@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* Theme tokens */
+@theme {
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222 40% 18%);
+
+  --color-primary: hsl(222 53% 23%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(220 20% 96%);
+  --color-secondary-foreground: hsl(222 53% 23%);
+
+  --color-muted: hsl(220 20% 96%);
+  --color-muted-foreground: hsl(220 10% 46%);
+
+  --color-accent: hsl(348 99% 44%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-border: hsl(220 15% 90%);
+  --color-surface: hsl(222 20% 97%);
+
+  /* 🔥 Breakpoints control container in Tailwind v4 */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1400px;
+}
+
+
+/* Base styles */
+@layer base {
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
