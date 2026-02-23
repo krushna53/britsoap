@@ -1,71 +1,77 @@
-"use client";
-
-import { useState } from "react";
-import { useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "@/components/Layout";
-import { machines } from "@/data/machines";
+import { getCategoryWithProducts } from "@/lib/contentful";
 
-export default function CategoryPage() {
-  const params = useParams();
-  const category = params.category as string;
+export default async function CategoryPage({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}) {
+  const { category: slug } = await params;
 
-  const categoryMachines = machines.filter(
-    (m) => m.categorySlug === category
-  );
+  const category = await getCategoryWithProducts(slug);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  if (!category) return notFound();
 
-  const machine = categoryMachines[currentIndex];
+  const products = category.products;
 
-  if (!machine) {
-    return <Layout>Machine not found</Layout>;
+  if (!products || products.length === 0) {
+    return notFound();
   }
 
   return (
     <Layout>
-      {/* Header */}
       <section className="py-16 bg-primary text-center">
         <div className="container">
           <h2 className="text-sm uppercase tracking-widest text-primary-foreground/60 mb-2">
-            {machine.category}
+            {category.title as string}
           </h2>
           <h1 className="text-4xl font-bold text-primary-foreground">
-            {machine.name}
+            Products
           </h1>
         </div>
       </section>
 
-      {/* Machine Content */}
       <section className="py-20 bg-background">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <Image
-              src={machine.image}
-              alt={machine.name}
-              className="rounded w-full object-contain"
-            />
-          </div>
-
-          <div className="text-sm leading-relaxed text-muted-foreground whitespace-pre-line">
-            {machine.description}
-          </div>
-        </div>
-
-        {/* Pagination */}
-        <div className="flex justify-center gap-4 mt-12">
-          {categoryMachines.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-10 h-10 rounded border text-sm font-medium ${
-                index === currentIndex
-                  ? "bg-primary text-white"
-                  : "bg-white text-primary"
-              }`}
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {products.map((product: any) => (
+            <div
+              key={product.slug}
+              className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition"
             >
-              {index + 1}
-            </button>
+              {product.imageUrl ? (
+                <Image
+                  src={product.imageUrl}
+                  alt={product.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-56 object-cover"
+                />
+              ) : (
+                <div className="w-full h-56 bg-gray-200 flex items-center justify-center text-xs text-gray-500">
+                  No Image
+                </div>
+              )}
+
+              <div className="p-5">
+                <h3 className="text-lg font-semibold mb-2 text-primary">
+                  {product.name}
+                </h3>
+
+                <p className="text-sm text-muted-foreground mb-4">
+                  {product.shortDescription}
+                </p>
+
+                <Link
+                  href={`/products/${slug}/${product.slug}`}
+                  className="text-xs uppercase tracking-wider text-accent font-medium"
+                >
+                  View Details →
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </section>

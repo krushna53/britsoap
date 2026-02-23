@@ -1,7 +1,9 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import FeaturedProducts from "@/components/FeaturedProducts";
-import HomeContent from "@/components/HomeContent";
+import HomeAbout from "@/components/HomeAbout";
+import HomeImpact from "@/components/HomeImpact";
+import HomeCTA from "@/components/HomeCTA";
 import ServicesPreview from "@/components/ServicesPreview";
 import { getHomepage, getServices } from "@/lib/contentful";
 
@@ -26,8 +28,10 @@ export default async function Index() {
     <Layout>
       <Hero hero={data} />
       <FeaturedProducts products={featuredProducts} />
-      <HomeContent />
+      <HomeAbout data={data} />
+      <HomeImpact data={data} />
       <ServicesPreview services={services} />
+      <HomeCTA data={data} />
     </Layout>
   );
 }
