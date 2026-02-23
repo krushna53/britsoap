@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -162,7 +164,7 @@ const Services = () => (
           requirements.
         </p>
         <Link
-          to="/contact"
+          href="/contact"
           className="inline-flex px-10 py-3 bg-accent text-accent-foreground font-medium rounded hover:bg-red-light transition-colors text-sm"
         >
           Request a Consultation
