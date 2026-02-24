@@ -1,37 +1,16 @@
-import Layout from "@/components/Layout";
-import Hero from "@/components/Hero";
-import FeaturedProducts from "@/components/FeaturedProducts";
-import HomeAbout from "@/components/HomeAbout";
-import HomeImpact from "@/components/HomeImpact";
-import HomeCTA from "@/components/HomeCTA";
-import ServicesPreview from "@/components/ServicesPreview";
-import { getHomepage, getServices } from "@/lib/contentful";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-export const revalidate = 300;
+export default async function Page() {
+  const headersList = await headers();
+  const acceptLang = headersList.get("accept-language") || "en";
 
-export default async function Index() {
-  const data = await getHomepage();
-  const services = await getServices();
+  let lang = "en";
 
-  if (!data) return null;
+  if (acceptLang.includes("hi")) lang = "hi";
+  else if (acceptLang.includes("zh")) lang = "zh";
+  else if (acceptLang.includes("ar")) lang = "ar";
+  else if (acceptLang.includes("fr")) lang = "fr";
 
-  const featuredProducts =
-    data.featuredProducts?.map((item) => ({
-      name: item.fields.name,
-      slug: item.fields.slug,
-      imageUrl: item.fields.image?.fields?.file?.url
-        ? `https:${item.fields.image.fields.file.url}`
-        : "",
-    })) || [];
-
-  return (
-    <Layout>
-      <Hero hero={data} />
-      <FeaturedProducts products={featuredProducts} />
-      <HomeAbout data={data} />
-      <HomeImpact data={data} />
-      <ServicesPreview services={services} />
-      <HomeCTA data={data} />
-    </Layout>
-  );
+  redirect(`/${lang}`);
 }

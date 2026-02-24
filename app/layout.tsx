@@ -1,6 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import Providers from "@/components/Providers";
+import { LanguageProvider } from "@/components/LanguageContext";
 
 export default function RootLayout({
   children,
@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

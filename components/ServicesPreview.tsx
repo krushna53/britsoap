@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import { Factory, Cog, Wrench } from "lucide-react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
 
 const icons = [Factory, Cog, Wrench];
 
 type Service = {
   title: string;
-  description: any;
+  description: Document | string;
 };
 
 type Props = {
@@ -44,7 +45,9 @@ export default function ServicesPreview({ services }: Props) {
                 </h3>
 
                 <div className="text-sm text-muted-foreground leading-relaxed">
-                  {documentToReactComponents(service.description)}
+                  {typeof service.description === "string"
+                    ? service.description
+                    : documentToReactComponents(service.description)}
                 </div>
               </motion.div>
             );
