@@ -5,9 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const navLinks = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Products", path: "/products" },
@@ -18,11 +19,18 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
+  const lang = pathname.split("/")[1] || "en";
+
+  const isActive = (path: string) => {
+    return pathname === `/${lang}${path}`;
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+
+        {/* ✅ Logo FIX */}
+        <Link href={`/${lang}`} className="flex items-center gap-2">
           <div className="w-1 h-6 bg-accent rounded-full" />
           <span className="text-xl font-heading font-bold text-primary tracking-tight uppercase">
             BritSoap
@@ -34,9 +42,9 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <Link
               key={link.path}
-              href={link.path}
+              href={`/${lang}${link.path}`}
               className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
-                pathname === link.path
+                isActive(link.path)
                   ? "text-primary"
                   : "text-muted-foreground"
               }`}
@@ -46,13 +54,16 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* CTA button */}
+        {/* ✅ CTA FIX */}
         <Link
-          href="/contact"
+          href={`/${lang}/contact`}
           className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
         >
           Get a Quote
         </Link>
+
+        {/* Language Switcher */}
+        <LanguageSwitcher />
 
         {/* Mobile toggle */}
         <button
@@ -74,13 +85,14 @@ const Navbar = () => {
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <nav className="container flex flex-col gap-4 py-6">
+
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  href={link.path}
+                  href={`/${lang}${link.path}`} // ✅ FIXED
                   onClick={() => setMobileOpen(false)}
                   className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
-                    pathname === link.path
+                    isActive(link.path)
                       ? "text-primary"
                       : "text-muted-foreground"
                   }`}
@@ -90,12 +102,14 @@ const Navbar = () => {
               ))}
 
               <Link
-                href="/contact"
+                href={`/${lang}/contact`} // ✅ FIXED
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
               >
                 Get a Quote
               </Link>
+
+              <LanguageSwitcher />
             </nav>
           </motion.div>
         )}
