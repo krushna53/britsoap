@@ -22,3 +22,26 @@ export type CategoryWithCount = {
   slug: string;
   count: number;
 };
+// Contentful raw structures
+export type ContentfulImage = {
+  fields?: {
+    file?: {
+      url?: string;
+    };
+  };
+};
+
+export type ContentfulProduct = {
+  fields: {
+    name: string;
+    slug: string;
+    shortDescription?: string;
+    image?: ContentfulImage;
+    order?: number;
+  };
+};
+
+// Homepage response type
+export type HomepageData = {
+  featuredProducts?: ContentfulProduct[];
+};
