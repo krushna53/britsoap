@@ -16,7 +16,7 @@ const stagger = {
 export type FeaturedProduct = {
   name: string;
   slug: string;
-  imageUrl: string;
+  imageUrl: string; // ✅ required
 };
 
 type FeaturedProductsProps = {
@@ -62,7 +62,6 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
               viewport={{ once: true }}
               transition={{ delay: i * 0.12 }}
             >
-           {/* <Link href={`/products/${product.slug}`} className="group block"> this code when need to using slug */}
               <Link href={`/products`} className="group block">
                 <div className="overflow-hidden rounded border border-border">
                   <Image

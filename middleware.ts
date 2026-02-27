@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
-const locales = ["en", "hi", "zh", "ar", "fr"];
+const locales = ["en", "fr", "es"] as const;
+type Locale = (typeof locales)[number];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -16,22 +17,26 @@ export function middleware(request: NextRequest) {
     return;
   }
 
-  // Already has lang
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}`)
+  // Already has locale
+  const pathnameHasLocale = locales.some((locale) =>
+    pathname.startsWith(`/${locale}`)
   );
 
   if (pathnameHasLocale) return;
 
   // 🌍 Detect country
-  const country = request.geo?.country || "IN";
+const country = (request as any).geo?.country || "IN";
 
-  let locale = "en";
+  // ✅ Mapping
+  const countryToLocale: Record<string, Locale> = {
+    IN: "en",
+    FR: "fr",
+    ES: "es",
+    MX: "es",
+    AR: "es",
+  };
 
-  if (country === "IN") locale = "hi";
-  if (country === "CN") locale = "zh";
-  if (country === "FR") locale = "fr";
-  if (country === "AE") locale = "ar";
+  const locale: Locale = countryToLocale[country] || "en";
 
   return NextResponse.redirect(
     new URL(`/${locale}${pathname}`, request.url)
