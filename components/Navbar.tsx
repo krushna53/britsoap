@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Home", path: "" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Products", path: "/products" },
+  { name: "Products", path: "/simplex-soap-refining-plodder-machine" },
   { name: "Contact", path: "/contact" },
 ];
 
