@@ -11,7 +11,28 @@ const navLinks = [
   { name: "Home", path: "" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Products", path: "/simplex-soap-refining-plodder-machine" },
+  // { name: "Products", path: "/simplex-soap-refining-plodder-machine" },
+  {
+    name: "Products",
+    submenu: [
+      {
+        name: "Double Sigma Mixer",
+        path: "/double-arm-sigma-mixer-soap-manufacturing",
+      },
+      {
+        name: "Simplex Refiner Plodder",
+        path: "/simplex-refiner-plodder",
+      },
+      {
+        name: "Triple Roll Mill",
+        path: "/triple-roll-mill-soap-refining-machine",
+      },
+      {
+        name: "Duplex Vacuum Plodder",
+        path: "/duplex-vacuum-soap-plodder-machine",
+      },
+    ],
+  },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -28,7 +49,6 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
-
         {/* ✅ Logo FIX */}
         <Link href={`/${lang}`} className="flex items-center gap-2">
           <div className="w-1 h-6 bg-accent rounded-full" />
@@ -39,18 +59,44 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              href={`/${lang}${link.path}`}
-              className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
-                isActive(link.path)
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
-            >
-              {link.name}
-            </Link>
+          {navLinks.map((link, i) => (
+            <div key={i} className="relative group">
+              {/* Normal Link */}
+              {!link.submenu && (
+                <Link
+                  href={`/${lang}${link.path}`}
+                  className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
+                    isActive(link.path)
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )}
+
+              {/* Dropdown Parent */}
+              {link.submenu && (
+                <>
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground cursor-pointer hover:text-primary">
+                    {link.name}
+                  </span>
+
+                  {/* Dropdown */}
+                  <div className="absolute left-0 top-full mt-4 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    {link.submenu.map((sub, idx) => (
+                      <Link
+                        key={idx}
+                        href={`/${lang}${sub.path}`}
+                        className="block px-4 py-3 text-sm hover:bg-muted transition"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           ))}
         </nav>
 
@@ -85,11 +131,10 @@ const Navbar = () => {
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <nav className="container flex flex-col gap-4 py-6">
-
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  href={`/${lang}${link.path}`} // ✅ FIXED
+                  href={`/${lang}${link.path}`}
                   onClick={() => setMobileOpen(false)}
                   className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
                     isActive(link.path)
@@ -102,7 +147,7 @@ const Navbar = () => {
               ))}
 
               <Link
-                href={`/${lang}/contact`} // ✅ FIXED
+                href={`/${lang}/contact`}
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
               >
