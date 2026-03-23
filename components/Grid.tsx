@@ -24,18 +24,18 @@ export default function Grid({ items }: GridProps) {
                 src={item.image}
                 alt={item.title || "image"}
                 width={400}
-                height={250}
-                className="w-full h-52 object-cover group-hover:scale-105 transition"
+                height={430}
+                className="w-full h-96 object-cover group-hover:scale-105 transition"
               />
             </div>
           )}
 
           <div className="p-6 text-center">
-            {item.title && (
+            {/* {item.title && (
               <h3 className="font-semibold text-lg mb-2">
                 {item.title}
               </h3>
-            )}
+            )} */}
             {item.desc && (
               <p className="text-gray-600 text-sm">{item.desc}</p>
             )}

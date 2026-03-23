@@ -137,17 +137,19 @@ export default function ProductPage() {
             {/* LEFT */}
             <div className="flex flex-col gap-8">
               {/* MAIN IMAGE (FIXED HEIGHT) */}
-              <div className="bg-white p-4 rounded-3xl shadow-xl">
-                <div className="h-[320px] overflow-hidden rounded-2xl">
-                  <Image
-                    src={product.detailSection.images?.[0]}
-                    alt="machine"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
+              {product.detailSection.images?.[0] && (
+                <div className="bg-white p-4 rounded-3xl shadow-xl">
+                  <div className="h-[320px] overflow-hidden rounded-2xl">
+                    <Image
+                      src={product.detailSection.images[0]}
+                      alt="machine"
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* SECOND IMAGE */}
               {product.detailSection.images?.[1] && (

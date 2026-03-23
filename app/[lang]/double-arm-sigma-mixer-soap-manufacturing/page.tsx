@@ -36,6 +36,14 @@ export type Product = {
     description: string;
     keywords: string[];
   };
+
+  detailSection?: {
+    title: string;
+    description: string[];
+    features?: string[];
+    optional?: string[];
+    image: string; // ✅ IMPORTANT
+  };
 };
 
 export async function generateMetadata() {
@@ -66,7 +74,7 @@ export default function ProductPage() {
         description={product.description}
         video={product.video}
       />
-  {product.refinerIntro && (
+      {product.refinerIntro && (
         <section className="py-24 text-center">
           <div className="container max-w-4xl">
             <h2 className="text-4xl font-bold text-primary mb-6">
@@ -81,11 +89,11 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.steps?.length  && (
+      {product.steps?.length && (
         <Section title="The Soap Mixing Process" center>
           <Grid items={product.steps} />
         </Section>
-      )}  
+      )}
 
       {product.importance?.length && (
         <Section
@@ -120,12 +128,12 @@ export default function ProductPage() {
                 {product.detailSection.title}
               </h2>
 
-              {product.detailSection.description.map((para, i) => (
+              {product.detailSection?.description?.map((para, i) => (
                 <p key={i} className="text-gray-600 mb-4 leading-relaxed">
                   {para}
                 </p>
               ))}
-              {product.detailSection.features?.length  && (
+              {product.detailSection.features?.length && (
                 <div className="space-y-2 mb-6">
                   <h4 className="text-lg font-semibold text-gray-900">
                     Key Features:
@@ -137,7 +145,7 @@ export default function ProductPage() {
                   </ul>
                 </div>
               )}
-              {product.detailSection.optional?.length  && (
+              {product.detailSection.optional?.length && (
                 <div className="bg-white p-5 rounded-xl shadow-sm border">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     Optional Configurations
@@ -151,13 +159,15 @@ export default function ProductPage() {
               )}
             </div>
             <div className="relative">
-              <Image
-                src={product.detailSection.image}
-                alt="Double arm sigma mixer mixing soap base"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-lg w-full object-cover"
-              />
+              {product.detailSection?.image && (
+                <Image
+                  src={product.detailSection.image}
+                  alt="Double arm sigma mixer mixing soap base"
+                  width={600}
+                  height={500}
+                  className="rounded-2xl shadow-lg w-full object-cover"
+                />
+              )}
 
               <div className="absolute top-4 left-4 bg-primary text-white px-4 py-1 rounded-full text-sm shadow">
                 Industrial Grade

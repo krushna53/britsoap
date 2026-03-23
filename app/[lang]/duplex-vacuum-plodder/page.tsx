@@ -5,6 +5,7 @@ import Grid from "@/components/Grid";
 import Image from "next/image";
 import { productPages } from "@/data/productPages";
 import { notFound } from "next/navigation";
+import CTASection from "@/components/CTASection";
 
 export type Product = {
   slug: string;
@@ -65,14 +66,28 @@ export default function ProductPage() {
         description={product.description}
         video={product.video}
       />
+      {product.refinerIntro && (
+        <section className="py-24 text-center">
+          <div className="container max-w-4xl">
+            <h2 className="text-4xl font-bold text-primary mb-6">
+              {product.refinerIntro.title}
+            </h2>
 
-      {product.steps?.length > 0 && (
+            {product.refinerIntro.paragraphs.map((p, i) => (
+              <p key={i} className="text-gray-600 text-lg mb-4 leading-relaxed">
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
+      {product.steps?.length && (
         <Section title="The Soap Mixing Process" center>
           <Grid items={product.steps} />
         </Section>
       )}
 
-      {product.importance?.length > 0 && (
+      {product.importance?.length && (
         <Section
           title={product.importanceTitle}
           description={product.importanceDescription}
@@ -81,7 +96,7 @@ export default function ProductPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <Image
               src={product.importanceImage}
-              alt="importance"
+              alt="Double arm sigma mixer mixing soap base"
               width={500}
               height={400}
               className="rounded-xl shadow-lg"
@@ -105,12 +120,44 @@ export default function ProductPage() {
                 {product.detailSection.title}
               </h2>
 
-              {product.detailSection.description.map((para, i) => (
-                <p key={i} className="text-gray-600 mb-4 leading-relaxed">
-                  {para}
-                </p>
-              ))}
-              {product.detailSection.features?.length > 0 && (
+              {product.detailSection && (
+                <section className="py-28 bg-gray-100">
+                  <div className="container grid md:grid-cols-2 gap-20 items-center">
+                    {/* LEFT → IMAGES */}
+                    <div className="flex flex-col gap-8">
+                      {product.detailSection.images?.map((img, i) => (
+                        <div
+                          key={i}
+                          className="bg-white p-4 rounded-3xl shadow-xl"
+                        >
+                          <div className="h-[300px] overflow-hidden rounded-2xl">
+                            <Image
+                              src={img}
+                              alt="machine"
+                              width={600}
+                              height={400}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* RIGHT → TEXT */}
+                    <div className="max-w-xl space-y-6">
+                      {product.detailSection.paragraphs?.map((para, i) => (
+                        <p
+                          key={i}
+                          className="text-gray-700 leading-relaxed text-[17px]"
+                        >
+                          {para}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              )}
+              {product.detailSection.features?.length && (
                 <div className="space-y-2 mb-6">
                   <h4 className="text-lg font-semibold text-gray-900">
                     Key Features:
@@ -122,7 +169,7 @@ export default function ProductPage() {
                   </ul>
                 </div>
               )}
-              {product.detailSection.optional?.length > 0 && (
+              {product.detailSection.optional?.length && (
                 <div className="bg-white p-5 rounded-xl shadow-sm border">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     Optional Configurations
@@ -136,14 +183,15 @@ export default function ProductPage() {
               )}
             </div>
             <div className="relative">
-              <Image
-                src={product.detailSection.image}
-                alt={product.detailSection.title}
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-lg w-full object-cover"
-              />
-
+              {product.detailSection?.image && (
+                <Image
+                  src={product.detailSection.image}
+                  alt="Double arm sigma mixer mixing soap base"
+                  width={600}
+                  height={500}
+                  className="rounded-2xl shadow-lg w-full object-cover"
+                />
+              )}
               <div className="absolute top-4 left-4 bg-primary text-white px-4 py-1 rounded-full text-sm shadow">
                 Industrial Grade
               </div>
@@ -160,7 +208,7 @@ export default function ProductPage() {
           <div className="relative">
             <Image
               src={product.applicationImage}
-              alt="application"
+              alt="Double arm sigma mixer mixing soap base"
               width={600}
               height={450}
               className="rounded-2xl shadow-2xl w-full object-cover"
@@ -172,28 +220,6 @@ export default function ProductPage() {
             <p className="text-white/80 text-lg leading-relaxed mb-6">
               {product.applicationDescription}
             </p>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-white rounded-full mt-2"></span>
-                <p className="text-white/80">
-                  Used in toilet and laundry soap production
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-white rounded-full mt-2"></span>
-                <p className="text-white/80">
-                  Ensures uniform blending before refining
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-white rounded-full mt-2"></span>
-                <p className="text-white/80">
-                  Supports continuous production lines
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </Section>
@@ -209,33 +235,18 @@ export default function ProductPage() {
               className="group bg-gradient-to-br from-primary to-primary/80 text-white p-8 rounded-2xl shadow-lg text-center transition hover:scale-105 hover:shadow-2xl"
             >
               <p className="text-3xl font-bold mb-2">{c}</p>
-              {/* <p className="text-white/70 text-sm">Production Capacity</p> */}
             </div>
           ))}
         </div>
       </Section>
-      <section className="py-28 bg-primary text-white text-center">
-        <div className="container max-w-3xl">
-          <h2 className="text-5xl font-bold mb-6">
-            Ready to Upgrade Your Production Line?
-          </h2>
-
-          <p className="text-white/80 text-lg mb-10">
-            Talk to our experts and get a customized solution tailored to your
-            factory.
-          </p>
-
-          <div className="flex justify-center gap-4">
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">
-              Speak with Engineer
-            </button>
-
-            <button className="border border-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition">
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </section>
+      {product.ctaSection && (
+        <CTASection
+          title={product.ctaSection.title}
+          description={product.ctaSection.description}
+          buttonText={product.ctaSection.buttonText}
+          buttonLink={product.ctaSection.buttonLink}
+        />
+      )}
     </Layout>
   );
 }

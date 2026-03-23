@@ -7,11 +7,18 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const navLinks = [
+type NavLink = {
+  name: string;
+  path?: string;
+  submenu?: {
+    name: string;
+    path: string;
+  }[];
+};
+const navLinks: NavLink[] = [
   { name: "Home", path: "" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  // { name: "Products", path: "/simplex-soap-refining-plodder-machine" },
   {
     name: "Products",
     submenu: [
@@ -35,7 +42,6 @@ const navLinks = [
   },
   { name: "Contact", path: "/contact" },
 ];
-
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
@@ -62,7 +68,7 @@ const Navbar = () => {
           {navLinks.map((link, i) => (
             <div key={i} className="relative group">
               {/* Normal Link */}
-              {!link.submenu && (
+              {!link.submenu && link.path && (
                 <Link
                   href={`/${lang}${link.path}`}
                   className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
@@ -131,20 +137,22 @@ const Navbar = () => {
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <nav className="container flex flex-col gap-4 py-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  href={`/${lang}${link.path}`}
-                  onClick={() => setMobileOpen(false)}
-                  className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
-                    isActive(link.path)
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link, i) =>
+                link.path ? (
+                  <Link
+                    key={i}
+                    href={`/${lang}${link.path}`}
+                    onClick={() => setMobileOpen(false)}
+                    className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
+                      isActive(link.path)
+                        ? "text-primary"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                ) : null,
+              )}
 
               <Link
                 href={`/${lang}/contact`}
