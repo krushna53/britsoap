@@ -13,7 +13,7 @@ export default async function ProductsPage() {
 
   return (
     <Layout>
-      <section className="py-24 bg-primary text-center">
+      <section className="py-20 bg-primary text-center">
         <div className="container">
           <h2 className="text-xs uppercase tracking-[0.3em] text-primary-foreground/60 mb-3">
             Our Range

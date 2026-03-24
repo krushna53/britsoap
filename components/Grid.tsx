@@ -16,29 +16,25 @@ export default function Grid({ items }: GridProps) {
       {items.map((item, i) => (
         <div
           key={i}
-          className="group bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition"
+          className="bg-white rounded-2xl overflow-hidden border border-gray-200 transition hover:shadow-md"
         >
           {item.image && (
-            <div className="overflow-hidden">
+            <div className="w-full aspect-4/3 overflow-hidden">
               <Image
                 src={item.image}
-                alt={item.title || "image"}
+                alt="Simplex refiner plodder machine for soap manufacturing"
+                loading="eager"
                 width={400}
-                height={430}
-                className="w-full h-96 object-cover group-hover:scale-105 transition"
+                height={300}
+                className="w-full h-full object-cover"
               />
             </div>
           )}
 
-          <div className="p-6 text-center">
-            {/* {item.title && (
-              <h3 className="font-semibold text-lg mb-2">
-                {item.title}
-              </h3>
-            )} */}
-            {item.desc && (
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            )}
+          <div className="p-5">
+            <p className="text-gray-600 text-sm leading-relaxed text-left">
+              {item.desc}
+            </p>
           </div>
         </div>
       ))}

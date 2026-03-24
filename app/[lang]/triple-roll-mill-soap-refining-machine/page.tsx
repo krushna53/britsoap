@@ -40,7 +40,7 @@ export type Product = {
 
 export async function generateMetadata() {
   const product = productPages.find(
-    (p) => p.slug === "simplex-refiner-plodder",
+    (p) => p.slug === "triple-roll-mill-soap-refining-machine",
   );
 
   if (!product) return {};
@@ -54,7 +54,7 @@ export async function generateMetadata() {
 
 export default function ProductPage() {
   const product = productPages.find(
-    (p) => p.slug === "simplex-refiner-plodder",
+    (p) => p.slug === "triple-roll-mill-soap-refining-machine",
   );
 
   if (!product) return notFound();
@@ -92,7 +92,7 @@ export default function ProductPage() {
               {product.processDescription}
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {product.processSteps.map((step, i) => (
                 <div
                   key={i}
@@ -101,13 +101,13 @@ export default function ProductPage() {
                   <div className="w-full aspect-[4/3] overflow-hidden">
                     <Image
                       src={step.image}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
+                      alt={step.desc}
                       width={400}
                       height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
+
                   <div className="p-5">
                     <p className="text-gray-600 text-sm leading-relaxed text-left">
                       {step.desc}
@@ -126,7 +126,7 @@ export default function ProductPage() {
               {product.whyTitle}
             </h2>
 
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto">
               {product.whyPoints.map((item, i) => (
                 <div
                   key={i}
@@ -155,24 +155,7 @@ export default function ProductPage() {
                   <div className="w-full aspect-[16/10]">
                     <Image
                       src={product.detailSection.images[0]}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
-
-              {/* SECOND IMAGE */}
-              {product.detailSection.images?.[1] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[1]}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
+                      alt="machine"
                       width={800}
                       height={500}
                       className="w-full h-full object-cover"
@@ -208,7 +191,6 @@ export default function ProductPage() {
               alt="Simplex refiner plodder machine for soap manufacturing"
               width={500}
               height={400}
-              loading="eager"
               className="rounded-xl shadow-lg"
             />
 
@@ -232,28 +214,10 @@ export default function ProductPage() {
             <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
               {product.applicationDescription}
             </p>
-
-            <div className="grid sm:grid-cols-2 gap-6">
-              {[
-                "Used in toilet and laundry soap production",
-                "Ensures uniform blending before refining",
-                "Supports continuous production lines",
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition"
-                >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/10">
-                    ✔
-                  </div>
-                  <p className="text-white/80">{item}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </Section>
-        {product.configurations?.length && (
+        {/* {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
             <h2 className="text-4xl font-bold text-primary text-center mb-16">
@@ -266,7 +230,6 @@ export default function ProductPage() {
                   <Image
                     src={config.image}
                     alt="Simplex refiner plodder machine for soap manufacturing"
-                    loading="eager"
                     width={400}
                     height={300}
                     className="rounded-2xl mx-auto mb-6 shadow-lg"
@@ -276,7 +239,7 @@ export default function ProductPage() {
                     {config.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-4 text-left">{config.desc}</p>
+                  <p className="text-gray-600 mb-4">{config.desc}</p>
 
                   <ul className="text-gray-700 space-y-1">
                     {config.points.map((p, i) => (
@@ -288,7 +251,7 @@ export default function ProductPage() {
             </div>
           </div>
         </section>
-      )}
+      )} */}
       <Section
         title="Capacity Range"
         description="The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales."

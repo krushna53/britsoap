@@ -42,7 +42,7 @@ export type Product = {
     description: string[];
     features?: string[];
     optional?: string[];
-    image: string; // ✅ IMPORTANT
+    image: string;
   };
 };
 
@@ -75,8 +75,8 @@ export default function ProductPage() {
         video={product.video}
       />
       {product.refinerIntro && (
-        <section className="py-24 text-center">
-          <div className="container max-w-4xl">
+        <section className="py-20 text-center">
+          <div className="container">
             <h2 className="text-4xl font-bold text-primary mb-6">
               {product.refinerIntro.title}
             </h2>
@@ -133,18 +133,6 @@ export default function ProductPage() {
                   {para}
                 </p>
               ))}
-              {product.detailSection.features?.length && (
-                <div className="space-y-2 mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900">
-                    Key Features:
-                  </h4>
-                  <ul className="list-disc list-inside text-gray-600">
-                    {product.detailSection.features.map((f, i) => (
-                      <li key={i}>{f}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
               {product.detailSection.optional?.length && (
                 <div className="bg-white p-5 rounded-xl shadow-sm border">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -180,21 +168,11 @@ export default function ProductPage() {
       <Section
         title={product.applicationTitle}
         className="bg-primary text-white"
+        center
       >
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <Image
-              src={product.applicationImage}
-              alt="Double arm sigma mixer mixing soap base"
-              width={600}
-              height={450}
-              className="rounded-2xl shadow-2xl w-full object-cover"
-            />
-            <div className="absolute -z-10 inset-0 bg-white/10 blur-3xl rounded-full"></div>
-          </div>
-
-          <div>
-            <p className="text-white/80 text-lg leading-relaxed mb-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
+            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
               {product.applicationDescription}
             </p>
           </div>
@@ -205,13 +183,18 @@ export default function ProductPage() {
         description="The Brit Soap soap mixers are available in a wide range of production capacities to suit different manufacturing scales."
         center
       >
-        <div className="grid md:grid-cols-4 gap-6 mt-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mt-10 max-w-5xl mx-auto">
           {product.capacities.map((c, i) => (
             <div
               key={i}
-              className="group bg-gradient-to-br from-primary to-primary/80 text-white p-8 rounded-2xl shadow-lg text-center transition hover:scale-105 hover:shadow-2xl"
+              className="bg-white border border-gray-200 rounded-xl px-5 py-4 flex items-center gap-3 shadow-sm hover:shadow-md transition"
             >
-              <p className="text-3xl font-bold mb-2">{c}</p>
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+                ⚙️
+              </div>
+              <div>
+                <p className="text-lg font-semibold text-gray-800">{c}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -64,7 +64,7 @@ export default function AboutClient({ data }: any) {
       </section>
 
       {/* ================= ABOUT SECTION ================= */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             
@@ -115,7 +115,7 @@ export default function AboutClient({ data }: any) {
       </section>
 
       {/* ================= VISION & MISSION ================= */}
-      <section className="py-24 bg-surface">
+      <section className="py-20 bg-surface">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
@@ -153,7 +153,7 @@ export default function AboutClient({ data }: any) {
       </section>
 
       {/* ================= VALUES ================= */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
 

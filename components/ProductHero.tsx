@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
 
 type ProductHeroProps = {
   title: string;
@@ -12,10 +15,8 @@ export default function ProductHero({
   video,
 }: ProductHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-28">
+    <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
       <div className="container grid md:grid-cols-2 gap-16 items-center">
-        
-        {/* LEFT */}
         <div>
           <p className="uppercase tracking-widest text-white/70 mb-4">
             BRIT SOAP MACHINERY
@@ -30,29 +31,37 @@ export default function ProductHero({
           </p>
 
           <div className="flex gap-4">
-            <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">
-              Request Details
-            </button>
+            <Link
+              href="/en/contact"
+              className="bg-white text-primary px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition inline-block"
+            >
+              Speak with Engineer
+            </Link>
 
-            <button className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition">
+            <button
+              onClick={() => {
+                document
+                  .getElementById("product-video")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition"
+            >
               Watch Demo
             </button>
           </div>
         </div>
 
-        {/* RIGHT */}
-        <div className="relative">
+        <div className="relative w-full h-full">
           <video
+            id="product-video"
             src={video}
             autoPlay
             loop
             muted
             playsInline
-            className="rounded-2xl shadow-2xl w-full"
+            className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
           />
-
-          {/* Glow effect */}
-          <div className="absolute -z-10 inset-0 blur-3xl bg-white/20 rounded-full"></div>
+          <div className="absolute inset-0 -z-10 blur-3xl bg-white/20 rounded-2xl"></div>
         </div>
       </div>
     </section>

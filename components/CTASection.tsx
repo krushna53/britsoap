@@ -15,9 +15,8 @@ export default function CTASection({
   buttonLink,
 }: CTASectionProps) {
   return (
-    <section className="py-28 bg-primary text-white text-center">
-      <div className="container max-w-3xl">
-        
+    <section className="py-20 bg-primary text-white text-center">
+      <div className="container">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
           {title}
         </h2>
@@ -40,7 +39,6 @@ export default function CTASection({
             </button>
           )}
         </div>
-
       </div>
     </section>
   );

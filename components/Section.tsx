@@ -16,16 +16,16 @@ export default function Section({
   className = "",
 }: SectionProps) {
   return (
-    <section className={`py-24 ${className}`}>
+    <section className={`py-20 ${className}`}>
       <div className="container">
         {(title || description) && (
           <div
             className={`mb-16 ${
-              center ? "text-center max-w-3xl mx-auto" : ""
+              center ? "text-center  mx-auto" : ""
             }`}
           >
             {title && (
-              <h2 className={`text-4xl font-bold text-gray-900 mb-4 ${className}`}>
+              <h2 className={`text-4xl font-bold text-primary mb-4 ${className}`}>
                 {title}
               </h2>
             )}

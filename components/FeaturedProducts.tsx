@@ -25,7 +25,7 @@ type FeaturedProductsProps = {
 
 export default function FeaturedProducts({ products }: FeaturedProductsProps) {
   return (
-    <section id="featured" className="py-24 bg-background">
+    <section id="featured" className="py-20 bg-background">
       <div className="container">
         <motion.div
           initial="hidden"

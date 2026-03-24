@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* ✅ Logo FIX */}
+        
         <Link href={`/${lang}`} className="flex items-center gap-2">
           <div className="w-1 h-6 bg-accent rounded-full" />
           <span className="text-xl font-heading font-bold text-primary tracking-tight uppercase">
@@ -63,11 +63,9 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link, i) => (
             <div key={i} className="relative group">
-              {/* Normal Link */}
               {!link.submenu && link.path && (
                 <Link
                   href={`/${lang}${link.path}`}
@@ -80,15 +78,12 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               )}
-
-              {/* Dropdown Parent */}
               {link.submenu && (
                 <>
                   <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground cursor-pointer hover:text-primary">
                     {link.name}
                   </span>
 
-                  {/* Dropdown */}
                   <div className="absolute left-0 top-full mt-4 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     {link.submenu.map((sub, idx) => (
                       <Link
@@ -105,19 +100,13 @@ const Navbar = () => {
             </div>
           ))}
         </nav>
-
-        {/* ✅ CTA FIX */}
         <Link
           href={`/${lang}/contact`}
           className="hidden md:inline-flex items-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
         >
           Get a Quote
         </Link>
-
-        {/* Language Switcher */}
         <LanguageSwitcher />
-
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-primary"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -126,8 +115,6 @@ const Navbar = () => {
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
-
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -137,23 +124,37 @@ const Navbar = () => {
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <nav className="container flex flex-col gap-4 py-6">
-              {navLinks.map((link, i) =>
-                link.path ? (
-                  <Link
-                    key={i}
-                    href={`/${lang}${link.path}`}
-                    onClick={() => setMobileOpen(false)}
-                    className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
-                      isActive(link.path)
-                        ? "text-primary"
-                        : "text-muted-foreground"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                ) : null,
-              )}
+              {navLinks.map((link, i) => (
+                <div key={i}>
+                  {link.path && (
+                    <Link
+                      href={`/${lang}${link.path}`}
+                      onClick={() => setMobileOpen(false)}
+                      className="block text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                  {link.submenu && (
+                    <div className="flex flex-col gap-2">
+                      <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                        {link.name}
+                      </span>
 
+                      {link.submenu.map((sub, idx) => (
+                        <Link
+                          key={idx}
+                          href={`/${lang}${sub.path}`}
+                          onClick={() => setMobileOpen(false)}
+                          className="pl-4 text-xs text-muted-foreground"
+                        >
+                          • {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
               <Link
                 href={`/${lang}/contact`}
                 onClick={() => setMobileOpen(false)}

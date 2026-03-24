@@ -51,7 +51,7 @@ export default function ServicesClient({ services }: Props) {
       </section>
 
       {/* SERVICES GRID */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((item, i) => {
@@ -86,7 +86,7 @@ export default function ServicesClient({ services }: Props) {
       </section>
 
       {/* PROCESS (STATIC) */}
-      <section className="py-24 bg-surface">
+      <section className="py-20 bg-surface">
         <div className="container">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-3">

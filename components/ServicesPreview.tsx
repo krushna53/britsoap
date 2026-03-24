@@ -18,7 +18,7 @@ type Props = {
 
 export default function ServicesPreview({ services }: Props) {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-20 bg-background">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">
