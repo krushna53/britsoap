@@ -6,6 +6,8 @@ import Image from "next/image";
 import { productPages } from "@/data/productPages";
 import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
+import CapacityRange from "@/components/CapacityRange";
+import RefinerIntro from "@/components/RefinerIntro";
 
 export type Product = {
   slug: string;
@@ -67,19 +69,10 @@ export default function ProductPage() {
         video={product.video}
       />
       {product.refinerIntro && (
-        <section className="py-20 text-center">
-          <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-6">
-              {product.refinerIntro.title}
-            </h2>
-
-            {product.refinerIntro.paragraphs.map((p, i) => (
-              <p key={i} className="text-gray-600 text-lg mb-4 leading-relaxed">
-                {p}
-              </p>
-            ))}
-          </div>
-        </section>
+        <RefinerIntro
+          title={product.refinerIntro.title}
+          paragraphs={product.refinerIntro.paragraphs}
+        />
       )}
       {product.processSteps?.length && (
         <section className="py-20 bg-gray-50 text-center">
@@ -253,7 +246,7 @@ export default function ProductPage() {
           </div>
         </div>
       </Section>
-        {product.configurations?.length && (
+      {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
             <h2 className="text-4xl font-bold text-primary text-center mb-16">
@@ -294,20 +287,7 @@ export default function ProductPage() {
         description="The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales."
         center
       >
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mt-10 max-w-5xl mx-auto">
-        {product.capacities.map((c, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-4 hover:border-primary hover:bg-primary/5 transition"
-          >
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
-              ⚙️
-            </div>
-
-            <p className="text-lg font-semibold text-gray-800">{c}</p>
-          </div>
-        ))}
-      </div>
+        <CapacityRange capacities={product.capacities} />
       </Section>
       {product.ctaSection && (
         <CTASection

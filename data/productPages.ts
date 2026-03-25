@@ -17,7 +17,7 @@ export const productPages = [
         description:
             "Heavy-duty sigma blade mixer designed for uniform blending of soap base with fragrances, colors, and additives.",
 
-        video: "/assets/DVP/duplex-vacuum-plodder-video.mp4",
+         video: "/assets/Mixer/double-arm-sigma-soap-mixer.mov",
 
         refinerIntro: {
             title: "High Performance Soap Mixing for Perfectly Blended Soap",
@@ -32,24 +32,26 @@ export const productPages = [
             {
                 title: "Feeding",
                 desc: "Soap base and additives are fed into the mixer vessel.",
-                image: "/assets/DVP/duplex-vacuum-plodder.jpg",
+                image: "/assets/Mixer/sigma-blade-mixing-soap-mass-soap-making.jpg",
             },
             {
                 title: "Kneading & Mixing",
                 desc: "Double sigma arms rotate kneading and folding the soap mass ensuring uniform mixing.",
-                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
+                image: "/assets/Mixer/soap-mixing-process-industrial-mixer.jpg",
+                
             },
             {
                 title: "Uniform Distribution",
                 desc: "Finished soap discharges through the bottom door.",
-                image: "/assets/DVP/vacuum-chamber-soap-plodder.jpg",
+                image: "/assets/Mixer/mixed-soap-discharge-sigma-soap-mixer.png",
+                
             },
         ],
 
         importanceTitle: "Why Mixing is an Important Step in Soap Production",
         importanceDescription:
             "Mixing is a critical step in the soap finishing process, as it ensures that perfumes, colourants, and functional additives are evenly distributed throughout the soap base creating  a uniform soap mass. Effective mixing also prepares the soap mass for efficient refining and plodding in the subsequent stages of the soap production line. Poor mixing can lead to uneven fragrance, colour streaking, and inconsistent product quality. The Double Sigma Mixer ensures: ",
-        importanceImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
+        importanceImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
         importance: [
             "Even distribution of perfumes and additives",
             "Consistent color and texture",
@@ -60,7 +62,7 @@ export const productPages = [
         applicationTitle: "Applications in Production",
         applicationDescription:
             "The Brit Soap soap mixer is used across a wide range of soap manufacturing environments. It is the starting step in the soap finishing line, used for mixing perfumes, additives and colour.  It supports both standard and specialised soap production lines, ensuring uniform mixing and improved downstream processing. Ideal for producing toilet soap bars, laundry soap bars, and syndet soaps.",
-        applicationImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
+        applicationImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
 
         capacityTitle: "Capacity Range",
         capacityDescription:
@@ -399,9 +401,8 @@ export const productPages = [
         // ✅ HERO
         title: "Duplex Vacuum Plodder | Extruder for Soap Manufacturing",
         description:
-            "Heavy-duty duplex vacuum plodder engineered for final refining, vacuum extraction, and extrusion of soap billets.Delivers dense, homogeneous soap with smooth texture and superior bar quality.",
-
-        video: "/assets/Mixer/double-arm-sigma-soap-mixer.mov",
+            "Heavy-duty duplex vacuum plodder engineered for final refining, vacuum extraction, and extrusion of soap billets.Delivers dense, homogeneous soap with smooth texture and superior bar quality.",
+        video: "/assets/DVP/duplex-vacuum-plodder-video.mp4",
 
         // ✅ INTRO SECTION
         refinerIntro: {
@@ -419,15 +420,15 @@ export const productPages = [
         processSteps: [
             {
                 desc: "Homogenized soap ribbons from the Mill are transported via a motorized elevating conveyor and fed into the top barrel of the Duplex Vacuum Plodder.",
-                image: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
+                image: "/assets/DVP/duplex-vacuum-plodder.jpg",
             },
             {
                 desc: "A specially designed slow-speed worm screw pulls the soap into the compression zone and forces it through a noodling plate, further refining, filtering, and homogenizing the soap mass.",
-                image: "/assets/RefinerPlodder/soap-refiner-plodder-screw.jpg",
+                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
             },
             {
                 desc: "The refined soap noodles fall into the vacuum chamber, where a strong vacuum removes trapped air to produce a dense, uniform product.",
-                image: "/assets/Mixer/sigma-blade-mixing-soap-mass-soap-making.jpg",
+                image: "/assets/DVP/vacuum-chamber-soap-plodder.jpg",
             },
             {
                 desc: "The soap is then pushed through the bottom compression barrel and finally extruded through a heated compression nose cone and extrusion plate, producing a continuous billet with the desired cross-section.",
@@ -474,7 +475,8 @@ export const productPages = [
         applicationTitle: "Application in Production",
         applicationDescription:
             "The Brit Soap duplex vacuum plodder is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines. The machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars . It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.",
-        applicationImage: "/assets/RefinerPlodder/soap-refiner-plodder-screw.jpg",
+        applicationImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
+
 
         // ✅ CONFIGURATIONS
         configurationsTitle: "Available Configurations",
