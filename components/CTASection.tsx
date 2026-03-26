@@ -29,13 +29,23 @@ export default function CTASection({
           {buttonLink ? (
             <Link
               href={buttonLink}
-              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold shadow hover:scale-105 transition"
+              className="bg-accent text-white px-4 py-4 rounded-xl shadow-md 
+                   flex items-center justify-center
+                   hover:bg-accent/90 transition-all duration-300"
             >
-              {buttonText}
+              <span className="font-semibold tracking-wide text-sm">
+                {buttonText}
+              </span>
             </Link>
           ) : (
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold shadow hover:scale-105 transition">
-              {buttonText}
+            <button
+              className="bg-accent text-white px-4 py-4 rounded-xl shadow-md 
+                   flex items-center justify-center
+                   hover:bg-accent/90 transition-all duration-300"
+            >
+              <span className="font-semibold tracking-wide text-sm">
+                {buttonText}
+              </span>
             </button>
           )}
         </div>

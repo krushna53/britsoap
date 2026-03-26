@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
 
 export type Product = {
   slug: string;
@@ -112,31 +113,11 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Duplex vacuum soap plodder machine for billet extrusion"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
-
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
+    <ImportanceGrid
+  title={product.importanceTitle}
+  description={product.importanceDescription}
+  items={product.importance || []}
+/>
 
       {product.detailSection && (
         <section className="py-20 bg-gray-100">

@@ -56,12 +56,12 @@ export const productPages = [
             "Even distribution of perfumes and additives",
             "Consistent color and texture",
             "Reliable batch-to-batch quality",
-            "Efficient preparation for refining",
+            "Efficient preparation of soap mass for refining and plodding",
         ],
 
         applicationTitle: "Applications in Production",
         applicationDescription:
-            "The Brit Soap soap mixer is used across a wide range of soap manufacturing environments. It is the starting step in the soap finishing line, used for mixing perfumes, additives and colour.  It supports both standard and specialised soap production lines, ensuring uniform mixing and improved downstream processing. Ideal for producing toilet soap bars, laundry soap bars, and syndet soaps.",
+            "The Brit Soap Double Sigma Mixer is designed for efficient mixing in industrial soap manufacturing lines. Two solid mixing shafts fitted with sigma blades rotate in synchronized motion to knead and fold the soap mass, ensuring thorough blending and uniform distribution of perfumes, colourants, and additives. The mixer features a double U-shaped trough mixing chamber, which promotes efficient material circulation and eliminates dead zones for consistent batch quality. The inner trough and blades are manufactured from AISI 304 stainless steel, providing durability and corrosion resistance when processing soap formulations. Each shaft is supported by heavy-duty bearing assemblies designed for stable and reliable operation under continuous production conditions. A top safety grill ensures safe loading of soap chips and additive.",
         applicationImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
 
         capacityTitle: "Capacity Range",
@@ -93,17 +93,17 @@ export const productPages = [
             ],
 
             optional: [
-                "Jacketed trough for heating or cooling",
-                "Worm discharge system for controlled transfer"
+                "Jacketed Trough for heating or cooling during mixing",
+                "Worm Discharge System for controlled transfer of soap mass to the next stage of the soap finishing line"
             ],
 
-            image: "/assets/DVP/duplex-vacuum-plodder.jpg"
+            image: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg"
         },
         ctaSection: {
             title: "Engineered for Efficiency. Built for Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
-            buttonText: "Speak with Engineer",
+            buttonText: "Speak with an Engineer",
             buttonLink: "/en/contact",
         },
     },
@@ -190,7 +190,7 @@ export const productPages = [
 
             images: [
                 "/assets/RefinerPlodder/simplex-soap-plodder.jpg",
-                "/assets/RefinerPlodder/single worm-soap-refiner-plodder.png"
+                "/assets/DVP/duplex-soap-refiner-plodder.jpg"
             ]
         },
 
@@ -210,7 +210,7 @@ export const productPages = [
                     "Single Worm Simplex Refiner",
                     "Single Worm Duplex Refiner",
                 ],
-                image: "/assets/RefinerPlodder/simplex-soap-plodder.jpg",
+                image: "/assets/RefinerPlodder/singleworm-soap-refiner-plodder.png",
             },
             {
                 title: "Twin Worm Refiners",
@@ -242,7 +242,7 @@ export const productPages = [
             title: "Engineered for Efficiency. Built for Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
-            buttonText: "Speak with Engineer",
+            buttonText: "Speak with an Engineer",
             buttonLink: "/en/contact",
         },
     },
@@ -272,10 +272,11 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "High Performance Refining for a Superior Quality Soap",
+            title: "Consistent Homogenisation for Smooth, Premium Soap Finishing",
             paragraphs: [
-                "The soap refining plodder receives soap, which has been fully mixed and amalgamated with colour, perfume and other additives directly from the bottom discharge door of the mixer, into the in-feed hopper of the plodder.",
-                "Positioned as the second machine in the soap finishing line, the soap refiner plodder plays a crucial role in improving the texture, consistency, and overall quality of the final soap bar.",
+                "The Brit Soap Triple Roll Mill is designed for homogenisation and refining of soap mass, ensuring the mixture becomes perfectly smooth, uniform, and ready for finishing.",
+                "Installed in the soap finishing line after the mixer or refiner and before plodding, the Triple Roll Mill adjusts the crystalline structure of soap particles, producing a creamy texture that feels smooth and pleasant on the skin.",
+                "Through accurate shearing and controlled pressure between rollers, the machine ensures complete incorporation of colours, perfumes, additives, and fillers, delivering consistent soap quality.",
             ],
         },
 
@@ -298,8 +299,11 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-        whyTitle: "Why Milling is Important",
-        whyPoints: [
+       importanceTitle: "Why Milling is Important",
+        importanceDescription:
+            "Refining is the difference between an ordinary soap bar and a premium product. In soap manufacturing, the refining stage determines the final product quality. Without proper homogenising the product may look grainy or rough, or perfume and color will not be distributed evenly. The milling action of the machine ensures the finished soap to have:",
+        importanceImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
+        importance: [
             "Superior smoothness",
             "Consistent appearance",
             "Even fragrance distribution",
@@ -376,7 +380,7 @@ export const productPages = [
             title: "Engineered for Efficiency. Built for Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
-            buttonText: "Speak with Engineer",
+            buttonText: "Speak with an Engineer",
             buttonLink: "/en/contact",
         },
     },
@@ -420,11 +424,11 @@ export const productPages = [
         processSteps: [
             {
                 desc: "Homogenized soap ribbons from the Mill are transported via a motorized elevating conveyor and fed into the top barrel of the Duplex Vacuum Plodder.",
-                image: "/assets/DVP/duplex-vacuum-plodder.jpg",
+                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
             },
             {
                 desc: "A specially designed slow-speed worm screw pulls the soap into the compression zone and forces it through a noodling plate, further refining, filtering, and homogenizing the soap mass.",
-                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
+                image: "/assets/RefinerPlodder/soap-refiner-plodder-screw.jpg",
             },
             {
                 desc: "The refined soap noodles fall into the vacuum chamber, where a strong vacuum removes trapped air to produce a dense, uniform product.",
@@ -466,8 +470,8 @@ export const productPages = [
             ],
 
             images: [
-                "/assets/Mill/three-soap-mill.jpg",
-                "/assets/RefinerPlodder/single worm-soap-refiner-plodder.png"
+                "/assets/DVP/duplex-vacuum-plodder.jpg",
+                "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg"
             ]
         },
 
@@ -487,7 +491,7 @@ export const productPages = [
                 points: [
                     "We can also supply Triplex Plodders (single worm / twin worm) on request.",
                 ],
-                image: "/assets/RefinerPlodder/simplex-soap-plodder.jpg",
+                image: "/assets/DVP/duplex-vacuum-plodder.jpg",
             },
             {
                 title: "Twin Worm Duplex Vacuum Plodder",
@@ -495,7 +499,7 @@ export const productPages = [
                 points: [
 
                 ],
-                image: "/assets/RefinerPlodder/simplex-soap-plodder.jpg",
+                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
             },
         ],
 
@@ -518,7 +522,7 @@ export const productPages = [
             title: "Engineered for Efficiency. Built for Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
-            buttonText: "Speak with Engineer",
+            buttonText: "Speak with an Engineer",
             buttonLink: "/en/contact",
         },
     },

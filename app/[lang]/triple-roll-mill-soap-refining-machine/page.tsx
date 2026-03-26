@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
 
 export type Product = {
   slug: string;
@@ -112,30 +113,11 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.whyPoints?.length && (
-        <section className="py-20  text-center">
-          <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-14">
-              {product.whyTitle}
-            </h2>
-
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto">
-              {product.whyPoints.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-100 border border-gray-100 p-6 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition"
-                >
-                  <div className="text-2xl mb-3 text-primary">✨</div>
-
-                  <p className="text-gray-700 text-sm md:text-base font-medium">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+          <ImportanceGrid
+              title={product.importanceTitle}
+              description={product.importanceDescription}
+              items={product.importance || []}
+            />
 
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
@@ -172,31 +154,7 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Simplex refiner plodder machine for soap manufacturing"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
 
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
       <Section
         title={product.applicationTitle}
         className="bg-primary text-white"

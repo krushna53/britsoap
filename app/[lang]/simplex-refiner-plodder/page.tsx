@@ -125,7 +125,7 @@ export default function ProductPage() {
                   key={i}
                   className="bg-gray-100 border border-gray-100 p-6 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition"
                 >
-                  <div className="text-2xl mb-3 text-primary">✨</div>
+                  {/* <div className="text-2xl mb-3 text-primary">✨</div> */}
 
                   <p className="text-gray-700 text-sm md:text-base font-medium">
                     {item}
@@ -225,55 +225,51 @@ export default function ProductPage() {
             <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
               {product.applicationDescription}
             </p>
-
-            <div className="grid sm:grid-cols-2 gap-6">
-              {[
-                "Used in toilet and laundry soap production",
-                "Ensures uniform blending before refining",
-                "Supports continuous production lines",
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition"
-                >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/10">
-                    ✔
-                  </div>
-                  <p className="text-white/80">{item}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </Section>
       {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
+            {/* TITLE */}
             <h2 className="text-4xl font-bold text-primary text-center mb-16">
               {product.configurationsTitle}
             </h2>
 
+            {/* GRID */}
             <div className="grid md:grid-cols-2 gap-16">
               {product.configurations.map((config, i) => (
-                <div key={i} className="text-center">
-                  <Image
-                    src={config.image}
-                    alt="Simplex refiner plodder machine for soap manufacturing"
-                    loading="eager"
-                    width={400}
-                    height={300}
-                    className="rounded-2xl mx-auto mb-6 shadow-lg"
-                  />
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-xl transition"
+                >
+                  {/* IMAGE */}
+                  <div className="relative w-full h-[260px] flex items-center justify-center mb-6  overflow-hidden">
+                    <Image
+                      src={config.image}
+                      alt="Simplex refiner plodder machine for soap manufacturing"
+                      fill
+                      loading="eager"
+                      className="rounded-2xl object-contain"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  </div>
 
-                  <h3 className="text-xl font-bold text-primary mb-2">
+                  {/* TITLE */}
+                  <h3 className="text-2xl font-semibold text-primary mb-3">
                     {config.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-4 text-left">{config.desc}</p>
+                  {/* DESCRIPTION */}
+                  <p className="text-gray-600 mb-5 max-w-md">{config.desc}</p>
 
-                  <ul className="text-gray-700 space-y-1">
+                  {/* POINTS */}
+                  <ul className="text-gray-700 space-y-2 text-left w-full max-w-sm mx-auto">
                     {config.points.map((p, i) => (
-                      <li key={i}>• {p}</li>
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{p}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>

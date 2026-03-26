@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Image from "next/image";
 
 type NavLink = {
   name: string;
@@ -55,12 +56,15 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        
         <Link href={`/${lang}`} className="flex items-center gap-2">
-          <div className="w-1 h-6 bg-accent rounded-full" />
-          <span className="text-xl font-heading font-bold text-primary tracking-tight uppercase">
-            BritSoap
-          </span>
+          <Image
+            src="/logo.png"
+            alt="Brit Soap"
+            width={140}
+            height={40}
+            priority
+            className="object-contain"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

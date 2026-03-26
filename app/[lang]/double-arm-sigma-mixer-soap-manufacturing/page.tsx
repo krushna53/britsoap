@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
 export type Product = {
   slug: string;
   title: string;
@@ -87,31 +88,11 @@ export default function ProductPage() {
         </Section>
       )}
 
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Double arm sigma mixer mixing soap base"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
-
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        items={product.importance || []}
+      />
       {product.detailSection && (
         <section className="bg-gray-50 py-20">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
