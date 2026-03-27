@@ -175,88 +175,98 @@ export default function AboutClient({ data }: Props) {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* text */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
-              <motion.span
-                variants={fadeUp}
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4"
-              >
-                <span className="w-5 h-px bg-accent" />
-                {about.label}
-              </motion.span>
+     <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+  <div className="container">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* LEFT CONTENT */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={stagger}
+      >
+        {/* Label */}
+        <motion.div variants={fadeUp} className="mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold tracking-widest uppercase">
+            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            {about.label}
+          </span>
+        </motion.div>
 
-              <motion.h2
-                variants={fadeUp}
-                className="text-4xl font-extrabold text-primary leading-tight mb-6"
-              >
-                {about.heading}
-              </motion.h2>
+        {/* Heading */}
+        <motion.h2
+          variants={fadeUp}
+          className="text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6"
+        >
+          {about.heading}
+        </motion.h2>
 
-              <motion.div
-                variants={fadeUp}
-                className="space-y-4 text-lg text-muted-foreground leading-relaxed"
-              >
-                {about.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </motion.div>
+        {/* Paragraphs */}
+        <motion.div
+          variants={fadeUp}
+          className="space-y-5 text-lg text-muted-foreground leading-relaxed max-w-xl"
+        >
+          {about.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </motion.div>
 
-              <motion.p
-                variants={fadeUp}
-                className="mt-8 text-lg font-bold text-accent tracking-wide"
-              >
-                {about.tagline}
-              </motion.p>
-            </motion.div>
+        {/* Tagline */}
+        <motion.p
+          variants={fadeUp}
+          className="mt-8 text-lg font-semibold text-accent border-l-4 border-accent pl-4"
+        >
+          {about.tagline}
+        </motion.p>
+      </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 32 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative"
-            >
-              <div className="bg-primary rounded-2xl p-10 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-[0.07]"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle, var(--color-accent) 1.5px, transparent 1.5px)",
-                    backgroundSize: "20px 20px",
-                  }}
-                />
-                <div className="relative z-10 space-y-6">
-                  {about.highlights.map(({ head, sub }) => (
-                    <div key={head} className="flex items-start gap-4">
-                      <CheckCircle2
-                        size={18}
-                        className="text-accent mt-0.5 shrink-0"
-                      />
-                      <div>
-                        <p className="text-lg font-semibold text-primary-foreground">
-                          {head}
-                        </p>
-                        <p className="text-xs text-primary-foreground/55">
-                          {sub}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+      {/* RIGHT CONTENT */}
+<motion.div
+  initial={{ opacity: 0, x: 32 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+  className="relative lg:sticky lg:top-24 h-fit"
+>
+        {/* Glass Card */}
+        <div className="relative rounded-3xl p-8 bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl">
+          
+          {/* Glow Effect */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 blur-3xl rounded-full" />
+
+          {/* Highlights Grid */}
+          <div className="relative z-10 grid gap-6">
+            {about.highlights.map(({ head, sub }) => (
+              <div
+                key={head}
+                className="group flex items-start gap-4 p-4 rounded-xl hover:bg-accent/10 transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="p-2 rounded-lg bg-accent/15 group-hover:bg-accent text-accent group-hover:text-white transition">
+                  <CheckCircle2 size={18} />
+                </div>
+
+                {/* Text */}
+                <div>
+                  <p className="text-lg font-semibold text-primary">
+                    {head}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {sub}
+                  </p>
                 </div>
               </div>
-              <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/30 -z-10" />
-            </motion.div>
+            ))}
           </div>
         </div>
-      </section>
+
+        {/* Border Depth */}
+        <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-3xl border border-accent/20 -z-10" />
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       <section className="py-24 bg-surface">
         <div className="container">

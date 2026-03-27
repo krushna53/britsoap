@@ -40,9 +40,6 @@ const navLinks: NavLink[] = [
           category: "Mixing Equipment",
           items: [
             { name: "Double Sigma Mixer", path: "/double-arm-sigma-mixer-soap-manufacturing" },
-            { name: "High Speed Mixer", path: "/high-speed-mixer" },
-            { name: "Ribbon Blender", path: "/ribbon-blender" },
-            {name: "HSB Cutter", path:"/high-speed-soap-cutter-machine"}
           ],
         },
         {
@@ -57,17 +54,8 @@ const navLinks: NavLink[] = [
           category: "Finishing Line",
           items: [
             { name: "Soap Cutters", path: "/soap-cutters" },
-            { name: "Soap Presses", path: "/soap-presses" },
-            { name: "Laboratory Pilot Line", path: "/laboratory-pilot-line" },
-          ],
-        },
-        {
-          category: "Special Applications",
-          items: [
-            { name: "Syndet Bars", path: "/syndet" },
-            { name: "Solid Shampoo", path: "/solid-shampoo" },
-            { name: "Dishwashing Bar", path: "/dishwashing-bar" },
-            { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine"}
+            { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine"},
+            {name: "HSB Cutter", path:"/high-speed-soap-cutter-machine"}
           ],
         },
       ],
@@ -125,22 +113,9 @@ const Navbar = () => {
 
                   {/* Mega Menu Dropdown */}
                   <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[780px] bg-[#1e2a38] text-white shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
-                    {/* Search bar */}
-                    {link.megaMenu.searchable && (
-                      <div className="flex gap-3 p-4 border-b border-white/10">
-                        <button className="flex items-center gap-2 flex-1 px-4 py-2 bg-accent text-white text-xs font-semibold uppercase tracking-widest rounded">
-                          <Search size={14} />
-                          Search by Technology
-                        </button>
-                        <button className="flex items-center gap-2 flex-1 px-4 py-2 bg-accent text-white text-xs font-semibold uppercase tracking-widest rounded">
-                          <Search size={14} />
-                          Search by Final Result
-                        </button>
-                      </div>
-                    )}
 
                     {/* Columns */}
-                    <div className="grid grid-cols-4 gap-0 p-2">
+                    <div className="grid grid-cols-3 gap-0 p-2">
                       {link.megaMenu.columns.map((col, ci) => (
                         <div
                           key={ci}

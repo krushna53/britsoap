@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import RefinerIntro from "@/components/RefinerIntro";
 import ImportanceGrid from "@/components/ImportanceGrid";
+import ConfigSelector from "@/components/ConfigSelector";
 
 export type Product = {
   slug: string;
@@ -33,13 +34,18 @@ export type Product = {
   capacityDescription?: string;
   capacities?: string[];
 
+  configurations?: {
+    title: string;
+    desc: string;
+    points: string[];
+  }[];
+
   meta: {
     title: string;
     description: string;
     keywords: string[];
   };
 };
-
 export async function generateMetadata() {
   const product = productPages.find(
     (p) => p.slug === "av-pneumatic-soap-cutter-machine",
@@ -112,11 +118,12 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-          <ImportanceGrid
-              title={product.importanceTitle}
-              description={product.importanceDescription}
-              items={product.importance || []}
-            />
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        items={product.importance || []}
+        columns={3}
+      />
 
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
@@ -153,55 +160,23 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-
+     {product.configurations && product.configurations.length > 0 && (
+        <ConfigSelector configurations={product.configurations} />
+      )}
       <Section
         title={product.applicationTitle}
-        className="bg-primary text-white"
+        className=""
         center
       >
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+          <div className="bg-primary backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
+            <p className="text-white text-lg leading-relaxed mb-8 text-center">
               {product.applicationDescription}
             </p>
           </div>
         </div>
       </Section>
-      {product.configurations?.length && (
-        <section className="py-20 bg-gray-50">
-          <div className="container">
-            <h2 className="text-4xl font-bold text-primary text-center mb-16">
-              {product.configurationsTitle}
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-16">
-              {product.configurations.map((config, i) => (
-                <div key={i} className="text-center">
-                  {/* <Image
-                    src={config.image}
-                    alt="Simplex refiner plodder machine for soap manufacturing"
-                    width={400}
-                    height={300}
-                    className="rounded-2xl mx-auto mb-6 shadow-lg"
-                  /> */}
-
-                  <h3 className="text-xl font-bold text-primary mb-2">
-                    {config.title}
-                  </h3>
-
-                  <p className="text-gray-600 mb-4">{config.desc}</p>
-
-                  <ul className="text-gray-700 space-y-1">
-                    {config.points.map((p, i) => (
-                      <li key={i}>• {p}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )} 
+ 
 
       {product.ctaSection && (
         <CTASection

@@ -627,7 +627,7 @@ export const productPages = [
             },
             {
                 title: "Embossing Roller Configuration",
-                desc: "Twin Worm Duplex Vacuum Plodder The twin worm configuration is designed for challenging soap formulations, especially when the material is highly sticky, hard, or difficult to compress. Two intermeshing screws provide improved feeding, stronger compression, and better material movement through the plodder, ensuring stable extrusion even with demanding formulations. The twin worm design ensures improved material handling, better compression stability, and smoother extrusion under difficult processing conditions. Ideal for production of soap with sticky formulations, hard soap bases, high additive content soaps, or specialty soap formulations, and for high throughput production lines",
+                desc: "",
                 points: [
                     "Integrated embossing roller assembly",
                     "Allows simultaneous branding and cutting",
@@ -714,25 +714,30 @@ export const productPages = [
         detailSection: {
             title: "High-Speed Rotary Cutting for Industrial Soap Production",
 
-            paragraphs: [
+            intro:
                 "The HSB cutting unit consists of a high-speed rotary blade driven by a servo motor, specially designed to deliver clean and precise cuts  at high throughput rates. The machine is built to be flexible and compact in design and deliver a high output.  The cutting assembly, length detection unit, and electrical control panel are mounted on a robust base frame with wheels, enabling easy positioning and integration within the soap finishing line.A roller-driven encoder ensures accurate measurement of billet movement, allowing precise control of bar length during continuous extrusion. It is also integrated with advance electronic control system via a touchscreen PLC interface that allows the operator to:",
-                "* Set cutting length (datum length)",
-                "* Start or stop machine operation",
-                "* Select operating modes",
-                "* Monitor production parameters",
 
-                "Guides and cutting parameters can be adjusted to accommodate different bar sizes. The machine offers dual operating modes ",
-                "* Encoder Mode – cutting triggered by billet length measurement",
-                "* Proxy Mode – cutting triggered by sensors when embossing rollers are used",
-                "The HSB Cutter can be equipped with engraving or embossing rollers to imprint logos or brand names directly onto the extruded soap billet.",
-
-                "This allows soap bars to be branded before cutting, eliminating the need for a separate stamping process for laundry soaps. For very large scale productions, a twin lane cutter is available with a minimum gap of 450mm.",
+            features: [
+                "Set cutting length (datum length)",
+                "Start or stop machine operation",
+                "Select operating modes",
+                "Monitor production parameters",
             ],
 
-            images: [
-                "/assets/HSB-Cutter/soap-cutting-machine-india.png",
-            ]
+            extraText:
+                "Guides and cutting parameters can be adjusted to accommodate different bar sizes.",
+
+            modes: [
+                "Encoder Mode – cutting triggered by billet length measurement",
+                "Proxy Mode – cutting triggered by sensors when embossing rollers are used",
+            ],
+
+            conclusion:
+                "The HSB Cutter can be equipped with engraving or embossing rollers to imprint logos or brand names directly onto the extruded soap billet. This allows soap bars to be branded before cutting, eliminating the need for a separate stamping process for laundry soaps. For very large scale productions, a twin lane cutter is available with a minimum gap of 450mm.",
+
+            images: ["/assets/HSB-Cutter/soap-cutting-machine-india.png"],
         },
+
 
         // ✅ APPLICATION
         applicationTitle: "Application",

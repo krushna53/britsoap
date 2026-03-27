@@ -6,8 +6,9 @@ import Image from "next/image";
 import { productPages } from "@/data/productPages";
 import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
-import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
+import ConfigSelector from "@/components/ConfigSelector";
 
 export type Product = {
   slug: string;
@@ -33,13 +34,18 @@ export type Product = {
   capacityDescription?: string;
   capacities?: string[];
 
+  configurations?: {
+    title: string;
+    desc: string;
+    points: string[];
+  }[];
+
   meta: {
     title: string;
     description: string;
     keywords: string[];
   };
 };
-
 export async function generateMetadata() {
   const product = productPages.find(
     (p) => p.slug === "high-speed-soap-cutter-machine",
@@ -94,15 +100,15 @@ export default function ProductPage() {
                   <div className="w-full aspect-[4/3] overflow-hidden">
                     <Image
                       src={step.image}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
+                      alt={step.desc}
                       width={400}
                       height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
+
                   <div className="p-5">
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="text-gray-600 text-lg leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -112,122 +118,104 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.whyPoints?.length && (
-        <section className="py-20  text-center">
-          <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-14">
-              {product.whyTitle}
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        columns={4}
+        items={product.importance || []}
+      />
+
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container grid lg:grid-cols-2 gap-16 items-start">
+          {/* LEFT - IMAGE */}
+          <div className="lg:sticky top-24">
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src={product.detailSection.images?.[0] || ""}
+                alt="soap cutting machine"
+                width={800}
+                height={500}
+                className="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT - CONTENT */}
+          <div className="max-w-xl">
+            {/* LABEL */}
+            <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+              Machine Overview
+            </p>
+
+            {/* TITLE */}
+            <h2 className="text-4xl font-extrabold text-primary leading-tight mb-6">
+              {product.detailSection.title}
             </h2>
 
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
-              {product.whyPoints.map((item, i) => (
+            {/* INTRO */}
+            <p className="text-gray-600 leading-relaxed mb-8">
+              {product.detailSection.intro}
+            </p>
+
+            {/* FEATURES */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+              {product.detailSection.features?.map((item, i) => (
                 <div
                   key={i}
-                  className="bg-gray-100 border border-gray-100 p-6 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition"
+                  className="group flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
-                  {/* <div className="text-2xl mb-3 text-primary">✨</div> */}
+                  {/* ICON */}
+                  <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-accent text-white font-bold text-lg shrink-0">
+                    ✓
+                  </div>
 
-                  <p className="text-gray-700 text-sm md:text-base font-medium">
+                  {/* TEXT */}
+                  <p className="text-gray-800 font-medium leading-relaxed">
                     {item}
                   </p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-      )}
 
-      {product.detailSection && (
-        <section className="py-20 bg-gray-100">
-          <div className="container grid md:grid-cols-2 gap-20 items-center">
-            {/* LEFT */}
-            <div className="flex flex-col gap-6">
-              {/* MAIN IMAGE */}
-              {product.detailSection.images?.[0] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[0]}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
+            {/* EXTRA TEXT */}
+            <p className="text-gray-600 leading-relaxed mb-6">
+              {product.detailSection.extraText}
+            </p>
+
+            {/* MODES (SPECIAL HIGHLIGHT BLOCK) */}
+            <div className="bg-primary/5 border border-primary/10 rounded-2xl p-6 mb-8">
+              <h4 className="text-lg font-bold text-primary mb-4">
+                The machine offers dual operating modes 
+              </h4>
+
+              <div className="space-y-3">
+                {product.detailSection.modes?.map((mode, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-accent font-bold text-lg">•</span>
+                    <span className="text-gray-700">{mode}</span>
                   </div>
-                </div>
-              )}
-
-              {/* SECOND IMAGE */}
-              {product.detailSection.images?.[1] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[1]}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
+                ))}
+              </div>
             </div>
 
-            {/* RIGHT */}
-            <div className="max-w-xl space-y-6">
-              {product.detailSection.paragraphs?.map((p, i) => (
-                <p
-                  key={i}
-                  className="text-gray-700 leading-relaxed text-[16.5px]"
-                >
-                  {p}
-                </p>
-              ))}
-            </div>
+            {/* CONCLUSION */}
+            <p className="text-gray-700 leading-relaxed">
+              {product.detailSection.conclusion}
+            </p>
           </div>
-        </section>
-      )}
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Simplex refiner plodder machine for soap manufacturing"
-              width={500}
-              height={400}
-              loading="eager"
-              className="rounded-xl shadow-lg"
-            />
+        </div>
+      </section>
 
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
-      <Section
-        title={product.applicationTitle}
-        className="bg-primary text-white"
-        center
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+      <Section title={product.applicationTitle} className="" center>
+        <div className="">
+          <div className="bg-primary backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
+            <p className="text-white text-lg leading-relaxed mb-8 text-center">
               {product.applicationDescription}
             </p>
           </div>
         </div>
       </Section>
+
       {product.ctaSection && (
         <CTASection
           title={product.ctaSection.title}

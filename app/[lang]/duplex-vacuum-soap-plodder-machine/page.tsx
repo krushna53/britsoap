@@ -117,6 +117,7 @@ export default function ProductPage() {
   title={product.importanceTitle}
   description={product.importanceDescription}
   items={product.importance || []}
+  columns={3}
 />
 
       {product.detailSection && (
@@ -215,7 +216,7 @@ export default function ProductPage() {
         description="The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales."
         center
       >
-        <CapacityRange capacities={product.capacities} />
+        <CapacityRange capacities={product.capacities || []} />
       </Section>
       {product.ctaSection && (
         <CTASection
