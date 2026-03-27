@@ -40,7 +40,7 @@ const stagger = {
 };
 
 type Props = {
-  data: any; // you can type later properly
+  data: any;
 };
 
 export default function AboutClient({ data }: Props) {
@@ -64,7 +64,6 @@ export default function AboutClient({ data }: Props) {
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="max-w-3xl"
           >
             <motion.span
               variants={fadeUp}
@@ -114,128 +113,7 @@ export default function AboutClient({ data }: Props) {
           </div>
         </div>
       </section>
-
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* text */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
-              <motion.span
-                variants={fadeUp}
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4"
-              >
-                <span className="w-5 h-px bg-accent" />
-                {about.label}
-              </motion.span>
-
-              <motion.h2
-                variants={fadeUp}
-                className="text-4xl font-extrabold text-primary leading-tight mb-6"
-              >
-                {about.heading}
-              </motion.h2>
-
-              <motion.div
-                variants={fadeUp}
-                className="space-y-4 text-sm text-muted-foreground leading-relaxed"
-              >
-                {about.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </motion.div>
-
-              <motion.p
-                variants={fadeUp}
-                className="mt-8 text-sm font-bold text-accent tracking-wide"
-              >
-                {about.tagline}
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 32 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative"
-            >
-              <div className="bg-primary rounded-2xl p-10 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-[0.07]"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle, var(--color-accent) 1.5px, transparent 1.5px)",
-                    backgroundSize: "20px 20px",
-                  }}
-                />
-                <div className="relative z-10 space-y-6">
-                  {about.highlights.map(({ head, sub }) => (
-                    <div key={head} className="flex items-start gap-4">
-                      <CheckCircle2
-                        size={18}
-                        className="text-accent mt-0.5 shrink-0"
-                      />
-                      <div>
-                        <p className="text-sm font-semibold text-primary-foreground">
-                          {head}
-                        </p>
-                        <p className="text-xs text-primary-foreground/55">
-                          {sub}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/30 -z-10" />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-surface">
-        <div className="container">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">
-              <span className="w-5 h-px bg-accent" />
-              {whyUs.label}
-              <span className="w-5 h-px bg-accent" />
-            </span>
-            <h2 className="text-3xl font-extrabold text-primary">
-              {whyUs.label}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyUs.items.map(({ title, desc }, i) => (
-              <motion.div
-                key={title}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="group bg-background rounded-xl p-7 border border-border hover:border-accent/40 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-8 h-0.5 bg-accent mb-5 group-hover:w-12 transition-all duration-300" />
-                <h3 className="text-sm font-bold text-primary mb-2 leading-snug">
-                  {title}
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-primary overflow-hidden">
+      <section className="py-24 overflow-hidden">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -254,14 +132,14 @@ export default function AboutClient({ data }: Props) {
 
               <motion.h2
                 variants={fadeUp}
-                className="text-4xl font-extrabold text-primary-foreground leading-tight mb-6"
+                className="text-3xl font-extrabold text-primary mb-4"
               >
                 {globalReach.heading}
               </motion.h2>
 
               <motion.div
                 variants={fadeUp}
-                className="space-y-4 text-sm text-primary-foreground/65 leading-relaxed"
+                className="space-y-4 text-lg leading-relaxed"
               >
                 {globalReach.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -297,14 +175,133 @@ export default function AboutClient({ data }: Props) {
           </div>
         </div>
       </section>
+      <section className="py-24 bg-background">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* text */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={stagger}
+            >
+              <motion.span
+                variants={fadeUp}
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4"
+              >
+                <span className="w-5 h-px bg-accent" />
+                {about.label}
+              </motion.span>
+
+              <motion.h2
+                variants={fadeUp}
+                className="text-4xl font-extrabold text-primary leading-tight mb-6"
+              >
+                {about.heading}
+              </motion.h2>
+
+              <motion.div
+                variants={fadeUp}
+                className="space-y-4 text-lg text-muted-foreground leading-relaxed"
+              >
+                {about.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </motion.div>
+
+              <motion.p
+                variants={fadeUp}
+                className="mt-8 text-lg font-bold text-accent tracking-wide"
+              >
+                {about.tagline}
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 32 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="relative"
+            >
+              <div className="bg-primary rounded-2xl p-10 relative overflow-hidden">
+                <div
+                  className="absolute inset-0 opacity-[0.07]"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, var(--color-accent) 1.5px, transparent 1.5px)",
+                    backgroundSize: "20px 20px",
+                  }}
+                />
+                <div className="relative z-10 space-y-6">
+                  {about.highlights.map(({ head, sub }) => (
+                    <div key={head} className="flex items-start gap-4">
+                      <CheckCircle2
+                        size={18}
+                        className="text-accent mt-0.5 shrink-0"
+                      />
+                      <div>
+                        <p className="text-lg font-semibold text-primary-foreground">
+                          {head}
+                        </p>
+                        <p className="text-xs text-primary-foreground/55">
+                          {sub}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/30 -z-10" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-surface">
+        <div className="container">
+          <div className="text-center mb-16">
+            {/* <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">
+              <span className="w-5 h-px bg-accent" />
+              {whyUs.label}
+              <span className="w-5 h-px bg-accent" />
+            </span> */}
+            <h2 className="text-3xl font-extrabold text-primary">
+              {whyUs.label}
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyUs.items.map(({ title, desc }, i) => (
+              <motion.div
+                key={title}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="group bg-background rounded-xl p-7 border border-border hover:border-accent/40 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-8 h-0.5 bg-accent mb-5 group-hover:w-12 transition-all duration-300" />
+                <h3 className="text-lg font-bold text-primary mb-2 leading-snug">
+                  {title}
+                </h3>
+                <p className="text-[16px] text-muted-foreground leading-relaxed">
+                  {desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-24 bg-background">
         <div className="container">
-          <div className="max-w-2xl mb-16">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">
+          <div className="mb-16">
+            {/* <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">
               <span className="w-5 h-px bg-accent" />
               {services.label}
-            </span>
+            </span> */}
             <h2 className="text-4xl font-extrabold text-primary mb-4">
               {services.heading}
             </h2>
@@ -312,13 +309,13 @@ export default function AboutClient({ data }: Props) {
               {services.intro.map((p, i) => (
                 <p
                   key={i}
-                  className="text-sm text-muted-foreground leading-relaxed"
+                  className="text-lg text-muted-foreground leading-relaxed"
                 >
                   {p}
                 </p>
               ))}
             </div>
-            <p className="mt-5 text-sm font-bold text-primary tracking-wide">
+            <p className="mt-5 text-lg font-bold text-primary tracking-wide">
               {services.tagline}
             </p>
           </div>
@@ -341,10 +338,10 @@ export default function AboutClient({ data }: Props) {
                     <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                       {Icon && <Icon size={22} className="text-accent" />}
                     </div>
-                    <h3 className="text-base font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
+                    <h3 className="text-lg font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
                       {title}
                     </h3>
-                    <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/60 leading-relaxed transition-colors">
+                    <p className="text-[16px] text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
                       {desc}
                     </p>
                   </div>
@@ -352,39 +349,6 @@ export default function AboutClient({ data }: Props) {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-accent">
-        <div className="container text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-4xl font-extrabold text-accent-foreground mb-4"
-            >
-              {cta.heading}
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-accent-foreground/70 max-w-md mx-auto mb-10 text-sm leading-relaxed"
-            >
-              {cta.desc}
-            </motion.p>
-            <motion.div variants={fadeUp}>
-              <Link
-                href={cta.buttonHref}
-                className="inline-flex items-center gap-2 px-10 py-3.5 bg-accent-foreground text-accent font-bold rounded-lg hover:opacity-90 transition-opacity text-sm"
-              >
-                {cta.buttonText}
-                <ArrowRight size={16} />
-              </Link>
-            </motion.div>
-          </motion.div>
         </div>
       </section>
     </>

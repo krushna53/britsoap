@@ -17,7 +17,7 @@ export const productPages = [
         description:
             "Heavy-duty sigma blade mixer designed for uniform blending of soap base with fragrances, colors, and additives.",
 
-         video: "/assets/Mixer/double-arm-sigma-soap-mixer.mov",
+        video: "/assets/Mixer/double-arm-sigma-soap-mixer.mov",
 
         refinerIntro: {
             title: "High Performance Soap Mixing for Perfectly Blended Soap",
@@ -38,13 +38,13 @@ export const productPages = [
                 title: "Kneading & Mixing",
                 desc: "Double sigma arms rotate kneading and folding the soap mass ensuring uniform mixing.",
                 image: "/assets/Mixer/soap-mixing-process-industrial-mixer.jpg",
-                
+
             },
             {
                 title: "Uniform Distribution",
                 desc: "Finished soap discharges through the bottom door.",
                 image: "/assets/Mixer/mixed-soap-discharge-sigma-soap-mixer.png",
-                
+
             },
         ],
 
@@ -299,7 +299,7 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-       importanceTitle: "Why Milling is Important",
+        importanceTitle: "Why Milling is Important",
         importanceDescription:
             "Refining is the difference between an ordinary soap bar and a premium product. In soap manufacturing, the refining stage determines the final product quality. Without proper homogenising the product may look grainy or rough, or perfume and color will not be distributed evenly. The milling action of the machine ensures the finished soap to have:",
         importanceImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
@@ -479,6 +479,265 @@ export const productPages = [
         applicationTitle: "Application in Production",
         applicationDescription:
             "The Brit Soap duplex vacuum plodder is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines. The machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars . It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.",
+        applicationImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
+
+
+        // ✅ CONFIGURATIONS
+        configurationsTitle: "Available Configurations",
+        configurations: [
+            {
+                title: "Single Worm Duplex Vacuum Plodder",
+                desc: "Designed for standard soap formulations, the single worm plodder provides reliable compression, refining, and extrusion for most toilet and laundry soap production lines. This configuration offers efficient compression, smooth extrusion, and consistent billet density for most soap manufacturing applications. Ideal for  production of Standard toilet soap formulations, Laundry soap production, plants requiring stable, continuous extrusion",
+                points: [
+                    "We can also supply Triplex Plodders (single worm / twin worm) on request.",
+                ],
+                image: "/assets/DVP/duplex-vacuum-plodder.jpg",
+            },
+            {
+                title: "Twin Worm Duplex Vacuum Plodder",
+                desc: "Twin Worm Duplex Vacuum Plodder The twin worm configuration is designed for challenging soap formulations, especially when the material is highly sticky, hard, or difficult to compress. Two intermeshing screws provide improved feeding, stronger compression, and better material movement through the plodder, ensuring stable extrusion even with demanding formulations. The twin worm design ensures improved material handling, better compression stability, and smoother extrusion under difficult processing conditions. Ideal for production of soap with sticky formulations, hard soap bases, high additive content soaps, or specialty soap formulations, and for high throughput production lines",
+                points: [
+
+                ],
+                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
+            },
+        ],
+
+        // ✅ CAPACITY
+        capacityTitle: "Capacity Range",
+        capacityDescription:
+            "The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales.",
+        capacities: [
+            "100 kgs/hr",
+            "250 kgs/hr",
+            "500 kgs/hr",
+            "1 ton/hr",
+            "2 tons/hr",
+            "3 tons/hr",
+            "4 tons/hr",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered for Efficiency. Built for Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+
+    {
+        slug: "av-pneumatic-soap-cutter-machine",
+
+        // ✅ SEO
+        meta: {
+            title: "AV Pneumatic Soap Cutter Machine for Precision Soap Bar Cutting",
+            description:
+                "Automatic pneumatic soap cutter for accurate bar cutting and uniform length. Ideal for soap manufacturing lines. Speak to an engineer today.",
+            keywords: [
+                "vertical soap cutter",
+                "soap manufacturing cutter",
+                "soap finishing line cutter",
+                "industrial soap cutting machine",
+            ],
+        },
+
+        // ✅ HERO
+        title: "AV Pneumatic Cutter | Automatic Vertical Cutter for Soap Bar Production",
+        description:
+            "High-accuracy electro-pneumatic cutter designed to divide continuously extruded soap bars into uniform lengths with perfectly aligned vertical cuts.",
+        video: "/assets/AVC/soap-cutting-machine-automatic.mov",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "High-Accuracy Electro-Pneumatic Cutting for Modern Soap Finishing Lines",
+            paragraphs: [
+                "The Brit Soap Automatic Vertical (AV) Pneumatic Cutter is a precision cutting machine designed to cut continuously extruded soap bars into uniform tablet lengths.",
+                "Installed directly after the Duplex Vacuum Plodder and before downstream processing, the machine receives the continuous soap billet from the extruder and divides it into accurately sized bars ready for stamping or packaging.",
+                "Using encoder-controlled cutting synchronization, the cutter moves at the same velocity as the soap bar during the cutting cycle, ensuring clean, distortion-free vertical cuts and precise bar length control."
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Cutting Process",
+
+        processSteps: [
+            {
+                desc: "The soap exits continuously from the plodder nose cone and moves directly onto the AV Cutter conveyor, aligned with the extruder outlet.",
+                image: "/assets/HSB-Cutter/rotary-soap-cutter.png",
+            },
+            {
+                desc: "An encoder measures the linear speed and length in real time. Once the preset bar length is reached, the encoder sends a cutting signal.",
+                image: "/assets/AVC/soap-manufacturing-cutter.jpg",
+            },
+            {
+                desc: "The pneumatically driven knife travels at the same velocity as the moving soap bar, ensuring a perfect vertical cut without distortion. The cut bars proceed further for stamping, or packaging operations",
+                image: "/assets/AVC/soap-cutter-knife-blade.png",
+            }
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why is the AV Pneumatic Cutter a significant machine?",
+        importanceDescription:
+            "In continuous soap production, cutting accuracy is critical to final product quality. The machine’s synchronized cutting mechanism ensures clean, distortion-free edges, eliminating drag marks and uneven surfaces so every bar is perfectly prepared for downstream finishing.",
+        importanceImage: "/assets/AVC/automatic-soap-cutting-machine.png",
+        importance: [
+            "Consistent soap bar length",
+            "Clean vertical cuts",
+            "Accurate branding alignment",
+            "Smooth Line Integration",
+            "Reduced product rejection and waste"
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap Duplex Vacuum Plodder",
+
+            paragraphs: [
+                "The Brit Soap AV Pneumatic Cutter is designed for precision, durability, and seamless integration into modern soap finishing lines. Placed after the Duplex Vacuum Plodder, the machine’s compact design with an integrated conveyor enables smooth billet transfer from the plodder and easy installation in existing setups. The machine offers high operational flexibility with multiple cutting modes and real-time length adjustment, supported by an electronic encoder for accurate measurement. The electro-pneumatic cutting system delivers clean, consistent vertical cuts, while features like adjustable settings and mobility enhance usability across different production environments. An optional embossing assembly allows simultaneous branding and cutting, simplifying the process—especially for laundry soap production.",
+            ],
+
+            images: [
+                "/assets/AVC/automatic-soap-cutting-machine.png",
+                "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Applications",
+        applicationDescription:
+            "The Brit Soap AV Pneumatic Cutter is designed for reliable performance across a wide range of soap production lines. Installed after the plodder, it divides the continuous soap billet into uniform bars with clean vertical cuts, ensuring consistency before downstream processes such as stamping or packaging. It is widely used for the production of toilet soaps, laundry soaps, and synthetic detergent bars.",
+        applicationImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
+
+
+        // ✅ CONFIGURATIONS
+        configurationsTitle: "Configurations of the Machine",
+        configurationsDec: "To suit different production requirements, the AV Pneumatic Cutter is available in different configurations. Manufacturers can choose the AV Pneumatic Cutter with or without the embossing section, allowing the machine to be tailored for both toilet soap and laundry soap production.",
+        configurations: [
+            {
+                title: "Standard Cutting Configuration ",
+                desc: "",
+                points: [
+                    "Designed for precise soap bar cutting",
+                    "Suitable for lines where branding is done later through stamping machines",
+                    "Ideal for toilet soap production"
+                ],
+                image: "/assets/DVP/duplex-vacuum-plodder.jpg",
+            },
+            {
+                title: "Embossing Roller Configuration",
+                desc: "Twin Worm Duplex Vacuum Plodder The twin worm configuration is designed for challenging soap formulations, especially when the material is highly sticky, hard, or difficult to compress. Two intermeshing screws provide improved feeding, stronger compression, and better material movement through the plodder, ensuring stable extrusion even with demanding formulations. The twin worm design ensures improved material handling, better compression stability, and smoother extrusion under difficult processing conditions. Ideal for production of soap with sticky formulations, hard soap bases, high additive content soaps, or specialty soap formulations, and for high throughput production lines",
+                points: [
+                    "Integrated embossing roller assembly",
+                    "Allows simultaneous branding and cutting",
+                    "Ensures accurate logo alignment on the soap bar",
+                    "Eliminates the need for a separate stamping process"
+                ],
+                image: "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg",
+            },
+        ],
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered for Efficiency. Built for Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+
+    {
+        slug: "high-speed-soap-cutter-machine",
+
+        // ✅ SEO
+        meta: {
+            title: "High Speed Soap Cutter Machine",
+            description:
+                "High-speed rotary soap cutter engineered with European design standards. Accurate cutting for toilet, laundry & hotel soaps. Reliable & cost-effective.",
+            keywords: [
+                "soap cutter for soap manufacturing line",
+                "detergent bar cutting machine",
+                "soap finishing line cutter",
+                "continuous soap cutting machine",
+                "plodder line soap cutter"
+            ],
+        },
+
+        // ✅ HERO
+        title: "HSB Cutter | High Speed Rotary Soap Bar Cutting",
+        description:
+            "High-speed cutting system designed for continuous soap bar production lines, delivering uniform bar length and efficient downstream processing.",
+        video: "/assets/HSB-Cutter/high-speed-soap-cutting-machine-india.mov",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "Engineered for Reliable High-Capacity Soap Finishing Lines",
+            paragraphs: [
+                "The Brit Soap HSB Cutter is a high-speed rotary cutting machine designed for cutting toilet soaps, laundry soaps, detergent bars, and deodorising blocks extruded from the Duplex Vacuum Plodder.",
+                "Positioned directly after the plodder extruder, the machine receives the continuous soap bar and cuts it into bars of predefined length before the next stage of the finishing line.",
+                "Thanks to its precision rotary blade mechanism and advanced electronic control system, the HSB Cutter delivers clean, orthogonal cuts even at high production speeds, ensuring consistent bar dimensions and smooth downstream processing."
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Soap Extrusion Process",
+
+        processSteps: [
+            {
+                desc: "The soap billet exits continuously from the plodder nose cone and moves directly onto the HSB Cutter conveyor, aligned with the extruder outlet.",
+                image: "/assets/HSB-Cutter/rotary-soap-cutter.png",
+            },
+            {
+                desc: "An encoder measures the billet speed and length in real time. Once the preset bar length is reached, the encoder sends a cutting signal.",
+                image: "/assets/HSB-Cutter/industrial-soap-cutter.jpg",
+            },
+            {
+                desc: "The rotary blade assembly, driven by a high-speed servo motor, rotates through the billet and produces a precise cut.",
+                image: "/assets/HSB-Cutter/soap-cutter-high-speed-knife.png",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why the HSB Cutter",
+        importanceDescription:
+            "In modern soap manufacturing, maintaining consistent bar dimensions at high production speeds is essential. Its robust design ensures continuous operation with minimal maintenance, making it suitable for industrial soap manufacturing environments.",
+        importanceImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
+        importance: [
+            "Precise and repeatable cutting accuracy",
+            "Stable performance in high-capacity production lines",
+            "Smooth integration with automated finishing equipment",
+            "Reduced manual handling and improved production efficiency",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "High-Speed Rotary Cutting for Industrial Soap Production",
+
+            paragraphs: [
+                "The HSB cutting unit consists of a high-speed rotary blade driven by a servo motor, specially designed to deliver clean and precise cuts  at high throughput rates. The machine is built to be flexible and compact in design and deliver a high output.  The cutting assembly, length detection unit, and electrical control panel are mounted on a robust base frame with wheels, enabling easy positioning and integration within the soap finishing line.A roller-driven encoder ensures accurate measurement of billet movement, allowing precise control of bar length during continuous extrusion. It is also integrated with advance electronic control system via a touchscreen PLC interface that allows the operator to:",
+                "* Set cutting length (datum length)",
+                "* Start or stop machine operation",
+                "* Select operating modes",
+                "* Monitor production parameters",
+
+                "Guides and cutting parameters can be adjusted to accommodate different bar sizes. The machine offers dual operating modes ",
+                "* Encoder Mode – cutting triggered by billet length measurement",
+                "* Proxy Mode – cutting triggered by sensors when embossing rollers are used",
+                "The HSB Cutter can be equipped with engraving or embossing rollers to imprint logos or brand names directly onto the extruded soap billet.",
+
+                "This allows soap bars to be branded before cutting, eliminating the need for a separate stamping process for laundry soaps. For very large scale productions, a twin lane cutter is available with a minimum gap of 450mm.",
+            ],
+
+            images: [
+                "/assets/HSB-Cutter/soap-cutting-machine-india.png",
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application",
+        applicationDescription:
+            "The HSB Cutter is suitable for cutting a wide range of extruded products. Its high-speed rotary cutting system ensures precise bar length and clean cuts, making it ideal for continuous soap finishing lines. The high speed rotary action makes it an ideal cutting machine for large scale soap production plants and is suitable for manufacturing of toilet soap bars, laundry soaps, detergent bars and syndet soaps.",
         applicationImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
 
 
