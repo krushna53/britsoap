@@ -600,10 +600,20 @@ export const productPages = [
 
             images: [
                 "/assets/AVC/automatic-soap-cutting-machine.png",
-                "/assets/DVP/duplex-vacuum-soap-plodder-machine.jpg"
             ]
         },
-
+        features: [
+            "Real-time adjustment of soap bar length without stoppage",
+            "Electronic encoder for precise length measurement",
+            "Electro-pneumatic vertical cutting for clean, accurate cuts",
+            "Adjustable cutting height for different bar sizes",
+            "Belt conveyor with variable speed control",
+            "Compact design with integrated conveyor for easy line integration",
+            "AISI 304 contact parts for durability and hygiene",
+            "Anti-vibration mounts for stable operation",
+            "Industrial mobility wheels with locking mechanism",
+            "Optional embossing assembly for branding",
+        ],
         // ✅ APPLICATION
         applicationTitle: "Applications",
         applicationDescription:

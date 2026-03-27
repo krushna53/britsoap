@@ -160,14 +160,44 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-     {product.configurations && product.configurations.length > 0 && (
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container">
+          <div className="bg-white rounded-3xl p-10 md:p-14 shadow-lg border border-gray-100">
+            {/* HEADING */}
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+                Key Features
+              </h3>
+              {/* <p className="text-gray-600 max-w-2xl mx-auto">
+                Engineered for precision, reliability, and seamless production
+                efficiency
+              </p> */}
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {product.features?.map((item, i) => (
+                <div
+                  key={i}
+                  className="group flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:border-accent/40 hover:shadow-md transition-all duration-300"
+                >
+                  {/* ICON */}
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-accent/10 text-accent font-bold shrink-0">
+                    ✓
+                  </div>
+
+                  {/* TEXT */}
+                  <p className="text-gray-800 font-medium leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {product.configurations && product.configurations.length > 0 && (
         <ConfigSelector configurations={product.configurations} />
       )}
-      <Section
-        title={product.applicationTitle}
-        className=""
-        center
-      >
+      <Section title={product.applicationTitle} className="" center>
         <div className="max-w-4xl mx-auto">
           <div className="bg-primary backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
             <p className="text-white text-lg leading-relaxed mb-8 text-center">
@@ -176,7 +206,6 @@ export default function ProductPage() {
           </div>
         </div>
       </Section>
- 
 
       {product.ctaSection && (
         <CTASection
