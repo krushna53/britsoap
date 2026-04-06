@@ -79,7 +79,7 @@ export default function ConfigSelector({ configurations }: Props) {
                     ✓
                   </span>
 
-                  <span className="text-gray-700 text-sm leading-relaxed">
+                  <span className="text-gray-700 text-lg leading-relaxed">
                     {p}
                   </span>
                 </div>

@@ -70,11 +70,11 @@ export default function ServicesClient({ services }: Props) {
                     <Icon size={20} className="text-primary-foreground" />
                   </div>
 
-                  <h3 className="text-base font-semibold text-primary mb-2">
+                  <h3 className="text-xl font-semibold text-primary mb-2">
                     {item.title}
                   </h3>
 
-                  <div className="text-xs text-muted-foreground leading-relaxed">
+                  <div className="text-lg text-muted-foreground leading-relaxed">
                     {item.description &&
                       documentToReactComponents(item.description)}
                   </div>
@@ -119,10 +119,10 @@ export default function ServicesClient({ services }: Props) {
                 <div className="text-4xl font-bold text-accent mb-3">
                   {item.step}
                 </div>
-                <h3 className="text-base font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-primary mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   {item.desc}
                 </p>
               </motion.div>
@@ -137,7 +137,7 @@ export default function ServicesClient({ services }: Props) {
           <h2 className="text-3xl font-bold text-primary-foreground mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-primary-foreground/60 max-w-md mx-auto mb-8 text-sm">
+          <p className="text-primary-foreground/60 max-w-md mx-auto mb-8 text-lg">
             Our engineering team is ready to design a solution for your specific requirements.
           </p>
           <Link

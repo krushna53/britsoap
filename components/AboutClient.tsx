@@ -197,7 +197,7 @@ export default function AboutClient({ data }: Props) {
         {/* Heading */}
         <motion.h2
           variants={fadeUp}
-          className="text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6"
+          className="text-2xl lg:text-3xl font-extrabold text-primary leading-tight mb-6"
         >
           {about.heading}
         </motion.h2>
@@ -293,10 +293,10 @@ export default function AboutClient({ data }: Props) {
                 className="group bg-background rounded-xl p-7 border border-border hover:border-accent/40 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-8 h-0.5 bg-accent mb-5 group-hover:w-12 transition-all duration-300" />
-                <h3 className="text-lg font-bold text-primary mb-2 leading-snug">
+                <h3 className="text-xl font-bold text-primary mb-2 leading-snug">
                   {title}
                 </h3>
-                <p className="text-[16px] text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   {desc}
                 </p>
               </motion.div>
@@ -312,7 +312,7 @@ export default function AboutClient({ data }: Props) {
               <span className="w-5 h-px bg-accent" />
               {services.label}
             </span> */}
-            <h2 className="text-4xl font-extrabold text-primary mb-4">
+            <h2 className="text-4xl font-extrabold text-primary mb-4 text-center">
               {services.heading}
             </h2>
             <div className="space-y-3">
@@ -348,10 +348,10 @@ export default function AboutClient({ data }: Props) {
                     <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                       {Icon && <Icon size={22} className="text-accent" />}
                     </div>
-                    <h3 className="text-lg font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
+                    <h3 className="text-xl font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
                       {title}
                     </h3>
-                    <p className="text-[16px] text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
+                    <p className="text-lg text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
                       {desc}
                     </p>
                   </div>

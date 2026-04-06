@@ -40,11 +40,11 @@ export default function ServicesPreview({ services }: Props) {
               >
                 <Icon size={28} className="text-primary mb-4" />
 
-                <h3 className="text-base font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-primary mb-2">
                   {service.title}
                 </h3>
 
-                <div className="text-sm text-muted-foreground leading-relaxed">
+                <div className="text-lg text-muted-foreground leading-relaxed">
                   {typeof service.description === "string"
                     ? service.description
                     : documentToReactComponents(service.description)}

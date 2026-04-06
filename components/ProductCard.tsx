@@ -19,7 +19,7 @@ export default function ProductCard({ title, description, image }: Props) {
         />
       </div>
 
-      <p className="text-sm leading-relaxed">{description}</p>
+      <p className="text-lg leading-relaxed">{description}</p>
     </div>
   );
 }
