@@ -13,7 +13,7 @@ export const productPages = [
             ],
         },
 
-        title: "Double Sigma Mixer | Soap Mixing Machine",
+        title: "Double Sigma Mixer Soap Mixing Machine",
         description:
             "Heavy-duty sigma blade mixer designed for uniform blending of soap base with fragrances, colors, and additives.",
 
@@ -125,7 +125,7 @@ export const productPages = [
         },
 
         // ✅ HERO
-        title: "Soap Refiner Plodder | Industrial Soap Plodder Machine",
+        title: "Soap Refiner Plodder Industrial Soap Plodder Machine",
         description:
             "High performance refining and noodling machine used in the soap finishing line to improve the texture, consistency and production quality",
 
@@ -264,7 +264,7 @@ export const productPages = [
         },
 
         // ✅ HERO
-        title: "Triple Roll Mill | Soap Milling Machine for Soap Manufacturing",
+        title: "Triple Roll Mill Soap Milling Machine for Soap Manufacturing",
         description:
             "Robust machine designed for refining and homogenizing soap mass to achieve smooth texture and uniform incorporation of colours, fragrances, and additives.",
 
@@ -403,7 +403,7 @@ export const productPages = [
         },
 
         // ✅ HERO
-        title: "Duplex Vacuum Plodder | Extruder for Soap Manufacturing",
+        title: "Duplex Vacuum Plodder Extruder for Soap Manufacturing",
         description:
             "Heavy-duty duplex vacuum plodder engineered for final refining, vacuum extraction, and extrusion of soap billets.Delivers dense, homogeneous soap with smooth texture and superior bar quality.",
         video: "/assets/DVP/duplex-vacuum-plodder-video.mp4",
