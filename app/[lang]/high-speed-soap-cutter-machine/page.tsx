@@ -87,7 +87,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
               {product.processDescription}
             </p>
 
@@ -153,7 +153,7 @@ export default function ProductPage() {
             </h2>
 
             {/* INTRO */}
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
               {product.detailSection.intro}
             </p>
 
@@ -178,7 +178,7 @@ export default function ProductPage() {
             </div>
 
             {/* EXTRA TEXT */}
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-gray-600 leading-relaxed mb-6 text-lg">
               {product.detailSection.extraText}
             </p>
 
@@ -199,7 +199,7 @@ export default function ProductPage() {
             </div>
 
             {/* CONCLUSION */}
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed text-lg">
               {product.detailSection.conclusion}
             </p>
           </div>
@@ -208,7 +208,7 @@ export default function ProductPage() {
 
       <Section title={product.applicationTitle} className="" center>
         <div className="">
-          <div className="bg-primary backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
+          <div className=" rounded-2xl p-8 md:p-10 ">
             <p className="text-white text-lg leading-relaxed mb-8 text-center">
               {product.applicationDescription}
             </p>

@@ -8,18 +8,19 @@ type Props = {
 
 export default function ProductCard({ title, description, image }: Props) {
   return (
-    <div className="bg-[#0d2c8d] rounded-[40px] p-6 text-center text-white shadow-lg">
-      <div className="bg-white rounded-[30px] p-4 mb-4">
+    <div className="bg-white rounded-xl shadow-md  flex items-center text-center hover:shadow-xl transition gap-2">
+      <div className="w-full w-[40%] h-[260px] overflow-hidden  ">
         <Image
           src={image}
           alt={title}
           width={400}
           height={300}
-          className="mx-auto object-contain"
+          className="w-full h-full object-cover rounded-l-xl"
         />
       </div>
-
-      <p className="text-sm leading-relaxed">{description}</p>
+      <div className="text-left">
+        <p className="text-gray-600 mb-5 max-w-md">{description}</p>
+      </div>
     </div>
   );
 }

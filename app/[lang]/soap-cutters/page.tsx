@@ -22,12 +22,12 @@ export default function SoapCuttersPage() {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h1 className="text-3xl font-semibold text-blue-900 mb-6">
+          <h1 className="text-3xl font-semibold text-blue-900 mb-6 text-left">
             Automatic Soap Cutters for Consistent Soap Manufacturing
           </h1>
 
           {/* Description */}
-          <div className="mx-auto text-gray-700 mb-12 leading-relaxed">
+          <div className="mx-auto text-gray-700 mb-12 leading-relaxed text-lg text-left">
             <p>
               Brit Soap offers two advanced models of automatic soap cutters,
               engineered for consistent performance across different production

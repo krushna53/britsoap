@@ -144,8 +144,8 @@ export default function ProductPage() {
         center
       >
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+          <div className=" rounded-2xl p-8 md:p-10">
+            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
               {product.applicationDescription}
             </p>
           </div>

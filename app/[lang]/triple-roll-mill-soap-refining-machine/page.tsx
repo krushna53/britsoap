@@ -82,7 +82,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
               {product.processDescription}
             </p>
 
@@ -103,7 +103,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="text-gray-600 text-lg leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -161,8 +161,8 @@ export default function ProductPage() {
         center
       >
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+          <div className=" rounded-2xl p-8 md:p-10">
+            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
               {product.applicationDescription}
             </p>
           </div>

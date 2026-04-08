@@ -81,7 +81,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
               {product.processDescription}
             </p>
 
@@ -102,7 +102,7 @@ export default function ProductPage() {
                     />
                   </div>
                   <div className="p-5">
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="text-gray-600 text-lg leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -127,7 +127,7 @@ export default function ProductPage() {
                 >
                   {/* <div className="text-2xl mb-3 text-primary">✨</div> */}
 
-                  <p className="text-gray-700 text-sm md:text-base font-medium">
+                  <p className="text-gray-700 text-lg md:text-base font-medium">
                     {item}
                   </p>
                 </div>
@@ -221,8 +221,8 @@ export default function ProductPage() {
         center
       >
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+          <div className=" rounded-2xl p-8 md:p-10">
+            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
               {product.applicationDescription}
             </p>
           </div>
@@ -241,37 +241,38 @@ export default function ProductPage() {
               {product.configurations.map((config, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center hover:shadow-xl transition"
+                  className="bg-white rounded-xl shadow-md  flex items-center text-center hover:shadow-xl transition gap-2"
                 >
                   {/* IMAGE */}
-                  <div className="relative w-full h-[260px] flex items-center justify-center mb-6  overflow-hidden">
+                  <div className="w-full w-[40%] h-[260px] overflow-hidden  ">
                     <Image
                       src={config.image}
                       alt="Simplex refiner plodder machine for soap manufacturing"
-                      fill
                       loading="eager"
-                      className="rounded-2xl object-contain"
-                      sizes="(max-width: 768px) 100vw, 400px"
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover rounded-l-xl"
                     />
                   </div>
+                  <div className="text-left">
+                    {/* TITLE */}
+                    <h3 className="text-2xl font-semibold text-primary mb-3">
+                      {config.title}
+                    </h3>
 
-                  {/* TITLE */}
-                  <h3 className="text-2xl font-semibold text-primary mb-3">
-                    {config.title}
-                  </h3>
+                    {/* DESCRIPTION */}
+                    <p className="text-gray-600 mb-5 max-w-md">{config.desc}</p>
 
-                  {/* DESCRIPTION */}
-                  <p className="text-gray-600 mb-5 max-w-md">{config.desc}</p>
-
-                  {/* POINTS */}
-                  <ul className="text-gray-700 space-y-2 text-left w-full max-w-sm mx-auto">
-                    {config.points.map((p, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-primary mt-1">•</span>
-                        <span>{p}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    {/* POINTS */}
+                    <ul className="text-gray-700 space-y-2 text-left w-full max-w-sm mx-auto">
+                      {config.points.map((p, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{p}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               ))}
             </div>
