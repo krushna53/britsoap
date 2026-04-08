@@ -244,7 +244,7 @@ export default function ProductPage() {
                   className="bg-white rounded-xl shadow-md  flex items-center text-center hover:shadow-xl transition gap-2"
                 >
                   {/* IMAGE */}
-                  <div className="w-full w-[40%] h-[260px] overflow-hidden  ">
+                  <div className="w-full w-[40%] h-[260px] overflow-hidden">
                     <Image
                       src={config.image}
                       alt="Simplex refiner plodder machine for soap manufacturing"
@@ -254,7 +254,7 @@ export default function ProductPage() {
                       className="w-full h-full object-cover rounded-l-xl"
                     />
                   </div>
-                  <div className="text-left">
+                  <div className="text-left pr-[15px]">
                     {/* TITLE */}
                     <h3 className="text-2xl font-semibold text-primary mb-3">
                       {config.title}
@@ -266,8 +266,8 @@ export default function ProductPage() {
                     {/* POINTS */}
                     <ul className="text-gray-700 space-y-2 text-left w-full max-w-sm mx-auto">
                       {config.points.map((p, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
+                        <li key={i} className="flex items-center gap-2">
+                          <span className="text-primary">•</span>
                           <span>{p}</span>
                         </li>
                       ))}

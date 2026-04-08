@@ -152,7 +152,8 @@ export const productPages = [
             },
             {
                 desc: "The material then passes through filter screens to remove impurities and hard particles.",
-                image: "/assets/RefinerPlodder/single worm-soap-refiner-plodder.png",
+                // image: "/assets/RefinerPlodder/single worm-soap-refiner-plodder.png",
+                image: "/assets/RefinerPlodder/product-not-avilable.jpg",
             },
             {
                 desc: "The refined soap is then extruded through a stainless steel noodling plate, producing uniform refined noodles.",
