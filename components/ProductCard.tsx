@@ -19,7 +19,7 @@ export default function ProductCard({ title, description, image }: Props) {
         />
       </div>
       <div className="text-left">
-        <p className="text-gray-600 mb-5 max-w-md">{description}</p>
+        <p className="text-gray-600 mb-5 max-w-md p-[15px] ">{description}dd</p>
       </div>
     </div>
   );
