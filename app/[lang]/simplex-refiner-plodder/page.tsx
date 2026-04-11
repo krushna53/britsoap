@@ -217,13 +217,15 @@ export default function ProductPage() {
       )}
 
       <div className="bg-primary text-white py-20">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center">
-            {product.applicationTitle}
-          </h2>
-          <p className="text-white/80 text-lg md:text-xl leading-relaxed mt-6 text-left">
-            {product.applicationDescription}
-          </p>
+        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+          {product.applicationTitle}
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          <div className=" rounded-2xl p-8 md:p-10">
+            <p className="text-white/80 text-lg leading-relaxed text-left">
+              {product.applicationDescription}
+            </p>
+          </div>
         </div>
       </div>
       {product.configurations?.length && (
