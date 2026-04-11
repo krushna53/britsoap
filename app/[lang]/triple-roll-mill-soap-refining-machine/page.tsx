@@ -113,11 +113,11 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-          <ImportanceGrid
-              title={product.importanceTitle}
-              description={product.importanceDescription}
-              items={product.importance || []}
-            />
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        items={product.importance || []}
+      />
 
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
@@ -155,19 +155,17 @@ export default function ProductPage() {
         </section>
       )}
 
-      <Section
-        title={product.applicationTitle}
-        className="bg-primary text-white"
-        center
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className=" rounded-2xl p-8 md:p-10">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
-              {product.applicationDescription}
-            </p>
-          </div>
+      <div className="bg-primary text-white py-20">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+          {product.applicationTitle}
+        </h2>
+
+        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
+          <p className="text-white/80 text-lg leading-relaxed text-left">
+            {product.applicationDescription}
+          </p>
         </div>
-      </Section>
+      </div>
       {/* {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">

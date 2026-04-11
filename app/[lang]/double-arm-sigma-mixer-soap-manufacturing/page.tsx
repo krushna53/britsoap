@@ -138,7 +138,7 @@ export default function ProductPage() {
         </section>
       )}
 
-      <Section
+      {/* <Section
         title={product.applicationTitle}
         className="bg-primary text-white"
         center
@@ -150,7 +150,18 @@ export default function ProductPage() {
             </p>
           </div>
         </div>
-      </Section>
+      </Section> */}
+      <div className="bg-primary text-white py-20">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+          {product.applicationTitle}
+        </h2>
+
+        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
+          <p className="text-white/80 text-lg leading-relaxed text-left">
+            {product.applicationDescription}
+          </p>
+        </div>
+      </div>
       <Section
         title="Capacity Range"
         description="The Brit Soap soap mixers are available in a wide range of production capacities to suit different manufacturing scales."

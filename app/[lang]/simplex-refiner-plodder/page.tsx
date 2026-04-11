@@ -220,12 +220,11 @@ export default function ProductPage() {
         <h2 className="text-3xl md:text-4xl font-semibold text-center">
           {product.applicationTitle}
         </h2>
-        <div className="max-w-4xl mx-auto">
-          <div className=" rounded-2xl pt-8">
-            <p className="text-white/80 text-lg leading-relaxed text-left">
-              {product.applicationDescription}
-            </p>
-          </div>
+
+        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
+          <p className="text-white/80 text-lg leading-relaxed text-left">
+            {product.applicationDescription}
+          </p>
         </div>
       </div>
       {product.configurations?.length && (
