@@ -237,11 +237,11 @@ export default function ProductPage() {
             </h2>
 
             {/* GRID */}
-            <div className="grid md:grid-cols-2 gap-16">
+            <div className="grid md:grid-cols-2 gap-16 ">
               {product.configurations.map((config, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl shadow-md  flex items-center text-center hover:shadow-xl transition gap-2"
+                  className="bg-white rounded-xl shadow-md flex  flex-col md:flex-row items-center text-center hover:shadow-xl transition gap-2"
                 >
                   {/* IMAGE */}
                   <div className="w-full w-[40%] h-[260px] overflow-hidden">
@@ -254,10 +254,10 @@ export default function ProductPage() {
                       className="w-full h-full object-cover rounded-l-xl"
                     />
                   </div>
-                  <div className="text-left pr-[15px]">
+                  <div className="text-left pr-[15px] md-p-[15px]">
                     {/* TITLE */}
                     <h3 className="text-2xl font-semibold text-primary mb-3">
-                      {config.title}
+                      {config.title}ddd
                     </h3>
 
                     {/* DESCRIPTION */}
