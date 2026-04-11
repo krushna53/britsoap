@@ -257,7 +257,7 @@ export default function ProductPage() {
                   <div className="text-left pr-[15px] md-p-[15px]">
                     {/* TITLE */}
                     <h3 className="text-2xl font-semibold text-primary mb-3">
-                      {config.title}ddd
+                      {config.title}
                     </h3>
 
                     {/* DESCRIPTION */}
