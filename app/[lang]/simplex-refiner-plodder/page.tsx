@@ -221,7 +221,7 @@ export default function ProductPage() {
           {product.applicationTitle}
         </h2>
         <div className="max-w-4xl mx-auto">
-          <div className=" rounded-2xl p-8 md:p-10">
+          <div className=" rounded-2xl pt-8">
             <p className="text-white/80 text-lg leading-relaxed text-left">
               {product.applicationDescription}
             </p>
