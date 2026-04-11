@@ -231,7 +231,7 @@ export default function ProductPage() {
       {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
-            {/* TITLE */}
+            {/* TITLE H2 */}
             <h2 className="text-4xl font-bold text-primary text-center mb-16">
               {product.configurationsTitle}
             </h2>
