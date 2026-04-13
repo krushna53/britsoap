@@ -234,7 +234,7 @@ export default function ProductPage() {
           <div className="container">
             {/* TITLE H2 */}
             <h2 className="text-4xl font-bold text-primary text-center mb-16 text-left">
-              {product.configurationsTitle}aaabb
+              {product.configurationsTitle}
             </h2>
 
             {/* GRID */}
