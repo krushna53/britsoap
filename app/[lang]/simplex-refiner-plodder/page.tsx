@@ -216,13 +216,15 @@ export default function ProductPage() {
         </Section>
       )}
 
-      <div className="bg-primary text-white py-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
+        {/* TITLE */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
           {product.applicationTitle}
         </h2>
 
-        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
-          <p className="text-white/80 text-lg leading-relaxed text-left">
+        {/* CONTENT */}
+        <div className="max-w-3xl mx-auto pt-6 md:pt-8">
+          <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed text-center">
             {product.applicationDescription}
           </p>
         </div>
@@ -231,46 +233,54 @@ export default function ProductPage() {
         <section className="py-20 bg-gray-50">
           <div className="container">
             {/* TITLE H2 */}
-            <h2 className="text-4xl font-bold text-primary text-center mb-16">
-              {product.configurationsTitle}
+            <h2 className="text-4xl font-bold text-primary text-center mb-16 text-left">
+              {product.configurationsTitle}aaabb
             </h2>
 
             {/* GRID */}
-            <div className="grid md:grid-cols-2 gap-16 ">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
               {product.configurations.map((config, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl shadow-md flex  flex-col md:flex-row items-center text-center hover:shadow-xl transition gap-2"
+                  className="bg-white rounded-xl shadow-md flex flex-col md:flex-row overflow-hidden hover:shadow-xl transition"
                 >
                   {/* IMAGE */}
-                  <div className="w-full w-[40%] h-[260px] overflow-hidden">
+                  <div className="w-full md:w-1/2 h-[220px] md:h-[260px]">
                     <Image
                       src={config.image}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
+                      alt="machine"
                       width={400}
                       height={400}
-                      className="w-full h-full object-cover rounded-l-xl"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="text-left pr-[15px] md-p-[15px]">
-                    {/* TITLE */}
-                    <h3 className="text-2xl font-semibold text-primary mb-3">
-                      {config.title}
-                    </h3>
 
-                    {/* DESCRIPTION */}
-                    <p className="text-gray-600 mb-5 max-w-md">{config.desc}</p>
+                  {/* CONTENT */}
+                  <div className="w-full md:w-1/2 flex">
+                    <div className="flex flex-col justify-between w-full p-5 md:p-6 text-left">
+                      {/* TITLE */}
+                      <h3 className="text-lg md:text-2xl font-semibold text-primary mb-3">
+                        {config.title}
+                      </h3>
 
-                    {/* POINTS */}
-                    <ul className="text-gray-700 space-y-2 text-left w-full max-w-sm mx-auto">
-                      {config.points.map((p, i) => (
-                        <li key={i} className="flex items-center gap-2">
-                          <span className="text-primary">•</span>
-                          <span>{p}</span>
-                        </li>
-                      ))}
-                    </ul>
+                      {/* DESCRIPTION */}
+                      <p className="text-gray-600 mb-3 text-sm md:text-base">
+                        {config.desc}
+                      </p>
+
+                      {/* POINTS */}
+                      <ul className="text-gray-700 space-y-1">
+                        {config.points.map((p, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-sm"
+                          >
+                            <span className="text-primary mt-1">•</span>
+                            <span>{p}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               ))}

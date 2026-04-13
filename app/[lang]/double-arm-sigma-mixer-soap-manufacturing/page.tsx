@@ -151,13 +151,15 @@ export default function ProductPage() {
           </div>
         </div>
       </Section> */}
-      <div className="bg-primary text-white py-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
+        {/* TITLE */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
           {product.applicationTitle}
         </h2>
 
-        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
-          <p className="text-white/80 text-lg leading-relaxed text-left">
+        {/* CONTENT */}
+        <div className="max-w-3xl mx-auto pt-6 md:pt-8">
+          <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed text-center">
             {product.applicationDescription}
           </p>
         </div>
