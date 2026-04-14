@@ -238,14 +238,14 @@ export default function ProductPage() {
             </h2>
 
             {/* GRID */}
-            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-stretch">
               {product.configurations.map((config, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl shadow-md flex flex-col md:flex-row overflow-hidden hover:shadow-xl transition"
+                  className="bg-white rounded-xl shadow-md flex flex-col md:flex-row overflow-hidden hover:shadow-xl transition h-full"
                 >
                   {/* IMAGE */}
-                  <div className="w-full md:w-1/2 h-[220px] md:h-[260px]">
+                  <div className="w-full md:w-1/2 h-[220px] md:h-auto md:min-h-full">
                     <Image
                       src={config.image}
                       alt="machine"
@@ -255,7 +255,6 @@ export default function ProductPage() {
                     />
                   </div>
 
-                  {/* CONTENT */}
                   <div className="w-full md:w-1/2 flex">
                     <div className="flex flex-col justify-between w-full p-5 md:p-6 text-left">
                       {/* TITLE */}
@@ -267,14 +266,10 @@ export default function ProductPage() {
                       <p className="text-gray-600 mb-3 text-sm md:text-base">
                         {config.desc}
                       </p>
-
-                      {/* POINTS */}
-                      <ul className="text-gray-700 space-y-1">
+                      <ul className="text-gray-700 space-y-1 list-none pl-0 mt-auto">
                         {config.points.map((p, i) => (
-                          <li
-                            key={i}
-                            className="flex items-start gap-2 text-sm"
-                          >
+                          <li key={i} className="text-sm">
+                            {" "}
                             <span className="text-primary mt-1">•</span>
                             <span>{p}</span>
                           </li>
