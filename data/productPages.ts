@@ -3,7 +3,7 @@ export const productPages = [
         slug: "double-arm-sigma-mixer-soap-manufacturing",
 
         meta: {
-            title: "Double Arm Sigma Mixer for Soap Manufacturing | Brit Soap",
+            title: "Double Arm Sigma Mixer For Soap Manufacturing | Brit Soap",
             description:
                 "Industrial sigma mixer for uniform soap mixing. Ideal for blending perfumes & additives. Speak to an engineer today.",
             keywords: [
@@ -20,7 +20,7 @@ export const productPages = [
         video: "/assets/Mixer/double-arm-sigma-soap-mixer.mov",
 
         refinerIntro: {
-            title: "High Performance Soap Mixing for Perfectly Blended Soap",
+            title: "High Performance Soap Mixing For Perfectly Blended Soap",
             paragraphs: [
                 "The Brit Soap Double Sigma Mixer is first machine in the soap finishing line, designed to thoroughly blend dried soap base or soap chips with perfumes, colourants, skin-conditioning agents, and other additives.",
                 "Installed in the soap finishing line before refining, the mixer ensures uniform distribution of ingredients, helping manufacturers produce soap with consistent fragrance, colour, and texture.",
@@ -48,7 +48,7 @@ export const productPages = [
             },
         ],
 
-        importanceTitle: "Why Mixing is an Important Step in Soap Production",
+        importanceTitle: "Why Mixing Is An Important Step In Soap Production",
         importanceDescription:
             "Mixing is a critical step in the soap finishing process, as it ensures that perfumes, colourants, and functional additives are evenly distributed throughout the soap base creating  a uniform soap mass. Effective mixing also prepares the soap mass for efficient refining and plodding in the subsequent stages of the soap production line. Poor mixing can lead to uneven fragrance, colour streaking, and inconsistent product quality. The Double Sigma Mixer ensures: ",
         importanceImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
@@ -59,7 +59,7 @@ export const productPages = [
             "Efficient preparation of soap mass for refining and plodding",
         ],
 
-        applicationTitle: "Applications in Production",
+        applicationTitle: "Applications In Production",
         applicationDescription:
             "The Brit Soap Double Sigma Mixer is designed for efficient mixing in industrial soap manufacturing lines. Two solid mixing shafts fitted with sigma blades rotate in synchronized motion to knead and fold the soap mass, ensuring thorough blending and uniform distribution of perfumes, colourants, and additives. The mixer features a double U-shaped trough mixing chamber, which promotes efficient material circulation and eliminates dead zones for consistent batch quality. The inner trough and blades are manufactured from AISI 304 stainless steel, providing durability and corrosion resistance when processing soap formulations. Each shaft is supported by heavy-duty bearing assemblies designed for stable and reliable operation under continuous production conditions. A top safety grill ensures safe loading of soap chips and additive.",
         applicationImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
@@ -100,7 +100,7 @@ export const productPages = [
             image: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg"
         },
         ctaSection: {
-            title: "Engineered for Efficiency. Built for Reliability",
+            title: "Engineered For Efficiency. Built For Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak with an Engineer",
@@ -133,7 +133,7 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "High Performance Refining for a Superior Quality Soap",
+            title: "High Performance Refining For A Superior Quality Soap",
             paragraphs: [
                 "The soap refining plodder receives soap, which has been fully mixed and amalgamated with colour, perfume and other additives directly from the bottom discharge door of the mixer, into the in-feed hopper of the plodder.",
                 "Positioned as the second machine in the soap finishing line, the soap refiner plodder plays a crucial role in improving the texture, consistency, and overall quality of the final soap bar.",
@@ -166,7 +166,7 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-        whyTitle: "Why Refining is Important",
+        whyTitle: "Why Refining Is Important",
         whyPoints: [
             "Eliminates impurities and hard particles",
             "Creates uniform homogenous soap mass",
@@ -196,7 +196,7 @@ export const productPages = [
         },
 
         // ✅ APPLICATION
-        applicationTitle: "Application in Production",
+        applicationTitle: "Application In Production",
         applicationDescription:
             "The Brit Soap Simplex Refining Plodder is used across a wide range of soap manufacturing environments where consistent refining and extrusion are required before finishing processes. It supports both standard and specialised soap production lines, ensuring uniform billet formation and improved downstream processing. Ideal for producing toilet soap bars, laundry soap bars, and syndet soaps.",
         applicationImage: "/assets/RefinerPlodder/soap-refiner-plodder-screw.jpg",
@@ -240,7 +240,7 @@ export const productPages = [
 
         // ✅ CTA
         ctaSection: {
-            title: "Engineered for Efficiency. Built for Reliability",
+            title: "Engineered For Efficiency. Built For Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak with an Engineer",
@@ -253,7 +253,7 @@ export const productPages = [
 
         // ✅ SEO
         meta: {
-            title: "Triple Roll Mill for Soap Manufacturing | Soap Refining Machine",
+            title: "Triple Roll Mill For Soap Manufacturing | Soap Refining Machine",
             description:
                 "High-performance triple roll mill for soap refining and homogenization, ensuring smooth texture and consistent blending of colours, fragrances, and additives.Ideal for high-quality soap bar production—enquire now.",
             keywords: [
@@ -265,7 +265,7 @@ export const productPages = [
         },
 
         // ✅ HERO
-        title: "Triple Roll Mill Soap Milling Machine for Soap Manufacturing",
+        title: "Triple Roll Mill Soap Milling Machine For Soap Manufacturing",
         description:
             "Robust machine designed for refining and homogenizing soap mass to achieve smooth texture and uniform incorporation of colours, fragrances, and additives.",
 
@@ -273,7 +273,7 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "Consistent Homogenisation for Smooth, Premium Soap Finishing",
+            title: "Consistent Homogenisation For Smooth, Premium Soap Finishing",
             paragraphs: [
                 "The Brit Soap Triple Roll Mill is designed for homogenisation and refining of soap mass, ensuring the mixture becomes perfectly smooth, uniform, and ready for finishing.",
                 "Installed in the soap finishing line after the mixer or refiner and before plodding, the Triple Roll Mill adjusts the crystalline structure of soap particles, producing a creamy texture that feels smooth and pleasant on the skin.",
@@ -300,7 +300,7 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-        importanceTitle: "Why Milling is Important",
+        importanceTitle: "Why Milling Is Important",
         importanceDescription:
             "Refining is the difference between an ordinary soap bar and a premium product. In soap manufacturing, the refining stage determines the final product quality. Without proper homogenising the product may look grainy or rough, or perfume and color will not be distributed evenly. The milling action of the machine ensures the finished soap to have:",
         importanceImage: "/assets/Mixer/double-arm-sigma-soap-mixer.jpg",
@@ -334,7 +334,7 @@ export const productPages = [
         },
 
         // ✅ APPLICATION
-        applicationTitle: "Application in Production",
+        applicationTitle: "Application In Production",
         applicationDescription:
             "The Brit Soap triple roll mill is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines, ensuring perfect homogenisation and uniform distribution of colours, fragrances, and additives giving the final soap a smooth texture. It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.",
         applicationImage: "/assets/RefinerPlodder/soap-refiner-plodder-screw.jpg",
@@ -378,7 +378,7 @@ export const productPages = [
 
         // ✅ CTA
         ctaSection: {
-            title: "Engineered for Efficiency. Built for Reliability",
+            title: "Engineered For Efficiency. Built For Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak with an Engineer",
@@ -391,7 +391,7 @@ export const productPages = [
 
         // ✅ SEO
         meta: {
-            title: "Duplex Vacuum Plodder Machine for Soap Manufacturing",
+            title: "Duplex Vacuum Plodder Machine For Soap Manufacturing",
             description:
                 "Precision duplex vacuum plodder designed for air-free compression and uniform soap extrusion. Ideal for high-quality soap bar production—enquire now.",
             keywords: [
@@ -404,14 +404,14 @@ export const productPages = [
         },
 
         // ✅ HERO
-        title: "Duplex Vacuum Plodder Extruder for Soap Manufacturing",
+        title: "Duplex Vacuum Plodder Extruder For Soap Manufacturing",
         description:
             "Heavy-duty duplex vacuum plodder engineered for final refining, vacuum extraction, and extrusion of soap billets.Delivers dense, homogeneous soap with smooth texture and superior bar quality.",
         video: "/assets/DVP/duplex-vacuum-plodder-video.mp4",
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "The Core Machine for High-Quality Soap Bar Production.",
+            title: "The Core Machine For High-quality Soap Bar Production.",
             paragraphs: [
                 "The Brit Soap Duplex Vacuum Plodder is a critical machine in the soap finishing line designed to refine, compress, and extrude soap into dense, uniform billets or bars.",
                 "Positioned after the Triple Roll Mill, the machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars with the desired shape and size.",
@@ -442,7 +442,7 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-        importanceTitle: "Why is Duplex Vacuum Plodder an important machine in Soap Production ",
+        importanceTitle: "Why Is Duplex Vacuum Plodder An Important Machine In Soap Production ",
         importanceDescription:
             "The Duplex Vacuum Plodder plays a critical role in determining the final quality of the soap bar. Without effective vacuum plodding, soap bars may suffer from cracks, air bubbles, poor finish, and inconsistent weight. This robust machine helps in achieving;",
         importanceImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
@@ -477,7 +477,7 @@ export const productPages = [
         },
 
         // ✅ APPLICATION
-        applicationTitle: "Application in Production",
+        applicationTitle: "Application In Production",
         applicationDescription:
             "The Brit Soap duplex vacuum plodder is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines. The machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars . It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.",
         applicationImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
@@ -520,7 +520,7 @@ export const productPages = [
 
         // ✅ CTA
         ctaSection: {
-            title: "Engineered for Efficiency. Built for Reliability",
+            title: "Engineered For Efficiency. Built For Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak with an Engineer",
@@ -533,7 +533,7 @@ export const productPages = [
 
         // ✅ SEO
         meta: {
-            title: "AV Pneumatic Soap Cutter Machine for Precision Soap Bar Cutting",
+            title: "AV Pneumatic Soap Cutter Machine For Precision Soap Bar Cutting",
             description:
                 "Automatic pneumatic soap cutter for accurate bar cutting and uniform length. Ideal for soap manufacturing lines. Speak to an engineer today.",
             keywords: [
@@ -545,14 +545,14 @@ export const productPages = [
         },
 
         // ✅ HERO
-        title: "AV Pneumatic Cutter | Automatic Vertical Cutter for Soap Bar Production",
+        title: "AV Pneumatic Cutter | Automatic Vertical Cutter For Soap Bar Production",
         description:
             "High-accuracy electro-pneumatic cutter designed to divide continuously extruded soap bars into uniform lengths with perfectly aligned vertical cuts.",
         video: "/assets/AVC/soap-cutting-machine-automatic.mov",
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "High-Accuracy Electro-Pneumatic Cutting for Modern Soap Finishing Lines",
+            title: "High-accuracy Electro-pneumatic Cutting For Modern Soap Finishing Lines",
             paragraphs: [
                 "The Brit Soap Automatic Vertical (AV) Pneumatic Cutter is a precision cutting machine designed to cut continuously extruded soap bars into uniform tablet lengths.",
                 "Installed directly after the Duplex Vacuum Plodder and before downstream processing, the machine receives the continuous soap billet from the extruder and divides it into accurately sized bars ready for stamping or packaging.",
@@ -579,7 +579,7 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-        importanceTitle: "Why is the AV Pneumatic Cutter a significant machine?",
+        importanceTitle: "Why Is The AV Pneumatic Cutter A Significant Machine?",
         importanceDescription:
             "In continuous soap production, cutting accuracy is critical to final product quality. The machine’s synchronized cutting mechanism ensures clean, distortion-free edges, eliminating drag marks and uneven surfaces so every bar is perfectly prepared for downstream finishing.",
         importanceImage: "/assets/AVC/automatic-soap-cutting-machine.png",
@@ -623,7 +623,7 @@ export const productPages = [
 
 
         // ✅ CONFIGURATIONS
-        configurationsTitle: "Configurations of the Machine",
+        configurationsTitle: "Configurations Of The Machine",
         configurationsDec: "To suit different production requirements, the AV Pneumatic Cutter is available in different configurations. Manufacturers can choose the AV Pneumatic Cutter with or without the embossing section, allowing the machine to be tailored for both toilet soap and laundry soap production.",
         configurations: [
             {
@@ -650,7 +650,7 @@ export const productPages = [
         ],
         // ✅ CTA
         ctaSection: {
-            title: "Engineered for Efficiency. Built for Reliability",
+            title: "Engineered For Efficiency. Built For Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak with an Engineer",
@@ -683,7 +683,7 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "Engineered for Reliable High-Capacity Soap Finishing Lines",
+            title: "Engineered For Reliable High-capacity Soap Finishing Lines",
             paragraphs: [
                 "The Brit Soap HSB Cutter is a high-speed rotary cutting machine designed for cutting toilet soaps, laundry soaps, detergent bars, and deodorising blocks extruded from the Duplex Vacuum Plodder.",
                 "Positioned directly after the plodder extruder, the machine receives the continuous soap bar and cuts it into bars of predefined length before the next stage of the finishing line.",
@@ -710,7 +710,7 @@ export const productPages = [
         ],
 
         // ✅ WHY SECTION
-        importanceTitle: "Why the HSB Cutter",
+        importanceTitle: "Why The HSB Cutter",
         importanceDescription:
             "In modern soap manufacturing, maintaining consistent bar dimensions at high production speeds is essential. Its robust design ensures continuous operation with minimal maintenance, making it suitable for industrial soap manufacturing environments.",
         importanceImage: "/assets/DVP/duplex-soap-refiner-plodder.jpg",
@@ -723,7 +723,7 @@ export const productPages = [
 
         // ✅ DETAIL SECTION
         detailSection: {
-            title: "High-Speed Rotary Cutting for Industrial Soap Production",
+            title: "High-speed Rotary Cutting For Industrial Soap Production",
 
             intro:
                 "The HSB cutting unit consists of a high-speed rotary blade driven by a servo motor, specially designed to deliver clean and precise cuts  at high throughput rates. The machine is built to be flexible and compact in design and deliver a high output.  The cutting assembly, length detection unit, and electrical control panel are mounted on a robust base frame with wheels, enabling easy positioning and integration within the soap finishing line.A roller-driven encoder ensures accurate measurement of billet movement, allowing precise control of bar length during continuous extrusion. It is also integrated with advance electronic control system via a touchscreen PLC interface that allows the operator to:",
@@ -794,7 +794,7 @@ export const productPages = [
 
         // ✅ CTA
         ctaSection: {
-            title: "Engineered for Efficiency. Built for Reliability",
+            title: "Engineered For Efficiency. Built For Reliability",
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak with an Engineer",

@@ -244,15 +244,25 @@ export default function ProductPage() {
       {product.configurations && product.configurations.length > 0 && (
         <ConfigSelector configurations={product.configurations} />
       )}
-      <Section title={product.applicationTitle} className="" center>
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl p-8 md:p-10">
-            <p className="text-white text-lg leading-relaxed mb-8 text-center">
+      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
+          {product.applicationTitle}
+        </h2>
+
+        <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
+          {Array.isArray(product.applicationDescription) ? (
+            product.applicationDescription.map((desc, i) => (
+              <p key={i} className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+                {desc}
+              </p>
+            ))
+          ) : (
+            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
               {product.applicationDescription}
             </p>
-          </div>
+          )}
         </div>
-      </Section>
+      </div>
 
       {product.ctaSection && (
         <CTASection
