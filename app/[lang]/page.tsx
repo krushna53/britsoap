@@ -15,9 +15,9 @@ export const revalidate = 300;
 export default async function Index({
   params,
 }: {
-  params: { lang: string }; // ✅ FIXED
+  params: Promise<{ lang: string }>; // ✅ FIXED
 }) {
-  const { lang } = params; // ✅ FIXED
+  const { lang } = await params; // ✅ FIXED
 
   const data = (await getHomepage(lang)) as HomepageData;
   const services = await getServices(lang);

@@ -81,8 +81,8 @@ const Navbar = () => {
           <Image
             src="/logo.png"
             alt="Brit Soap"
-            width={140}
-            height={40}
+            width={160}
+            height={48}
             priority
             className="object-contain"
           />
@@ -96,8 +96,8 @@ const Navbar = () => {
               {!link.megaMenu && link.path !== undefined && (
                 <Link
                   href={`/${lang}${link.path}`}
-                  className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
-                    isActive(link.path) ? "text-primary" : "text-muted-foreground"
+                  className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                    isActive(link.path) ? "text-primary" : "text-foreground"
                   }`}
                 >
                   {link.name}
@@ -107,7 +107,7 @@ const Navbar = () => {
               {/* Mega menu trigger */}
               {link.megaMenu && (
                 <>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground cursor-pointer hover:text-primary select-none">
+                  <span className="text-sm font-medium tracking-wide text-foreground cursor-pointer hover:text-primary select-none">
                     {link.name}
                   </span>
 
@@ -121,7 +121,7 @@ const Navbar = () => {
                           key={ci}
                           className="p-4 border-r border-white/10 last:border-r-0"
                         >
-                          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white mb-3 pb-2 border-b border-white/20">
+                          <p className="text-xs font-bold tracking-wide text-white mb-3 pb-2 border-b border-white/20">
                             {col.category}
                           </p>
                           <ul className="flex flex-col gap-1">
@@ -129,7 +129,7 @@ const Navbar = () => {
                               <li key={ii}>
                                 <Link
                                   href={`/${lang}${item.path}`}
-                                  className="block text-[13px] text-white/70 hover:text-white hover:translate-x-1 transition-all duration-150 py-1"
+                                  className="block text-sm text-white/70 hover:text-white hover:translate-x-1 transition-all duration-150 py-1"
                                 >
                                   {item.name}
                                 </Link>
@@ -150,7 +150,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href={`/${lang}/contact`}
-            className="inline-flex items-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
+            className="inline-flex items-center px-5 py-2 bg-accent text-accent-foreground text-sm font-medium rounded hover:bg-red-light transition-colors tracking-wide"
           >
             Get a Quote
           </Link>
@@ -184,7 +184,7 @@ const Navbar = () => {
                     <Link
                       href={`/${lang}${link.path}`}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground"
+                      className="block text-sm font-medium tracking-wide text-foreground"
                     >
                       {link.name}
                     </Link>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   {link.megaMenu && (
                     <div>
                       <button
-                        className="w-full text-left text-xs font-medium uppercase tracking-[0.2em] text-primary flex justify-between items-center"
+                        className="w-full text-left text-sm font-medium tracking-wide text-primary flex justify-between items-center"
                         onClick={() =>
                           setMobileExpanded(
                             mobileExpanded === link.name ? null : link.name
@@ -215,7 +215,7 @@ const Navbar = () => {
                           >
                             {link.megaMenu.columns.map((col, ci) => (
                               <div key={ci} className="mt-3">
-                                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1">
+                                <p className="text-xs font-bold tracking-wide text-foreground mb-1">
                                   {col.category}
                                 </p>
                                 {col.items.map((item, ii) => (
@@ -223,7 +223,7 @@ const Navbar = () => {
                                     key={ii}
                                     href={`/${lang}${item.path}`}
                                     onClick={() => setMobileOpen(false)}
-                                    className="block pl-3 py-1 text-xs text-muted-foreground hover:text-primary"
+                                    className="block pl-3 py-1 text-sm text-foreground hover:text-primary"
                                   >
                                     • {item.name}
                                   </Link>
@@ -241,7 +241,7 @@ const Navbar = () => {
               <Link
                 href={`/${lang}/contact`}
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center justify-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
+                className="inline-flex items-center justify-center px-5 py-2 bg-accent text-accent-foreground text-sm font-medium rounded hover:bg-red-light transition-colors tracking-wide"
               >
                 Get a Quote
               </Link>
