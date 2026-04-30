@@ -158,10 +158,18 @@ export default function ProductPage() {
         </h2>
 
         {/* CONTENT */}
-        <div className="max-w-3xl mx-auto pt-6 md:pt-8">
-          <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed text-center">
-            {product.applicationDescription}
-          </p>
+                        <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
+          {Array.isArray(product.applicationDescription) ? (
+            product.applicationDescription.map((para, i) => (
+              <p key={i} className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+                {para}
+              </p>
+            ))
+          ) : (
+            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              {product.applicationDescription}
+            </p>
+          )}
         </div>
       </div>
       <Section

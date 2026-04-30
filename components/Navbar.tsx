@@ -96,7 +96,7 @@ const Navbar = () => {
               {!link.megaMenu && link.path !== undefined && (
                 <Link
                   href={`/${lang}${link.path}`}
-                  className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-primary ${
+                  className={`text-sm font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${
                     isActive(link.path) ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
@@ -107,21 +107,21 @@ const Navbar = () => {
               {/* Mega menu trigger */}
               {link.megaMenu && (
                 <>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground cursor-pointer hover:text-primary select-none">
+                  <span className="text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground cursor-pointer hover:text-primary select-none">
                     {link.name}
                   </span>
 
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[780px] bg-[#1e2a38] text-white shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[780px] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
 
                     {/* Columns */}
                     <div className="grid grid-cols-3 gap-0 p-2">
                       {link.megaMenu.columns.map((col, ci) => (
                         <div
                           key={ci}
-                          className="p-4 border-r border-white/10 last:border-r-0"
+                          className="p-4 border-r border-border last:border-r-0"
                         >
-                          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white mb-3 pb-2 border-b border-white/20">
+                          <p className="text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border">
                             {col.category}
                           </p>
                           <ul className="flex flex-col gap-1">
@@ -129,7 +129,7 @@ const Navbar = () => {
                               <li key={ii}>
                                 <Link
                                   href={`/${lang}${item.path}`}
-                                  className="block text-[13px] text-white/70 hover:text-white hover:translate-x-1 transition-all duration-150 py-1"
+                                  className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
                                 >
                                   {item.name}
                                 </Link>
@@ -184,7 +184,7 @@ const Navbar = () => {
                     <Link
                       href={`/${lang}${link.path}`}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground"
+                      className="block text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground"
                     >
                       {link.name}
                     </Link>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   {link.megaMenu && (
                     <div>
                       <button
-                        className="w-full text-left text-xs font-medium uppercase tracking-[0.2em] text-primary flex justify-between items-center"
+                        className="w-full text-left text-sm font-medium capitalize tracking-[0.15em] text-primary flex justify-between items-center"
                         onClick={() =>
                           setMobileExpanded(
                             mobileExpanded === link.name ? null : link.name
@@ -215,7 +215,7 @@ const Navbar = () => {
                           >
                             {link.megaMenu.columns.map((col, ci) => (
                               <div key={ci} className="mt-3">
-                                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1">
+                                <p className="text-xs font-bold capitalize tracking-widest text-muted-foreground mb-1">
                                   {col.category}
                                 </p>
                                 {col.items.map((item, ii) => (
@@ -223,7 +223,7 @@ const Navbar = () => {
                                     key={ii}
                                     href={`/${lang}${item.path}`}
                                     onClick={() => setMobileOpen(false)}
-                                    className="block pl-3 py-1 text-xs text-muted-foreground hover:text-primary"
+                                    className="block pl-3 py-1 text-sm text-muted-foreground hover:text-primary"
                                   >
                                     • {item.name}
                                   </Link>
