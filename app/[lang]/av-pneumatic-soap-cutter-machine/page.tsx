@@ -244,20 +244,20 @@ export default function ProductPage() {
       {product.configurations && product.configurations.length > 0 && (
         <ConfigSelector configurations={product.configurations} />
       )}
-      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
+      <div className="bg-white py-12 md:py-20 px-4 md:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug text-primary">
           {product.applicationTitle}
         </h2>
 
         <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
           {Array.isArray(product.applicationDescription) ? (
             product.applicationDescription.map((desc, i) => (
-              <p key={i} className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-sm sm:text-base md:text-lg leading-relaxed mb-4">
                 {desc}
               </p>
             ))
           ) : (
-            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+            <p className="text-[lab(27.1134_-0.956401_-12.3224)] text-sm sm:text-base md:text-lg leading-relaxed font-light">
               {product.applicationDescription}
             </p>
           )}
