@@ -1,7 +1,7 @@
 export const aboutData = {
   hero: {
     label: "About Us",
-    heading: "A trusted partner in modern soap manufacturing",
+    heading: "A Trusted Partner in Modern Soap Manufacturing",
     tagline: "Engineered for Efficiency. Built for Reliability. Trusted Worldwide.",
   },
 
@@ -28,15 +28,15 @@ export const aboutData = {
         sub: "Britannia Soap Machinery (UK) × Orum Engineering (India)",
       },
       {
-        head: "European-standard design and technology",
+        head: "European-Standard Design and Technology",
         sub: "Combined with cost-effective Indian manufacturing",
       },
       {
-        head: "Practical, production-focused engineering",
+        head: "Practical, Production-Focused Engineering",
         sub: "Effective and dependable in real operating conditions",
       },
       {
-        head: "Expanded capabilities & global presence",
+        head: "Expanded Capabilities & Global Presence",
         sub: "Continuously investing in designs and processes",
       },
     ],
@@ -46,27 +46,27 @@ export const aboutData = {
     label: "Why Choose Us",
     items: [
       {
-        title: "Global engineering, built for practical manufacturing",
+        title: "Global Engineering, Built for Practical Manufacturing",
         desc: "European-standard design and technology, combined with cost-effective Indian manufacturing—giving you the best of both worlds.",
       },
       {
-        title: "Designed for real production environments",
+        title: "Designed for Real Production Environments",
         desc: "Our machines are built to perform consistently, ensuring smooth operations and dependable output.",
       },
       {
-        title: "Efficient, reliable, and built to last",
+        title: "Efficient, Reliable, and Built to Last",
         desc: "Every system is developed with a focus on long-term performance, reducing downtime and supporting continuous production.",
       },
       {
-        title: "Solutions that adapt to your needs",
+        title: "Solutions That Adapt to Your Needs",
         desc: "From individual machines to complete lines, our offerings are flexible and aligned with different production scales and requirements.",
       },
       {
-        title: "Responsive service and ongoing support",
+        title: "Responsive Service and Ongoing Support",
         desc: "We stay closely engaged—from installation to after-sales—ensuring your operations run smoothly over time.",
       },
       {
-        title: "Experience that translates into value",
+        title: "Experience That Translates into Value",
         desc: "Backed by strong engineering and manufacturing expertise, we deliver solutions that balance performance with cost-effectiveness.",
       },
     ],
@@ -74,7 +74,7 @@ export const aboutData = {
 
   globalReach: {
     label: "Global Presence",
-    heading: "Successfully installed in over 40 countries worldwide",
+    heading: "Successfully Installed in Over 40 Countries Worldwide",
     paragraphs: [
       "Over the past two decades, Brit Soap Machinery has proudly expanded its footprint in the global market. With a strong focus on exports, we have established a particularly solid presence across the African continent.",
       "Our soap manufacturing machines are successfully installed in over 40 countries worldwide, a testament to the trust our clients place in our technology and service.",

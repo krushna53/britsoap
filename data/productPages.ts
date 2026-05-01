@@ -411,7 +411,7 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "The Core Machine For High-quality Soap Bar Production.",
+            title: "The Core Machine For High-Quality Soap Bar Production.",
             paragraphs: [
                 "The Brit Soap Duplex Vacuum Plodder is a critical machine in the soap finishing line designed to refine, compress, and extrude soap into dense, uniform billets or bars.",
                 "Positioned after the Triple Roll Mill, the machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars with the desired shape and size.",
@@ -552,7 +552,7 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "High-accuracy Electro-pneumatic Cutting For Modern Soap Finishing Lines",
+            title: "High-Accuracy Electro-Pneumatic Cutting For Modern Soap Finishing Lines",
             paragraphs: [
                 "The Brit Soap Automatic Vertical (AV) Pneumatic Cutter is a precision cutting machine designed to cut continuously extruded soap bars into uniform tablet lengths.",
                 "Installed directly after the Duplex Vacuum Plodder and before downstream processing, the machine receives the continuous soap billet from the extruder and divides it into accurately sized bars ready for stamping or packaging.",
@@ -683,7 +683,7 @@ export const productPages = [
 
         // ✅ INTRO SECTION
         refinerIntro: {
-            title: "Engineered For Reliable High-capacity Soap Finishing Lines",
+            title: "Engineered For Reliable High-Capacity Soap Finishing Lines",
             paragraphs: [
                 "The Brit Soap HSB Cutter is a high-speed rotary cutting machine designed for cutting toilet soaps, laundry soaps, detergent bars, and deodorising blocks extruded from the Duplex Vacuum Plodder.",
                 "Positioned directly after the plodder extruder, the machine receives the continuous soap bar and cuts it into bars of predefined length before the next stage of the finishing line.",
@@ -723,7 +723,7 @@ export const productPages = [
 
         // ✅ DETAIL SECTION
         detailSection: {
-            title: "High-speed Rotary Cutting For Industrial Soap Production",
+            title: "High-Speed Rotary Cutting For Industrial Soap Production",
 
             intro:
                 "The HSB cutting unit consists of a high-speed rotary blade driven by a servo motor, specially designed to deliver clean and precise cuts  at high throughput rates. The machine is built to be flexible and compact in design and deliver a high output.  The cutting assembly, length detection unit, and electrical control panel are mounted on a robust base frame with wheels, enabling easy positioning and integration within the soap finishing line.A roller-driven encoder ensures accurate measurement of billet movement, allowing precise control of bar length during continuous extrusion. It is also integrated with advance electronic control system via a touchscreen PLC interface that allows the operator to:",
