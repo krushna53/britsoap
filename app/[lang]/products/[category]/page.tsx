@@ -24,7 +24,7 @@ export default async function CategoryPage({
     isLocal = false;
   }
 
-  const products = categoryData.products;
+  const products = categoryData?.products || [];
 
   if (!products || products.length === 0) {
     return notFound();

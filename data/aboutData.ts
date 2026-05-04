@@ -9,7 +9,7 @@ export const aboutData = {
     { value: "2005", label: "Founded" },
     { value: "40+", label: "Countries Worldwide" },
     { value: "20+", label: "Years of Exports" },
-    { value: "Africa", label: "Strongest Presence" },
+    { value: "Worldwide", label: "Presence" },
   ],
 
   about: {
@@ -76,7 +76,7 @@ export const aboutData = {
     label: "Global Presence",
     heading: "Successfully Installed in Over 40 Countries Worldwide",
     paragraphs: [
-      "Over the past two decades, Brit Soap Machinery has proudly expanded its footprint in the global market. With a strong focus on exports, we have established a particularly solid presence across the African continent.",
+      "Over the past two decades, Brit Soap Machinery has proudly expanded its footprint in the global market. With a strong focus on exports, we have established a particularly solid worldwide presence.",
       "Our soap manufacturing machines are successfully installed in over 40 countries worldwide, a testament to the trust our clients place in our technology and service.",
       "Each year brings new opportunities to grow, and we continue to expand our reach—bringing our expertise to new regions and building lasting international partnerships.",
     ],
