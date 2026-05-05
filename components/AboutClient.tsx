@@ -305,62 +305,6 @@ export default function AboutClient({ data }: Props) {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="mb-16">
-            {/* <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">
-              <span className="w-5 h-px bg-accent" />
-              {services.label}
-            </span> */}
-            <h2 className="text-4xl font-extrabold text-primary mb-4 text-center">
-              {services.heading}
-            </h2>
-            <div className="space-y-3">
-              {services.intro.map((p, i) => (
-                <p
-                  key={i}
-                  className="text-lg text-muted-foreground leading-relaxed"
-                >
-                  {p}
-                </p>
-              ))}
-            </div>
-            <p className="mt-5 text-lg font-bold text-primary tracking-wide">
-              {services.tagline}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.items.map(({ icon, title, desc }, i) => {
-              const Icon = ICON_MAP[icon];
-              return (
-                <motion.div
-                  key={title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className="group relative rounded-xl p-8 border border-border hover:border-transparent hover:shadow-xl transition-all duration-300 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                      {Icon && <Icon size={22} className="text-accent" />}
-                    </div>
-                    <h3 className="text-xl font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
-                      {title}
-                    </h3>
-                    <p className="text-lg text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
-                      {desc}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

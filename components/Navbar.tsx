@@ -15,6 +15,7 @@ type SubItem = {
 
 type Category = {
   category: string;
+  path?: string;
   items: SubItem[];
 };
 
@@ -38,12 +39,14 @@ const navLinks: NavLink[] = [
       columns: [
         {
           category: "Mixing Equipment",
+          path: "/products/mixing-equipment",
           items: [
             { name: "Double Sigma Mixer", path: "/double-arm-sigma-mixer-soap-manufacturing" },
           ],
         },
         {
           category: "Refining & Plodding",
+          path: "/products/refining-and-plodding",
           items: [
             { name: "Simplex Refiner Plodder", path: "/simplex-refiner-plodder" },
             { name: "Duplex Vacuum Plodder", path: "/duplex-vacuum-soap-plodder-machine" },
@@ -52,6 +55,7 @@ const navLinks: NavLink[] = [
         },
         {
           category: "Finishing Line",
+          path: "/products/finishing-line",
           items: [
             { name: "Soap Cutters", path: "/soap-cutters" },
             { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine"},
@@ -121,9 +125,15 @@ const Navbar = () => {
                           key={ci}
                           className="p-4 border-r border-border last:border-r-0"
                         >
-                          <p className="text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border">
-                            {col.category}
-                          </p>
+                          {col.path ? (
+                            <Link href={`/${lang}${col.path}`} className="block text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border hover:text-accent transition-colors">
+                              {col.category}
+                            </Link>
+                          ) : (
+                            <p className="text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border">
+                              {col.category}
+                            </p>
+                          )}
                           <ul className="flex flex-col gap-1">
                             {col.items.map((item, ii) => (
                               <li key={ii}>
@@ -215,9 +225,15 @@ const Navbar = () => {
                           >
                             {link.megaMenu.columns.map((col, ci) => (
                               <div key={ci} className="mt-3">
-                                <p className="text-xs font-bold capitalize tracking-widest text-muted-foreground mb-1">
-                                  {col.category}
-                                </p>
+                                {col.path ? (
+                                  <Link href={`/${lang}${col.path}`} onClick={() => setMobileOpen(false)} className="block text-xs font-bold capitalize tracking-widest text-muted-foreground mb-1 hover:text-primary">
+                                    {col.category}
+                                  </Link>
+                                ) : (
+                                  <p className="text-xs font-bold capitalize tracking-widest text-muted-foreground mb-1">
+                                    {col.category}
+                                  </p>
+                                )}
                                 {col.items.map((item, ii) => (
                                   <Link
                                     key={ii}
