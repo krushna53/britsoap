@@ -36,12 +36,12 @@ export default async function CategoryPage({
       <section className="py-20 bg-background text-center">
         <div className="container">
           <h2 className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-            {categoryData.title}
+            {categoryData?.title}
           </h2>
           <h1 className="text-4xl md:text-5xl font-bold text-primary">
-            {categoryData.title} ({products.length})
+            {categoryData?.title} ({products.length})
           </h1>
-          {categoryData.description && (
+          {categoryData?.description && (
             <p className="mt-4 text-primary max-w-2xl mx-auto text-lg">
               {categoryData.description}
             </p>
