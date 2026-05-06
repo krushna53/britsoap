@@ -26,19 +26,21 @@ export default function ProductHero({
             {title}
           </h1>
 
-          <p className="text-white/80 text-lg mb-8 max-w-xl">
-            {description}
-          </p>
+          <p className="text-white/80 text-lg mb-8 max-w-xl">{description}</p>
 
           <div className="flex gap-4">
             <Link
               href="/en/contact"
-              className="bg-white text-primary px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition inline-block"
+              className="bg-accent text-white px-4 py-4 rounded-xl shadow-md 
+                   flex items-center justify-center
+                   hover:bg-accent/90 transition-all duration-300"
             >
-              Speak with Engineer
+              <span className="font-semibold tracking-wide text-sm">
+                Speak with an Engineer
+              </span>
             </Link>
 
-            <button
+            {/* <button
               onClick={() => {
                 document
                   .getElementById("product-video")
@@ -47,7 +49,7 @@ export default function ProductHero({
               className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition"
             >
               Watch Demo
-            </button>
+            </button> */}
           </div>
         </div>
 

@@ -72,7 +72,7 @@ export default function HomeAbout({ data }: Props) {
           {/* DYNAMIC DESCRIPTION */}
           <motion.div
             variants={fadeUp}
-            className="text-foreground leading-relaxed mb-6 text-sm"
+            className="text-foreground leading-relaxed mb-6 text-lg"
           >
             {data?.aboutDescription?.nodeType
               ? documentToReactComponents(data.aboutDescription)

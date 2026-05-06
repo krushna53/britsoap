@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
 export type Product = {
   slug: string;
   title: string;
@@ -87,31 +88,11 @@ export default function ProductPage() {
         </Section>
       )}
 
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Double arm sigma mixer mixing soap base"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
-
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        items={product.importance || []}
+      />
       {product.detailSection && (
         <section className="bg-gray-50 py-20">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -157,25 +138,46 @@ export default function ProductPage() {
         </section>
       )}
 
-      <Section
+      {/* <Section
         title={product.applicationTitle}
         className="bg-primary text-white"
         center
       >
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+          <div className=" rounded-2xl p-8 md:p-10">
+            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
               {product.applicationDescription}
             </p>
           </div>
         </div>
-      </Section>
+      </Section> */}
+      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
+        {/* TITLE */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
+          {product.applicationTitle}
+        </h2>
+
+        {/* CONTENT */}
+                        <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
+          {Array.isArray(product.applicationDescription) ? (
+            product.applicationDescription.map((para, i) => (
+              <p key={i} className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+                {para}
+              </p>
+            ))
+          ) : (
+            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              {product.applicationDescription}
+            </p>
+          )}
+        </div>
+      </div>
       <Section
         title="Capacity Range"
         description="The Brit Soap soap mixers are available in a wide range of production capacities to suit different manufacturing scales."
         center
       >
-        <CapacityRange capacities={product.capacities} />
+        <CapacityRange capacities={product.capacities ?? []} />
       </Section>
       {product.ctaSection && (
         <CTASection
