@@ -38,6 +38,23 @@ const navLinks: NavLink[] = [
       searchable: true,
       columns: [
         {
+          category: "Soap Stampers",
+          path: "/products/soap-stampers",
+          items: [
+            { name: "Manual Pneumatic Stamper", path: "/products/soap-stampers/manual-pneumatic-soap-stamper" },
+            { name: "HRD Soap Stamper", path: "/products/soap-stampers/hrd-soap-stamper" },
+            { name: "Rotary Soap Stamper", path: "/products/soap-stampers/rotary-soap-stamper" },
+          ],
+        },
+        {
+          category: "Soponification",
+          path: "/products/soponification",
+          items: [
+            { name: "Saponification Crutcher", path: "/products/soponification/saponification-crutcher" },
+            { name: "Saponification Jet", path: "/products/soponification/saponification-jet" },
+          ],
+        },
+        {
           category: "Mixing Equipment",
           path: "/products/mixing-equipment",
           items: [
@@ -60,6 +77,15 @@ const navLinks: NavLink[] = [
             { name: "Soap Cutters", path: "/soap-cutters" },
             { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine"},
             {name: "HSB Cutter", path:"/high-speed-soap-cutter-machine"}
+          ],
+        },
+        {
+          category: "Dryling Line",
+          path: "/products/dryling-line",
+          items: [
+            { name: "Heat Exchanger", path: "/products/dryling-line/soap-heat-exchanger" },
+            { name: "Powder Separator", path: "/products/dryling-line/powder-separator" },
+            { name: "Vacuum Drying System", path: "/products/dryling-line/vacuum-drying-system" },
           ],
         },
       ],
@@ -116,10 +142,10 @@ const Navbar = () => {
                   </span>
 
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[780px] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[1100px] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
 
                     {/* Columns */}
-                    <div className="grid grid-cols-3 gap-0 p-2">
+                    <div className="grid grid-cols-5 gap-0 p-2">
                       {link.megaMenu.columns.map((col, ci) => (
                         <div
                           key={ci}

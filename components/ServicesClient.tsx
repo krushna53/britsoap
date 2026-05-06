@@ -68,9 +68,6 @@ export default function ServicesClient({ services }: Props) {
       <section className="py-24 bg-background">
         <div className="container">
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-extrabold text-primary mb-6">
-              {aboutData.services.heading}
-            </h2>
             <div className="space-y-3 max-w-4xl mx-auto">
               {aboutData.services.intro.map((p, i) => (
                 <p
