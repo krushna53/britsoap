@@ -49,6 +49,43 @@ export default async function CategoryPage({
         </div>
       </section>
 
+      {/* 🔹 Intro Content + Image */}
+      <section className="pb-12 bg-background">
+        <div className="container grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            {(isLocal
+              ? categoryData?.intro || []
+              : [
+                  "This product line supports consistent soap processing with quality-focused engineering and practical plant integration.",
+                  "Detailed machine-level pages will be added with complete specifications, videos, and application guidance.",
+                ]
+            ).map((paragraph: string, idx: number) => (
+              <p
+                key={idx}
+                className={`text-lg text-muted-foreground leading-relaxed ${
+                  idx === 0 ? "mb-5" : ""
+                }`}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div>
+            <Image
+              src={
+                isLocal
+                  ? categoryData?.introImage || "/placeholder.png"
+                  : "/placeholder.png"
+              }
+              alt={`${categoryData?.title} overview`}
+              width={900}
+              height={560}
+              className="w-full h-[280px] md:h-[340px] object-cover rounded-2xl border border-border"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 🔹 Products */}
       <section className="py-20 bg-background">
         <div className="container">
@@ -56,7 +93,12 @@ export default async function CategoryPage({
             {products.map((product: any, i: number) => {
               const productTitle = isLocal ? product.title : product.name;
               const productDesc = isLocal ? product.description : product.shortDescription;
-              const productLink = isLocal ? `/${lang}/${product.slug}` : `/${lang}/products/${slug}/${product.slug}`;
+              const isComingSoon = Boolean(isLocal && product.comingSoon);
+              const productLink = isLocal
+                ? isComingSoon
+                  ? `/${lang}/products/${slug}/${product.slug}`
+                  : `/${lang}/${product.slug}`
+                : `/${lang}/products/${slug}/${product.slug}`;
               
               let productImg = null;
               if (isLocal) {
@@ -68,25 +110,8 @@ export default async function CategoryPage({
               return (
                 <div
                   key={`${product.slug}-${i}`}
-                  className="group bg-primary border border-primary rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col"
+                  className="group bg-primary border border-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col min-h-[500px] max-w-[360px] mx-auto w-full"
                 >
-                  {/* Image */}
-                  <div className="overflow-hidden bg-white">
-                    {productImg ? (
-                      <Image
-                        src={productImg}
-                        alt={productTitle}
-                        width={500}
-                        height={300}
-                        className="w-full h-56 object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="w-full h-56 bg-white flex items-center justify-center text-xs text-primary">
-                        No Image
-                      </div>
-                    )}
-                  </div>
-
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-grow bg-primary text-primary-foreground">
                     <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors">
@@ -97,12 +122,27 @@ export default async function CategoryPage({
                       {productDesc}
                     </p>
 
-                    {/* CTA */}
+                    <div className="mt-auto">
+                      {productImg ? (
+                        <Image
+                          src={productImg}
+                          alt={productTitle}
+                          width={500}
+                          height={300}
+                          className="w-full h-56 object-cover rounded-xl border border-white/30"
+                        />
+                      ) : (
+                        <div className="w-full h-56 bg-white/10 rounded-xl border border-white/20 flex items-center justify-center text-xs text-primary-foreground/80">
+                          No Image
+                        </div>
+                      )}
+                    </div>
+
                     <Link
                       href={productLink}
-                      className="mt-auto inline-flex items-center justify-center text-sm font-semibold text-primary bg-white px-4 py-2 rounded hover:bg-accent hover:text-white transition-colors"
+                      className="mt-5 inline-flex items-center justify-center text-sm font-semibold text-primary bg-white px-4 py-2 rounded hover:bg-accent hover:text-white transition-colors"
                     >
-                      View Details
+                      {isComingSoon ? "Coming Soon" : "View Details"}
                       <span className="ml-2 transition-transform group-hover:translate-x-1">
                         →
                       </span>
