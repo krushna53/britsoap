@@ -47,7 +47,7 @@ export default function ContactClient({ contact }: any) {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <motion.div

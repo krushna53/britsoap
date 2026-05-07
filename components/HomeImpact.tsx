@@ -18,7 +18,7 @@ type Props = {
 
 export default function HomeImpact({ data }: Props) {
   return (
-    <section className="py-24 bg-primary">
+    <section className="py-20 bg-primary">
       <div className="container text-center">
         
         {/* HEADER */}
