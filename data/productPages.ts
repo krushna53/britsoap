@@ -1265,7 +1265,7 @@ export const productPages = [
             },
             {
                 desc: "Multiple pneumatic dies engage simultaneously, embossing all six faces with synchronized, controlled pressure.",
-                image: "/assets/SixFaceStamper/cubeoid-soap-press.jpg",
+                image: "/assets/SixFaceStamper/cuboid-soap-press.jpg",
             },
             {
                 desc: "Completed premium bars are ejected, fully embossed on all sides and ready for packaging.",
@@ -1370,7 +1370,7 @@ export const productPages = [
             },
             {
                 desc: "Pneumatic dies engage with controlled force, creating uniform embossed impressions on the laundry bar surface.",
-                image: "/assets/LaundryStamper/laundry-soap-syamper.png",
+                image: "/assets/LaundryStamper/laundry-soap-stamper.png",
             },
             {
                 desc: "Stamped laundry bars are discharged in continuous flow, ready for downstream processing and packaging.",
@@ -1402,7 +1402,7 @@ export const productPages = [
             ],
 
             images: [
-                "/assets/LaundryStamper/laundry-soap-syamper.png",
+                "/assets/LaundryStamper/laundry-soap-stamper.png",
                 "/assets/LaundryStamper/laundry-soap-bar-production.jpeg"
             ]
         },
