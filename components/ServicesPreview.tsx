@@ -17,7 +17,7 @@ type Props = {
 
 export default function ServicesPreview({ services }: Props) {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-20 pb-0 bg-background">
       <div className="w-full">
         <div className="text-center mb-12 container">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">
@@ -29,9 +29,9 @@ export default function ServicesPreview({ services }: Props) {
           {services.slice(0, 3).map((service, i) => {
             const Icon = icons[i % icons.length];
             const shades = [
-              "bg-sky-400",
-              "bg-blue-600",
-              "bg-blue-800",
+              "bg-[#3A44A8]",
+              "bg-[#2A328B]",
+              "bg-[#1F276F]",
             ];
 
             return (
@@ -72,6 +72,10 @@ export default function ServicesPreview({ services }: Props) {
               </div>
             );
           })}
+        </div>
+
+        <div className="container">
+          <div className="h-0.5 bg-accent w-full" />
         </div>
       </div>
     </section>
