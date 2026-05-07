@@ -21,13 +21,14 @@ type LocalCategory = {
 
 export const categories = [
   {
-    title: "Soap Stampers",
+    title: "Soap Stamping Machines | Precision Soap Finishing for High-Quality Bar Production",
     slug: "soap-stampers",
     description:
-      "Precision soap stamping systems for clean embossing, uniform bar shape, and reliable high-speed finishing.",
+      "Enhancing Shape, Branding & Finish in Soap Manufacturing",
     intro: [
-      "Soap stamping is a key stage in the finishing line where refined billets are transformed into uniform branded bars with sharp embossing and superior visual appeal.",
-      "Our stamper range supports artisanal to high-capacity automated production, with dedicated models for toilet soaps, laundry bars, and six-face premium formats.",
+      "Soap stamping is a critical stage in the soap finishing line, where refined soap billets are transformed into uniform, branded soap bars with precise shape, smooth surface, and sharp embossing. This process involves compressing and moulding soap under controlled pressure using precision dies, ensuring consistency in weight, appearance, and product identity.",
+      "Beyond aesthetics, soap stamping plays a key role in product differentiation, brand recall, and packaging readiness, making it an essential step for both toilet soaps and laundry soaps. Modern soap stamping machines are designed to deliver high efficiency, repeatability, and flexibility, catering to a wide range of production capacities - from small-scale artisanal setups to fully automated industrial lines.",
+      "At Brit Soap Machinery, we offer a comprehensive range of soap stamping solutions, each engineered for specific production needs, automation levels, and soap formats.",
     ],
     introImage: "/category-media/soap-stampers/overview.jpeg",
     products: [
@@ -106,50 +107,50 @@ export const categories = [
 const localProducts: Record<string, LocalProduct> = {
   "manual-pneumatic-soap-stamper": {
     slug: "manual-pneumatic-soap-stamper",
-    title: "Manual Pneumatic Soap Stamper",
+    title: "Manual Pneumatic Stamper",
     description:
-      "Compact single-cavity stamper for low-capacity production, pilot runs, and artisanal soap finishing with reliable embossing quality.",
+      "A compact manual soap stamping machine designed for low-capacity production, pilot batches, and artisanal soap makers. It offers precise embossing with a pneumatically assisted mechanism, making it ideal for small-scale manufacturers and customised soap runs.",
     detailSection: { images: ["/category-media/soap-stampers/manual-stamper.png"] },
     comingSoon: true,
   },
   "hrd-soap-stamper": {
     slug: "hrd-soap-stamper",
-    title: "HRD Soap Stamper",
+    title: "HRD Stamper",
     description:
-      "Integrated cutting and stamping machine for continuous billets with stable bar definition and quick die changeover.",
-    detailSection: { images: ["/category-media/soap-stampers/hrd-stamper.png"] },
+      "A robust heavy-duty soap stamper built for medium-capacity production, delivering consistent output with enhanced durability. Best suited for manufacturers looking for a balance between manual control and higher productivity.",
+    detailSection: { images: ["/assets/HRDStamper/soap-stamping-machine.png"] },
     comingSoon: true,
   },
   "rotary-soap-stamper": {
     slug: "rotary-soap-stamper",
-    title: "Rotary Soap Stamper",
+    title: "Rotary Stamper",
     description:
-      "High-speed automatic stamper with rotary mandrel and de-flashing support for continuous production lines.",
+      "A high-speed rotary stamping machine designed for continuous soap production lines, capable of delivering high output with uniform quality. Ideal for large-scale manufacturers requiring efficiency, automation, and consistent branding.",
     detailSection: { images: ["/category-media/soap-stampers/rotary-stamper.png"] },
     comingSoon: true,
   },
   "vertical-soap-stamper": {
     slug: "vertical-soap-stamper",
-    title: "Vertical Soap Stamper",
+    title: "Vertical Stamper",
     description:
-      "Precision vertical stamping system with vacuum handling and reduced scrap for advanced finishing lines.",
-    detailSection: { images: ["/category-media/soap-stampers/vertical-stamper.png"] },
+      "An advanced vertical stamping system engineered for precision alignment and superior surface finish, especially for premium soap bars. Suitable for high-end toilet soap production and automated finishing lines.",
+    detailSection: { images: ["/assets/VerticalStamper/automatic-soap-stamping-machine.png"] },
     comingSoon: true,
   },
   "six-face-soap-stamper": {
     slug: "six-face-soap-stamper",
-    title: "6 Face Soap Stamper",
+    title: "6 Face Stamper",
     description:
-      "Fully automatic six-side stamping machine for cuboid and rectangular soaps with premium all-face embossing.",
-    detailSection: { images: ["/category-media/soap-stampers/six-face-stamper.png"] },
+      "A specialised six-side stamping machine that stamps all faces of cuboid or Marseille-type soaps, ensuring complete branding and uniform geometry. Ideal for premium, export-quality, and traditional soap formats.",
+    detailSection: { images: ["/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png"] },
     comingSoon: true,
   },
   "laundry-soap-stamper": {
     slug: "laundry-soap-stamper",
-    title: "Laundry Soap Stamper",
+    title: "Laundry Stamper",
     description:
-      "Dual-side rotary stamper designed for high-volume rectangular laundry bars with consistent geometry and branding.",
-    detailSection: { images: ["/category-media/soap-stampers/laundry-stamper.png"] },
+      "A purpose-built soap stamper for rectangular laundry bars, capable of stamping multiple faces efficiently. Best suited for high-volume laundry soap production with consistent shape and automated finishing lines.",
+    detailSection: { images: ["/assets/LaundryStamper/laundry-soap-syamper.png"] },
     comingSoon: true,
   },
   "saponification-crutcher": {

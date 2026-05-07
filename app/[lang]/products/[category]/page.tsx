@@ -67,21 +67,23 @@ export default async function CategoryPage({
               </p>
             ))}
           </div>
-          <div>
-            <Image
-              src={
-                isLocal
-                  ? categoryData?.introImage || "/placeholder.png"
-                  : "/placeholder.png"
-              }
-              alt={`${categoryData?.title} overview`}
-              width={900}
-              height={560}
-              className={`w-full h-[280px] md:h-[340px] rounded-2xl ${
-                slug === "soponification" ? "object-contain" : "object-cover"
-              }`}
-            />
-          </div>
+          {slug !== "soap-stampers" && (
+            <div>
+              <Image
+                src={
+                  isLocal
+                    ? categoryData?.introImage || "/placeholder.png"
+                    : "/placeholder.png"
+                }
+                alt={`${categoryData?.title} overview`}
+                width={900}
+                height={560}
+                className={`w-full h-[280px] md:h-[340px] rounded-2xl ${
+                  slug === "soponification" ? "object-contain" : "object-cover"
+                }`}
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -93,9 +95,17 @@ export default async function CategoryPage({
               const productTitle = isLocal ? product.title : product.name;
               const productDesc = isLocal ? product.description : product.shortDescription;
               const isComingSoon = Boolean(isLocal && product.comingSoon);
-              const cardMinHeight = slug === "soponification" ? "min-h-[800px]" : "min-h-[500px]";
+              const cardMinHeight =
+                slug === "soponification"
+                  ? "min-h-[800px]"
+                  : slug === "soap-stampers"
+                  ? "min-h-[620px]"
+                  : "min-h-[500px]";
               const imageHeight = "h-56";
-              const descriptionClass = "text-sm text-primary-foreground/80 leading-relaxed";
+              const descriptionClass =
+                slug === "soap-stampers"
+                  ? "text-xs text-primary-foreground/80 leading-relaxed"
+                  : "text-sm text-primary-foreground/80 leading-relaxed";
               const productLink = isLocal
                 ? isComingSoon
                   ? `/${lang}/products/${slug}/${product.slug}`
