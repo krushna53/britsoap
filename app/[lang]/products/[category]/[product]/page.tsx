@@ -156,7 +156,7 @@ const LOCAL_PRODUCT_SEO: Record<string, ProductSeoData> = {
     ],
   },
   "powder-separator": {
-    title: "Powder Separator for Soap Plants | Cyclone Dust Removal System",
+    title: "Powder Separators | Efficient powder separation for soap drying lines",
     description:
       "Efficient cyclone powder separators for removing fine soap dust from vacuum spray chamber gases and improving plant efficiency.",
     keywords: [
@@ -193,7 +193,6 @@ export async function generateMetadata({
   return {
     title: seo.title,
     description: seo.description,
-    keywords: seo.keywords,
     alternates: {
       canonical: `/${lang}/products/${category}/${product}`,
     },
@@ -203,43 +202,36 @@ export async function generateMetadata({
       type: "website",
       url: `/${lang}/products/${category}/${product}`,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: seo.title,
-      description: seo.description,
-    },
   };
 }
 
 const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "saponification-crutcher-soap-manufacturing": {
     title: "Saponification Crutcher",
-    description:
-      "Batch-type soap reaction vessel for controlled semi-boiled soap production with flexible formulation control.",
-    video: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
-    introTitle: "Controlled Batch Saponification For Consistent Neat Soap",
+    description: "Industrial crutcher for controlled batch saponification and mixing.",
+    video: "/assets/SaponificationCrutcher/saponification-crutcher-soap.png",
+    introTitle: "Precision-Engineered Crutcher for Consistent Soap Production",
     introParagraphs: [
-      "The Saponification Crutcher is a batch-type soap reaction vessel used in the semi-boiled soap process for controlled mixing of fatty acids, caustic soda, brine, and water.",
-      "It is designed for manufacturers who need precise reaction control, consistent neat soap quality, and flexibility for different soap formulations and additive blending.",
+      "The Saponification Crutcher is the primary reaction vessel in the semi-boiled soap process, designed to produce neat soap with consistent quality.",
+      "It enables precise mixing of raw materials like fatty acids, caustic soda, brine, and water, ensuring batch uniformity.",
     ],
-    processTitle: "The Saponification Crutcher Process",
+    processTitle: "The Saponification Process",
     processSteps: [
       {
-        desc: "Raw materials are charged into the vessel with accurate dosing of fatty acids, caustic liquor, brine, and water.",
-        image: "/assets/SaponificationCrutcher/neat-soap-production.jpeg",
+        desc: "Raw materials are charged into the vessel with accurate dosing.",
+        image: "/assets/SaponificationCrutcher/industrial-soap-manufacturing.jpeg",
       },
       {
         desc: "The agitator maintains uniform mixing through the reaction stage to complete saponification.",
-        image: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
+        image: "/assets/SaponificationCrutcher/soap-from-oil-caustic.JPG",
       },
       {
-        desc: "Neat soap is discharged for downstream drying and finishing operations after the batch cycle is complete.",
-        image: "/assets/SaponificationCrutcher/soap-from-oil-caustic.JPG",
+        desc: "Finished neat soap is discharged for downstream processing.",
+        image: "/assets/SaponificationCrutcher/neat-soap-production.jpeg",
       },
     ],
     importanceTitle: "Why Saponification Control Matters",
-    importanceDescription:
-      "Saponification determines the base quality of every soap bar. Stable reaction control improves downstream drying, refining, and final product consistency.",
+    importanceDescription: "Saponification determines the base quality of every soap bar, affecting drying and refining stages.",
     importanceItems: [
       "Consistent neat soap quality",
       "Better control over formulation variability",
@@ -248,14 +240,12 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     ],
     detailTitle: "Brit Soap Saponification Crutcher",
     detailParagraphs: [
-      "The crutcher is the primary reaction vessel in the semi-boiled soap process and is designed to produce neat soap with consistent quality.",
-      "A typical cycle is organized around charging, a controlled saponification reaction, and discharge, with an overall cycle time of about two hours.",
-      "Critical parameters such as pump ratings, saponification value, caustic liquor concentration, and reaction temperature directly affect batch performance and quality.",
+      "Designed for efficient reaction with a 2-hour cycle time (charging, reaction, discharge).",
+      "Critical for industrial plants requiring controlled batch saponification and recipe flexibility.",
     ],
     detailImage: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
     applicationTitle: "Application In Production",
-    applicationDescription:
-      "Used in industrial soap plants requiring controlled batch saponification, recipe flexibility, and stable neat soap output for downstream drying and finishing lines.",
+    applicationDescription: "Used in industrial soap plants for controlled batch saponification and additive blending.",
     capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
   },
   "saponification-jet": {
@@ -356,98 +346,43 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
   },
   "powder-separator": {
-    title: "Powder Separator",
-    description:
-      "Cyclone-based powder separation unit for removing soap fines from drying line exhaust gases.",
-    video: DEFAULT_VIDEO,
-    introTitle: "Efficient Soap Dust Separation For Cleaner Drying Operation",
+    title: "Powder Separator for Soap Plants",
+    description: "Efficient cyclone powder separators for removing fine soap dust.",
+    video: "/assets/DrylingLine/powder-separator.png",
+    introTitle: "Efficient Dust Removal Process",
     introParagraphs: [
-      "Powder separators remove fine soap particles from gases exiting the vacuum spray chamber, protecting downstream systems and condenser performance.",
-      "The setup improves operational reliability, effluent quality control, and overall plant cleanliness.",
+      "The Brit Soap Powder Separators efficiently remove fine dust particles from gases exiting the Vacuum Spray Chamber.",
+      "Ensures cleaner exhaust flow and protects downstream systems.",
     ],
-    processTitle: "Powder Separation Process",
+    processTitle: "The Separation Process",
     processSteps: [
       {
-        desc: "Particle-laden gases enter the cyclone chamber from the drying line.",
-        image: "/category-media/dryling-line/powder-separator.png",
+        desc: "Exhaust gases enter the cyclone separator where centrifugal force separates fine particles.",
+        image: "/assets/DrylingLine/soap-drying-dust-collector.png",
       },
       {
-        desc: "Cyclone motion separates fine soap dust from gas stream flow.",
-        image: "/category-media/dryling-line/overview.png",
-      },
-      {
-        desc: "Collected powder is discharged through catch pots while cleaned gases continue downstream.",
-        image: "/category-media/dryling-line/vacuum-system.png",
+        desc: "Separated powder is collected in catch pots while cleaned gases exit through the top.",
+        image: "/assets/DrylingLine/soap-drying-filteration.png",
       },
     ],
-    importanceTitle: "Why Powder Separation Is Important",
-    importanceDescription:
-      "Dust control protects process equipment and supports stable continuous operation with cleaner exhaust handling.",
+    importanceTitle: "Why Powder Separation Matters",
+    importanceDescription: "Prevents contamination and improves overall system efficiency.",
     importanceItems: [
-      "Prevents carryover into condenser system",
-      "Improves plant cleanliness and reliability",
-      "Supports smoother wastewater management",
-      "Reduces contamination-related disruptions",
+      "Prevents cooling water contamination",
+      "Reduces environmental impact",
+      "Ensures smoother plant operations",
     ],
-    detailTitle: "Brit Soap Powder Separators",
+    detailTitle: "Brit Soap Powder Separator",
     detailParagraphs: [
-      "The cyclone separator system is engineered for continuous industrial duty and efficient fine particle removal.",
-      "Catch-pot and isolation arrangements support maintenance without major process interruption.",
-      "Material options are available based on application, durability, and corrosion requirements.",
+      "Dual cyclone design engineered for reliable and continuous industrial performance.",
+      "Available in AISI 304 stainless steel or Carbon Steel with isolating valve system.",
     ],
-    detailImage: "/category-media/dryling-line/powder-separator.png",
+    detailImage: "/assets/DrylingLine/powder-separator.png",
     applicationTitle: "Application In Production",
-    applicationDescription:
-      "Ideal for vacuum spray drying plants and integrated soap processing lines requiring robust dust and fine-particle control.",
-    capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
+    applicationDescription: "Ideal for continuous soap drying and vacuum spray systems.",
+    capacities: ["1 ton/hr", "2 tons/hr", "4 tons/hr", "6 tons/hr", "10 tons/hr"],
   },
   "vacuum-drying-system": {
-    title: "Vacuum Drying System",
-    description:
-      "Integrated vacuum booster, condenser, and pump system for efficient moisture removal in soap drying lines.",
-    video: DEFAULT_VIDEO,
-    introTitle: "Integrated Vacuum Generation For Stable Drying Performance",
-    introParagraphs: [
-      "The vacuum generating system creates and maintains the required vacuum conditions in spray drying plants for effective moisture evaporation.",
-      "By combining booster, condenser, and vacuum pump functions, it improves drying efficiency and lowers overall gas load.",
-    ],
-    processTitle: "Vacuum Drying System Workflow",
-    processSteps: [
-      {
-        desc: "Vacuum booster increases suction performance for enhanced chamber vacuum.",
-        image: "/category-media/dryling-line/vacuum-system.png",
-      },
-      {
-        desc: "Condenser cools and condenses vapors to reduce load on the vacuum pump.",
-        image: "/category-media/dryling-line/overview.png",
-      },
-      {
-        desc: "Vacuum pump evacuates non-condensable gases for stable process conditions.",
-        image: "/category-media/dryling-line/atomiser.png",
-      },
-    ],
-    importanceTitle: "Why Vacuum Stability Matters",
-    importanceDescription:
-      "Consistent vacuum is critical for moisture removal, product uniformity, and continuous high-capacity drying line operation.",
-    importanceItems: [
-      "Improves moisture evaporation efficiency",
-      "Reduces energy demand on pumps",
-      "Enhances product consistency",
-      "Improves reliability of full drying line",
-    ],
-    detailTitle: "Brit Soap Vacuum Drying System",
-    detailParagraphs: [
-      "The system is engineered as an integrated package to optimize vacuum generation and condensation performance.",
-      "Component coordination improves thermal efficiency and supports stable long-duration operation.",
-      "Designed for spray drying and continuous soap production environments requiring predictable process control.",
-    ],
-    detailImage: "/category-media/dryling-line/vacuum-system.png",
-    applicationTitle: "Application In Production",
-    applicationDescription:
-      "Used in spray drying and continuous soap manufacturing lines where moisture control, energy efficiency, and process stability are primary objectives.",
-    capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
-  },
-  "soap-atomiser": {
     title: "Atomiser / Vacuum Spray Chamber",
     description:
       "Vacuum spray chamber for rapid conversion of liquid neat soap into dried solid soap.",
@@ -1801,6 +1736,222 @@ export default async function ProductDetailPage({
       );
     }
 
+    if (productSlug === "powder-separator") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Powder Separator for Soap Drying Systems"
+            description="The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance."
+            video={templateData.video}
+          />
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <h2 className="text-3xl font-bold text-primary mb-4">
+                  Efficient Dust Removal Process in Soap Drying Systems
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  The Brit Soap Powder Separators efficiently remove fine dust
+                  particles from gases exiting the Vacuum Spray Chamber,
+                  ensuring cleaner exhaust flow, protecting downstream systems,
+                  and improving overall process efficiency.
+                </p>
+                <ul className="space-y-4 text-muted-foreground leading-relaxed">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold flex-shrink-0 mt-1.5">
+                      •
+                    </span>
+                    <span>
+                      Effectively separates fine soap particles from exhaust
+                      gases
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold flex-shrink-0 mt-1.5">
+                      •
+                    </span>
+                    <span>
+                      Prevents soap carryover into the Barometric Condenser
+                      cooling water
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold flex-shrink-0 mt-1.5">
+                      •
+                    </span>
+                    <span>
+                      Reduces risks of contamination and operational disruptions
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold flex-shrink-0 mt-1.5">
+                      •
+                    </span>
+                    <span>
+                      Supports smoother effluent discharge and wastewater
+                      management
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold flex-shrink-0 mt-1.5">
+                      •
+                    </span>
+                    <span>Enhances overall plant efficiency and reliability</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <div className="grid grid-cols-1 gap-4">
+                  <Image
+                    src="/assets/DrylingLine/soap-drying-dust-collector.png"
+                    alt="Soap drying dust collector"
+                    width={900}
+                    height={520}
+                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                  />
+                  <Image
+                    src="/assets/DrylingLine/soap-drying-filteration.png"
+                    alt="Soap drying filtration system"
+                    width={900}
+                    height={520}
+                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.85fr_1.15fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/DrylingLine/powder-separator.png"
+                  alt="Powder separator unit"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[480px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  Robust Engineering & Durable Construction
+                </h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Brit Soap manufactures dual cyclone powder separators,
+                    engineered for reliable and continuous industrial
+                    performance.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Available with contact parts in AISI 304 stainless steel
+                      or Carbon Steel</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Designed for efficient cyclone-based particle separation</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Equipped with catch pots at the bottom of the separators</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Fitted with an isolating valve, allowing the drum to be
+                      emptied without stopping the plant</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Built for durability and long service life in demanding
+                      soap manufacturing environments</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  Ideal for Soap Manufacturing Plants – Key Benefits
+                </h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>The Brit Soap Powder Separators are ideal for:</p>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Continuous soap drying and vacuum spray systems</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Integrated soap processing and finishing lines</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Industrial plants requiring efficient dust and particle
+                      control</span>
+                    </li>
+                  </ul>
+                  <p className="font-semibold text-primary">Key Benefits:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Prevents contamination of cooling water systems in the
+                      Barometric Condenser</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Supports smoother plant operations and reduces effluent
+                      discharge issues</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Improves overall system efficiency by removing fine
+                      particles effectively</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Enables uninterrupted production with easy maintenance via
+                      isolating valve system</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>Enhances environmental compliance and cleaner plant
+                      operations</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/DrylingLine/powder-separator-drying-plant.png"
+                  alt="Powder separator in drying plant"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[480px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered For Efficiency. Built For Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
     if (productSlug === "soap-heat-exchanger") {
       return (
         <Layout>
@@ -2011,50 +2162,28 @@ export default async function ProductDetailPage({
                   Powder Separators for Soap Drying Systems
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The Brit Soap Powder Separators are a critical component in
-                  modern soap drying lines, designed to efficiently remove fine
-                  dust particles from gases exiting the vacuum spray chamber.
-                  This controlled separation process prevents soap particles from
-                  entering the barometric condenser cooling water, ensuring
-                  smooth plant operation, improved effluent management, and
-                  consistent overall system performance.
+                  The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance.
                 </p>
               </div>
             </div>
           </section>
 
           <section className="py-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
+            <div className="container grid gap-10 md:grid-cols-[1.05fr_0.95fr] items-center">
               <div className="space-y-5">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Efficient Dust Removal Process in Soap Drying Systems
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    The Brit Soap Powder Separators efficiently remove fine dust
-                    particles from gases exiting the Vacuum Spray Chamber,
-                    ensuring cleaner exhaust flow, protecting downstream systems,
-                    and improving overall process efficiency.
+                    The Brit Soap Powder Separators efficiently remove fine dust particles from gases exiting the Vacuum Spray Chamber, ensuring cleaner exhaust flow, protecting downstream systems, and improving overall process efficiency.
                   </p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>
-                      Effectively separates fine soap particles from exhaust
-                      gases
-                    </li>
-                    <li>
-                      Prevents soap carryover into the Barometric Condenser
-                      cooling water
-                    </li>
-                    <li>
-                      Reduces risks of contamination and operational disruptions
-                    </li>
-                    <li>
-                      Supports smoother effluent discharge and wastewater
-                      management
-                    </li>
-                    <li>
-                      Enhances overall plant efficiency and reliability
-                    </li>
+                    <li>Effectively separates fine soap particles from exhaust gases</li>
+                    <li>Prevents soap carryover into the Barometric Condenser cooling water</li>
+                    <li>Reduces risks of contamination and operational disruptions</li>
+                    <li>Supports smoother effluent discharge and wastewater management</li>
+                    <li>Enhances overall plant efficiency and reliability</li>
                   </ul>
                 </div>
               </div>
@@ -2098,29 +2227,14 @@ export default async function ProductDetailPage({
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Brit Soap manufactures dual cyclone powder separators,
-                    engineered for reliable and continuous industrial
-                    performance.
+                    Brit Soap manufactures dual cyclone powder separators, engineered for reliable and continuous industrial performance.
                   </p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>
-                      Available with contact parts in AISI 304 stainless steel
-                      or Carbon Steel
-                    </li>
-                    <li>
-                      Designed for efficient cyclone-based particle separation
-                    </li>
-                    <li>
-                      Equipped with catch pots at the bottom of the separators
-                    </li>
-                    <li>
-                      Fitted with an isolating valve, allowing the drum to be
-                      emptied without stopping the plant
-                    </li>
-                    <li>
-                      Built for durability and long service life in demanding
-                      soap manufacturing environments
-                    </li>
+                    <li>Available with contact parts in AISI 304 stainless steel or Carbon Steel</li>
+                    <li>Designed for efficient cyclone-based particle separation</li>
+                    <li>Equipped with catch pots at the bottom of the separators</li>
+                    <li>Fitted with an isolating valve, allowing the drum to be emptied without stopping the plant</li>
+                    <li>Built for durability and long service life in demanding soap manufacturing environments</li>
                   </ul>
                 </div>
               </div>
@@ -2131,40 +2245,22 @@ export default async function ProductDetailPage({
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Ideal for Soap Manufacturing Plants - Key Benefits
+                  Ideal for Soap Manufacturing Plants – Key Benefits
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>The Brit Soap Powder Separators are ideal for:</p>
                   <ul className="space-y-2 list-disc pl-5">
                     <li>Continuous soap drying and vacuum spray systems</li>
                     <li>Integrated soap processing and finishing lines</li>
-                    <li>
-                      Industrial plants requiring efficient dust and particle
-                      control
-                    </li>
+                    <li>Industrial plants requiring efficient dust and particle control</li>
                   </ul>
                   <p className="font-semibold text-primary">Key Benefits:</p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>
-                      Prevents contamination of cooling water systems in the
-                      Barometric Condenser
-                    </li>
-                    <li>
-                      Supports smoother plant operations and reduces effluent
-                      discharge issues
-                    </li>
-                    <li>
-                      Improves overall system efficiency by removing fine
-                      particles effectively
-                    </li>
-                    <li>
-                      Enables uninterrupted production with easy maintenance via
-                      isolating valve system
-                    </li>
-                    <li>
-                      Enhances environmental compliance and cleaner plant
-                      operations
-                    </li>
+                    <li>Prevents contamination of cooling water systems in the Barometric Condenser</li>
+                    <li>Supports smoother plant operations and reduces effluent discharge issues</li>
+                    <li>Improves overall system efficiency by removing fine particles effectively</li>
+                    <li>Enables uninterrupted production with easy maintenance via isolating valve system</li>
+                    <li>Enhances environmental compliance and cleaner plant operations</li>
                   </ul>
                 </div>
               </div>
@@ -2177,6 +2273,166 @@ export default async function ProductDetailPage({
                   height={700}
                   className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
                 />
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "vacuum-drying-system") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Vacuum Drying System| Vacuum Booster, Condenser & Pumps for soap drying lines"
+            description="High-efficiency vacuum system designed to optimize moisture removal, improve drying performance, and enhance energy efficiency in modern soap manufacturing lines."
+          />
+
+          <section className="py-16 bg-background">
+            <div className="container max-w-4xl mx-auto">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                  Integrated Vacuum System for Efficient Soap Drying
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  The Brit Soap Vacuum Generating System is engineered to create and maintain optimal vacuum conditions within the spray drying plant, enabling efficient moisture evaporation and consistent soap quality. By combining a vacuum booster, condenser, and vacuum pump, the system ensures reduced gas load, improved thermal efficiency, and stable plant operation.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-12 bg-background">
+            <div className="container">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold mb-3">Vacuum Booster</h3>
+                  <div className="mb-4">
+                    <Image
+                      src="/assets/DrylingLine/vacuum-booster-jet.png"
+                      alt="Vacuum Booster"
+                      width={420}
+                      height={220}
+                      className="w-full h-36 object-contain rounded-md bg-white p-2"
+                    />
+                  </div>
+                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
+                    <p>
+                      The Brit Soap Vacuum Booster increases the degree of vacuum available in the spray drying plant by reinforcing the action of the vacuum pump.
+                    </p>
+                    <ul className="list-disc pl-5 mt-3 space-y-1">
+                      <li>Utilizes steam passing through a venturi tube with a restricted throat</li>
+                      <li>High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
+                      <li>Generates a higher vacuum level than a pump alone</li>
+                      <li>Improves overall system efficiency and drying effectiveness</li>
+                      <li>Designed for continuous industrial operation with robust construction</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold mb-3">Condenser</h3>
+                  <div className="mb-4">
+                    <Image
+                      src="/assets/DrylingLine/soap-condenser-soap-drying.png"
+                      alt="Condenser"
+                      width={420}
+                      height={220}
+                      className="w-full h-36 object-contain rounded-md bg-white p-2"
+                    />
+                  </div>
+                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
+                    <p>
+                      The Brit Soap water-cooled direct contact type gas condenser efficiently handles hot gases released from drying soap and the steam-operated vacuum booster.
+                    </p>
+                    <ul className="list-disc pl-5 mt-3 space-y-1">
+                      <li>Cools hot gases, significantly reducing their volume</li>
+                      <li>Lowers the gas load on the vacuum pump, improving energy efficiency</li>
+                      <li>Ensures maximum condensation of condensable vapours into liquid</li>
+                      <li>Reduces non-condensable gases to minimum possible volume</li>
+                      <li>Engineered for reliable performance in high-temperature environments</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold mb-3">Vacuum Pump</h3>
+                  <div className="mb-4">
+                    <Image
+                      src="/assets/DrylingLine/vacuum-pump.jpg"
+                      alt="Vacuum Pump"
+                      width={420}
+                      height={220}
+                      className="w-full h-36 object-contain rounded-md bg-white p-2"
+                    />
+                  </div>
+                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
+                    <p>
+                      A double-stage liquid ring vacuum pump is used as part of the vacuum generating system.
+                    </p>
+                    <ul className="list-disc pl-5 mt-3 space-y-1">
+                      <li>Evacuates air and non-condensable gases entering the system</li>
+                      <li>Maintains stable vacuum levels for consistent drying performance</li>
+                      <li>Designed for durability and continuous industrial usage</li>
+                      <li>Supports efficient operation of the overall vacuum system</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                  <h3 className="text-xl font-semibold mb-3">Barometric Tower</h3>
+                  <div className="mb-4">
+                    <Image
+                      src="/assets/DrylingLine/barometric-tower-soap-drying-plant.jpeg"
+                      alt="Barometric Tower"
+                      width={420}
+                      height={220}
+                      className="w-full h-36 object-contain rounded-md bg-white p-2"
+                    />
+                  </div>
+                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
+                    <p>
+                      The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 bg-background">
+            <div className="container max-w-4xl mx-auto">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-primary">Applications &amp; Key Benefits</h3>
+                <div className="text-muted-foreground leading-relaxed">
+                  <p className="font-semibold">Ideal for:</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>Soap spray drying plants</li>
+                    <li>Continuous soap manufacturing lines</li>
+                    <li>High-efficiency drying and moisture removal systems</li>
+                  </ul>
+
+                  <p className="font-semibold mt-4">Key Benefits:</p>
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>Enhances drying efficiency through improved vacuum levels</li>
+                    <li>Reduces energy consumption by lowering gas load on the pump</li>
+                    <li>Ensures consistent soap quality and moisture control</li>
+                    <li>Improves overall plant reliability and operational stability</li>
+                    <li>Optimizes performance of the entire soap drying line system</li>
+                  </ul>
+
+                  <h4 className="text-xl font-semibold mt-6">Barometric Tower for Vacuum System Integration</h4>
+                  <p className="mt-2">
+                    The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -2262,10 +2518,11 @@ export default async function ProductDetailPage({
         </Section>
 
         <CTASection
-          title="Engineered For Efficiency. Built For Reliability"
+          title="Engineered for Efficiency. Built for Reliability"
           description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
           buttonText="Speak with an Engineer"
           buttonLink={`/${lang}/contact`}
+          showSecondaryButton={false}
         />
       </Layout>
     );

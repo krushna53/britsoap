@@ -38,7 +38,7 @@ export default async function CategoryPage({
           <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
             {categoryData?.title}
           </h1>
-          {categoryData?.description && (
+          {slug !== "dryling-line" && categoryData?.description && (
             <p className="mt-4 text-primary text-lg text-left">
               {categoryData.description}
             </p>
@@ -50,6 +50,12 @@ export default async function CategoryPage({
       <section className="pb-12 bg-background">
         <div className="container space-y-8">
           <div>
+            {slug === "dryling-line" && categoryData?.description && (
+              <p className="text-lg text-primary mb-5">
+                {categoryData.description}
+              </p>
+            )}
+
             {(isLocal
               ? categoryData?.intro || []
               : [
@@ -107,7 +113,9 @@ export default async function CategoryPage({
                   : slug === "soap-stampers"
                   ? "min-h-[620px]"
                   : "min-h-[500px]";
-              const imageHeight = "h-56";
+              const rotateAtomiserImage =
+                slug === "dryling-line" && product.slug === "soap-atomiser";
+              const imageHeight = rotateAtomiserImage ? "h-36 md:h-40" : "h-56";
               const descriptionClass =
                 slug === "soap-stampers"
                   ? "text-xs text-primary-foreground/80 leading-relaxed"
@@ -124,10 +132,8 @@ export default async function CategoryPage({
               } else {
                 productImg = product.imageUrl;
               }
-              const rotateAtomiserImage =
-                slug === "dryling-line" && product.slug === "soap-atomiser";
               const cardImageClass = rotateAtomiserImage
-                ? `w-full ${imageHeight} object-contain rounded-xl border border-white/30 -rotate-90 bg-white p-2`
+                ? `w-full ${imageHeight} object-contain rounded-xl border border-white/30 bg-white p-2`
                 : `w-full ${imageHeight} object-cover rounded-xl border border-white/30`;
 
               return (
