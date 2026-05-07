@@ -39,7 +39,7 @@ export default async function CategoryPage({
             {categoryData?.title}
           </h2>
           <h1 className="text-4xl md:text-5xl font-bold text-primary">
-            {categoryData?.title} ({products.length})
+            {categoryData?.title}
           </h1>
           {categoryData?.description && (
             <p className="mt-4 text-primary max-w-2xl mx-auto text-lg">
@@ -51,7 +51,7 @@ export default async function CategoryPage({
 
       {/* 🔹 Intro Content + Image */}
       <section className="pb-12 bg-background">
-        <div className="container grid md:grid-cols-2 gap-10 items-center">
+        <div className="container max-w-5xl mx-auto space-y-8">
           <div>
             {(isLocal
               ? categoryData?.intro || []
@@ -108,21 +108,18 @@ export default async function CategoryPage({
               }
 
               return (
-                <div
+                <Link
                   key={`${product.slug}-${i}`}
-                  className="group bg-primary border border-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col min-h-[500px] max-w-[360px] mx-auto w-full"
+                  href={productLink}
+                  className="group bg-primary border border-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300 flex flex-col min-h-[500px] max-w-[360px] mx-auto w-full"
                 >
                   {/* Content */}
-                  <div className="p-6 flex flex-col flex-grow bg-primary text-primary-foreground">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors">
+                  <div className="px-6 py-8 md:py-10 flex flex-col flex-grow bg-primary text-primary-foreground text-center justify-center">
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors">
                       {productTitle}
                     </h3>
 
-                    <p className="text-sm text-primary-foreground/80 line-clamp-3 mb-6">
-                      {productDesc}
-                    </p>
-
-                    <div className="mt-auto">
+                    <div className="mb-6">
                       {productImg ? (
                         <Image
                           src={productImg}
@@ -138,17 +135,11 @@ export default async function CategoryPage({
                       )}
                     </div>
 
-                    <Link
-                      href={productLink}
-                      className="mt-5 inline-flex items-center justify-center text-sm font-semibold text-primary bg-white px-4 py-2 rounded hover:bg-accent hover:text-white transition-colors"
-                    >
-                      {isComingSoon ? "Coming Soon" : "View Details"}
-                      <span className="ml-2 transition-transform group-hover:translate-x-1">
-                        →
-                      </span>
-                    </Link>
+                    <p className="text-sm text-primary-foreground/80 line-clamp-4">
+                      {productDesc}
+                    </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
