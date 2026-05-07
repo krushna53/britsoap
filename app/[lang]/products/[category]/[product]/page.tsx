@@ -213,9 +213,9 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
   },
   "saponification-jet": {
-    title: "Saponification Jet",
+    title: "Saponification Jet | Instant Soap Making System with Venturi Technology",
     description:
-      "Steam-Powered Saponification Jet for Continuous & Instant Soap Processing",
+      "High-efficiency instant saponification system using steam-driven venturi technology for continuous soap production",
     video: "/assets/SaponificationJet/saponification-jet-soap.png",
     introTitle: "Instant Continuous Saponification Using Venturi Steam Technology",
     introParagraphs: [
@@ -796,17 +796,14 @@ export default async function ProductDetailPage({
       return (
         <Layout>
           <ProductHero
-            title={templateData.title}
-            description={templateData.description}
+            title="Saponification Crutcher | High-Efficiency Soap Reaction Vessel for Semi-Boiled Process"
+            description="Advanced industrial crutcher for efficient saponification, mixing, and soap manufacturing processes."
             video={templateData.video}
           />
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-                  BRIT SOAP MACHINERY
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
@@ -820,9 +817,6 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                  Saponification Crutcher
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Saponification Crutcher
                 </h2>
@@ -859,16 +853,16 @@ export default async function ProductDetailPage({
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <div className="grid gap-4">
                   <Image
-                    src="/assets/SaponificationCrutcher/soap-manufacturing-soap-machinery.jpeg"
-                    alt="Soap manufacturing machinery"
+                    src="/assets/SaponificationCrutcher/industrial-soap-manufacturing.jpeg"
+                    alt="Industrial soap manufacturing setup"
                     width={900}
                     height={520}
                     className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
                   />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Image
-                      src="/assets/SaponificationCrutcher/oil-casutic-soda-mixing-soap-base.png"
-                      alt="Oil and caustic soda mixing soap base"
+                      src="/assets/SaponificationCrutcher/soap-from-oil-caustic.JPG"
+                      alt="Soap base output from oil and caustic process"
                       width={420}
                       height={320}
                       className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
@@ -946,9 +940,6 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-                  BRIT SOAP MACHINERY
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
@@ -962,9 +953,6 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                  Saponification Jet
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Saponification Jet
                 </h2>
@@ -997,12 +985,6 @@ export default async function ProductDetailPage({
                     The venturi-induced vacuum draws both streams into the mixing zone, where they interact in the presence of steam, resulting in instantaneous saponification and producing up to 90% reacted neat soap.
                   </p>
                 </div>
-                <div className="rounded-2xl border border-border bg-primary/5 p-5 md:p-6 text-primary">
-                  <p className="font-semibold mb-2">Speak with our engineers</p>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    Discuss your production requirements and identify the right capacity, configuration, and customization for your plant.
-                  </p>
-                </div>
               </div>
 
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
@@ -1023,8 +1005,8 @@ export default async function ProductDetailPage({
                       className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
                     />
                     <Image
-                      src="/assets/SaponificationJet/saponification-jet-soap.png"
-                      alt="Saponification jet operation"
+                      src="/assets/SaponificationCrutcher/soap-from-oil-caustic.JPG"
+                      alt="Soap formation in saponification process"
                       width={420}
                       height={320}
                       className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
@@ -1055,19 +1037,6 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border bg-gradient-to-br from-blue-50 to-indigo-50 p-7 md:p-10 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Capacity Range
-                </p>
-                <div className="space-y-3">
-                  {["1 ton/hr", "2 tons/hr", "4 tons/hr", "6 tons/hr", "10 tons/hr"].map((capacity, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                      <span className="text-primary font-medium">{capacity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </section>
 
@@ -1087,16 +1056,13 @@ export default async function ProductDetailPage({
         <Layout>
           <ProductHero
             title="Manual Pneumatic Soap Stamper | Compact Soap Finishing Machine for Precision Stamping"
-            description="Manual accurate stamping for soap finishing lines."
+            description="Cost-Effective Single Cavity Stamper for Low Capacity Soap Production"
             video={templateData.video}
           />
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-                  BRIT SOAP MACHINERY
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
@@ -1116,9 +1082,6 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                  Manual Pneumatic Soap Stamper
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Manual Pneumatic Soap Stamper
                 </h2>
@@ -1183,14 +1146,6 @@ export default async function ProductDetailPage({
                       maintenance, while maintaining a low investment cost.
                     </p>
                   </div>
-                </div>
-                <div className="rounded-2xl border border-border bg-primary/5 p-5 md:p-6 text-primary">
-                  <p className="font-semibold mb-2">Speak with our engineers</p>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    Speak with our engineers to discuss your production
-                    requirements and identify the right capacity, configuration,
-                    and customization for your plant.
-                  </p>
                 </div>
               </div>
 
@@ -1281,19 +1236,6 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border bg-gradient-to-br from-blue-50 to-indigo-50 p-7 md:p-10 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Capacity Range
-                </p>
-                <div className="space-y-3">
-                  {["10-15 bars/min"].map((capacity, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                      <span className="text-primary font-medium">{capacity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </section>
 
@@ -1408,9 +1350,6 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-                  BRIT SOAP MACHINERY
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
@@ -1428,9 +1367,6 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                  HRD Soap Stamper
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   HRD Soap Stamper
                 </h2>
@@ -1466,14 +1402,6 @@ export default async function ProductDetailPage({
                     modern continuous soap manufacturing processes. The machine
                     can handle production for banded and bandless types of
                     soaps.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-border bg-primary/5 p-5 md:p-6 text-primary">
-                  <p className="font-semibold mb-2">Speak with our engineers</p>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    Speak with our engineers to discuss your production
-                    requirements and identify the right capacity, configuration,
-                    and customization for your plant.
                   </p>
                 </div>
               </div>
@@ -1550,19 +1478,6 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border bg-gradient-to-br from-blue-50 to-indigo-50 p-7 md:p-10 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Capacity Range
-                </p>
-                <div className="space-y-3">
-                  {["Up to 70 stamps/min"].map((capacity, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                      <span className="text-primary font-medium">{capacity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </section>
 
@@ -1677,9 +1592,6 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-                  BRIT SOAP MACHINERY
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
@@ -1699,9 +1611,6 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                  Rotary Soap Stamper
-                </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Rotary Soap Stamper
                 </h2>
@@ -1747,14 +1656,6 @@ export default async function ProductDetailPage({
                     is supplied with in-feed and out-feed conveyors, ensuring
                     smooth transfer of soap billets from the plodder and cutter
                     into the stamping stage and onward to wrapping.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-border bg-primary/5 p-5 md:p-6 text-primary">
-                  <p className="font-semibold mb-2">Speak with our engineers</p>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    Speak with our engineers to discuss your production
-                    requirements and identify the right capacity, configuration,
-                    and customization for your plant.
                   </p>
                 </div>
               </div>
@@ -1830,19 +1731,6 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border bg-gradient-to-br from-blue-50 to-indigo-50 p-7 md:p-10 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Capacity Configuration
-                </p>
-                <div className="space-y-3">
-                  {["2 to 6 die cavities"].map((capacity, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                      <span className="text-primary font-medium">{capacity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </section>
 
