@@ -33,16 +33,13 @@ export default async function CategoryPage({
   return (
     <Layout>
       {/* 🔹 Hero */}
-      <section className="py-20 bg-background text-center">
+      <section className="py-20 bg-background">
         <div className="container">
-          <h2 className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-            {categoryData?.title}
-          </h2>
-          <h1 className="text-4xl md:text-5xl font-bold text-primary">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
             {categoryData?.title}
           </h1>
           {categoryData?.description && (
-            <p className="mt-4 text-primary max-w-2xl mx-auto text-lg">
+            <p className="mt-4 text-primary text-lg text-left">
               {categoryData.description}
             </p>
           )}
@@ -51,7 +48,7 @@ export default async function CategoryPage({
 
       {/* 🔹 Intro Content + Image */}
       <section className="pb-12 bg-background">
-        <div className="container max-w-5xl mx-auto space-y-8">
+        <div className="container space-y-8">
           <div>
             {(isLocal
               ? categoryData?.intro || []
@@ -80,7 +77,7 @@ export default async function CategoryPage({
               alt={`${categoryData?.title} overview`}
               width={900}
               height={560}
-              className={`w-full h-[280px] md:h-[340px] rounded-2xl border border-border ${
+              className={`w-full h-[280px] md:h-[340px] rounded-2xl ${
                 slug === "soponification" ? "object-contain" : "object-cover"
               }`}
             />
