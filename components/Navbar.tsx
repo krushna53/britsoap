@@ -46,7 +46,7 @@ const navLinks: NavLink[] = [
           category: "Soponification",
           path: "/products/soponification",
           items: [
-            { name: "Saponification Crutcher", path: "/products/soponification/saponification-crutcher" },
+            { name: "Saponification Crutcher", path: "/products/soponification/saponification-crutcher-soap-manufacturing" },
             { name: "Saponification Jet", path: "/products/soponification/saponification-jet" },
           ],
         },

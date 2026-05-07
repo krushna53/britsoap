@@ -41,7 +41,7 @@ type LocalProductPageData = {
 const DEFAULT_VIDEO = "/assets/Mixer/double-arm-sigma-soap-mixer.mov";
 
 const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
-  "saponification-crutcher": {
+  "saponification-crutcher-soap-manufacturing": {
     title: "Saponification Crutcher",
     description:
       "Batch-type soap reaction vessel for controlled semi-boiled soap production with flexible formulation control.",

@@ -43,10 +43,10 @@ export const categories = [
     title: "Soponification",
     slug: "soponification",
     description:
-      "Soap reaction systems that convert oils and caustic soda into neat soap with controlled process stability.",
+      "Soap reaction systems that convert oils and caustic soda into neat soap for industrial soap manufacturing.",
     intro: [
-      "The saponification stage is the first and most critical step in soap manufacturing, where oils and fats react with alkali under controlled conditions to produce neat soap.",
-      "We support both batch and continuous approaches through crutcher and jet systems, enabling flexible operation across plant capacities and product formulations.",
+      "The saponification process in soap manufacturing is the first and most critical stage of industrial soap production, where oils and fats such as palm oil react with caustic soda (alkali) under controlled temperature and mixing conditions to produce a liquid soap base known as neat soap.",
+      "This chemical reaction determines the overall quality, consistency, and performance of the final product. The neat soap is then transferred to a soap drying plant, where moisture is removed to form soap noodles, which serve as the base for toilet soap, laundry soap, and specialty soap bar production through further refining, extrusion, cutting, and stamping processes.",
     ],
     introImage: "/category-media/soponification/overview.png",
     products: ["saponification-crutcher", "saponification-jet"],
@@ -154,10 +154,10 @@ const localProducts: Record<string, LocalProduct> = {
     comingSoon: true,
   },
   "saponification-crutcher": {
-    slug: "saponification-crutcher",
+    slug: "saponification-crutcher-soap-manufacturing",
     title: "Saponification Crutcher",
     description:
-      "Batch reaction vessel for semi-boiled process, enabling controlled mixing of fatty acids, caustic soda, brine, and water.",
+      "The Saponification Crutcher is a batch-type soap reaction vessel used in the semi-boiled soap process, designed for controlled mixing of fatty acids, caustic soda, brine, and water to produce neat soap with consistent quality.",
     detailSection: { images: ["/category-media/soponification/crutcher.png"] },
     comingSoon: true,
   },
@@ -165,7 +165,7 @@ const localProducts: Record<string, LocalProduct> = {
     slug: "saponification-jet",
     title: "Saponification Jet",
     description:
-      "Steam venturi based continuous system with no moving parts for instant saponification and high conversion efficiency.",
+      "The Saponification Jet is a continuous soap manufacturing system that uses steam-driven venturi technology to enable instant saponification, producing up to 90% reacted neat soap directly.",
     detailSection: { images: ["/category-media/soponification/jet.png"] },
     comingSoon: true,
   },
