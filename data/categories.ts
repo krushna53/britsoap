@@ -52,17 +52,6 @@ export const categories = [
     products: ["saponification-crutcher", "saponification-jet"],
   },
   {
-    title: "Mixing Equipment",
-    slug: "mixing-equipment",
-    description: "Explore our range of mixing equipment for optimal soap manufacturing.",
-    intro: [
-      "Heavy-duty mixing systems are used for blending soap noodles with additives to create uniform composition before refining and extrusion.",
-      "Our mixers are designed for reliable operation and consistent mass quality in continuous and batch finishing lines.",
-    ],
-    introImage: "/assets/product-finishing.jpg",
-    products: ["double-arm-sigma-mixer-soap-manufacturing"],
-  },
-  {
     title: "Refining & Plodding",
     slug: "refining-and-plodding",
     description: "High-performance machines designed for refining and homogenizing soap mass.",

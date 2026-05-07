@@ -318,10 +318,10 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
   },
   "manual-pneumatic-soap-stamper": {
-    title: "Manual Pneumatic Soap Stamper",
+    title: "Manual Stamper",
     description:
       "Compact single-cavity soap stamper for low-capacity production, pilot batches, and custom branded runs.",
-    video: DEFAULT_VIDEO,
+    video: "/category-media/soap-stampers/manual-penumatic-soap-stamper.mov",
     introTitle: "Cost-Effective Precision Stamping For Small-Scale Production",
     introParagraphs: [
       "The manual pneumatic stamper is designed for controlled low-volume production where consistent embossing and brand clarity are required.",
@@ -331,15 +331,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Operator places pre-cut soap slug into the lower die cavity.",
-        image: "/category-media/soap-stampers/manual-stamper.png",
+        image: "/category-media/soap-stampers/manual-bar-soap-stamper.JPG",
       },
       {
         desc: "Pneumatic assist closes top die and applies uniform compression for shaping and embossing.",
-        image: "/category-media/soap-stampers/overview.jpeg",
+        image: "/category-media/soap-stampers/manual-penumatic-bar-soap-stamper.png",
       },
       {
         desc: "Stamped bar is released and removed, ready for repeat operation.",
-        image: "/category-media/soap-stampers/laundry-stamper.png",
+        image: "/category-media/soap-stampers/manual-soap-press.png",
       },
     ],
     importanceTitle: "Why Manual Pneumatic Stamping Is Useful",
@@ -351,23 +351,23 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Suitable for pilot and custom soap runs",
       "Lower operating complexity and cost",
     ],
-    detailTitle: "Brit Soap Manual Pneumatic Stamper",
+    detailTitle: "Brit Soap Manual Stamper",
     detailParagraphs: [
       "The machine combines robust frame construction with pneumatic assistance to improve operator ease and output consistency.",
       "Single-cavity design enables precise and controlled stamping with clean release using suitable die materials.",
       "It is well-suited as a primary unit for small production or auxiliary backup in larger lines.",
     ],
-    detailImage: "/category-media/soap-stampers/manual-stamper.png",
+    detailImage: "/category-media/soap-stampers/manual-bar-soap-stamper.JPG",
     applicationTitle: "Application In Production",
     applicationDescription:
       "Best suited for artisanal manufacturers, pilot lots, custom orders, and low-volume finishing lines requiring controlled branding quality.",
     capacities: ["10-15 bars/min", "Pilot batch", "Low-capacity production"],
   },
   "hrd-soap-stamper": {
-    title: "HRD Soap Stamper",
+    title: "HRD Stamper",
     description:
       "Integrated cutting and stamping machine for continuous soap billets with stable finish and repeatable geometry.",
-    video: DEFAULT_VIDEO,
+    video: "/category-media/soap-stampers/toilet-soap-stamping-machine.mp4",
     introTitle: "Continuous Cutting + Stamping In One Machine",
     introParagraphs: [
       "The HRD stamper is designed to receive continuous soap from the plodder line and perform cutting and stamping in a synchronized operation.",
@@ -377,15 +377,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Continuous soap feed enters the machine from upstream extrusion/cutting line.",
-        image: "/category-media/soap-stampers/hrd-stamper.png",
+        image: "/category-media/soap-stampers/soap-stamper-machine.png",
       },
       {
         desc: "Integrated mechanism performs shaping and embossing with controlled die action.",
-        image: "/category-media/soap-stampers/overview.jpeg",
+        image: "/category-media/soap-stampers/automatic-soap-stamping-machine.jpeg",
       },
       {
         desc: "Dual ejection support transfers finished bars for downstream handling.",
-        image: "/category-media/soap-stampers/laundry-stamper.png",
+        image: "/category-media/soap-stampers/soap-press-industrial.jpg",
       },
     ],
     importanceTitle: "Why HRD Stamper Is Valuable",
@@ -397,13 +397,13 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Flexible die change for product variants",
       "Reduced handling between process stages",
     ],
-    detailTitle: "Brit Soap HRD Soap Stamper",
+    detailTitle: "Brit Soap HRD Stamper",
     detailParagraphs: [
       "The HRD stamper is built on a rigid industrial structure designed for reliable continuous operation.",
       "Its synchronized stamping and extraction pattern supports clean product release across varying formulations.",
       "Operator controls and speed adjustment support process tuning for different soap formats and capacities.",
     ],
-    detailImage: "/category-media/soap-stampers/hrd-stamper.png",
+    detailImage: "/category-media/soap-stampers/soap-stamper-machine.png",
     applicationTitle: "Application In Production",
     applicationDescription:
       "Suitable for medium-to-high capacity soap finishing lines that require integrated cutting and stamping with repeatable quality.",
@@ -502,10 +502,10 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     capacities: ["VPress 04", "VPress 06", "Continuous automated operation"],
   },
   "six-face-soap-stamper": {
-    title: "6 Face Soap Stamper",
+    title: "6 F Stamper",
     description:
       "Automatic six-side stamping system for cuboid and rectangular soaps with full-surface branding.",
-    video: DEFAULT_VIDEO,
+    video: "/category-media/soap-stampers/automatic-cube-stamper.mov",
     introTitle: "All-Side Stamping For Premium Cuboid Soap Formats",
     introParagraphs: [
       "The six-face stamper is designed to emboss all sides of cuboid soap with uniform geometry and sharp definition.",
@@ -515,15 +515,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Soap billets are fed continuously and positioned over mold cavity.",
-        image: "/category-media/soap-stampers/six-face-stamper.png",
+        image: "/category-media/soap-stampers/soap-stamper-cuboid-six-side-stamper.png",
       },
       {
         desc: "Top, bottom, and side punches shape and emboss all faces in one cycle.",
-        image: "/category-media/soap-stampers/overview.jpeg",
+        image: "/category-media/soap-stampers/automatic-soap-press.jpg",
       },
       {
         desc: "Stamped bars are ejected and transferred to outfeed for packing integration.",
-        image: "/category-media/soap-stampers/rotary-stamper.png",
+        image: "/category-media/soap-stampers/marseille-soap-stamper.jpg",
       },
     ],
     importanceTitle: "Why Six-Face Stamping Is Important",
@@ -535,23 +535,23 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Consistent cuboid shape control",
       "Reduced dependence on manual finishing",
     ],
-    detailTitle: "Brit Soap 6 Face Stamper",
+    detailTitle: "Brit Soap 6 F Stamper",
     detailParagraphs: [
       "The machine combines precision punch mechanics with automatic handling to deliver stable high-quality output.",
       "Cooling and material selection in punch/mold systems support better release and long-term durability.",
       "PLC-controlled automation allows integration into advanced continuous finishing lines.",
     ],
-    detailImage: "/category-media/soap-stampers/six-face-stamper.png",
+    detailImage: "/category-media/soap-stampers/soap-stamper-cuboid-six-side-stamper.png",
     applicationTitle: "Application In Production",
     applicationDescription:
       "Used for cuboid and rectangular premium soap formats requiring complete-face stamping and high repeatability.",
     capacities: ["50 mm to 100 mm soap size range", "Automatic line integration"],
   },
   "laundry-soap-stamper": {
-    title: "Laundry Soap Stamper",
+    title: "Laundry Stamper",
     description:
       "Dual-side rotary laundry soap stamping machine for high-volume rectangular bars with consistent embossing.",
-    video: DEFAULT_VIDEO,
+    video: "/category-media/soap-stampers/laundry-soap-stamper.mov",
     introTitle: "High-Efficiency Stamping For Laundry Soap Bars",
     introParagraphs: [
       "The laundry stamper is engineered for rectangular bar formats and continuous high-throughput operation.",
@@ -561,15 +561,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Dual in-feed conveyor streams position soap bars for synchronized stamping.",
-        image: "/category-media/soap-stampers/laundry-stamper.png",
+        image: "/category-media/soap-stampers/laundry-soap-bar-production.jpeg",
       },
       {
         desc: "Rotary die box performs dual-side embossing with stable alignment.",
-        image: "/category-media/soap-stampers/overview.jpeg",
+        image: "/category-media/soap-stampers/laundry-soap-syamper.png",
       },
       {
         desc: "Stamped bars are discharged in aligned flow for downstream packing.",
-        image: "/category-media/soap-stampers/hrd-stamper.png",
+        image: "/category-media/soap-stampers/soap-press-die-laundry-soap.jpeg",
       },
     ],
     importanceTitle: "Why Laundry Stamping Setup Matters",
@@ -587,7 +587,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Cooling arrangements and die material design support clean release and better emboss clarity.",
       "Parallel feed strategy improves throughput while preserving bar geometry and alignment.",
     ],
-    detailImage: "/category-media/soap-stampers/laundry-stamper.png",
+    detailImage: "/category-media/soap-stampers/laundry-soap-syamper.png",
     applicationTitle: "Application In Production",
     applicationDescription:
       "Designed for high-volume laundry and rectangular soap production lines where output stability and consistent bar definition are essential.",
