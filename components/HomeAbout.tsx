@@ -25,7 +25,7 @@ export default function HomeAbout({ data }: Props) {
     : "/images/about-factory.jpg";
 
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 bg-muted">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* IMAGE */}
