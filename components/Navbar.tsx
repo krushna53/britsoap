@@ -17,6 +17,11 @@ type Category = {
   category: string;
   path?: string;
   items: SubItem[];
+  subcategories?: {
+    category: string;
+    path?: string;
+    items: SubItem[];
+  }[];
 };
 
 type NavLink = {
@@ -58,22 +63,21 @@ const navLinks: NavLink[] = [
           ],
         },
         {
-          category: "Refining & Plodding",
-          path: "/products/refining-and-plodding",
-          items: [
-            { name: "Simplex Refiner Plodder", path: "/simplex-refiner-plodder" },
-            { name: "Duplex Vacuum Plodder", path: "/duplex-vacuum-soap-plodder-machine" },
-            { name: "Triple Roll Mill", path: "/triple-roll-mill-soap-refining-machine" },
-          ],
-        },
-        {
           category: "Finishing Line",
           path: "/products/finishing-line",
           items: [
             { name: "Double Sigma Mixer", path: "/double-arm-sigma-mixer-soap-manufacturing" },
-            { name: "Soap Cutters", path: "/soap-cutters" },
-            { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine"},
-            {name: "HSB Cutter", path:"/high-speed-soap-cutter-machine"}
+            { name: "Refiner Plodders", path: "/simplex-refiner-plodder" },
+            { name: "Triple Roll Mill", path: "/triple-roll-mill-soap-refining-machine" },
+            { name: "Duplex Vacuum Plodder", path: "/duplex-vacuum-soap-plodder-machine" },
+          ],
+        },
+        {
+          category: "Soap Cutters",
+          path: "/soap-cutters",
+          items: [
+            { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine" },
+            { name: "HSB Cutter", path: "/high-speed-soap-cutter-machine" },
           ],
         },
         {
@@ -157,18 +161,44 @@ const Navbar = () => {
                               {col.category}
                             </p>
                           )}
-                          <ul className="flex flex-col gap-1">
+                          <div className="flex flex-col gap-1">
                             {col.items.map((item, ii) => (
-                              <li key={ii}>
-                                <Link
-                                  href={`/${lang}${item.path}`}
-                                  className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
-                                >
-                                  {item.name}
-                                </Link>
-                              </li>
+                              <Link
+                                key={ii}
+                                href={`/${lang}${item.path}`}
+                                className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
+                              >
+                                {item.name}
+                              </Link>
                             ))}
-                          </ul>
+                            {col.subcategories?.map((subCategory, si) => (
+                              <div key={si} className="mt-2 pl-3 border-l border-border/70">
+                                {subCategory.path ? (
+                                  <Link
+                                    href={`/${lang}${subCategory.path}`}
+                                    className="block text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-2 hover:text-accent transition-colors"
+                                  >
+                                    {subCategory.category}
+                                  </Link>
+                                ) : (
+                                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-2">
+                                    {subCategory.category}
+                                  </p>
+                                )}
+                                <div className="flex flex-col gap-1">
+                                  {subCategory.items.map((item, ii) => (
+                                    <Link
+                                      key={ii}
+                                      href={`/${lang}${item.path}`}
+                                      className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -266,6 +296,33 @@ const Navbar = () => {
                                   >
                                     • {item.name}
                                   </Link>
+                                ))}
+                                {col.subcategories?.map((subCategory, si) => (
+                                  <div key={si} className="mt-2 pl-3 border-l border-border/70">
+                                    {subCategory.path ? (
+                                      <Link
+                                        href={`/${lang}${subCategory.path}`}
+                                        onClick={() => setMobileOpen(false)}
+                                        className="block text-xs font-semibold uppercase tracking-widest text-primary mb-1 hover:text-accent"
+                                      >
+                                        {subCategory.category}
+                                      </Link>
+                                    ) : (
+                                      <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-1">
+                                        {subCategory.category}
+                                      </p>
+                                    )}
+                                    {subCategory.items.map((item, ii) => (
+                                      <Link
+                                        key={ii}
+                                        href={`/${lang}${item.path}`}
+                                        onClick={() => setMobileOpen(false)}
+                                        className="block pl-3 py-1 text-sm text-muted-foreground hover:text-primary"
+                                      >
+                                        • {item.name}
+                                      </Link>
+                                    ))}
+                                  </div>
                                 ))}
                               </div>
                             ))}
