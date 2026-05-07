@@ -44,6 +44,9 @@ const navLinks: NavLink[] = [
             { name: "Manual Pneumatic Stamper", path: "/products/soap-stampers/manual-pneumatic-soap-stamper" },
             { name: "HRD Soap Stamper", path: "/products/soap-stampers/hrd-soap-stamper" },
             { name: "Rotary Soap Stamper", path: "/products/soap-stampers/rotary-soap-stamper" },
+            { name: "Vertical Soap Stamper", path: "/products/soap-stampers/vertical-soap-stamper" },
+            { name: "Six-Face Soap Stamper", path: "/products/soap-stampers/six-face-soap-stamper" },
+            { name: "Laundry Soap Stamper", path: "/products/soap-stampers/laundry-soap-stamper" },
           ],
         },
         {
@@ -52,13 +55,6 @@ const navLinks: NavLink[] = [
           items: [
             { name: "Saponification Crutcher", path: "/products/soponification/saponification-crutcher" },
             { name: "Saponification Jet", path: "/products/soponification/saponification-jet" },
-          ],
-        },
-        {
-          category: "Mixing Equipment",
-          path: "/products/mixing-equipment",
-          items: [
-            { name: "Double Sigma Mixer", path: "/double-arm-sigma-mixer-soap-manufacturing" },
           ],
         },
         {
@@ -74,6 +70,7 @@ const navLinks: NavLink[] = [
           category: "Finishing Line",
           path: "/products/finishing-line",
           items: [
+            { name: "Double Sigma Mixer", path: "/double-arm-sigma-mixer-soap-manufacturing" },
             { name: "Soap Cutters", path: "/soap-cutters" },
             { name: "AV Pneumatic Cutter", path: "/av-pneumatic-soap-cutter-machine"},
             {name: "HSB Cutter", path:"/high-speed-soap-cutter-machine"}

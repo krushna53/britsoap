@@ -801,4 +801,634 @@ export const productPages = [
             buttonLink: "/en/contact",
         },
     },
+    {
+        slug: "manual-pneumatic-soap-stamper",
+
+        // ✅ SEO
+        meta: {
+            title: "Manual Pneumatic Soap Stamper | Industrial Soap Stamping Machine",
+            description:
+                "Compact manual pneumatic soap stamper for artisanal and small-scale soap production. Clean embossing and uniform bar shape.",
+            keywords: [
+                "manual soap stamper",
+                "pneumatic soap stamper",
+                "soap stamping machine",
+                "soap bar stamper",
+            ],
+        },
+
+        // ✅ HERO
+        title: "Manual Pneumatic Soap Stamper For Precision Bar Stamping",
+        description:
+            "Compact manual pneumatic stamper designed for precise embossing of soap bars with clean, uniform impressions.",
+
+        video: "/assets/ManualStamper/manual-penumatic-soap-stamper.mov",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "Precise Manual Stamping For Quality Soap Branding",
+            paragraphs: [
+                "The Manual Pneumatic Soap Stamper is designed for small to medium-scale soap production, delivering precision embossing with minimal operator effort.",
+                "Ideal for artisanal producers and contract manufacturers, the stamper ensures consistent bar shape and sharp logo impression on every bar.",
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Manual Stamping Process",
+        processDescription:
+            "Step-by-step operation of the manual pneumatic stamper for reliable embossing.",
+
+        processSteps: [
+            {
+                desc: "Soap bars are positioned on the stamping plate, aligned with the die.",
+                image: "/assets/ManualStamper/manual-bar-soap-stamper.JPG",
+            },
+            {
+                desc: "The operator activates the pneumatic press, which drives the die down onto the soap bar with controlled force.",
+                image: "/assets/ManualStamper/manual-penumatic-bar-soap-stamper.png",
+            },
+            {
+                desc: "The stamped bar is removed, showing a clean, uniform embossed impression ready for packaging.",
+                image: "/assets/ManualStamper/manual-soap-press.png",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why Manual Stamping Is Effective For Small-Scale Production",
+        importanceDescription:
+            "Manual stampers provide flexibility and precision for producers who value customization and quality branding without the capital investment of automated systems.",
+        importanceItems: [
+            "Precise embossing with clean impressions",
+            "Low equipment cost and minimal maintenance",
+            "Flexible bar size and design options",
+            "Ideal for small to medium batch production",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap Manual Pneumatic Stamper",
+
+            paragraphs: [
+                "The Manual Pneumatic Stamper is engineered for reliable performance in artisanal and small-scale soap manufacturing. The compact design makes it suitable for limited production spaces while delivering consistent stamping quality.",
+
+                "Built with a sturdy steel frame and precision-engineered pneumatic components, the stamper ensures uniform embossing pressure across every bar. The stamping die is easily replaceable, allowing producers to switch between different logos or designs as needed.",
+
+                "The operator-friendly design minimizes fatigue during extended stamping sessions, with adjustable stroke and pressure settings to accommodate different soap formulations and desired impression depth.",
+            ],
+
+            images: [
+                "/assets/ManualStamper/manual-penumatic-bar-soap-stamper.png",
+                "/assets/ManualStamper/manual-soap-press.png"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application In Production",
+        applicationDescription:
+            "The Manual Pneumatic Stamper is ideal for artisanal soap makers, small manufacturing operations, and contract producers who require flexibility in stamping designs and production volumes. It supports production of toilet soaps, specialty soaps, and branded bar production.",
+        applicationImage: "/assets/ManualStamper/manual-penumatic-bar-soap-stamper.png",
+
+        // ✅ CAPACITY
+        capacityTitle: "Production Capacity",
+        capacityDescription:
+            "Production rate depends on operator efficiency and bar size.",
+        capacities: [
+            "100-200 bars/hour",
+            "Custom configurations available",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered For Efficiency. Built For Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+    {
+        slug: "hrd-soap-stamper",
+
+        // ✅ SEO
+        meta: {
+            title: "HRD Soap Stamper | Industrial Toilet Soap Stamping Machine",
+            description:
+                "Heavy-duty HRD soap stamper for high-speed embossing of toilet soap bars. Clean impressions and reliable performance.",
+            keywords: [
+                "HRD soap stamper",
+                "toilet soap stamper",
+                "industrial soap stamper",
+                "soap bar stamping machine",
+            ],
+        },
+
+        // ✅ HERO
+        title: "HRD Soap Stamper | Industrial Toilet Soap Stamping Machine",
+        description:
+            "Heavy-duty pneumatic stamper engineered for high-speed embossing of toilet soap bars with precision and reliability.",
+
+        video: "/assets/HRDStamper/toilet-soap-stamping-machine.mp4",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "High-Performance Stamping For Industrial Toilet Soap Production",
+            paragraphs: [
+                "The HRD Soap Stamper is designed for high-capacity toilet soap production lines, delivering fast, consistent embossing with sharp, clean impressions.",
+                "Built for industrial duty, the stamper integrates seamlessly into finishing lines, providing reliable performance even under demanding production schedules.",
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The HRD Stamping Process",
+        processDescription:
+            "High-speed embossing operation of the HRD stamper.",
+
+        processSteps: [
+            {
+                desc: "Soap bars are automatically fed onto the stamping platform at high speed.",
+                image: "/assets/HRDStamper/automatic-soap-stamping-machine.jpeg",
+            },
+            {
+                desc: "The pneumatic dies press down onto the soap, creating precise embossed impressions with controlled force.",
+                image: "/assets/HRDStamper/soap-stamper-machine.png",
+            },
+            {
+                desc: "Stamped bars are discharged, ready for downstream processing or packaging.",
+                image: "/assets/HRDStamper/soap-press-industrial.jpg",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why HRD Stamper Is Essential For High-Volume Production",
+        importanceDescription:
+            "The HRD stamper combines speed with precision, ensuring consistent branding and product quality across large-volume toilet soap production.",
+        importanceItems: [
+            "High-speed embossing capability",
+            "Consistent impression quality",
+            "Industrial-duty reliability",
+            "Easy die changeover for design flexibility",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap HRD Stamper",
+
+            paragraphs: [
+                "The HRD Stamper is engineered for continuous high-capacity production, featuring a robust frame, precision-guided dies, and pneumatic actuation for smooth, consistent operation.",
+
+                "The stamper accommodates various die designs, enabling quick changeover between different logos and branding options. Precision alignment guides ensure perfect positioning of each bar under the stamping dies.",
+
+                "Built with industrial-grade components and designed for 24/7 operation, the HRD stamper minimizes downtime and maintenance while delivering consistently sharp embossing across millions of bars.",
+            ],
+
+            images: [
+                "/assets/HRDStamper/soap-stamper-die.jpeg",
+                "/assets/HRDStamper/soap-press-die.jpeg"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application In Production",
+        applicationDescription:
+            "The HRD Stamper is designed for high-capacity industrial soap production lines focused on toilet soap manufacturing. It delivers consistent, high-quality embossing suitable for commercial-scale operations.",
+        applicationImage: "/assets/HRDStamper/soap-stamping-machine.png",
+
+        // ✅ CAPACITY
+        capacityTitle: "Production Capacity",
+        capacityDescription:
+            "Designed for high-speed industrial production.",
+        capacities: [
+            "300-500 bars/minute",
+            "Scalable for larger production volumes",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered For Efficiency. Built For Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+    {
+        slug: "rotary-soap-stamper",
+
+        // ✅ SEO
+        meta: {
+            title: "Rotary Soap Stamper | High-Speed Soap Bar Stamping Machine",
+            description:
+                "Advanced rotary soap stamper for high-capacity production. Precision embossing with rotary die technology. Speak to an engineer today.",
+            keywords: [
+                "rotary soap stamper",
+                "rotary die stamper",
+                "high-speed soap stamper",
+                "industrial stamping machine",
+            ],
+        },
+
+        // ✅ HERO
+        title: "Rotary Soap Stamper | Advanced Rotary Die Stamping System",
+        description:
+            "High-capacity rotary stamper utilizing rotary die technology for rapid, precise embossing of soap bars in finishing lines.",
+
+        video: "/assets/RotaryStamper/automatic-soap-stamping-machine.mp4",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "High-Speed Rotary Stamping For Premium Soap Finishing",
+            paragraphs: [
+                "The Rotary Soap Stamper is engineered for high-capacity production environments, using rotating dies to deliver rapid, consistent embossing.",
+                "Ideal for large-scale operations producing branded toilet soaps, laundry bars, and specialty soaps, the stamper combines speed with embossing precision.",
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Rotary Stamping Process",
+        processDescription:
+            "Advanced rotary die mechanism for high-speed embossing.",
+
+        processSteps: [
+            {
+                desc: "Soap bars are continuously fed through the rotary stamper at high speed.",
+                image: "/assets/RotaryStamper/rotary-soap-stamper.png",
+            },
+            {
+                desc: "Rotating dies press onto the soap bars with precision-controlled pressure, creating sharp embossed impressions.",
+                image: "/assets/RotaryStamper/soap-stampin-machine.jpg",
+            },
+            {
+                desc: "Embossed bars are discharged in continuous flow for immediate downstream processing.",
+                image: "/assets/RotaryStamper/industrial-soap-bar-stamping.jpg",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why Rotary Stamping Is Superior For High-Volume Production",
+        importanceDescription:
+            "Rotary die technology enables continuous, high-speed production while maintaining embossing quality. This makes it ideal for large manufacturing operations.",
+        importanceItems: [
+            "Continuous high-speed embossing",
+            "Consistent impression quality across high volumes",
+            "Reduced production cycle time",
+            "Minimal maintenance and wear on dies",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap Rotary Stamper",
+
+            paragraphs: [
+                "The Rotary Stamper is a sophisticated machine designed for continuous, high-capacity soap production. Its rotating die mechanism enables seamless operation at production speeds that match the fastest finishing lines.",
+
+                "Built with precision-engineered dies, advanced actuation systems, and robust structural components, the rotary stamper delivers consistent, sharp embossing across millions of bars without quality degradation.",
+
+                "The modular die design allows quick changeover between different logos and designs, providing manufacturing flexibility for multi-product facilities.",
+            ],
+
+            images: [
+                "/assets/RotaryStamper/rotary-soap-stamper.png",
+                "/assets/RotaryStamper/soap-die-press.jpg"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application In Production",
+        applicationDescription:
+            "The Rotary Stamper is ideal for large-scale industrial soap production requiring continuous, high-speed embossing. It suits manufacturers of toilet soaps, laundry bars, and branded specialty soaps.",
+        applicationImage: "/assets/RotaryStamper/soap-finishing-line-stamper.jpeg",
+
+        // ✅ CAPACITY
+        capacityTitle: "Production Capacity",
+        capacityDescription:
+            "Designed for maximum throughput in continuous production lines.",
+        capacities: [
+            "500-1000+ bars/minute",
+            "Scalable for ultra-high-capacity plants",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered For Efficiency. Built For Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+    {
+        slug: "vertical-soap-stamper",
+
+        // ✅ SEO
+        meta: {
+            title: "Vertical Soap Stamper | Industrial Vertical Stamping Machine",
+            description:
+                "Vertical pneumatic soap stamper for precise bar embossing. Compact design with high performance. Ideal for finishing lines.",
+            keywords: [
+                "vertical soap stamper",
+                "vertical stamping machine",
+                "soap bar stamper",
+                "pneumatic stamper",
+            ],
+        },
+
+        // ✅ HERO
+        title: "Vertical Soap Stamper | Precision Vertical Bar Stamping",
+        description:
+            "Vertical pneumatic stamper engineered for accurate embossing with a compact footprint, ideal for integrated soap finishing lines.",
+
+        video: "/assets/VerticalStamper/vertical-final.mp4",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "Precision Vertical Stamping For Consistent Bar Quality",
+            paragraphs: [
+                "The Vertical Soap Stamper is designed for precise embossing of soap bars using a vertical stamping mechanism, ensuring uniform impressions with minimal floor space requirements.",
+                "Perfect for medium to high-capacity lines, the stamper delivers reliable performance with easy integration into existing finishing equipment.",
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Vertical Stamping Process",
+        processDescription:
+            "Vertical pressing mechanism for accurate embossing.",
+
+        processSteps: [
+            {
+                desc: "Soap bars are positioned on the stamping base, aligned with the vertical press.",
+                image: "/assets/VerticalStamper/vertical-soap-stamper.png",
+            },
+            {
+                desc: "The pneumatic press moves vertically downward, applying controlled force to create sharp, centered embossed impressions.",
+                image: "/assets/VerticalStamper/automatic-soap-stamping-machine.png",
+            },
+            {
+                desc: "Stamped bars are ejected and ready for downstream packaging or further processing.",
+                image: "/assets/VerticalStamper/bar-soap-stamping-machine.jpg",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why Vertical Stamping Excels In Production",
+        importanceDescription:
+            "The vertical design offers precision stamping in a compact footprint, making it ideal for facilities with space constraints while maintaining high embossing quality.",
+        importanceItems: [
+            "Precise vertical pressure control",
+            "Compact footprint with high throughput",
+            "Easy integration with finishing lines",
+            "Reliable, low-maintenance operation",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap Vertical Stamper",
+
+            paragraphs: [
+                "The Vertical Stamper combines precision engineering with a space-efficient design. Its vertical pressing mechanism ensures that force is applied uniformly across the soap bar surface, creating sharp, consistent embossings.",
+
+                "Built with reinforced structural components and precision-guided actuation, the stamper operates reliably in continuous production environments. The modular die system allows quick changeover for different branding options.",
+
+                "Adjustable pressure settings accommodate different soap formulations and desired impression depths, providing flexibility for varied production requirements.",
+            ],
+
+            images: [
+                "/assets/VerticalStamper/vertical-soap-stamper.png",
+                "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application In Production",
+        applicationDescription:
+            "The Vertical Stamper is ideal for medium to high-capacity soap production lines where space efficiency and precision embossing are priorities. Suitable for toilet soaps, laundry bars, and branded specialty soaps.",
+        applicationImage: "/assets/VerticalStamper/automatic-soap-press.jpeg",
+
+        // ✅ CAPACITY
+        capacityTitle: "Production Capacity",
+        capacityDescription:
+            "Designed for reliable mid to high-volume production.",
+        capacities: [
+            "300-700 bars/minute",
+            "Configurable for different production requirements",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered For Efficiency. Built For Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+    {
+        slug: "six-face-soap-stamper",
+
+        // ✅ SEO
+        meta: {
+            title: "Six-Face Soap Stamper | Multi-Sided Soap Bar Embossing",
+            description:
+                "Premium six-face soap stamper for cuboid and multi-faced soap bars. Precise embossing on all sides. Perfect for luxury soap production.",
+            keywords: [
+                "six-face stamper",
+                "cuboid soap stamper",
+                "multi-face stamper",
+                "luxury soap stamping",
+            ],
+        },
+
+        // ✅ HERO
+        title: "Six-Face Soap Stamper | Premium Cuboid Bar Embossing System",
+        description:
+            "Specialized stamper engineered to emboss soap bars on six faces simultaneously, ideal for premium cuboid and multi-faced soap production.",
+
+        video: "/assets/SixFaceStamper/automatic-cube-stamper.mov",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "Premium Multi-Face Embossing For Luxury Soap Bars",
+            paragraphs: [
+                "The Six-Face Soap Stamper is designed specifically for premium soap bars with cuboid and multi-faced designs, enabling simultaneous embossing on all exposed surfaces.",
+                "Perfect for manufacturers seeking to create distinctive, branded luxury soap bars, the stamper delivers precision and consistency in complex embossing applications.",
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Six-Face Stamping Process",
+        processDescription:
+            "Multi-face simultaneous embossing for premium bar production.",
+
+        processSteps: [
+            {
+                desc: "Cuboid soap bars are positioned in the multi-face stamping chamber with precision alignment guides.",
+                image: "/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png",
+            },
+            {
+                desc: "Multiple pneumatic dies engage simultaneously, embossing all six faces with synchronized, controlled pressure.",
+                image: "/assets/SixFaceStamper/cubeoid-soap-press.jpg",
+            },
+            {
+                desc: "Completed premium bars are ejected, fully embossed on all sides and ready for packaging.",
+                image: "/assets/SixFaceStamper/marseille-soap-stamper.jpg",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why Six-Face Stamping Is Essential For Premium Products",
+        importanceDescription:
+            "Six-face embossing creates distinctive premium soap bars that stand out in retail environments. The technique adds significant brand value through comprehensive surface branding.",
+        importanceItems: [
+            "Complete surface branding on all faces",
+            "Premium product differentiation",
+            "Simultaneous multi-face embossing",
+            "Consistent quality across complex designs",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap Six-Face Stamper",
+
+            paragraphs: [
+                "The Six-Face Stamper is an advanced system engineered for premium soap production. Its design accommodates multiple die sets positioned to engage all six faces of a cuboid bar simultaneously.",
+
+                "Built with precision-engineered dies, synchronized pneumatic actuation, and sophisticated positioning systems, the stamper delivers consistent, high-quality embossing across all faces with minimal bar distortion.",
+
+                "The modular die design allows quick changeover between different six-face designs, providing flexibility for diverse premium product lines.",
+            ],
+
+            images: [
+                "/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png",
+                "/assets/SixFaceStamper/automatic-soap-press.jpg"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application In Production",
+        applicationDescription:
+            "The Six-Face Stamper is specifically designed for premium luxury soap bar production, where comprehensive branding on multiple surfaces is desired. Ideal for artisanal and high-end soap manufacturers.",
+        applicationImage: "/assets/SixFaceStamper/marseille-soap-stamper.jpg",
+
+        // ✅ CAPACITY
+        capacityTitle: "Production Capacity",
+        capacityDescription:
+            "Optimized for premium product quality and precision.",
+        capacities: [
+            "100-300 bars/minute",
+            "Customizable for specific bar dimensions",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered For Efficiency. Built For Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
+    {
+        slug: "laundry-soap-stamper",
+
+        // ✅ SEO
+        meta: {
+            title: "Laundry Soap Stamper | Industrial Laundry Bar Stamping Machine",
+            description:
+                "Specialized laundry soap stamper for uniform bar embossing. Designed for high-capacity laundry soap production.",
+            keywords: [
+                "laundry soap stamper",
+                "laundry bar stamper",
+                "industrial soap stamper",
+                "laundry bar embossing",
+            ],
+        },
+
+        // ✅ HERO
+        title: "Laundry Soap Stamper | Specialized Laundry Bar Stamping System",
+        description:
+            "Purpose-built stamper engineered specifically for laundry soap bar production, delivering precise, consistent embossing on larger, rectangular bars.",
+
+        video: "/assets/LaundryStamper/laundry-soap-stamper.mov",
+
+        // ✅ INTRO SECTION
+        refinerIntro: {
+            title: "Specialized Embossing For Laundry Soap Production",
+            paragraphs: [
+                "The Laundry Soap Stamper is specifically designed for laundry soap bar production, with features optimized for the unique dimensions and hardness of laundry bars.",
+                "Engineered to handle the characteristics of laundry soap formulations, the stamper delivers reliable, consistent branding suitable for high-volume commercial production.",
+            ],
+        },
+
+        // ✅ PROCESS SECTION
+        processTitle: "The Laundry Soap Stamping Process",
+        processDescription:
+            "Specialized stamping mechanism for laundry bar production.",
+
+        processSteps: [
+            {
+                desc: "Laundry soap bars are fed through the stamping line at controlled speed, positioned for precise embossing.",
+                image: "/assets/LaundryStamper/laundry-soap-bar-production.jpeg",
+            },
+            {
+                desc: "Pneumatic dies engage with controlled force, creating uniform embossed impressions on the laundry bar surface.",
+                image: "/assets/LaundryStamper/laundry-soap-syamper.png",
+            },
+            {
+                desc: "Stamped laundry bars are discharged in continuous flow, ready for downstream processing and packaging.",
+                image: "/assets/LaundryStamper/soap-press-die-laundry-soap.jpeg",
+            },
+        ],
+
+        // ✅ WHY SECTION
+        importanceTitle: "Why Specialized Laundry Stamping Is Important",
+        importanceDescription:
+            "Laundry soaps have unique characteristics that require specialized stamping equipment. A dedicated laundry stamper ensures consistent branding while maintaining bar integrity.",
+        importanceItems: [
+            "Optimized for laundry soap formulations",
+            "Handles larger bar dimensions",
+            "Maintains bar structural integrity",
+            "Consistent branding at high volumes",
+        ],
+
+        // ✅ DETAIL SECTION
+        detailSection: {
+            title: "Brit Soap Laundry Stamper",
+
+            paragraphs: [
+                "The Laundry Soap Stamper is engineered specifically for laundry soap bar production, with design features that address the unique challenges of stamping larger, more robust bars.",
+
+                "Built with heavy-duty components capable of handling the harder formulations typical of laundry soaps, the stamper delivers consistent embossing without compromising bar quality or structural integrity.",
+
+                "The adjustable pressure settings and die designs accommodate different laundry bar specifications, providing flexibility across diverse product lines and manufacturing requirements.",
+            ],
+
+            images: [
+                "/assets/LaundryStamper/laundry-soap-syamper.png",
+                "/assets/LaundryStamper/laundry-soap-bar-production.jpeg"
+            ]
+        },
+
+        // ✅ APPLICATION
+        applicationTitle: "Application In Production",
+        applicationDescription:
+            "The Laundry Soap Stamper is designed specifically for high-capacity laundry soap production, providing efficient branding of larger bar formats used in commercial laundry applications.",
+        applicationImage: "/assets/LaundryStamper/soap-press-die-laundry-soap.jpeg",
+
+        // ✅ CAPACITY
+        capacityTitle: "Production Capacity",
+        capacityDescription:
+            "Designed for high-volume laundry soap production.",
+        capacities: [
+            "400-800 bars/minute",
+            "Scalable for ultra-high-capacity facilities",
+        ],
+
+        // ✅ CTA
+        ctaSection: {
+            title: "Engineered For Efficiency. Built For Reliability",
+            description:
+                "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
+            buttonText: "Speak with an Engineer",
+            buttonLink: "/en/contact",
+        },
+    },
 ];

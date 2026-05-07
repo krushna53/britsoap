@@ -2,11 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type ProductHeroProps = {
   title: string;
   description: string;
-  video: string;
+  video?: string;
 };
 
 export default function ProductHero({
@@ -54,15 +55,25 @@ export default function ProductHero({
         </div>
 
         <div className="relative w-full h-full">
-          <video
-            id="product-video"
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
-          />
+          {video && (video.endsWith(".mp4") || video.endsWith(".mov") || video.endsWith(".webm")) ? (
+            <video
+              id="product-video"
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
+            />
+          ) : (
+            <Image
+              src={video || "/placeholder.png"}
+              alt={title}
+              width={960}
+              height={540}
+              className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
+            />
+          )}
           <div className="absolute inset-0 -z-10 blur-3xl bg-white/20 rounded-2xl"></div>
         </div>
       </div>
