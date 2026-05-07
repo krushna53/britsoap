@@ -132,6 +132,52 @@ const LOCAL_PRODUCT_SEO: Record<string, ProductSeoData> = {
     ],
     imageAlt: "Rotary soap stamper machine shaping and finishing soap bars",
   },
+  "soap-heat-exchanger": {
+    title: "Industrial Heat Exchanger for Soap Drying Lines | Brit Soap Machinery",
+    description:
+      "High-performance heat exchanger for liquid soap heating, ensuring efficient moisture evaporation and consistent drying in soap manufacturing plants.",
+    keywords: [
+      "soap heat exchanger",
+      "industrial heat exchanger",
+      "soap drying equipment",
+      "liquid soap heating system",
+      "steam heat exchanger",
+      "moisture evaporation system",
+      "soap drying line machinery",
+      "soap manufacturing equipment",
+      "spray drying plant soap",
+      "industrial soap processing machinery",
+      "vacuum drying system",
+      "soap finishing line equipment",
+      "soap plant engineering",
+      "soap production machine manufacturer",
+      "industrial soap machinery India",
+      "soap processing plant equipment",
+    ],
+  },
+  "powder-separator": {
+    title: "Powder Separator for Soap Plants | Cyclone Dust Removal System",
+    description:
+      "Efficient cyclone powder separators for removing fine soap dust from vacuum spray chamber gases and improving plant efficiency.",
+    keywords: [
+      "powder separator soap",
+      "cyclone separator",
+      "soap dust removal system",
+      "vacuum spray chamber separator",
+      "industrial dust collector",
+      "soap plant filtration",
+      "soap drying line machinery",
+      "soap manufacturing equipment",
+      "spray drying plant soap",
+      "industrial soap processing machinery",
+      "vacuum drying system",
+      "soap finishing line equipment",
+      "soap plant engineering",
+      "soap production machine manufacturer",
+      "industrial soap machinery India",
+      "soap processing plant equipment",
+    ],
+  },
 };
 
 export async function generateMetadata({
@@ -842,12 +888,6 @@ export default async function ProductDetailPage({
                     Critical parameters such as pump ratings, saponification value of fats, caustic liquor concentration, and reaction temperature play a vital role in achieving efficient and consistent batch cycles.
                   </p>
                 </div>
-                <div className="rounded-2xl border border-border bg-primary/5 p-5 md:p-6 text-primary">
-                  <p className="font-semibold mb-2">Speak with our engineers</p>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    Discuss your production requirements and identify the right capacity, configuration, and customization for your plant.
-                  </p>
-                </div>
               </div>
 
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
@@ -1080,101 +1120,89 @@ export default async function ProductDetailPage({
           </section>
 
           <section className="py-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
-              <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
-                  Manual Pneumatic Soap Stamper
-                </h2>
+            <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/ManualStamper/manual-penumatic-bar-soap-stamper.png"
+                  alt="Manual pneumatic soap stamper"
+                  width={900}
+                  height={700}
+                  className="h-[340px] md:h-[480px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  The Manual Pneumatic Soap Stamper operates through a simple
+                  and efficient soap finishing process where pre-cut soap bars
+                  are manually placed onto the bottom die cavity. The operator
+                  then engages the mechanical door with pneumatic actuation,
+                  which safely closes to bring the top die into alignment.
+                </p>
+                <p>
+                  This action applies uniform pressure to compress, shape, and
+                  emboss the soap bar, ensuring precise branding and a clean
+                  finish. Once the cycle is complete, the door opens for easy
+                  removal and repeat operation.
+                </p>
+                <p>
+                  The machine delivers an output of approximately 10-15 soap
+                  bars per minute, depending on operator speed, making it ideal
+                  for low-capacity soap production. The pneumatically assisted
+                  safety door mechanism enhances operator safety while
+                  maintaining consistent soap stamping quality and efficiency.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                  Construction &amp; Functional Advantages
+                </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    The Manual Pneumatic Soap Stamper operates through a simple
-                    and efficient soap finishing process where pre-cut soap bars
-                    are manually placed onto the bottom die cavity.
+                    Built with durability, operator safety, and ease of use in
+                    mind, this machine combines robust mechanical design with
+                    pneumatic assistance for enhanced stamping efficiency.
                   </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Heavy-duty frame construction for stability and long
+                      service life
+                    </li>
+                    <li>
+                      Pneumatically assisted lever operation for reduced
+                      operator fatigue
+                    </li>
+                    <li>
+                      Single cavity die system ensuring precision stamping for
+                      each soap bar
+                    </li>
+                    <li>Compatible with banded and bandless soap formats</li>
+                    <li>
+                      High-quality brass soap dies with non-stick coating for
+                      clean release and superior finish
+                    </li>
+                  </ul>
                   <p>
-                    The operator then engages the mechanical door with pneumatic
-                    actuation, which safely closes to bring the top die into
-                    alignment. This action applies uniform pressure to compress,
-                    shape, and emboss the soap bar for precise branding and a
-                    clean finish.
+                    This configuration makes the machine highly suitable for
+                    consistent soap embossing, reduced wastage, and easy
+                    maintenance, while maintaining a low investment cost.
                   </p>
-                  <p>
-                    Once the cycle is complete, the door opens for easy removal
-                    and repeat operation. The machine delivers an output of
-                    approximately 10-15 soap bars per minute, depending on
-                    operator speed, making it ideal for low-capacity soap
-                    production.
-                  </p>
-                  <p>
-                    The pneumatically assisted safety door mechanism enhances
-                    operator safety while maintaining consistent soap stamping
-                    quality and efficiency.
-                  </p>
-                  <div className="space-y-2 rounded-2xl border border-border bg-white p-5 md:p-6">
-                    <p className="font-semibold text-primary">
-                      Construction &amp; Functional Advantages
-                    </p>
-                    <p className="text-sm">
-                      Built with durability, operator safety, and ease of use in
-                      mind, this machine combines robust mechanical design with
-                      pneumatic assistance for enhanced stamping efficiency.
-                    </p>
-                    <ul className="space-y-2 list-disc pl-5 text-sm">
-                      <li>
-                        Heavy-duty frame construction for stability and long
-                        service life
-                      </li>
-                      <li>
-                        Pneumatically assisted lever operation for reduced
-                        operator fatigue
-                      </li>
-                      <li>
-                        Single cavity die system ensuring precision stamping for
-                        each soap bar
-                      </li>
-                      <li>
-                        Compatible with banded and bandless soap formats
-                      </li>
-                      <li>
-                        High-quality brass soap dies with non-stick coating for
-                        clean release and superior finish
-                      </li>
-                    </ul>
-                    <p className="text-sm">
-                      This configuration makes the machine highly suitable for
-                      consistent soap embossing, reduced wastage, and easy
-                      maintenance, while maintaining a low investment cost.
-                    </p>
-                  </div>
                 </div>
               </div>
 
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
-                <div className="grid gap-4">
-                  <Image
-                    src="/assets/ManualStamper/manual-penumatic-bar-soap-stamper.png"
-                    alt="Manual pneumatic soap stamper"
-                    width={900}
-                    height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
-                  />
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Image
-                      src="/assets/ManualStamper/manual-bar-soap-stamper.JPG"
-                      alt="Manual bar soap stamper"
-                      width={420}
-                      height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
-                    />
-                    <Image
-                      src="/assets/ManualStamper/manual-soap-press.png"
-                      alt="Manual soap press"
-                      width={420}
-                      height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
-                    />
-                  </div>
-                </div>
+                <Image
+                  src="/assets/ManualStamper/manual-soap-press.png"
+                  alt="Manual soap press"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
               </div>
             </div>
           </section>
@@ -1235,7 +1263,15 @@ export default async function ProductDetailPage({
                   </ul>
                 </div>
               </div>
-
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/ManualStamper/manual-bar-soap-stamper.JPG"
+                  alt="Manual bar soap stamper"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
             </div>
           </section>
 
@@ -1365,82 +1401,57 @@ export default async function ProductDetailPage({
           </section>
 
           <section className="py-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
-              <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
-                  HRD Soap Stamper
-                </h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    The HRD Stamper is built on a rigid, industrial-grade
-                    structure designed to ensure stability during continuous
-                    high-speed operation. The machine integrates a compact
-                    cutting and stamping unit optimized for precision and
-                    repeatability.
-                  </p>
-                  <p>
-                    Its unique stamping process, which simultaneously feeds,
-                    stamps, and extracts the soap, enables smoother release
-                    from the die cavities, allowing excess soap to be separated
-                    gently from the finished bars.
-                  </p>
-                  <p>
-                    A dual ejection system combining air and mechanical action
-                    further ensures reliable product release across varying soap
-                    formulations.
-                  </p>
-                  <p>
-                    The control panel provides intuitive operation, while the
-                    variable speed drive system allows precise adjustment of
-                    stamping rates. An integrated discharge conveyor supports
-                    smooth product handling, and the quick die-change
-                    arrangement minimizes downtime during product transitions.
-                  </p>
-                  <p>
-                    The overall construction reflects a focus on durability,
-                    controlled operation, and ease of maintenance, aligned with
-                    modern continuous soap manufacturing processes. The machine
-                    can handle production for banded and bandless types of
-                    soaps.
-                  </p>
-                </div>
+            <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/HRDStamper/soap-stamping-machine.png"
+                  alt={
+                    LOCAL_PRODUCT_SEO["hrd-soap-stamper"].imageAlt ||
+                    "HRD soap stamper machine"
+                  }
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[440px] w-full object-contain rounded-2xl bg-white"
+                />
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
-                <div className="grid gap-4">
-                  <Image
-                    src="/assets/HRDStamper/soap-stamper-machine.png"
-                    alt={
-                      LOCAL_PRODUCT_SEO["hrd-soap-stamper"].imageAlt ||
-                      "HRD soap stamper machine"
-                    }
-                    width={900}
-                    height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
-                  />
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Image
-                      src="/assets/HRDStamper/automatic-soap-stamping-machine.jpeg"
-                      alt="Automatic HRD soap stamping machine"
-                      width={420}
-                      height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
-                    />
-                    <Image
-                      src="/assets/HRDStamper/soap-press-industrial.jpg"
-                      alt="Industrial soap press"
-                      width={420}
-                      height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
-                    />
-                  </div>
-                </div>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  The HRD Stamper is built on a rigid, industrial-grade
+                  structure designed to ensure stability during continuous
+                  high-speed operation. The machine integrates a compact cutting
+                  and stamping unit, optimised for precision and repeatability.
+                </p>
+                <p>
+                  Its unique stamping process, which simultaneously feeds,
+                  stamps, and extracts the soap, enables smoother release from
+                  the die cavities allowing excess soap to be separated gently
+                  from the finished bars.
+                </p>
+                <p>
+                  A dual ejection system, combining air and mechanical action,
+                  further ensures reliable product release across varying soap
+                  formulations.
+                </p>
+                <p>
+                  The control panel provides intuitive operation, while the
+                  variable speed drive system allows precise adjustment of
+                  stamping rates. An integrated discharge conveyor supports
+                  smooth product handling, and the quick die change arrangement
+                  minimises downtime during product transitions.
+                </p>
+                <p>
+                  The overall construction reflects a focus on durability,
+                  controlled operation, and ease of maintenance, aligned with
+                  modern, continuous soap manufacturing processes. The machine
+                  can handle production for banded and bandless type of soaps.
+                </p>
               </div>
             </div>
           </section>
 
           <section className="pb-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
+            <div className="container grid gap-10 md:grid-cols-[1fr_1fr] items-start">
               <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
                   Key Benefits &amp; Functional Highlights
@@ -1477,7 +1488,52 @@ export default async function ProductDetailPage({
                   </ul>
                 </div>
               </div>
-
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <Image
+                    src="/assets/HRDStamper/soap-stamper-machine.png"
+                    alt="HRD soap stamper machine"
+                    width={260}
+                    height={180}
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                  />
+                  <Image
+                    src="/assets/HRDStamper/soap-stamper-die.jpeg"
+                    alt="HRD soap stamper die"
+                    width={260}
+                    height={180}
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                  />
+                  <Image
+                    src="/assets/HRDStamper/soap-press-industrial.jpg"
+                    alt="Industrial soap press"
+                    width={260}
+                    height={180}
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                  />
+                  <Image
+                    src="/assets/HRDStamper/soap-press-die.jpeg"
+                    alt="Soap press die assembly"
+                    width={260}
+                    height={180}
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                  />
+                  <Image
+                    src="/assets/HRDStamper/soap-bar-stamper.jpeg"
+                    alt="Stamped soap bars"
+                    width={260}
+                    height={180}
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                  />
+                  <Image
+                    src="/assets/HRDStamper/automatic-soap-stamping-machine.jpeg"
+                    alt="Automatic soap stamping machine"
+                    width={260}
+                    height={180}
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                  />
+                </div>
+              </div>
             </div>
           </section>
 
@@ -1731,6 +1787,397 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "soap-heat-exchanger") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Heat Exchanger | Liquid Soap Processing for efficient soap drying lines"
+            description="Precision Heat Exchanger for efficient soap heating and moisture evaporation. Designed for controlled temperature performance and seamless integration in modern soap drying lines."
+            video={templateData.video}
+          />
+
+          <section className="py-16 bg-background">
+            <div className="container max-w-4xl mx-auto">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                  High-Performance Heat Exchanger for Liquid Soap Processing
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  The Brit Soap Heat Exchanger is a critical component in modern
+                  soap drying lines, designed to efficiently raise the
+                  temperature of liquid soap prior to entering the soap drying
+                  chamber. This controlled heating process ensures that excess
+                  water rapidly evaporates, enabling consistent soap quality and
+                  optimal drying performance.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
+              <div className="space-y-5">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                  Advanced Heat Transfer &amp; Precise Temperature Control
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    The unit consists of a large number of small tubes through
+                    which the liquid soap is pumped. These tubes are externally
+                    heated by steam, ensuring uniform heat transfer and
+                    efficient thermal exchange while enabling precise control
+                    over soap temperature for optimal drying performance.
+                  </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Steam heating enables rapid and consistent temperature
+                      increase
+                    </li>
+                    <li>
+                      Multi-tube configuration ensures maximum surface area for
+                      heat exchange
+                    </li>
+                    <li>
+                      Designed for continuous and high-capacity soap production
+                      lines
+                    </li>
+                    <li>
+                      Temperature can be adjusted by varying steam pressure
+                    </li>
+                    <li>
+                      Flow rate of liquid soap can be controlled to regulate
+                      heating intensity
+                    </li>
+                    <li>
+                      Ensures controlled and consistent evaporation of excess
+                      moisture
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/DrylingLine/heat-exchanger-soap-drying.jpg"
+                  alt="Heat exchanger for soap drying line"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/DrylingLine/heat-exchanger-tubes.png"
+                  alt="Heat exchanger tube plate assembly"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                  Robust Stainless Steel Construction &amp; Safety Engineering
+                </p>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Built for reliability, hygiene, and long-term industrial
+                    performance, the heat exchanger is constructed using
+                    high-grade stainless steel and engineered to meet stringent
+                    safety standards.
+                  </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Tubes: AISI 316L stainless steel for superior corrosion
+                      resistance
+                    </li>
+                    <li>
+                      Shell, diaphragms, plates, and cones: AISI 304 stainless
+                      steel
+                    </li>
+                    <li>
+                      Designed for long service life in demanding industrial
+                      environments
+                    </li>
+                    <li>
+                      Equipped with an expansion joint to handle thermal stress
+                    </li>
+                    <li>Designed operating (project) pressure: 8-10 bars</li>
+                    <li>
+                      Pressure tested at 14 bars to ensure safety and durability
+                    </li>
+                  </ul>
+                  <p>
+                    Speak with our engineers to discuss your production
+                    requirements and identify the right capacity, configuration,
+                    and customization for your plant.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                  Ideal for Modern Soap Manufacturing Plants
+                </p>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>The Brit Soap Heat Exchanger is suitable for:</p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>Continuous soap drying systems</li>
+                    <li>High-efficiency soap finishing lines</li>
+                    <li>
+                      Industrial liquid soap heating and moisture removal
+                      applications
+                    </li>
+                  </ul>
+                  <p className="font-semibold text-primary">Key Benefits:</p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Improves overall drying efficiency by enabling faster and
+                      uniform moisture evaporation
+                    </li>
+                    <li>
+                      Ensures consistent soap quality with controlled
+                      temperature management
+                    </li>
+                    <li>
+                      Enhances production capacity through continuous and stable
+                      operation
+                    </li>
+                    <li>
+                      Reduces energy wastage with efficient steam-based heat
+                      transfer
+                    </li>
+                    <li>
+                      Minimizes process variability, leading to better finish and
+                      reduced rework
+                    </li>
+                    <li>
+                      Built for reliability, resulting in lower maintenance and
+                      longer equipment life
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "powder-separator") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Powder Separators | Efficient powder separation for soap drying lines"
+            description="High-efficiency powder separation for removing fine dust particles from vacuum spray chamber exhaust gases."
+            video={templateData.video}
+          />
+
+          <section className="py-16 bg-background">
+            <div className="container max-w-4xl mx-auto">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                  Powder Separators for Soap Drying Systems
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  The Brit Soap Powder Separators are a critical component in
+                  modern soap drying lines, designed to efficiently remove fine
+                  dust particles from gases exiting the vacuum spray chamber.
+                  This controlled separation process prevents soap particles from
+                  entering the barometric condenser cooling water, ensuring
+                  smooth plant operation, improved effluent management, and
+                  consistent overall system performance.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
+              <div className="space-y-5">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                  Efficient Dust Removal Process in Soap Drying Systems
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    The Brit Soap Powder Separators efficiently remove fine dust
+                    particles from gases exiting the Vacuum Spray Chamber,
+                    ensuring cleaner exhaust flow, protecting downstream systems,
+                    and improving overall process efficiency.
+                  </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Effectively separates fine soap particles from exhaust
+                      gases
+                    </li>
+                    <li>
+                      Prevents soap carryover into the Barometric Condenser
+                      cooling water
+                    </li>
+                    <li>
+                      Reduces risks of contamination and operational disruptions
+                    </li>
+                    <li>
+                      Supports smoother effluent discharge and wastewater
+                      management
+                    </li>
+                    <li>
+                      Enhances overall plant efficiency and reliability
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <div className="grid gap-4">
+                  <Image
+                    src="/assets/DrylingLine/soap-drying-dust-collector.png"
+                    alt="Soap drying dust collector"
+                    width={900}
+                    height={520}
+                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                  />
+                  <Image
+                    src="/assets/DrylingLine/soap-drying-filteration.png"
+                    alt="Soap drying gas filtration"
+                    width={900}
+                    height={520}
+                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/DrylingLine/powder-separator.png"
+                  alt="Cyclone powder separator unit"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                  Robust Engineering &amp; Durable Construction
+                </p>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Brit Soap manufactures dual cyclone powder separators,
+                    engineered for reliable and continuous industrial
+                    performance.
+                  </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Available with contact parts in AISI 304 stainless steel
+                      or Carbon Steel
+                    </li>
+                    <li>
+                      Designed for efficient cyclone-based particle separation
+                    </li>
+                    <li>
+                      Equipped with catch pots at the bottom of the separators
+                    </li>
+                    <li>
+                      Fitted with an isolating valve, allowing the drum to be
+                      emptied without stopping the plant
+                    </li>
+                    <li>
+                      Built for durability and long service life in demanding
+                      soap manufacturing environments
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                  Ideal for Soap Manufacturing Plants - Key Benefits
+                </p>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>The Brit Soap Powder Separators are ideal for:</p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>Continuous soap drying and vacuum spray systems</li>
+                    <li>Integrated soap processing and finishing lines</li>
+                    <li>
+                      Industrial plants requiring efficient dust and particle
+                      control
+                    </li>
+                  </ul>
+                  <p className="font-semibold text-primary">Key Benefits:</p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>
+                      Prevents contamination of cooling water systems in the
+                      Barometric Condenser
+                    </li>
+                    <li>
+                      Supports smoother plant operations and reduces effluent
+                      discharge issues
+                    </li>
+                    <li>
+                      Improves overall system efficiency by removing fine
+                      particles effectively
+                    </li>
+                    <li>
+                      Enables uninterrupted production with easy maintenance via
+                      isolating valve system
+                    </li>
+                    <li>
+                      Enhances environmental compliance and cleaner plant
+                      operations
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/DrylingLine/powder-separator-drying-plant.png"
+                  alt="Powder separator in drying plant"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
             </div>
           </section>
 

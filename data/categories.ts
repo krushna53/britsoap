@@ -86,13 +86,13 @@ export const categories = [
     ],
   },
   {
-    title: "Dryling Line",
+    title: "Advanced Soap Drying Line System",
     slug: "dryling-line",
     description:
-      "High-efficiency vacuum spray drying systems for converting liquid neat soap into dried solid soap.",
+      "High-efficiency drying process designed to convert liquid soap into solid form with precise moisture control and consistent product quality.",
     intro: [
-      "The drying line converts liquid neat soap into solid soap under controlled vacuum spray conditions, delivering consistent moisture removal and stable product quality.",
-      "Our integrated setup combines heat exchange, atomisation, vacuum generation, and particle separation for reliable and energy-efficient high-capacity production.",
+      "The soap drying line is a critical stage in soap manufacturing where liquid neat soap is transformed into dried, solid soap through a controlled vacuum spray drying process. By combining advanced equipment such as the atomiser, vacuum generating system, and powder separators, the process ensures rapid moisture evaporation, uniform drying, and efficient material handling.",
+      "This integrated system enhances product consistency, improves energy efficiency, and enables seamless operation across modern high-capacity soap production lines.",
     ],
     introImage: "/category-media/dryling-line/overview.png",
     products: [
@@ -173,15 +173,15 @@ const localProducts: Record<string, LocalProduct> = {
     slug: "soap-heat-exchanger",
     title: "Heat Exchanger",
     description:
-      "Steam-heated exchanger for precise liquid soap preheating before vacuum spray drying to improve evaporation efficiency.",
+      "The heat exchanger raises the temperature of liquid soap before it enters the vacuum spray chamber, enabling effective evaporation of excess moisture during the drying process. This controlled heating ensures consistent drying performance, improved efficiency, and uniform final soap quality.",
     detailSection: { images: ["/category-media/dryling-line/heat-exchanger.jpg"] },
     comingSoon: true,
   },
   "powder-separator": {
     slug: "powder-separator",
-    title: "Powder Separator",
+    title: "Powder Separators",
     description:
-      "Cyclone separator system that removes fine soap particles from exhaust gases to protect downstream systems.",
+      "The powder separators remove fine soap particles from exhaust gases leaving the vacuum spray chamber, ensuring clean gas flow and preventing contamination of downstream systems. This improves plant efficiency, protects the condenser system, and supports better effluent management.",
     detailSection: { images: ["/category-media/dryling-line/powder-separator.png"] },
     comingSoon: true,
   },
@@ -189,7 +189,7 @@ const localProducts: Record<string, LocalProduct> = {
     slug: "vacuum-drying-system",
     title: "Vacuum Drying System",
     description:
-      "Integrated booster, condenser, and vacuum pump arrangement for stable vacuum levels and efficient moisture removal.",
+      "The vacuum spray drying system, including the vacuum booster, condenser, and vacuum pump, creates and maintains optimal vacuum conditions for efficient moisture evaporation. It enhances drying performance, reduces energy consumption, and ensures stable, continuous plant operation.",
     detailSection: { images: ["/category-media/dryling-line/vacuum-system.png"] },
     comingSoon: true,
   },
@@ -197,8 +197,10 @@ const localProducts: Record<string, LocalProduct> = {
     slug: "soap-atomiser",
     title: "Atomiser / Vacuum Spray Chamber",
     description:
-      "Vacuum spray chamber for rapid transformation of liquid neat soap into dried solid form with uniform quality.",
-    detailSection: { images: ["/category-media/dryling-line/atomiser.png"] },
+      "The atomiser / vacuum spray chamber converts liquid soap into dried, solid form within seconds by spraying it under controlled vacuum conditions. This ensures uniform drying, consistent quality, and smooth integration with refining or plodding equipment.",
+    detailSection: {
+      images: ["/assets/DrylingLine/soap-atomiser-vacuum-spray-chamber.png"],
+    },
     comingSoon: true,
   },
   "soap-stampers-overview": {

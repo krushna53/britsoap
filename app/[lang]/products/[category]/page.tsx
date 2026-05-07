@@ -78,8 +78,14 @@ export default async function CategoryPage({
                 alt={`${categoryData?.title} overview`}
                 width={900}
                 height={560}
-                className={`w-full h-[280px] md:h-[340px] rounded-2xl ${
-                  slug === "soponification" ? "object-contain" : "object-cover"
+              className={`w-full ${
+                slug === "dryling-line"
+                  ? "h-[380px] md:h-[460px]"
+                  : "h-[280px] md:h-[340px]"
+              } rounded-2xl ${
+                slug === "soponification" || slug === "dryling-line"
+                  ? "object-contain"
+                  : "object-cover"
                 }`}
               />
             </div>
@@ -118,6 +124,11 @@ export default async function CategoryPage({
               } else {
                 productImg = product.imageUrl;
               }
+              const rotateAtomiserImage =
+                slug === "dryling-line" && product.slug === "soap-atomiser";
+              const cardImageClass = rotateAtomiserImage
+                ? `w-full ${imageHeight} object-contain rounded-xl border border-white/30 -rotate-90 bg-white p-2`
+                : `w-full ${imageHeight} object-cover rounded-xl border border-white/30`;
 
               return (
                 <Link
@@ -138,7 +149,7 @@ export default async function CategoryPage({
                           alt={productTitle}
                           width={500}
                           height={300}
-                          className={`w-full ${imageHeight} object-cover rounded-xl border border-white/30`}
+                          className={cardImageClass}
                         />
                       ) : (
                         <div className={`w-full ${imageHeight} bg-white/10 rounded-xl border border-white/20 flex items-center justify-center text-xs text-primary-foreground/80`}>
