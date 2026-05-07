@@ -43,23 +43,20 @@ const navLinks: NavLink[] = [
       searchable: true,
       columns: [
         {
-          category: "Soap Stampers",
-          path: "/products/soap-stampers",
-          items: [
-            { name: "Manual Pneumatic Stamper", path: "/products/soap-stampers/manual-pneumatic-soap-stamper" },
-            { name: "HRD Soap Stamper", path: "/products/soap-stampers/hrd-soap-stamper" },
-            { name: "Rotary Soap Stamper", path: "/products/soap-stampers/rotary-soap-stamper" },
-            { name: "Vertical Soap Stamper", path: "/products/soap-stampers/vertical-soap-stamper" },
-            { name: "Six-Face Soap Stamper", path: "/products/soap-stampers/six-face-soap-stamper" },
-            { name: "Laundry Soap Stamper", path: "/products/soap-stampers/laundry-soap-stamper" },
-          ],
-        },
-        {
           category: "Soponification",
           path: "/products/soponification",
           items: [
             { name: "Saponification Crutcher", path: "/products/soponification/saponification-crutcher" },
             { name: "Saponification Jet", path: "/products/soponification/saponification-jet" },
+          ],
+        },
+        {
+          category: "Dryling Line",
+          path: "/products/dryling-line",
+          items: [
+            { name: "Heat Exchanger", path: "/products/dryling-line/soap-heat-exchanger" },
+            { name: "Powder Separator", path: "/products/dryling-line/powder-separator" },
+            { name: "Vacuum Drying System", path: "/products/dryling-line/vacuum-drying-system" },
           ],
         },
         {
@@ -80,15 +77,19 @@ const navLinks: NavLink[] = [
             { name: "HSB Cutter", path: "/high-speed-soap-cutter-machine" },
           ],
         },
-        {
-          category: "Dryling Line",
-          path: "/products/dryling-line",
+          {
+          category: "Soap Stampers",
+          path: "/products/soap-stampers",
           items: [
-            { name: "Heat Exchanger", path: "/products/dryling-line/soap-heat-exchanger" },
-            { name: "Powder Separator", path: "/products/dryling-line/powder-separator" },
-            { name: "Vacuum Drying System", path: "/products/dryling-line/vacuum-drying-system" },
+            { name: "HRD Soap Stamper", path: "/products/soap-stampers/hrd-soap-stamper" },
+            { name: "Rotary Soap Stamper", path: "/products/soap-stampers/rotary-soap-stamper" },
+            { name: "Vertical Soap Stamper", path: "/products/soap-stampers/vertical-soap-stamper" },
+            { name: "Laundry Soap Stamper", path: "/products/soap-stampers/laundry-soap-stamper" },
+            { name: "6 Face Soap Stamper", path: "/products/soap-stampers/six-face-soap-stamper" },
+            { name: "Manual Pneumatic Stamper", path: "/products/soap-stampers/manual-pneumatic-soap-stamper" },
           ],
         },
+   
       ],
     },
   },

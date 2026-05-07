@@ -18,9 +18,9 @@ type Props = {
 
 export default function HomeImpact({ data }: Props) {
   return (
-    <section className="py-20 bg-primary">
+    <section className="py-20 bg-background">
       <div className="container text-center">
-        
+
         {/* HEADER */}
         <motion.div
           initial="hidden"
@@ -33,15 +33,15 @@ export default function HomeImpact({ data }: Props) {
             variants={fadeUp}
             className="flex items-center justify-center gap-3 mb-4"
           >
-            <div className="w-12 h-[2px] bg-accent" />
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+            <div className="w-12 h-0.5 bg-accent" />
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
               Our Impact
             </span>
           </motion.div>
 
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl font-bold text-white uppercase"
+            className="text-3xl md:text-4xl font-bold text-primary uppercase"
           >
             Trusted Globally
           </motion.h2>

@@ -77,15 +77,19 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-xs text-primary-foreground/60">
                 <MapPin size={14} className="mt-0.5 shrink-0 text-accent" />
-                <span>BritSoap Machinery Pvt. Ltd., India</span>
+                <span>Unit No 12, Kotkar Industrial Estate, Off Aarey Road, Goregaon East, Mumbai 400 063, India</span>
               </li>
-              <li className="flex items-center gap-3 text-xs text-primary-foreground/60">
-                <Phone size={14} className="shrink-0 text-accent" />
-                <span>+91 XXXX XXXXXX</span>
+              <li className="flex items-start gap-3 text-xs text-primary-foreground/60">
+                <Phone size={14} className="mt-0.5 shrink-0 text-accent" />
+                <div className="space-y-1">
+                  <a href="tel:+912228685199" className="block hover:text-primary-foreground transition-colors">+91 022 28685199</a>
+                  <a href="tel:+912228693162" className="block hover:text-primary-foreground transition-colors">+91 022 28693162</a>
+                  <a href="tel:+919769466349" className="block hover:text-primary-foreground transition-colors">+91 9769466349</a>
+                </div>
               </li>
               <li className="flex items-center gap-3 text-xs text-primary-foreground/60">
                 <Mail size={14} className="shrink-0 text-accent" />
-                <span>info@britsoap.com</span>
+                <a href="mailto:britsoap@gmail.com" className="hover:text-primary-foreground transition-colors">britsoap@gmail.com</a>
               </li>
             </ul>
           </div>
