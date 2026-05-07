@@ -44,17 +44,17 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "saponification-crutcher": {
     title: "Saponification Crutcher",
     description:
-      "Batch reaction vessel for controlled semi-boiled soap production with stable quality and formulation flexibility.",
+      "Batch-type soap reaction vessel for controlled semi-boiled soap production with flexible formulation control.",
     video: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
     introTitle: "Controlled Batch Saponification For Consistent Neat Soap",
     introParagraphs: [
-      "The Saponification Crutcher is the primary reaction vessel in semi-boiled soap production, where fatty acids, caustic soda, brine, and water are blended under controlled process conditions.",
-      "It is designed for manufacturers who need formulation flexibility while maintaining consistent reaction quality and repeatable batch performance.",
+      "The Saponification Crutcher is a batch-type soap reaction vessel used in the semi-boiled soap process for controlled mixing of fatty acids, caustic soda, brine, and water.",
+      "It is designed for manufacturers who need precise reaction control, consistent neat soap quality, and flexibility for different soap formulations and additive blending.",
     ],
     processTitle: "The Saponification Crutcher Process",
     processSteps: [
       {
-        desc: "Raw materials are charged into the vessel with accurate dosing of oils, caustic liquor, brine, and water.",
+        desc: "Raw materials are charged into the vessel with accurate dosing of fatty acids, caustic liquor, brine, and water.",
         image: "/assets/SaponificationCrutcher/neat-soap-production.jpeg",
       },
       {
@@ -62,7 +62,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
         image: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
       },
       {
-        desc: "Neat soap is discharged for downstream drying and finishing operations.",
+        desc: "Neat soap is discharged for downstream drying and finishing operations after the batch cycle is complete.",
         image: "/assets/SaponificationCrutcher/soap-from-oil-caustic.JPG",
       },
     ],
@@ -77,20 +77,20 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     ],
     detailTitle: "Brit Soap Saponification Crutcher",
     detailParagraphs: [
-      "Built for industrial duty, the crutcher supports reliable semi-boiled process operation with strong mixing performance and repeatable cycles.",
-      "The process sequence is typically designed around charging, reaction, and discharge phases to balance quality and throughput.",
-      "The system is suitable for both neat soap generation and additive blending depending on plant process design.",
+      "The crutcher is the primary reaction vessel in the semi-boiled soap process and is designed to produce neat soap with consistent quality.",
+      "A typical cycle is organized around charging, a controlled saponification reaction, and discharge, with an overall cycle time of about two hours.",
+      "Critical parameters such as pump ratings, saponification value, caustic liquor concentration, and reaction temperature directly affect batch performance and quality.",
     ],
     detailImage: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
     applicationTitle: "Application In Production",
     applicationDescription:
-      "Used in industrial soap plants requiring controlled batch saponification, especially where recipe flexibility and process stability are key requirements.",
+      "Used in industrial soap plants requiring controlled batch saponification, recipe flexibility, and stable neat soap output for downstream drying and finishing lines.",
     capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
   },
   "saponification-jet": {
     title: "Saponification Jet",
     description:
-      "Steam venturi based instant soap reaction system for continuous production with low maintenance and high efficiency.",
+      "Steam venturi based instant soap reaction system for continuous production with low maintenance, high efficiency, and rapid conversion.",
     video: "/assets/SaponificationJet/saponification-jet-soap.png",
     introTitle: "Instant Continuous Saponification Using Venturi Steam Technology",
     introParagraphs: [
@@ -104,11 +104,11 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
         image: "/assets/SaponificationJet/venturi-system-soap-reactor.jpg",
       },
       {
-        desc: "Caustic and oil streams are drawn into the mixing zone with adjustable flow control.",
-        image: "/assets/SaponificationJet/soap-saponification-plant.png",
+        desc: "Caustic liquor and oil streams are drawn into concentric barrels with adjustable needle valve control.",
+        image: "/assets/SaponificationJet/venturi-system-soap-reactor.jpg",
       },
       {
-        desc: "Instant saponification occurs and high-reacted neat soap is discharged for drying.",
+        desc: "Instant saponification occurs and high-reacted neat soap is discharged directly for further processing.",
         image: "/assets/SaponificationJet/saponification-jet-soap.png",
       },
     ],
@@ -123,14 +123,14 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     ],
     detailTitle: "Brit Soap Saponification Jet",
     detailParagraphs: [
-      "The system operates on venturi-driven suction with motive steam, enabling controlled and repeatable continuous reaction.",
-      "Needle valve adjustment allows operators to tune flow, output, and process stability based on production requirements.",
-      "Its compact and robust build is designed for long-duty industrial operation with minimal mechanical complexity.",
+      "The system operates on venturi-driven suction with 5 bar motive steam, enabling controlled and repeatable continuous reaction.",
+      "Needle valve adjustment allows operators to tune flow, output, and process stability while handling output capacities from 1 to 10 tonnes per hour.",
+      "Its compact and robust build is designed for long-duty industrial operation with minimal mechanical complexity and low steam consumption.",
     ],
     detailImage: "/assets/SaponificationJet/saponification-jet-soap.png",
     applicationTitle: "Application In Production",
     applicationDescription:
-      "Ideal for continuous soap manufacturing lines where high output, consistent reaction quality, and low-maintenance operation are required.",
+      "Ideal for continuous soap manufacturing lines where high output, consistent reaction quality, low steam use, and low-maintenance operation are required.",
     capacities: ["1 ton/hr", "2 tons/hr", "4 tons/hr", "6 tons/hr", "10 tons/hr"],
   },
   "soap-heat-exchanger": {
