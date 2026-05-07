@@ -13,7 +13,8 @@ export default function CTASection({
   description,
   buttonText,
   buttonLink,
-}: CTASectionProps) {
+  showSecondaryButton = true,
+}: CTASectionProps & { showSecondaryButton?: boolean }) {
   return (
     <section className="py-20 bg-primary text-white text-center">
       <div className="container">
@@ -48,16 +49,18 @@ export default function CTASection({
               </span>
             </button>
           )}
-          <a
-            href="https://wa.me/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#25D366] text-white px-6 py-4 rounded-xl shadow-md flex items-center justify-center hover:bg-[#1ebd5b] transition-all duration-300"
-          >
-            <span className="font-semibold tracking-wide text-sm">
-              Connect with Engineer
-            </span>
-          </a>
+          {showSecondaryButton && (
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] text-white px-6 py-4 rounded-xl shadow-md flex items-center justify-center hover:bg-[#1ebd5b] transition-all duration-300"
+            >
+              <span className="font-semibold tracking-wide text-sm">
+                Connect with Engineer
+              </span>
+            </a>
+          )}
         </div>
       </div>
     </section>
