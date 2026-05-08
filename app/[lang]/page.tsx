@@ -39,8 +39,8 @@ export default async function Index({
       <Hero hero={data} />
       <FeaturedProducts products={featuredProducts} />
       <HomeAbout data={data} />
-      <HomeImpact data={data} />
       <ServicesPreview services={services} />
+      <HomeImpact data={data} />
       <HomeCTA data={data} />
     </Layout>
   );

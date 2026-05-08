@@ -62,6 +62,7 @@ const navLinks: NavLink[] = [
             { name: "Saponification Jet", path: "/products/saponification/saponification-jet" },
           ],
         },
+
         {
           category: "Finishing Line",
           path: "/products/finishing-line",
@@ -89,6 +90,7 @@ const navLinks: NavLink[] = [
             { name: "Vacuum Drying System", path: "/products/drying-line/vacuum-drying-system" },
           ],
         },
+
       ],
     },
   },

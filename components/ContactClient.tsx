@@ -2,8 +2,16 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, User } from "lucide-react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+const CONTACT_INFO = {
+  person: "Mrs. Radhika Mehta",
+  address:
+    "Unit No 12, Kotkar Industrial Estate, Off Aarey Road, Goregaon East, Mumbai 400 063, India",
+  phones: ["+91 022 28685199", "+91 022 28693162", "+91 9769466349"],
+  email: "britsoap@gmail.com",
+};
 
 export default function ContactClient({ contact }: any) {
   const [formData, setFormData] = useState({
@@ -57,48 +65,85 @@ export default function ContactClient({ contact }: any) {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-primary mb-3">
-                  {contact?.title}
+                <h2 className="text-2xl font-bold text-primary mb-1">
+                  Get In Touch
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  {contact?.description &&
-                    documentToReactComponents(contact.description)}
+                  Reach out to us for product enquiries, quotes, or technical support.
                 </p>
               </div>
+
               <div className="space-y-5">
-                {[
-                  {
-                    icon: MapPin,
-                    label: "Address",
-                    value: contact?.address,
-                  },
-                  {
-                    icon: Phone,
-                    label: "Phone",
-                    value: contact?.phone,
-                  },
-                  {
-                    icon: Mail,
-                    label: "Email",
-                    value: contact?.email,
-                  },
-                ].map(({ icon: Icon, label, value }) => (
-                  <div key={label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
-                      <Icon size={16} className="text-primary-foreground" />
-                    </div>
+                {/* Contact Person */}
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
+                    <User size={16} className="text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
+                      Contact Person
+                    </h4>
+                    <p className="text-sm text-muted-foreground font-medium">
+                      {CONTACT_INFO.person}
+                    </p>
+                  </div>
+                </div>
 
-                    <div>
-                      <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
-                        {label}
-                      </h4>
+                {/* Address */}
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
+                    <MapPin size={16} className="text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
+                      Address
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {CONTACT_INFO.address}
+                    </p>
+                  </div>
+                </div>
 
-                      <p className="text-xs text-muted-foreground">
-                        {value || "N/A"}
-                      </p>
+                {/* Phone — multiple numbers */}
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
+                    <Phone size={16} className="text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
+                      Tel
+                    </h4>
+                    <div className="space-y-0.5">
+                      {CONTACT_INFO.phones.map((phone) => (
+                        <a
+                          key={phone}
+                          href={`tel:${phone.replace(/\s/g, "")}`}
+                          className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {phone}
+                        </a>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
+                    <Mail size={16} className="text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
+                      Email
+                    </h4>
+                    <a
+                      href={`mailto:${CONTACT_INFO.email}`}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {CONTACT_INFO.email}
+                    </a>
+                  </div>
+                </div>
               </div>
             </motion.div>
 

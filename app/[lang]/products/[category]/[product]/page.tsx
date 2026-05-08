@@ -428,11 +428,11 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Used for converting liquid neat soap into dried base for refining lines, or feeding directly into extrusion pathways based on plant configuration.",
     capacities: ["1 ton/hr", "2 tons/hr", "3 tons/hr", "4 tons/hr"],
   },
-  
-  
-  
+
+
+
   "manual-pneumatic-soap-stamper": {
-  
+
     title: "Manual Pneumatic Soap Stamper",
     description: "Compact manual pneumatic stamper for artisanal and small-scale soap production.",
     video: "/assets/ManualStamper/manual-penumatic-soap-stamper.mov",
@@ -562,28 +562,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     capacities: ["500-1000+ bars/minute"],
   },
   "vertical-soap-stamper": {
-    title: "Vertical Soap Stamper",
-    description: "Vertical pneumatic stamper engineered for accurate embossing with a compact footprint.",
+    title: "Vertical Soap Stamping Machine | Automatic Soap Stamping for Advanced Soap Finishing Lines",
+    description: "High-precision vertical soap stamper engineered for superior shaping, reduced scrap, and consistent quality in modern soap finishing lines",
     video: "/assets/VerticalStamper/vertical-final.mp4",
-    introTitle: "Precision Vertical Stamping For Consistent Bar Quality",
+    introTitle: "Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production",
     introParagraphs: [
-      "The Vertical Soap Stamper is designed for precise embossing of soap bars using a vertical stamping mechanism.",
-      "Perfect for medium to high-capacity lines, the stamper delivers reliable performance with easy integration into existing finishing equipment.",
+      "Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality soap production."
     ],
-    processTitle: "The Vertical Stamping Process",
+    processTitle: "",
     processSteps: [
-      {
-        desc: "Soap bars are positioned on the stamping base, aligned with the vertical press.",
-        image: "/assets/VerticalStamper/vertical-soap-stamper.png",
-      },
-      {
-        desc: "The pneumatic press moves vertically downward, applying controlled force.",
-        image: "/assets/VerticalStamper/automatic-soap-stamping-machine.png",
-      },
-      {
-        desc: "Stamped bars are ejected and ready for downstream packaging.",
-        image: "/assets/VerticalStamper/bar-soap-stamping-machine.jpg",
-      },
     ],
     importanceTitle: "Why Vertical Stamping Excels",
     importanceDescription: "Vertical design offers precision in a compact footprint.",
@@ -605,90 +592,44 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     capacities: ["300-700 bars/minute"],
   },
   "six-face-soap-stamper": {
-    title: "Six-Face Soap Stamper",
-    description: "Specialized stamper for embossing soap bars on six faces simultaneously.",
+    title: "Six Face Soap Stamping Machine | Automatic Stamping for Cubic & Cuboid Soaps in Advanced Finishing Lines",
+    description: "Fully automatic six-side soap stamper engineered for precision embossing, uniform shape, and premium finish in continuous soap production lines.",
     video: "/assets/SixFaceStamper/automatic-cube-stamper.mov",
-    introTitle: "Premium Multi-Face Embossing For Luxury Soap Bars",
+    introTitle: "Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production",
     introParagraphs: [
-      "The Six-Face Soap Stamper is designed specifically for premium soap bars with cuboid designs.",
-      "Perfect for manufacturers seeking distinctive, branded luxury soap bars.",
+      "The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern, high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more durable, automated, and precision-driven approach.",
     ],
-    processTitle: "The Six-Face Stamping Process",
-    processSteps: [
-      {
-        desc: "Cuboid soap bars are positioned with precision alignment guides.",
-        image: "/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png",
-      },
-      {
-        desc: "Multiple pneumatic dies engage simultaneously, embossing all six faces.",
-        image: "/assets/SixFaceStamper/cubeoid-soap-press.jpg",
-      },
-      {
-        desc: "Completed bars are ejected, fully embossed on all sides.",
-        image: "/assets/SixFaceStamper/marseille-soap-stamper.jpg",
-      },
-    ],
-    importanceTitle: "Why Six-Face Stamping Is Important",
-    importanceDescription: "Six-face embossing creates distinctive premium products with complete surface branding.",
-    importanceItems: [
-      "Complete surface branding on all faces",
-      "Premium product differentiation",
-      "Simultaneous multi-face embossing",
-      "Consistent quality across complex designs",
-    ],
-    detailTitle: "Brit Soap Six-Face Stamper",
-    detailParagraphs: [
-      "Advanced system engineered for premium soap production.",
-      "Multiple die sets positioned to engage all six faces simultaneously.",
-      "Modular die design for quick changeover.",
-    ],
+    processTitle: "",
+    processSteps: [],
+    importanceTitle: "",
+    importanceDescription: "",
+    importanceItems: [],
+    detailTitle: "",
+    detailParagraphs: [],
     detailImage: "/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png",
-    applicationTitle: "Application In Production",
-    applicationDescription: "Specifically designed for premium luxury soap bar production.",
-    capacities: ["100-300 bars/minute"],
+    applicationTitle: "",
+    applicationDescription: "",
+    capacities: [],
   },
   "laundry-soap-stamper": {
-    title: "Laundry Soap Stamper",
-    description: "Purpose-built stamper engineered specifically for laundry soap bar production.",
+    title: "Laundry Soap Stamper Machine | Dual-Side Stamping for Laundry Soap Finishing Lines",
+    description: "Automatic laundry soap stamper designed for precise dual-side embossing of rectangular soap bars in high-efficiency soap finishing lines.",
     video: "/assets/LaundryStamper/laundry-soap-stamper.mov",
-    introTitle: "Specialized Embossing For Laundry Soap Production",
+    introTitle: "Dual Rotary Stamping for Laundry Soap Bars",
     introParagraphs: [
-      "The Laundry Soap Stamper is specifically designed for laundry soap bar production.",
-      "Engineered to handle the characteristics of laundry soap formulations.",
+      "The Brit Soap Laundry Soap Stamper is a high-performance rotary soap stamping machine engineered for accurate and efficient stamping of rectangular banded laundry soaps and toilet soaps. Designed for integration into modern soap finishing lines, it ensures uniform shape, clean embossing, and reliable throughput with minimal handling.",
     ],
-    processTitle: "The Laundry Soap Stamping Process",
-    processSteps: [
-      {
-        desc: "Laundry soap bars are fed through the stamping line at controlled speed.",
-        image: "/assets/LaundryStamper/laundry-soap-bar-production.jpeg",
-      },
-      {
-        desc: "Pneumatic dies engage with controlled force, creating uniform embossed impressions.",
-        image: "/assets/LaundryStamper/laundry-soap-syamper.png",
-      },
-      {
-        desc: "Stamped bars are discharged in continuous flow for downstream processing.",
-        image: "/assets/LaundryStamper/soap-press-die-laundry-soap.jpeg",
-      },
-    ],
-    importanceTitle: "Why Specialized Laundry Stamping Matters",
-    importanceDescription: "Laundry soaps require specialized equipment for consistent branding.",
-    importanceItems: [
-      "Optimized for laundry soap formulations",
-      "Handles larger bar dimensions",
-      "Maintains bar structural integrity",
-      "Consistent branding at high volumes",
-    ],
-    detailTitle: "Brit Soap Laundry Stamper",
-    detailParagraphs: [
-      "Engineered specifically for laundry soap bar production.",
-      "Heavy-duty components handle harder formulations.",
-      "Adjustable pressure settings for different bar specifications.",
-    ],
-    detailImage: "/assets/LaundryStamper/laundry-soap-syamper.png",
-    applicationTitle: "Application In Production",
-    applicationDescription: "Designed for high-capacity laundry soap production.",
-    capacities: ["400-800 bars/minute"],
+    processTitle: "",
+    processSteps: [],
+    importanceTitle: "",
+    importanceDescription: "",
+    importanceItems: [],
+    detailTitle: "",
+    detailParagraphs: [],
+    detailImage: "/assets/LaundryStamper/laundry-soap-stamper.png",
+    applicationTitle: "",
+    applicationDescription: "",
+    capacities: [],
   },
 };
 
@@ -1849,7 +1790,7 @@ export default async function ProductDetailPage({
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Available with contact parts in AISI 304 stainless steel
-                      or Carbon Steel</span>
+                        or Carbon Steel</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
@@ -1862,12 +1803,12 @@ export default async function ProductDetailPage({
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Fitted with an isolating valve, allowing the drum to be
-                      emptied without stopping the plant</span>
+                        emptied without stopping the plant</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Built for durability and long service life in demanding
-                      soap manufacturing environments</span>
+                        soap manufacturing environments</span>
                     </li>
                   </ul>
                 </div>
@@ -1895,7 +1836,7 @@ export default async function ProductDetailPage({
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Industrial plants requiring efficient dust and particle
-                      control</span>
+                        control</span>
                     </li>
                   </ul>
                   <p className="font-semibold text-primary">Key Benefits:</p>
@@ -1903,27 +1844,27 @@ export default async function ProductDetailPage({
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Prevents contamination of cooling water systems in the
-                      Barometric Condenser</span>
+                        Barometric Condenser</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Supports smoother plant operations and reduces effluent
-                      discharge issues</span>
+                        discharge issues</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Improves overall system efficiency by removing fine
-                      particles effectively</span>
+                        particles effectively</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Enables uninterrupted production with easy maintenance via
-                      isolating valve system</span>
+                        isolating valve system</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
                       <span>Enhances environmental compliance and cleaner plant
-                      operations</span>
+                        operations</span>
                     </li>
                   </ul>
                 </div>

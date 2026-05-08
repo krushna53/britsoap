@@ -37,11 +37,12 @@ export default function Counter({
 
   return (
     <div className="text-center">
-      <div className="text-3xl md:text-4xl font-bold text-white">
+      <div className="text-4xl md:text-5xl font-bold text-primary">
         {count}
         {suffix}
       </div>
-      <p className="text-white/60 text-sm mt-2">{label}</p>
+      <div className="w-8 h-0.5 bg-accent mx-auto my-2" />
+      <p className="text-sm text-muted-foreground mt-1">{label}</p>
     </div>
   );
 }
