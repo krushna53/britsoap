@@ -38,7 +38,7 @@ export default async function CategoryPage({
           <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
             {categoryData?.title}
           </h1>
-          {slug !== "dryling-line" && categoryData?.description && (
+          {slug !== "drying-line" && categoryData?.description && (
             <p className="mt-4 text-primary text-lg text-left">
               {categoryData.description}
             </p>
@@ -50,7 +50,7 @@ export default async function CategoryPage({
       <section className="pb-12 bg-background">
         <div className="container space-y-8">
           <div>
-            {slug === "dryling-line" && categoryData?.description && (
+            {slug === "drying-line" && categoryData?.description && (
               <p className="text-lg text-primary mb-5">
                 {categoryData.description}
               </p>
@@ -59,15 +59,14 @@ export default async function CategoryPage({
             {(isLocal
               ? categoryData?.intro || []
               : [
-                  "This product line supports consistent soap processing with quality-focused engineering and practical plant integration.",
-                  "Detailed machine-level pages will be added with complete specifications, videos, and application guidance.",
-                ]
+                "This product line supports consistent soap processing with quality-focused engineering and practical plant integration.",
+                "Detailed machine-level pages will be added with complete specifications, videos, and application guidance.",
+              ]
             ).map((paragraph: string, idx: number) => (
               <p
                 key={idx}
-                className={`text-lg text-muted-foreground leading-relaxed ${
-                  idx === 0 ? "mb-5" : ""
-                }`}
+                className={`text-lg text-muted-foreground leading-relaxed ${idx === 0 ? "mb-5" : ""
+                  }`}
               >
                 {paragraph}
               </p>
@@ -84,15 +83,13 @@ export default async function CategoryPage({
                 alt={`${categoryData?.title} overview`}
                 width={900}
                 height={560}
-              className={`w-full ${
-                slug === "dryling-line"
+                className={`w-full ${slug === "drying-line"
                   ? "h-[380px] md:h-[460px]"
                   : "h-[280px] md:h-[340px]"
-              } rounded-2xl ${
-                slug === "soponification" || slug === "dryling-line"
-                  ? "object-contain"
-                  : "object-cover"
-                }`}
+                  } rounded-2xl ${slug === "saponification" || slug === "drying-line"
+                    ? "object-contain"
+                    : "object-cover"
+                  }`}
               />
             </div>
           )}
@@ -108,13 +105,13 @@ export default async function CategoryPage({
               const productDesc = isLocal ? product.description : product.shortDescription;
               const isComingSoon = Boolean(isLocal && product.comingSoon);
               const cardMinHeight =
-                slug === "soponification"
+                slug === "saponification"
                   ? "min-h-[800px]"
                   : slug === "soap-stampers"
-                  ? "min-h-[620px]"
-                  : "min-h-[500px]";
+                    ? "min-h-[620px]"
+                    : "min-h-[500px]";
               const rotateAtomiserImage =
-                slug === "dryling-line" && product.slug === "soap-atomiser";
+                slug === "drying-line" && product.slug === "soap-atomiser";
               const imageHeight = rotateAtomiserImage ? "h-36 md:h-40" : "h-56";
               const descriptionClass =
                 slug === "soap-stampers"
@@ -125,7 +122,7 @@ export default async function CategoryPage({
                   ? `/${lang}/products/${slug}/${product.slug}`
                   : `/${lang}/${product.slug}`
                 : `/${lang}/products/${slug}/${product.slug}`;
-              
+
               let productImg = null;
               if (isLocal) {
                 productImg = product.detailSection?.images?.[0] || product.applicationImage || product.importanceImage || product.processSteps?.[0]?.image || null;

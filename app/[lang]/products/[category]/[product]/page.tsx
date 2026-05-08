@@ -209,7 +209,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "saponification-crutcher-soap-manufacturing": {
     title: "Saponification Crutcher",
     description: "Industrial crutcher for controlled batch saponification and mixing.",
-    video: "/assets/SaponificationCrutcher/saponification-crutcher-soap.png",
+    video: "/assets/SaponificationCrutcher/soap-saponification-crutcher.png",
     introTitle: "Precision-Engineered Crutcher for Consistent Soap Production",
     introParagraphs: [
       "The Saponification Crutcher is the primary reaction vessel in the semi-boiled soap process, designed to produce neat soap with consistent quality.",
@@ -313,15 +313,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Liquid soap is pumped through multiple tube paths for high surface-area heat transfer.",
-        image: "/category-media/dryling-line/heat-exchanger.jpg",
+        image: "/category-media/drying-line/heat-exchanger.jpg",
       },
       {
         desc: "Steam heats the external shell side to raise process temperature in a controlled manner.",
-        image: "/category-media/dryling-line/overview.png",
+        image: "/category-media/drying-line/overview.png",
       },
       {
         desc: "Preheated soap is transferred to the atomiser for rapid vacuum drying.",
-        image: "/category-media/dryling-line/atomiser.png",
+        image: "/category-media/drying-line/atomiser.png",
       },
     ],
     importanceTitle: "Why Controlled Heating Is Important",
@@ -339,7 +339,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Multi-tube construction improves exchange area and enables efficient process control under plant load variations.",
       "Industrial-grade materials and pressure-tested build quality support long service life in demanding soap plants.",
     ],
-    detailImage: "/category-media/dryling-line/heat-exchanger.jpg",
+    detailImage: "/category-media/drying-line/heat-exchanger.jpg",
     applicationTitle: "Application In Production",
     applicationDescription:
       "Used in integrated soap drying systems where reliable preheating is required for efficient moisture evaporation and consistent process output.",
@@ -348,7 +348,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "powder-separator": {
     title: "Powder Separator for Soap Plants",
     description: "Efficient cyclone powder separators for removing fine soap dust.",
-    video: "/assets/DrylingLine/powder-separator.png",
+    video: "/assets/DryingLine/powder-separator.png",
     introTitle: "Efficient Dust Removal Process",
     introParagraphs: [
       "The Brit Soap Powder Separators efficiently remove fine dust particles from gases exiting the Vacuum Spray Chamber.",
@@ -358,11 +358,11 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Exhaust gases enter the cyclone separator where centrifugal force separates fine particles.",
-        image: "/assets/DrylingLine/soap-drying-dust-collector.png",
+        image: "/assets/DryingLine/soap-drying-dust-collector.png",
       },
       {
         desc: "Separated powder is collected in catch pots while cleaned gases exit through the top.",
-        image: "/assets/DrylingLine/soap-drying-filteration.png",
+        image: "/assets/DryingLine/soap-drying-filteration.png",
       },
     ],
     importanceTitle: "Why Powder Separation Matters",
@@ -377,7 +377,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Dual cyclone design engineered for reliable and continuous industrial performance.",
       "Available in AISI 304 stainless steel or Carbon Steel with isolating valve system.",
     ],
-    detailImage: "/assets/DrylingLine/powder-separator.png",
+    detailImage: "/assets/DryingLine/powder-separator.png",
     applicationTitle: "Application In Production",
     applicationDescription: "Ideal for continuous soap drying and vacuum spray systems.",
     capacities: ["1 ton/hr", "2 tons/hr", "4 tons/hr", "6 tons/hr", "10 tons/hr"],
@@ -396,15 +396,15 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     processSteps: [
       {
         desc: "Liquid soap is sprayed onto chamber surfaces through controlled rotating assembly.",
-        image: "/category-media/dryling-line/atomiser.png",
+        image: "/category-media/drying-line/atomiser.png",
       },
       {
         desc: "Under vacuum, moisture evaporates rapidly and soap solidifies within seconds.",
-        image: "/category-media/dryling-line/overview.png",
+        image: "/category-media/drying-line/overview.png",
       },
       {
         desc: "Scraper system removes solidified soap and transfers material to downstream handling.",
-        image: "/category-media/dryling-line/powder-separator.png",
+        image: "/category-media/drying-line/powder-separator.png",
       },
     ],
     importanceTitle: "Why Atomisation Is Critical",
@@ -422,7 +422,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
       "Integrated shaft, nozzle, scraping, and observation systems support reliable operation and maintenance access.",
       "Contact parts use suitable stainless-steel construction for hygiene and long service life.",
     ],
-    detailImage: "/category-media/dryling-line/atomiser.png",
+    detailImage: "/category-media/drying-line/atomiser.png",
     applicationTitle: "Application In Production",
     applicationDescription:
       "Used for converting liquid neat soap into dried base for refining lines, or feeding directly into extrusion pathways based on plant configuration.",
@@ -1805,14 +1805,14 @@ export default async function ProductDetailPage({
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <div className="grid grid-cols-1 gap-4">
                   <Image
-                    src="/assets/DrylingLine/soap-drying-dust-collector.png"
+                    src="/assets/DryingLine/soap-drying-dust-collector.png"
                     alt="Soap drying dust collector"
                     width={900}
                     height={520}
                     className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
                   />
                   <Image
-                    src="/assets/DrylingLine/soap-drying-filteration.png"
+                    src="/assets/DryingLine/soap-drying-filteration.png"
                     alt="Soap drying filtration system"
                     width={900}
                     height={520}
@@ -1827,7 +1827,7 @@ export default async function ProductDetailPage({
             <div className="container grid gap-10 md:grid-cols-[0.85fr_1.15fr] items-center">
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <Image
-                  src="/assets/DrylingLine/powder-separator.png"
+                  src="/assets/DryingLine/powder-separator.png"
                   alt="Powder separator unit"
                   width={900}
                   height={700}
@@ -1931,7 +1931,7 @@ export default async function ProductDetailPage({
 
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <Image
-                  src="/assets/DrylingLine/powder-separator-drying-plant.png"
+                  src="/assets/DryingLine/powder-separator-drying-plant.png"
                   alt="Powder separator in drying plant"
                   width={900}
                   height={700}
@@ -2023,7 +2023,7 @@ export default async function ProductDetailPage({
 
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <Image
-                  src="/assets/DrylingLine/heat-exchanger-soap-drying.jpg"
+                  src="/assets/DryingLine/heat-exchanger-soap-drying.jpg"
                   alt="Heat exchanger for soap drying line"
                   width={900}
                   height={700}
@@ -2037,7 +2037,7 @@ export default async function ProductDetailPage({
             <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <Image
-                  src="/assets/DrylingLine/heat-exchanger-tubes.png"
+                  src="/assets/DryingLine/heat-exchanger-tubes.png"
                   alt="Heat exchanger tube plate assembly"
                   width={900}
                   height={700}
@@ -2191,14 +2191,14 @@ export default async function ProductDetailPage({
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <div className="grid gap-4">
                   <Image
-                    src="/assets/DrylingLine/soap-drying-dust-collector.png"
+                    src="/assets/DryingLine/soap-drying-dust-collector.png"
                     alt="Soap drying dust collector"
                     width={900}
                     height={520}
                     className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
                   />
                   <Image
-                    src="/assets/DrylingLine/soap-drying-filteration.png"
+                    src="/assets/DryingLine/soap-drying-filteration.png"
                     alt="Soap drying gas filtration"
                     width={900}
                     height={520}
@@ -2213,7 +2213,7 @@ export default async function ProductDetailPage({
             <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <Image
-                  src="/assets/DrylingLine/powder-separator.png"
+                  src="/assets/DryingLine/powder-separator.png"
                   alt="Cyclone powder separator unit"
                   width={900}
                   height={700}
@@ -2267,7 +2267,7 @@ export default async function ProductDetailPage({
 
               <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
                 <Image
-                  src="/assets/DrylingLine/powder-separator-drying-plant.png"
+                  src="/assets/DryingLine/powder-separator-drying-plant.png"
                   alt="Powder separator in drying plant"
                   width={900}
                   height={700}
@@ -2316,7 +2316,7 @@ export default async function ProductDetailPage({
                   <h3 className="text-xl font-semibold mb-3">Vacuum Booster</h3>
                   <div className="mb-4">
                     <Image
-                      src="/assets/DrylingLine/vacuum-booster-jet.png"
+                      src="/assets/DryingLine/vacuum-booster-jet.png"
                       alt="Vacuum Booster"
                       width={420}
                       height={220}
@@ -2341,7 +2341,7 @@ export default async function ProductDetailPage({
                   <h3 className="text-xl font-semibold mb-3">Condenser</h3>
                   <div className="mb-4">
                     <Image
-                      src="/assets/DrylingLine/soap-condenser-soap-drying.png"
+                      src="/assets/DryingLine/soap-condenser-soap-drying.png"
                       alt="Condenser"
                       width={420}
                       height={220}
@@ -2366,7 +2366,7 @@ export default async function ProductDetailPage({
                   <h3 className="text-xl font-semibold mb-3">Vacuum Pump</h3>
                   <div className="mb-4">
                     <Image
-                      src="/assets/DrylingLine/vacuum-pump.jpg"
+                      src="/assets/DryingLine/vacuum-pump.jpg"
                       alt="Vacuum Pump"
                       width={420}
                       height={220}
@@ -2390,7 +2390,7 @@ export default async function ProductDetailPage({
                   <h3 className="text-xl font-semibold mb-3">Barometric Tower</h3>
                   <div className="mb-4">
                     <Image
-                      src="/assets/DrylingLine/barometric-tower-soap-drying-plant.jpeg"
+                      src="/assets/DryingLine/barometric-tower-soap-drying-plant.jpeg"
                       alt="Barometric Tower"
                       width={420}
                       height={220}

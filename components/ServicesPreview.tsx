@@ -46,13 +46,11 @@ export default function ServicesPreview({ services }: Props) {
                     >
                       <div>
                         <Icon size={30} className="text-white/90 mb-5" />
-                        <h3 className="text-2xl font-bold tracking-tight">
+                        <h3 className="text-2xl font-bold tracking-tight display-flex justify-center align-center">
                           {service.title}
                         </h3>
                       </div>
-                      <p className="text-sm md:text-base text-white/90">
-                        Hover to view details
-                      </p>
+
                     </div>
 
                     <div

@@ -55,11 +55,11 @@ const navLinks: NavLink[] = [
           ],
         },
         {
-          category: "Soponification",
-          path: "/products/soponification",
+          category: "Saponification",
+          path: "/products/saponification",
           items: [
-            { name: "Saponification Crutcher", path: "/products/soponification/saponification-crutcher-soap-manufacturing" },
-            { name: "Saponification Jet", path: "/products/soponification/saponification-jet" },
+            { name: "Saponification Crutcher", path: "/products/saponification/saponification-crutcher-soap-manufacturing" },
+            { name: "Saponification Jet", path: "/products/saponification/saponification-jet" },
           ],
         },
         {
@@ -81,12 +81,12 @@ const navLinks: NavLink[] = [
           ],
         },
         {
-          category: "Dryling Line",
-          path: "/products/dryling-line",
+          category: "Drying Line",
+          path: "/products/drying-line",
           items: [
-            { name: "Heat Exchanger", path: "/products/dryling-line/soap-heat-exchanger" },
-            { name: "Powder Separator", path: "/products/dryling-line/powder-separator" },
-            { name: "Vacuum Drying System", path: "/products/dryling-line/vacuum-drying-system" },
+            { name: "Heat Exchanger", path: "/products/drying-line/soap-heat-exchanger" },
+            { name: "Powder Separator", path: "/products/drying-line/powder-separator" },
+            { name: "Vacuum Drying System", path: "/products/drying-line/vacuum-drying-system" },
           ],
         },
       ],
@@ -127,9 +127,8 @@ const Navbar = () => {
               {!link.megaMenu && link.path !== undefined && (
                 <Link
                   href={`/${lang}${link.path}`}
-                  className={`text-sm font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${
-                    isActive(link.path) ? "text-primary" : "text-muted-foreground"
-                  }`}
+                  className={`text-sm font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"
+                    }`}
                 >
                   {link.name}
                 </Link>
