@@ -33,13 +33,13 @@ export default async function CategoryPage({
   return (
     <Layout>
       {/* 🔹 Hero */}
-      <section className="py-20 bg-background">
+      <section className="pt-20 pb-6 bg-background">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
             {categoryData?.title}
           </h1>
-          {categoryData?.description && (
-            <p className="mt-4 text-primary text-lg text-left">
+          {slug !== "drying-line" && categoryData?.description && (
+            <p className="mt-4 text-primary text-lg text-left max-w-4xl">
               {categoryData.description}
             </p>
           )}
@@ -47,27 +47,32 @@ export default async function CategoryPage({
       </section>
 
       {/* 🔹 Intro Content + Image */}
-      <section className="pb-12 bg-background">
+      <section className="pb-12 pt-2 bg-background">
         <div className="container space-y-8">
           <div>
+            {slug === "drying-line" && categoryData?.description && (
+              <p className="text-lg text-primary mb-5">
+                {categoryData.description}
+              </p>
+            )}
+
             {(isLocal
               ? categoryData?.intro || []
               : [
-                  "This product line supports consistent soap processing with quality-focused engineering and practical plant integration.",
-                  "Detailed machine-level pages will be added with complete specifications, videos, and application guidance.",
-                ]
+                "This product line supports consistent soap processing with quality-focused engineering and practical plant integration.",
+                "Detailed machine-level pages will be added with complete specifications, videos, and application guidance.",
+              ]
             ).map((paragraph: string, idx: number) => (
               <p
                 key={idx}
-                className={`text-lg text-muted-foreground leading-relaxed ${
-                  idx === 0 ? "mb-5" : ""
-                }`}
+                className={`text-lg text-muted-foreground leading-relaxed ${idx === 0 ? "mb-5" : ""
+                  }`}
               >
                 {paragraph}
               </p>
             ))}
           </div>
-          {slug !== "soap-stampers" && (
+          {slug !== "soap-stampers" && slug !== "finishing-line" && (
             <div>
               <Image
                 src={
@@ -78,15 +83,13 @@ export default async function CategoryPage({
                 alt={`${categoryData?.title} overview`}
                 width={900}
                 height={560}
-              className={`w-full ${
-                slug === "dryling-line"
+                className={`w-full ${slug === "drying-line"
                   ? "h-[380px] md:h-[460px]"
                   : "h-[280px] md:h-[340px]"
-              } rounded-2xl ${
-                slug === "soponification" || slug === "dryling-line"
-                  ? "object-contain"
-                  : "object-cover"
-                }`}
+                  } rounded-2xl ${slug === "saponification" || slug === "drying-line"
+                    ? "object-contain"
+                    : "object-cover"
+                  }`}
               />
             </div>
           )}
@@ -102,32 +105,41 @@ export default async function CategoryPage({
               const productDesc = isLocal ? product.description : product.shortDescription;
               const isComingSoon = Boolean(isLocal && product.comingSoon);
               const cardMinHeight =
-                slug === "soponification"
+                slug === "saponification"
                   ? "min-h-[800px]"
                   : slug === "soap-stampers"
-                  ? "min-h-[620px]"
-                  : "min-h-[500px]";
-              const imageHeight = "h-56";
+                    ? "min-h-[620px]"
+                    : "min-h-[500px]";
+              const rotateAtomiserImage =
+                slug === "drying-line" && product.slug === "soap-atomiser";
+              const imageHeight = rotateAtomiserImage ? "h-36 md:h-40" : "h-56";
               const descriptionClass =
                 slug === "soap-stampers"
                   ? "text-xs text-primary-foreground/80 leading-relaxed"
                   : "text-sm text-primary-foreground/80 leading-relaxed";
+              const rootSlugs = [
+                "av-pneumatic-soap-cutter-machine",
+                "double-arm-sigma-mixer-soap-manufacturing",
+                "duplex-vacuum-soap-plodder-machine",
+                "high-speed-soap-cutter-machine",
+                "simplex-refiner-plodder",
+                "triple-roll-mill-soap-refining-machine",
+              ];
+
               const productLink = isLocal
-                ? isComingSoon
-                  ? `/${lang}/products/${slug}/${product.slug}`
-                  : `/${lang}/${product.slug}`
+                ? rootSlugs.includes(product.slug)
+                  ? `/${lang}/${product.slug}`
+                  : `/${lang}/products/${slug}/${product.slug}`
                 : `/${lang}/products/${slug}/${product.slug}`;
-              
+
               let productImg = null;
               if (isLocal) {
                 productImg = product.detailSection?.images?.[0] || product.applicationImage || product.importanceImage || product.processSteps?.[0]?.image || null;
               } else {
                 productImg = product.imageUrl;
               }
-              const rotateAtomiserImage =
-                slug === "dryling-line" && product.slug === "soap-atomiser";
               const cardImageClass = rotateAtomiserImage
-                ? `w-full ${imageHeight} object-contain rounded-xl border border-white/30 -rotate-90 bg-white p-2`
+                ? `w-full ${imageHeight} object-contain rounded-xl border border-white/30 bg-white p-2`
                 : `w-full ${imageHeight} object-cover rounded-xl border border-white/30`;
 
               return (

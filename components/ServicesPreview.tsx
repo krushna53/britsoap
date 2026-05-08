@@ -37,23 +37,18 @@ export default function ServicesPreview({ services }: Props) {
                 key={`${service.title}-${i}`}
                 className={`relative h-[300px] md:h-[320px] ${shades[i]} overflow-hidden group`}
               >
-                {/* Large background number watermark */}
-                <span className="absolute -bottom-4 -right-2 text-[120px] font-black text-white/5 leading-none select-none pointer-events-none">
-                  {numbers[i]}
-                </span>
-
-                {/* Front face */}
-                <div className="absolute inset-0 flex flex-col justify-between p-8 transition-opacity duration-500 group-hover:opacity-0">
-                  <div>
-                    {/* Number + Icon row */}
-                    <div className="flex items-center gap-3 mb-6">
-                      <span className="text-xs font-bold tracking-[0.3em] text-white/40 uppercase">
-                        {numbers[i]}
-                      </span>
-                      <div className="w-px h-4 bg-white/20" />
-                      <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-                        <Icon size={20} className="text-accent" />
+                <div className="group h-full w-full" style={{ perspective: "1200px" }}>
+                  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    <div
+                      className="absolute inset-0 text-white p-8 flex flex-col justify-between [backface-visibility:hidden]"
+                    >
+                      <div>
+                        <Icon size={30} className="text-white/90 mb-5" />
+                        <h3 className="text-2xl font-bold tracking-tight display-flex justify-center align-center">
+                          {service.title}
+                        </h3>
                       </div>
+
                     </div>
 
                     <h3 className="text-2xl font-bold text-white leading-snug tracking-tight">
