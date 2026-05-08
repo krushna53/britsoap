@@ -178,6 +178,18 @@ const LOCAL_PRODUCT_SEO: Record<string, ProductSeoData> = {
       "soap processing plant equipment",
     ],
   },
+  "soap-atomiser": {
+    title: "Atomiser / Vacuum Spray Chamber | Efficient Soap Drying Systems",
+    description: "High-efficiency vacuum spray drying chamber for converting liquid neat soap into solid, cooled soap within seconds.",
+    keywords: [
+      "soap atomiser",
+      "vacuum spray chamber",
+      "soap drying chamber",
+      "liquid soap to solid soap",
+      "industrial soap drying",
+      "soap plant machinery India",
+    ],
+  },
 };
 
 export async function generateMetadata({
@@ -627,6 +639,26 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     detailTitle: "",
     detailParagraphs: [],
     detailImage: "/assets/LaundryStamper/laundry-soap-stamper.png",
+    applicationTitle: "",
+    applicationDescription: "",
+    capacities: [],
+  },
+  "soap-atomiser": {
+    title: "Atomiser / Vacuum Spray Chamber for Soap Drying Systems",
+    description: "High-efficiency vacuum spray drying chamber for converting liquid neat soap into solid, cooled soap within seconds.",
+    video: "/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png",
+    introTitle: "Advanced Vacuum Spray Drying Technology for Soap Manufacturing",
+    introParagraphs: [
+      "The Brit Soap Atomiser / Vacuum Spray Chamber enables soap manufacturers to transform liquid neat soap into dried, cooled, solid soap in just a few seconds by boiling off excess moisture under carefully controlled vacuum conditions.",
+    ],
+    processTitle: "",
+    processSteps: [],
+    importanceTitle: "",
+    importanceDescription: "",
+    importanceItems: [],
+    detailTitle: "",
+    detailParagraphs: [],
+    detailImage: "/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png",
     applicationTitle: "",
     applicationDescription: "",
     capacities: [],
@@ -1681,10 +1713,23 @@ export default async function ProductDetailPage({
       return (
         <Layout>
           <ProductHero
-            title="Powder Separator for Soap Drying Systems"
-            description="The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance."
+            title="Powder Separators | Efficient powder separation for soap drying lines"
+            description="High-efficiency powder separation for removing fine dust particles from vacuum spray chamber exhaust gases."
             video={templateData.video}
           />
+
+          <section className="py-16 bg-background">
+            <div className="container max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                Powder Separators for Soap Drying Systems
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles 
+                from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric 
+                condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance.
+              </p>
+            </div>
+          </section>
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
@@ -2018,11 +2063,6 @@ export default async function ProductDetailPage({
                       Pressure tested at 14 bars to ensure safety and durability
                     </li>
                   </ul>
-                  <p>
-                    Speak with our engineers to discuss your production
-                    requirements and identify the right capacity, configuration,
-                    and customization for your plant.
-                  </p>
                 </div>
               </div>
             </div>
@@ -2087,147 +2127,7 @@ export default async function ProductDetailPage({
       );
     }
 
-    if (productSlug === "powder-separator") {
-      return (
-        <Layout>
-          <ProductHero
-            title="Powder Separators | Efficient powder separation for soap drying lines"
-            description="High-efficiency powder separation for removing fine dust particles from vacuum spray chamber exhaust gases."
-            video={templateData.video}
-          />
 
-          <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
-              <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
-                  Powder Separators for Soap Drying Systems
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[1.05fr_0.95fr] items-center">
-              <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
-                  Efficient Dust Removal Process in Soap Drying Systems
-                </h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    The Brit Soap Powder Separators efficiently remove fine dust particles from gases exiting the Vacuum Spray Chamber, ensuring cleaner exhaust flow, protecting downstream systems, and improving overall process efficiency.
-                  </p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>Effectively separates fine soap particles from exhaust gases</li>
-                    <li>Prevents soap carryover into the Barometric Condenser cooling water</li>
-                    <li>Reduces risks of contamination and operational disruptions</li>
-                    <li>Supports smoother effluent discharge and wastewater management</li>
-                    <li>Enhances overall plant efficiency and reliability</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
-                <div className="grid gap-4">
-                  <Image
-                    src="/assets/DryingLine/soap-drying-dust-collector.png"
-                    alt="Soap drying dust collector"
-                    width={900}
-                    height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
-                  />
-                  <Image
-                    src="/assets/DryingLine/soap-drying-filteration.png"
-                    alt="Soap drying gas filtration"
-                    width={900}
-                    height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="pb-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
-                <Image
-                  src="/assets/DryingLine/powder-separator.png"
-                  alt="Cyclone powder separator unit"
-                  width={900}
-                  height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
-                />
-              </div>
-
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Robust Engineering &amp; Durable Construction
-                </p>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    Brit Soap manufactures dual cyclone powder separators, engineered for reliable and continuous industrial performance.
-                  </p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>Available with contact parts in AISI 304 stainless steel or Carbon Steel</li>
-                    <li>Designed for efficient cyclone-based particle separation</li>
-                    <li>Equipped with catch pots at the bottom of the separators</li>
-                    <li>Fitted with an isolating valve, allowing the drum to be emptied without stopping the plant</li>
-                    <li>Built for durability and long service life in demanding soap manufacturing environments</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="pb-20 bg-background">
-            <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-                  Ideal for Soap Manufacturing Plants – Key Benefits
-                </p>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>The Brit Soap Powder Separators are ideal for:</p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>Continuous soap drying and vacuum spray systems</li>
-                    <li>Integrated soap processing and finishing lines</li>
-                    <li>Industrial plants requiring efficient dust and particle control</li>
-                  </ul>
-                  <p className="font-semibold text-primary">Key Benefits:</p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>Prevents contamination of cooling water systems in the Barometric Condenser</li>
-                    <li>Supports smoother plant operations and reduces effluent discharge issues</li>
-                    <li>Improves overall system efficiency by removing fine particles effectively</li>
-                    <li>Enables uninterrupted production with easy maintenance via isolating valve system</li>
-                    <li>Enhances environmental compliance and cleaner plant operations</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
-                <Image
-                  src="/assets/DryingLine/powder-separator-drying-plant.png"
-                  alt="Powder separator in drying plant"
-                  width={900}
-                  height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
-                />
-              </div>
-            </div>
-          </section>
-
-          <CTASection
-            title="Engineered for Efficiency. Built for Reliability"
-            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
-            buttonLink={`/${lang}/contact`}
-            showSecondaryButton={false}
-          />
-        </Layout>
-      );
-    }
 
     if (productSlug === "vacuum-drying-system") {
       return (
@@ -2235,6 +2135,7 @@ export default async function ProductDetailPage({
           <ProductHero
             title="Vacuum Drying System| Vacuum Booster, Condenser & Pumps for soap drying lines"
             description="High-efficiency vacuum system designed to optimize moisture removal, improve drying performance, and enhance energy efficiency in modern soap manufacturing lines."
+            video="/assets/DryingLine/vacuum-booster-jet.png"
           />
 
           <section className="py-16 bg-background">
@@ -2348,32 +2249,174 @@ export default async function ProductDetailPage({
             </div>
           </section>
 
-          <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-primary">Applications & Key Benefits</h3>
-                <div className="text-muted-foreground leading-relaxed">
-                  <p className="font-semibold">Ideal for:</p>
-                  <ul className="list-disc pl-5 space-y-1">
-                    <li>Soap spray drying plants</li>
-                    <li>Continuous soap manufacturing lines</li>
-                    <li>High-efficiency drying and moisture removal systems</li>
-                  </ul>
+          <section className="py-20 bg-slate-50">
+            <div className="container">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
+                  <h3 className="text-2xl font-bold text-primary">Applications & Key Benefits</h3>
+                  <div className="text-muted-foreground leading-relaxed space-y-5">
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-2">Ideal for:</p>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>Soap spray drying plants</li>
+                        <li>Continuous soap manufacturing lines</li>
+                        <li>High-efficiency drying and moisture removal systems</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-2">Key Benefits:</p>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>Enhances drying efficiency through improved vacuum levels</li>
+                        <li>Reduces energy consumption by lowering gas load on the pump</li>
+                        <li>Ensures consistent soap quality and moisture control</li>
+                        <li>Improves overall plant reliability and operational stability</li>
+                        <li>Optimizes performance of the entire soap drying line system</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-                  <p className="font-semibold mt-4">Key Benefits:</p>
-                  <ul className="list-disc pl-5 space-y-1">
-                    <li>Enhances drying efficiency through improved vacuum levels</li>
-                    <li>Reduces energy consumption by lowering gas load on the pump</li>
-                    <li>Ensures consistent soap quality and moisture control</li>
-                    <li>Improves overall plant reliability and operational stability</li>
-                    <li>Optimizes performance of the entire soap drying line system</li>
-                  </ul>
-
-                  <h4 className="text-xl font-semibold mt-6">Barometric Tower for Vacuum System Integration</h4>
-                  <p className="mt-2">
+                <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
+                  <h4 className="text-2xl font-bold text-primary">Barometric Tower for Vacuum System Integration</h4>
+                  <p className="text-muted-foreground leading-relaxed">
                     The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
                   </p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "soap-atomiser") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Atomiser / Vacuum Spray Chamber for Soap Drying Systems"
+            description="High-efficiency vacuum spray drying chamber for converting liquid neat soap into solid, cooled soap within seconds."
+            video="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"
+          />
+
+          <section className="py-16 bg-background">
+            <div className="container max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                Advanced Vacuum Spray Drying Technology for Soap Manufacturing
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The Brit Soap Atomiser / Vacuum Spray Chamber enables soap manufacturers to transform liquid neat soap into dried, cooled, solid 
+                soap in just a few seconds by boiling off excess moisture under carefully controlled vacuum conditions. This rapid drying process ensures 
+                consistent soap quality, improved efficiency, and seamless integration with downstream soap finishing equipment.
+              </p>
+            </div>
+          </section>
+
+          <section className="py-20 bg-slate-50">
+            <div className="container grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-bold text-primary">Process & Functioning</h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    The atomiser operates on a continuous vacuum spray drying process, ensuring rapid moisture removal 
+                    and uniform solidification of soap. Its rotating internal mechanism allows efficient spraying, drying, and 
+                    discharge within a single integrated system.
+                  </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>The chamber is cylindrical with a centrally mounted rotating shaft</li>
+                    <li>Soap spray nozzle and scraper blades are mounted on the shaft</li>
+                    <li>As the shaft rotates, liquid soap is sprayed onto the chamber walls, where it rapidly solidifies under vacuum</li>
+                    <li>The scraper blades remove the solidified soap from the chamber walls</li>
+                    <li>Soap is then deposited into the infeed throat of the outfeed plodder screw</li>
+                    <li>A bridge breaker is fixed at the bottom of the atomiser to ensure smooth material flow</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-white p-5 md:p-6">
+                <Image
+                  src="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"
+                  alt="Soap Atomiser / Vacuum Spray Chamber Process"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-2xl"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6 order-2 md:order-1">
+                <Image
+                  src="/assets/DryingLine/soap-automiser.JPG"
+                  alt="Engineering and Construction of Soap Atomiser"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                />
+              </div>
+              <div className="space-y-6 order-1 md:order-2">
+                <h3 className="text-3xl font-bold text-primary">Engineering & Construction</h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Engineered for durability and precision, the atomiser features robust stainless steel 
+                    construction and multiple design elements that ensure safe operation, easy maintenance, 
+                    and long service life in industrial environments.
+                  </p>
+                  <ul className="space-y-2 list-disc pl-5">
+                    <li>Chamber designed for vacuum-based rapid drying and efficient heat transfer</li>
+                    <li>Gland packing installed on the shaft on both soap side and vacuum side for sealing</li>
+                    <li>Equipped with a large bottom door for easy entry and maintenance inspection</li>
+                    <li>Includes two sight glasses with wipers (top and bottom) for real-time monitoring</li>
+                    <li>Contact parts made in AISI 304 stainless steel, including the duct connecting to the powder separator</li>
+                    <li>Built for durability, hygiene, and continuous industrial operation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-20 bg-slate-50">
+            <div className="container grid gap-10 md:grid-cols-2 items-start">
+              <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
+                <h3 className="text-2xl font-bold text-primary">Applications & Key Benefits</h3>
+                <div className="text-muted-foreground leading-relaxed space-y-6">
+                  <div>
+                    <p className="font-semibold text-gray-900 mb-3 text-lg">Used for:</p>
+                    <ul className="space-y-2 list-disc pl-5">
+                      <li>Converting liquid neat soap into solid soap base or noodles</li>
+                      <li>Integration with simplex refiner for toilet, laundry, or multipurpose soap noodles</li>
+                      <li>Direct connection to duplex vacuum plodder for finished soap bar extrusion</li>
+                      <li>Suitable for continuous soap drying and finishing lines</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 mb-3 text-lg">Key Benefits:</p>
+                    <ul className="space-y-2 list-disc pl-5">
+                      <li>Rapid drying within seconds under controlled vacuum conditions</li>
+                      <li>Ensures consistent product quality and uniform moisture removal</li>
+                      <li>Supports flexible production (noodles or finished bars)</li>
+                      <li>Enhances overall plant efficiency and throughput</li>
+                      <li>Available in capacities ranging from 1 ton/hr to 4 tons/hr</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-white p-5 md:p-6">
+                <Image
+                  src="/assets/DryingLine/soap-atomiser-soap-drying.png"
+                  alt="Applications of Soap Atomiser"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-2xl"
+                />
               </div>
             </div>
           </section>
@@ -2398,13 +2441,13 @@ export default async function ProductDetailPage({
             video="/assets/VerticalStamper/vertical-final.mp4"
           />
 
-          <section className="py-16 bg-primary text-white">
+          <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
-                <p className="text-lg text-white/90 leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling 
                   irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a 
                   significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality 
@@ -2531,12 +2574,12 @@ export default async function ProductDetailPage({
             video="/assets/SixFaceStamper/automatic-cube-stamper.mov"
           />
 
-          <section className="py-16 bg-primary text-white">
+          <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                 The Brit Soap Machinery 6F Stamper
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped 
                 cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern, 
                 high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more 
@@ -2662,12 +2705,12 @@ export default async function ProductDetailPage({
             video="/assets/LaundryStamper/laundry-soap-stamper.mov"
           />
 
-          <section className="py-16 bg-primary text-white">
+          <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 The Brit Soap Laundry Soap Stamper is a high-performance rotary soap stamping machine 
                 engineered for accurate and efficient stamping of rectangular banded laundry soaps and 
                 toilet soaps. Designed for integration into modern soap finishing lines, it ensures 

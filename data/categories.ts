@@ -72,8 +72,7 @@ export const categories = [
     description:
       "Integrated finishing systems for mixing, refining, extrusion, cutting, and stamping of premium soap bars.",
     intro: [
-      "The soap finishing line is the final and most quality-critical stage where soap mass is transformed into smooth, refined, and precisely shaped bars ready for packaging.",
-      "By combining mixing, milling, plodding, cutting, and stamping equipment, the line ensures consistent appearance, structural integrity, and strong brand identity.",
+      "The soap finishing line is the final and most quality-critical stage where soap mass is transformed into smooth, refined, and precisely shaped bars ready for packaging. By combining mixing, milling, plodding, cutting, and stamping equipment, the line ensures consistent appearance, structural integrity, and strong brand identity.",
     ],
     introImage: "/category-media/finishing-line/overview.jpg",
     products: [
@@ -91,8 +90,7 @@ export const categories = [
     description:
       "High-efficiency drying process designed to convert liquid soap into solid form with precise moisture control and consistent product quality.",
     intro: [
-      "The soap drying line is a critical stage in soap manufacturing where liquid neat soap is transformed into dried, solid soap through a controlled vacuum spray drying process. By combining advanced equipment such as the atomiser, vacuum generating system, and powder separators, the process ensures rapid moisture evaporation, uniform drying, and efficient material handling.",
-      "This integrated system enhances product consistency, improves energy efficiency, and enables seamless operation across modern high-capacity soap production lines.",
+      "The soap drying line is a critical stage in soap manufacturing where liquid neat soap is transformed into dried, solid soap through a controlled vacuum spray drying process. By combining advanced equipment such as the atomiser, vacuum generating system, and powder separators, the process ensures rapid moisture evaporation, uniform drying, and efficient material handling. This integrated system enhances product consistency, improves energy efficiency, and enables seamless operation across modern high-capacity soap production lines.",
     ],
     introImage: "/category-media/drying-line/overview.png",
     products: [
@@ -135,7 +133,7 @@ const localProducts: Record<string, LocalProduct> = {
     description:
       "An advanced vertical stamping system engineered for precision alignment and superior surface finish, especially for premium soap bars. Suitable for high-end toilet soap production and automated finishing lines.",
     detailSection: { images: ["/assets/VerticalStamper/automatic-soap-stamping-machine.png"] },
-    comingSoon: true,
+    comingSoon: false,
   },
   "six-face-soap-stamper": {
     slug: "six-face-soap-stamper",
@@ -143,7 +141,7 @@ const localProducts: Record<string, LocalProduct> = {
     description:
       "A specialised six-side stamping machine that stamps all faces of cuboid or Marseille-type soaps, ensuring complete branding and uniform geometry. Ideal for premium, export-quality, and traditional soap formats.",
     detailSection: { images: ["/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png"] },
-    comingSoon: true,
+    comingSoon: false,
   },
   "laundry-soap-stamper": {
     slug: "laundry-soap-stamper",
@@ -151,7 +149,7 @@ const localProducts: Record<string, LocalProduct> = {
     description:
       "A purpose-built soap stamper for rectangular laundry bars, capable of stamping multiple faces efficiently. Best suited for high-volume laundry soap production with consistent shape and automated finishing lines.",
     detailSection: { images: ["/assets/LaundryStamper/laundry-soap-syamper.png"] },
-    comingSoon: true,
+    comingSoon: false,
   },
   "saponification-crutcher": {
     slug: "saponification-crutcher-soap-manufacturing",
@@ -175,7 +173,7 @@ const localProducts: Record<string, LocalProduct> = {
     description:
       "The heat exchanger raises the temperature of liquid soap before it enters the vacuum spray chamber, enabling effective evaporation of excess moisture during the drying process. This controlled heating ensures consistent drying performance, improved efficiency, and uniform final soap quality.",
     detailSection: { images: ["/category-media/drying-line/heat-exchanger.jpg"] },
-    comingSoon: true,
+    comingSoon: false,
   },
   "powder-separator": {
     slug: "powder-separator",
@@ -183,7 +181,7 @@ const localProducts: Record<string, LocalProduct> = {
     description:
       "The powder separators remove fine soap particles from exhaust gases leaving the vacuum spray chamber, ensuring clean gas flow and preventing contamination of downstream systems. This improves plant efficiency, protects the condenser system, and supports better effluent management.",
     detailSection: { images: ["/category-media/drying-line/powder-separator.png"] },
-    comingSoon: true,
+    comingSoon: false,
   },
   "vacuum-drying-system": {
     slug: "vacuum-drying-system",
@@ -201,7 +199,7 @@ const localProducts: Record<string, LocalProduct> = {
     detailSection: {
       images: ["/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"],
     },
-    comingSoon: true,
+    comingSoon: false,
   },
   "soap-stampers-overview": {
     slug: "soap-stampers-overview",

@@ -33,13 +33,13 @@ export default async function CategoryPage({
   return (
     <Layout>
       {/* 🔹 Hero */}
-      <section className="py-20 bg-background">
+      <section className="pt-20 pb-6 bg-background">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
-            <p className="mt-4 text-primary text-lg text-left">
+            <p className="mt-4 text-primary text-lg text-left max-w-4xl">
               {categoryData.description}
             </p>
           )}
@@ -47,7 +47,7 @@ export default async function CategoryPage({
       </section>
 
       {/* 🔹 Intro Content + Image */}
-      <section className="pb-12 bg-background">
+      <section className="pb-12 pt-2 bg-background">
         <div className="container space-y-8">
           <div>
             {slug === "drying-line" && categoryData?.description && (
@@ -72,7 +72,7 @@ export default async function CategoryPage({
               </p>
             ))}
           </div>
-          {slug !== "soap-stampers" && (
+          {slug !== "soap-stampers" && slug !== "finishing-line" && (
             <div>
               <Image
                 src={
@@ -117,10 +117,19 @@ export default async function CategoryPage({
                 slug === "soap-stampers"
                   ? "text-xs text-primary-foreground/80 leading-relaxed"
                   : "text-sm text-primary-foreground/80 leading-relaxed";
+              const rootSlugs = [
+                "av-pneumatic-soap-cutter-machine",
+                "double-arm-sigma-mixer-soap-manufacturing",
+                "duplex-vacuum-soap-plodder-machine",
+                "high-speed-soap-cutter-machine",
+                "simplex-refiner-plodder",
+                "triple-roll-mill-soap-refining-machine",
+              ];
+
               const productLink = isLocal
-                ? isComingSoon
-                  ? `/${lang}/products/${slug}/${product.slug}`
-                  : `/${lang}/${product.slug}`
+                ? rootSlugs.includes(product.slug)
+                  ? `/${lang}/${product.slug}`
+                  : `/${lang}/products/${slug}/${product.slug}`
                 : `/${lang}/products/${slug}/${product.slug}`;
 
               let productImg = null;
