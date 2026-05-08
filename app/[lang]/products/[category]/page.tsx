@@ -104,19 +104,9 @@ export default async function CategoryPage({
               const productTitle = isLocal ? product.title : product.name;
               const productDesc = isLocal ? product.description : product.shortDescription;
               const isComingSoon = Boolean(isLocal && product.comingSoon);
-              const cardMinHeight =
-                slug === "saponification"
-                  ? "min-h-[800px]"
-                  : slug === "soap-stampers"
-                    ? "min-h-[620px]"
-                    : "min-h-[500px]";
               const rotateAtomiserImage =
                 slug === "drying-line" && product.slug === "soap-atomiser";
-              const imageHeight = rotateAtomiserImage ? "h-36 md:h-40" : "h-56";
-              const descriptionClass =
-                slug === "soap-stampers"
-                  ? "text-xs text-primary-foreground/80 leading-relaxed"
-                  : "text-sm text-primary-foreground/80 leading-relaxed";
+              const imageHeight = rotateAtomiserImage ? "h-36 md:h-40" : "h-52";
               const rootSlugs = [
                 "av-pneumatic-soap-cutter-machine",
                 "double-arm-sigma-mixer-soap-manufacturing",
@@ -138,39 +128,35 @@ export default async function CategoryPage({
               } else {
                 productImg = product.imageUrl;
               }
-              const cardImageClass = rotateAtomiserImage
-                ? `w-full ${imageHeight} object-contain rounded-xl border border-white/30 bg-white p-2`
-                : `w-full ${imageHeight} object-cover rounded-xl border border-white/30`;
-
               return (
                 <Link
                   key={`${product.slug}-${i}`}
                   href={productLink}
-                  className={`group bg-primary border border-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300 flex flex-col ${cardMinHeight} max-w-[360px] mx-auto w-full`}
+                  className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full"
                 >
-                  {/* Content */}
-                  <div className="px-6 py-8 md:py-10 flex flex-col flex-grow bg-primary text-primary-foreground text-center justify-center">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors">
+                  {/* Image */}
+                  <div className="bg-white m-4 mb-0 rounded-xl overflow-hidden border border-border">
+                    {productImg ? (
+                      <Image
+                        src={productImg}
+                        alt={productTitle}
+                        width={500}
+                        height={300}
+                        className={`w-full ${imageHeight} object-contain p-3`}
+                      />
+                    ) : (
+                      <div className={`w-full ${imageHeight} bg-muted flex items-center justify-center text-xs text-muted-foreground`}>
+                        No Image
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Text */}
+                  <div className="px-5 py-5 text-primary-foreground">
+                    <h3 className="text-base font-bold mb-2 leading-snug">
                       {productTitle}
                     </h3>
-
-                    <div className="mb-6">
-                      {productImg ? (
-                        <Image
-                          src={productImg}
-                          alt={productTitle}
-                          width={500}
-                          height={300}
-                          className={cardImageClass}
-                        />
-                      ) : (
-                        <div className={`w-full ${imageHeight} bg-white/10 rounded-xl border border-white/20 flex items-center justify-center text-xs text-primary-foreground/80`}>
-                          No Image
-                        </div>
-                      )}
-                    </div>
-
-                    <p className={descriptionClass}>
+                    <p className="text-xs text-primary-foreground/75 leading-relaxed">
                       {productDesc}
                     </p>
                   </div>
