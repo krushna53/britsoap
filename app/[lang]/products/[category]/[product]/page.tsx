@@ -2351,7 +2351,7 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-primary">Applications &amp; Key Benefits</h3>
+                <h3 className="text-2xl font-semibold text-primary">Applications & Key Benefits</h3>
                 <div className="text-muted-foreground leading-relaxed">
                   <p className="font-semibold">Ideal for:</p>
                   <ul className="list-disc pl-5 space-y-1">
@@ -2374,6 +2374,388 @@ export default async function ProductDetailPage({
                     The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
                   </p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "vertical-soap-stamper") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Vertical Soap Stamper | Precision Stamping for Premium Soap Production"
+            description="High-performance vertical soap press engineered for superior geometry, accurate shaping, and seamless integration into automated soap finishing lines."
+            video="/assets/VerticalStamper/vertical-final.mp4"
+          />
+
+          <section className="py-16 bg-primary text-white">
+            <div className="container max-w-4xl mx-auto">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                  Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
+                </h2>
+                <p className="text-lg text-white/90 leading-relaxed">
+                  Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling 
+                  irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a 
+                  significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality 
+                  soap production.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/VerticalStamper/automatic-soap-stamping-machine.png"
+                  alt="Vertical Soap Stamping Machine"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  The Brit Soap Machinery Vertical Stamping Machine (BSM / VPress) is engineered for 
+                  precision soap finishing and seamless integration into automated soap production lines.
+                  A continuous soap billet from the duplex vacuum plodder is cut into uniform slugs using 
+                  an automatic soap cutter, then transferred via conveyors to the stamping unit for a 
+                  synchronized workflow.
+                </p>
+                <p>
+                  A vacuum pick-and-place system positions each slug between precision upper and lower 
+                  dies. The vertical reciprocating stamping mechanism ensures uniform compression, 
+                  accurate shaping, and superior surface finish for consistent soap bar geometry.
+                </p>
+                <p>
+                  The lower die, mounted on an indexed rotating mandrel, enables efficient transfer of 
+                  stamped bars. A vacuum-operated handling system moves finished bars onto the outfeed 
+                  conveyor, ready for downstream wrapping and packaging.
+                </p>
+                <p>
+                  An integrated de-flashing (trimming) system removes excess material, significantly 
+                  reducing scrap. Separated flash is automatically recycled back into the process, 
+                  improving material efficiency and yield.
+                </p>
+                <p>
+                  Temperature-controlled chilled dies prevent soap sticking and ensure smooth, continuous 
+                  operation across various soap formulations.
+                </p>
+                <p>
+                  Available in VPress 04 and VPress 06, the machine features PLC-controlled automation 
+                  with HMI, delivering high repeatability, process control, and operator ease. Supplied with 
+                  a vacuum pump and die set, it is ready for immediate integration into industrial soap 
+                  manufacturing lines.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-6">
+                  Key Benefits & Functional Highlights
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Vertical stamping mechanism for enhanced precision and uniformity",
+                    "Lower scrap generation compared to rotary stamping machines",
+                    "Handles irregular and complex soap shapes with ease",
+                    "Vacuum pick-and-place system for accurate slug positioning",
+                    "Indexed rotating mandrel for efficient bar transfer",
+                    "Integrated de-flashing system for clean finishing",
+                    "Chilled dies to prevent soap sticking and ensure smooth release",
+                    "Seamless integration with soap finishing lines and wrapping systems",
+                    "PLC-controlled operation with user-friendly HMI interface",
+                    "Available in multiple capacities: VPress04 and VPress06",
+                  ].map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  "/assets/VerticalStamper/automatic-soap-press.jpeg",
+                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
+                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
+                  "/assets/VerticalStamper/bar-soap-stamping-machine.jpg",
+                ].map((img, i) => (
+                  <div key={i} className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-2">
+                    <Image
+                      src={img}
+                      alt={`Vertical Stamper Feature ${i + 1}`}
+                      width={400}
+                      height={300}
+                      className="w-full h-32 md:h-40 object-contain rounded-xl bg-white"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "six-face-soap-stamper") {
+      return (
+        <Layout>
+          <ProductHero
+            title="6 Face Soap Stamper | Precision Six-Side Embossing for Premium Soaps"
+            description="Advanced six-side stamping system engineered for sharp cuboid geometry and uniform branding on all faces of premium soap bars."
+            video="/assets/SixFaceStamper/automatic-cube-stamper.mov"
+          />
+
+          <section className="py-16 bg-primary text-white">
+            <div className="container max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                The Brit Soap Machinery 6F Stamper
+              </h2>
+              <p className="text-lg text-white/90 leading-relaxed">
+                The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped 
+                cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern, 
+                high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more 
+                durable, automated, and precision-driven approach.
+              </p>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png"
+                  alt="Six Side Soap Stamping Machine"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  The Six Side Soap Stamping Machine integrates automation, precision engineering, and 
+                  durability to ensure consistent output and reduced manual intervention in soap 
+                  finishing operations.
+                </p>
+                <p>
+                  An input conveyor system allows continuous feeding of multiple soap billets. A pick-and-place 
+                  mechanism accurately positions each soap above the mould cavity, ensuring 
+                  correct alignment before stamping.
+                </p>
+                <p>
+                  The soap is then held firmly using specially engineered sliding side punches, which 
+                  stabilize the billet during the stamping cycle. A vertical reciprocating top punch
+                  compresses the soap into the mould cavity, achieving a sharp cuboid geometry and 
+                  uniform embossing across all six surfaces.
+                </p>
+                <p>
+                  Post-stamping, the side punches retract, and a bottom punch ejects the finished soap 
+                  smoothly. A gripper transfer system then places the stamped soap onto an output 
+                  conveyor for downstream handling or packaging.
+                </p>
+                <div className="bg-slate-50 p-6 rounded-2xl border border-border">
+                  <p className="font-semibold text-primary mb-3">The stamping system includes:</p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>6 precision brass punches (top, bottom, and four sides)</li>
+                    <li>Integrated cooling galleries to prevent sticking and ensure clean release</li>
+                    <li>A high-grade alloy mould for extended service life and consistent dimensional accuracy</li>
+                  </ul>
+                </div>
+                <p>
+                  The machine is equipped with a PLC and HMI-based control panel, enabling operator-friendly 
+                  control, repeatability, and integration into automated soap finishing lines.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-6">
+                  Key Benefits & Functional Highlights
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Fully automatic six-side soap stamping system for premium finish",
+                    "Uniform embossing on all faces including sides and edges",
+                    "Suitable for cuboid and rectangular soaps (50 mm – 100 mm range)",
+                    "Precision pick-and-place feeding mechanism",
+                    "Sliding side punch technology for firm holding and sharp definition",
+                    "Brass punches with cooling galleries for anti-sticking performance",
+                    "Durable alloy mould construction for long operational life",
+                    "Integrated PLC & HMI controls for automation and consistency",
+                    "Seamless integration into continuous soap finishing lines",
+                    "Reduced maintenance compared to conventional stamping machines",
+                  ].map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                {[
+                  "/assets/SixFaceStamper/automatic-soap-press.jpg",
+                  "/assets/SixFaceStamper/cuboid-soap-press.jpg",
+                  "/assets/SixFaceStamper/marseille-soap-stamper.jpg",
+                ].map((img, i) => (
+                  <div key={i} className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-2">
+                    <Image
+                      src={img}
+                      alt={`6F Stamper Feature ${i + 1}`}
+                      width={400}
+                      height={300}
+                      className="w-full h-32 md:h-48 object-contain rounded-xl bg-white"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <CTASection
+            title="Engineered for Efficiency. Built for Reliability"
+            description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
+            buttonText="Speak with an Engineer"
+            buttonLink={`/${lang}/contact`}
+            showSecondaryButton={false}
+          />
+        </Layout>
+      );
+    }
+
+    if (productSlug === "laundry-soap-stamper") {
+      return (
+        <Layout>
+          <ProductHero
+            title="Laundry Soap Stamper | High-Speed Rotary Stamping for Laundry Bars"
+            description="Robust rotary soap stamper designed for efficient, continuous stamping of rectangular laundry and toilet soap bars."
+            video="/assets/LaundryStamper/laundry-soap-stamper.mov"
+          />
+
+          <section className="py-16 bg-primary text-white">
+            <div className="container max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                Dual Rotary Stamping for Laundry Soap Bars
+              </h2>
+              <p className="text-lg text-white/90 leading-relaxed">
+                The Brit Soap Laundry Soap Stamper is a high-performance rotary soap stamping machine 
+                engineered for accurate and efficient stamping of rectangular banded laundry soaps and 
+                toilet soaps. Designed for integration into modern soap finishing lines, it ensures 
+                uniform shape, clean embossing, and reliable throughput with minimal handling.
+              </p>
+            </div>
+          </section>
+
+          <section className="py-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
+              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+                <Image
+                  src="/assets/LaundryStamper/laundry-soap-stamper.png"
+                  alt="Laundry Soap Stamping Machine"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                />
+              </div>
+
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  Built for durability and precision, this automatic soap stamper incorporates 
+                  a robust rotary die system and synchronized material handling for smooth, 
+                  continuous operation. The machine features a rotating die box with four 
+                  stations, each equipped with two cavities, enabling two stamped soaps per 
+                  stroke—optimizing output while maintaining consistent quality.
+                </p>
+                <p>
+                  The die box is manufactured from a special alloy for extended service life, 
+                  while the die punches are equipped with internal cooling galleries
+                  circulating chilled water (down to -25°C) to prevent soap adhesion and 
+                  ensure clean release—critical for maintaining embossing clarity and 
+                  reducing downtime.
+                </p>
+                <p>
+                  A dual in-feed conveyor system feeds two parallel streams of soap bars into 
+                  the stamping zone using intermittent motion, ensuring precise positioning 
+                  and smooth transfer. A single synchronized pusher assembly inserts two 
+                  soap bars into the die cavities while simultaneously ejecting stamped 
+                  soaps, which are aligned via an off-take conveyor for efficient downstream 
+                  handling.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="pb-20 bg-background">
+            <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
+              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                <h3 className="text-2xl font-bold text-primary mb-6">
+                  Key Benefits & Functional Highlights
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Dual-side stamping capability for rectangular soap bars",
+                    "Rotary die box with 4 stations × 2 cavities (2 soaps per stroke)",
+                    "Special alloy die construction for long operational life",
+                    "Chilled die punches with cooling galleries (-25°C) to prevent sticking",
+                    "Dual in-feed conveyor for parallel soap feeding",
+                    "Intermittent conveyor motion for accurate positioning",
+                    "Single pusher system for simultaneous feeding and ejection",
+                    "Off-take conveyor for aligned soap discharge",
+                    "Designed for continuous, high-efficiency soap finishing lines",
+                  ].map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                {[
+                  "/assets/LaundryStamper/laundry-soap-bar-production.jpeg",
+                  "/assets/LaundryStamper/soap-press-die-laundry-soap.jpeg",
+                ].map((img, i) => (
+                  <div key={i} className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-2">
+                    <Image
+                      src={img}
+                      alt={`Laundry Stamper Feature ${i + 1}`}
+                      width={400}
+                      height={300}
+                      className="w-full h-40 md:h-56 object-contain rounded-xl bg-white"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </section>
