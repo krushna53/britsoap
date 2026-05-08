@@ -46,6 +46,13 @@
     font-weight: 700;
     letter-spacing: -0.02em;
   }
+
+  button,
+  a,
+  [role="button"],
+  select {
+    cursor: pointer;
+  }
 }
 
 .container {

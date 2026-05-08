@@ -24,10 +24,32 @@ export default function ContactClient({ contact }: any) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || "Failed to send. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: any) => {
@@ -250,12 +272,16 @@ export default function ContactClient({ contact }: any) {
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
+                  {error && (
+                    <p className="text-xs text-red-500">{error}</p>
+                  )}
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-accent-foreground text-sm font-medium rounded hover:bg-red-light transition-colors"
+                    disabled={loading}
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-accent-foreground text-sm font-medium rounded hover:bg-red-light transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send size={14} />
-                    Send Message
+                    {loading ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               )}
