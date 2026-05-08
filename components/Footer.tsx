@@ -1,7 +1,24 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1] || "en";
+
+  const productLinks = [
+    { name: "Saponification", path: "/products/saponification" },
+    { name: "Drying", path: "/products/drying-line" },
+    { name: "Finishing Line", path: "/products/finishing-line" },
+    { name: "Soap Cutters", path: "/soap-cutters" },
+    { name: "Soap Stampers", path: "/products/soap-stampers" },
+    { name: "Wrapping", path: null },
+    { name: "Pneumatic Transport", path: null },
+    { name: "Detergent Plants", path: null },
+  ];
+
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Red accent line at top */}
@@ -35,7 +52,7 @@ const Footer = () => {
               ].map((link) => (
                 <li key={link.path}>
                   <Link
-                    href={link.path}
+                    href={`/${lang}${link.path}`}
                     className="text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                   >
                     {link.name}
@@ -50,21 +67,20 @@ const Footer = () => {
               Products
             </h4>
             <ul className="space-y-2">
-              {[
-                "Saponification",
-                "Drying",
-                "Finishing Line",
-                "Wrapping",
-                "Pneumatic Transport",
-                "Detergent Plants",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="/products"
-                    className="text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-                  >
-                    {item}
-                  </Link>
+              {productLinks.map((item) => (
+                <li key={item.name}>
+                  {item.path ? (
+                    <Link
+                      href={`/${lang}${item.path}`}
+                      className="text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <span className="text-xs text-primary-foreground/40 cursor-default">
+                      {item.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

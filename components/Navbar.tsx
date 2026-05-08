@@ -237,7 +237,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-background border-b border-border"
+            className="md:hidden overflow-y-auto max-h-[calc(100vh-4rem)] bg-background border-b border-border"
           >
             <nav className="container flex flex-col gap-4 py-6">
               {navLinks.map((link, i) => (
