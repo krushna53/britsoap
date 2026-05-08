@@ -61,7 +61,7 @@ export default function ServicesPreview({ services }: Props) {
                   </div>
 
                   <div className="flex items-center gap-2 text-white/50 text-sm">
-                    <span>Hover to view details</span>
+                    {/* <span>Hover to view details</span> */}
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path
                         d="M1 7h12M8 2l5 5-5 5"
