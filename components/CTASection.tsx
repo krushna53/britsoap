@@ -18,7 +18,7 @@ export default function CTASection({
   return (
     <section className="py-20 bg-primary text-white text-center">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <h2 className="text-4xl md:text-[47px] font-bold mb-6 leading-tight capitalize">
           {title}
         </h2>
 
@@ -57,7 +57,7 @@ export default function CTASection({
               className="bg-[#25D366] text-white px-6 py-4 rounded-xl shadow-md flex items-center justify-center hover:bg-[#1ebd5b] transition-all duration-300"
             >
               <span className="font-semibold tracking-wide text-sm">
-                Connect with Engineer
+                Connect With Engineer
               </span>
             </a>
           )}

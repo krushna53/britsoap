@@ -691,10 +691,10 @@ export default async function ProductDetailPage({
         <Layout>
           <section className="py-16 bg-primary text-center">
             <div className="container">
-              <h2 className="text-sm uppercase tracking-widest text-primary-foreground/60 mb-2">
+              <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
                 {localCategory.title}
               </h2>
-              <h1 className="text-4xl font-bold text-primary-foreground">
+              <h1 className="text-4xl font-bold text-primary-foreground capitalize">
                 {localProduct.title}
               </h1>
             </div>
@@ -713,7 +713,7 @@ export default async function ProductDetailPage({
               </div>
 
               <div>
-                <h2 className="text-2xl font-semibold text-primary mb-4">
+                <h2 className="text-2xl font-semibold text-primary mb-4 capitalize">
                   {localProduct.title}
                 </h2>
 
@@ -758,7 +758,7 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -771,7 +771,7 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Saponification Crutcher
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -798,7 +798,7 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <div className="grid gap-4">
                   <Image
                     src="/assets/SaponificationCrutcher/industrial-soap-manufacturing.jpeg"
@@ -830,7 +830,16 @@ export default async function ProductDetailPage({
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+                      <div className=" overflow-hidden ">
+                <Image
+                  src={templateData.detailImage}
+                  alt={templateData.title}
+                  width={900}
+                  height={1100}
+                  className="h-[420px] md:h-[560px] w-full object-contain p-6"
+                />
+              </div>
+              <div className=" shadow-smshadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
@@ -853,22 +862,14 @@ export default async function ProductDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50">
-                <Image
-                  src={templateData.detailImage}
-                  alt={templateData.title}
-                  width={900}
-                  height={1100}
-                  className="h-[420px] md:h-[560px] w-full object-contain p-6"
-                />
-              </div>
+      
             </div>
           </section>
 
           <CTASection
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -889,7 +890,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -914,7 +915,7 @@ production."
                 />
               </div>
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Saponification Jet | Instant Soap Making System with Venturi Technology
 
                 </h2>
@@ -959,7 +960,7 @@ production."
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Engineering and Construction
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1001,7 +1002,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Uses and Benefits
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1052,7 +1053,7 @@ production."
           <CTASection
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1072,7 +1073,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1090,7 +1091,7 @@ production."
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/ManualStamper/manual-penumatic-bar-soap-stamper.png"
                   alt="Manual pneumatic soap stamper"
@@ -1127,7 +1128,7 @@ production."
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
                   Construction &amp; Functional Advantages
                 </p>
@@ -1164,7 +1165,7 @@ production."
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/ManualStamper/manual-soap-press.png"
                   alt="Manual soap press"
@@ -1178,7 +1179,16 @@ production."
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+               <div className=" ">
+                <Image
+                  src="/assets/ManualStamper/manual-bar-soap-stamper.JPG"
+                  alt="Manual bar soap stamper"
+                  width={900}
+                  height={700}
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                />
+              </div>
+              <div className=" shadow-smshadow-sm">
                 <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
                   Key Features, Highlights &amp; Applications
                 </p>
@@ -1232,22 +1242,14 @@ production."
                   </ul>
                 </div>
               </div>
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
-                <Image
-                  src="/assets/ManualStamper/manual-bar-soap-stamper.JPG"
-                  alt="Manual bar soap stamper"
-                  width={900}
-                  height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
-                />
-              </div>
+             
             </div>
           </section>
 
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1355,7 +1357,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1371,7 +1373,7 @@ production."
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/HRDStamper/soap-stamping-machine.png"
                   alt={
@@ -1380,7 +1382,7 @@ production."
                   }
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[440px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[440px] w-full object-contain  bg-white"
                 />
               </div>
 
@@ -1421,7 +1423,7 @@ production."
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_1fr] items-start">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
                   Key Benefits &amp; Functional Highlights
                 </p>
@@ -1457,7 +1459,7 @@ production."
                   </ul>
                 </div>
               </div>
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   <Image
                     src="/assets/HRDStamper/soap-stamper-machine.png"
@@ -1509,7 +1511,7 @@ production."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1618,7 +1620,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1683,7 +1685,7 @@ Production Lines"
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <div className="grid gap-4">
                   <Image
                     src="/assets/RotaryStamper/rotary-soap-stamper.png"
@@ -1718,7 +1720,7 @@ Production Lines"
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
                   Key Benefits &amp; Functional Highlights
                 </p>
@@ -1760,7 +1762,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1779,7 +1781,7 @@ Production Lines"
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Powder Separators for Soap Drying Systems
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1792,7 +1794,7 @@ Production Lines"
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <h2 className="text-3xl font-bold text-primary mb-4">
                   Efficient Dust Removal Process in Soap Drying Systems
                 </h2>
@@ -1847,7 +1849,7 @@ Production Lines"
                 </ul>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <div className="grid grid-cols-1 gap-4">
                   <Image
                     src="/assets/DryingLine/soap-drying-dust-collector.png"
@@ -1870,7 +1872,7 @@ Production Lines"
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.85fr_1.15fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/DryingLine/powder-separator.png"
                   alt="Powder separator unit"
@@ -1880,7 +1882,7 @@ Production Lines"
                 />
               </div>
 
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <h3 className="text-2xl font-bold text-primary mb-4">
                   Robust Engineering & Durable Construction
                 </h3>
@@ -1922,7 +1924,7 @@ Production Lines"
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <h3 className="text-2xl font-bold text-primary mb-4">
                   Ideal for Soap Manufacturing Plants – Key Benefits
                 </h3>
@@ -1974,7 +1976,7 @@ Production Lines"
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/DryingLine/powder-separator-drying-plant.png"
                   alt="Powder separator in drying plant"
@@ -1989,7 +1991,7 @@ Production Lines"
           <CTASection
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2009,7 +2011,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   High-Performance Heat Exchanger for Liquid Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2027,7 +2029,7 @@ Production Lines"
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Advanced Heat Transfer &amp; Precise Temperature Control
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2066,7 +2068,7 @@ Production Lines"
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/DryingLine/heat-exchanger-soap-drying.jpg"
                   alt="Heat exchanger for soap drying line"
@@ -2080,7 +2082,7 @@ Production Lines"
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/DryingLine/heat-exchanger-tubes.png"
                   alt="Heat exchanger tube plate assembly"
@@ -2090,7 +2092,7 @@ Production Lines"
                 />
               </div>
 
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
                   Robust Stainless Steel Construction &amp; Safety Engineering
                 </p>
@@ -2129,7 +2131,7 @@ Production Lines"
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
@@ -2178,7 +2180,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2200,7 +2202,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Integrated Vacuum System for Efficient Soap Drying
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2348,7 +2350,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2367,7 +2369,7 @@ Production Lines"
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Advanced Vacuum Spray Drying Technology for Soap Manufacturing
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2398,13 +2400,13 @@ Production Lines"
                   </ul>
                 </div>
               </div>
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-white p-5 md:p-6">
+              <div className=" overflow-hidden  p-5 md:p-6">
                 <Image
                   src="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"
                   alt="Soap Atomiser / Vacuum Spray Chamber Process"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-2xl"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
@@ -2412,13 +2414,13 @@ Production Lines"
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6 order-2 md:order-1">
+              <div className="  order-2 md:order-1">
                 <Image
                   src="/assets/DryingLine/soap-automiser.JPG"
                   alt="Engineering and Construction of Soap Atomiser"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                  className="w-full h-auto object-contain bg-white"
                 />
               </div>
               <div className="space-y-6 order-1 md:order-2">
@@ -2471,13 +2473,13 @@ Production Lines"
                   </div>
                 </div>
               </div>
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-white p-5 md:p-6">
+              <div className=" overflow-hidden  p-5 md:p-6">
                 <Image
                   src="/assets/DryingLine/soap-atomiser-soap-drying.png"
                   alt="Applications of Soap Atomiser"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-2xl"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
@@ -2486,7 +2488,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2507,7 +2509,7 @@ Soap Finishing Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2522,13 +2524,13 @@ Soap Finishing Lines"
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/VerticalStamper/automatic-soap-stamping-machine.png"
                   alt="Vertical Soap Stamping Machine"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                  className="w-full h-auto object-contain bg-white"
                 />
               </div>
 
@@ -2571,7 +2573,7 @@ Soap Finishing Lines"
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <h3 className="text-2xl font-bold text-primary mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
@@ -2603,7 +2605,7 @@ Soap Finishing Lines"
                   "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
                   "/assets/VerticalStamper/bar-soap-stamping-machine.jpg",
                 ].map((img, i) => (
-                  <div key={i} className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-2">
+                  <div key={i} className="overflow-hidden p-2">
                     <Image
                       src={img}
                       alt={`Vertical Stamper Feature ${i + 1}`}
@@ -2620,7 +2622,7 @@ Soap Finishing Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2640,7 +2642,7 @@ continuous soap production lines."
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2654,13 +2656,13 @@ continuous soap production lines."
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/SixFaceStamper/soap-stamper-cuboid-six-side-stamper.png"
                   alt="Six Side Soap Stamping Machine"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                  className="w-full h-auto object-contain bg-white"
                 />
               </div>
 
@@ -2704,7 +2706,7 @@ continuous soap production lines."
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <h3 className="text-2xl font-bold text-primary mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
@@ -2735,7 +2737,7 @@ continuous soap production lines."
                   "/assets/SixFaceStamper/cuboid-soap-press.jpg",
                   "/assets/SixFaceStamper/marseille-soap-stamper.jpg",
                 ].map((img, i) => (
-                  <div key={i} className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-2">
+                  <div key={i} className="overflow-hidden p-2">
                     <Image
                       src={img}
                       alt={`6F Stamper Feature ${i + 1}`}
@@ -2752,7 +2754,7 @@ continuous soap production lines."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2773,7 +2775,7 @@ efficiency soap finishing lines."
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2787,13 +2789,13 @@ efficiency soap finishing lines."
 
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-5 md:p-6">
+              <div className=" ">
                 <Image
                   src="/assets/LaundryStamper/laundry-soap-stamper.png"
                   alt="Laundry Soap Stamping Machine"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-2xl bg-white"
+                  className="w-full h-auto object-contain bg-white"
                 />
               </div>
 
@@ -2826,7 +2828,7 @@ efficiency soap finishing lines."
 
           <section className="pb-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
-              <div className="rounded-[2rem] border border-border bg-white p-7 md:p-10 shadow-sm">
+              <div className=" shadow-smshadow-sm">
                 <h3 className="text-2xl font-bold text-primary mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
@@ -2855,7 +2857,7 @@ efficiency soap finishing lines."
                   "/assets/LaundryStamper/laundry-soap-bar-production.jpeg",
                   "/assets/LaundryStamper/soap-press-die-laundry-soap.jpeg",
                 ].map((img, i) => (
-                  <div key={i} className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-2">
+                  <div key={i} className="overflow-hidden p-2">
                     <Image
                       src={img}
                       alt={`Laundry Stamper Feature ${i + 1}`}
@@ -2872,7 +2874,7 @@ efficiency soap finishing lines."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2921,7 +2923,7 @@ efficiency soap finishing lines."
                 alt={templateData.title}
                 width={600}
                 height={500}
-                className="rounded-2xl shadow-lg w-full object-cover"
+                className="shadow-lg w-full object-cover"
               />
               <div className="absolute top-4 left-4 bg-primary text-white px-4 py-1 rounded-full text-sm shadow">
                 Industrial Grade
@@ -2952,7 +2954,7 @@ efficiency soap finishing lines."
         <CTASection
           title="Engineered for Efficiency. Built for Reliability"
           description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-          buttonText="Speak with an Engineer"
+          buttonText="Speak With An Engineer"
           buttonLink={`/${lang}/contact`}
           showSecondaryButton={false}
         />
@@ -2974,10 +2976,10 @@ efficiency soap finishing lines."
     <Layout>
       <section className="py-16 bg-primary text-center">
         <div className="container">
-          <h2 className="text-sm uppercase tracking-widest text-primary-foreground/60 mb-2">
+          <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
             {category.title}
           </h2>
-          <h1 className="text-4xl font-bold text-primary-foreground">
+          <h1 className="text-4xl font-bold text-primary-foreground capitalize">
             {product.name}
           </h1>
         </div>
@@ -3002,7 +3004,7 @@ efficiency soap finishing lines."
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-primary mb-4 capitalize">
               {product.name}
             </h2>
 

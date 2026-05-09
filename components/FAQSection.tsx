@@ -40,7 +40,7 @@ export default function FAQSection() {
     <section className="py-20 bg-background">
       <div className="container max-w-3xl">
 
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-center mb-12 capitalize">
           Frequently Asked Questions
         </h2>
 

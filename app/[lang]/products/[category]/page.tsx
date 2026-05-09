@@ -35,7 +35,7 @@ export default async function CategoryPage({
       {/* 🔹 Hero */}
       <section className="pt-20 pb-6 bg-background">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left capitalize">
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
@@ -99,14 +99,16 @@ export default async function CategoryPage({
       {/* 🔹 Products */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          <div className={`grid gap-8 justify-items-center ${
+            products.length === 1
+              ? "grid-cols-1 max-w-95 mx-auto"
+              : products.length === 2
+              ? "grid-cols-1 md:grid-cols-2 max-w-[800px] mx-auto"
+              : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+          }`}>
             {products.map((product: any, i: number) => {
               const productTitle = isLocal ? product.title : product.name;
               const productDesc = isLocal ? product.description : product.shortDescription;
-              const isComingSoon = Boolean(isLocal && product.comingSoon);
-              const rotateAtomiserImage =
-                slug === "drying-line" && product.slug === "soap-atomiser";
-              const imageHeight = rotateAtomiserImage ? "h-36 md:h-40" : "h-52";
               const rootSlugs = [
                 "av-pneumatic-soap-cutter-machine",
                 "double-arm-sigma-mixer-soap-manufacturing",
@@ -132,7 +134,7 @@ export default async function CategoryPage({
                 <Link
                   key={`${product.slug}-${i}`}
                   href={productLink}
-                  className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full"
+                  className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 h-101.25"
                 >
                   {/* Image */}
                   <div className="bg-white m-4 mb-0 rounded-xl overflow-hidden border border-border">
@@ -142,10 +144,10 @@ export default async function CategoryPage({
                         alt={productTitle}
                         width={500}
                         height={300}
-                        className={`w-full ${imageHeight} object-contain p-3`}
+                        className="w-full h-52 object-contain p-3"
                       />
                     ) : (
-                      <div className={`w-full ${imageHeight} bg-muted flex items-center justify-center text-xs text-muted-foreground`}>
+                      <div className="w-full h-52 bg-muted flex items-center justify-center text-xs text-muted-foreground">
                         No Image
                       </div>
                     )}
@@ -153,10 +155,10 @@ export default async function CategoryPage({
 
                   {/* Text */}
                   <div className="px-5 py-5 text-primary-foreground">
-                    <h3 className="text-base font-bold mb-2 leading-snug">
+                    <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-[#e21e2d] line-clamp-2">
                       {productTitle}
                     </h3>
-                    <p className="text-xs text-primary-foreground/75 leading-relaxed">
+                    <p className="text-[13px] text-primary-foreground/75 leading-relaxed line-clamp-4">
                       {productDesc}
                     </p>
                   </div>

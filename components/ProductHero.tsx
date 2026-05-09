@@ -23,7 +23,7 @@ export default function ProductHero({
             BRIT SOAP MACHINERY
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 capitalize">
             {title}
           </h1>
 
@@ -37,7 +37,7 @@ export default function ProductHero({
                    hover:bg-accent/90 transition-all duration-300"
             >
               <span className="font-semibold tracking-wide text-sm">
-                Speak with an Engineer
+                Speak With An Engineer
               </span>
             </Link>
 

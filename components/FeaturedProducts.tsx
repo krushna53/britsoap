@@ -47,7 +47,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
 
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl font-bold text-primary"
+            className="text-3xl md:text-4xl font-bold text-primary capitalize"
           >
             Precision Machinery
           </motion.h2>
@@ -75,7 +75,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
 
                 <div className="mt-4 flex items-center gap-2">
                   <div className="w-3 h-0.5 bg-accent" />
-                  <h3 className="text-base font-semibold text-primary group-hover:text-indigo-light transition-colors">
+                  <h3 className="text-base font-semibold text-primary group-hover:text-indigo-light transition-colors capitalize">
                     {product.name}
                   </h3>
                 </div>

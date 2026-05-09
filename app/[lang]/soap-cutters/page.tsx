@@ -1,33 +1,39 @@
 import ProductCard from "@/components/ProductCard";
 import Layout from "@/components/Layout";
 
-export default function SoapCuttersPage() {
+export default async function SoapCuttersPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+
   const products = [
     {
       title: "Electro Pneumatic Vertical Cutter",
       image: "/assets/AVC/automatic-soap-cutting-machine.png",
       description:
         "Electro-pneumatic vertical cutter for precise, synchronized cutting of continuously extruded soap into uniform bars.",
+      href: `/${lang}/av-pneumatic-soap-cutter-machine`,
     },
     {
       title: "High Speed Rotary Cutter",
       image: "/assets/HSB-Cutter/soap-cutting-machine-india.png",
       description:
         "A high-speed rotary soap cutter designed for precise, continuous cutting of extruded soap bars in larger manufacturing lines.",
+      href: `/${lang}/high-speed-soap-cutter-machine`,
     },
   ];
 
   return (
     <Layout>
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4 text-center">
-          {/* Heading */}
-          <h1 className="text-3xl font-semibold text-blue-900 mb-6 text-left">
+      <section className="py-16 bg-muted">
+        <div className="container">
+          <h1 className="text-3xl font-bold text-primary mb-6 capitalize">
             Automatic Soap Cutters for Consistent Soap Manufacturing
           </h1>
 
-          {/* Description */}
-          <div className="mx-auto text-gray-700 mb-12 leading-relaxed text-lg text-left">
+          <div className="text-muted-foreground mb-12 leading-relaxed text-lg space-y-3">
             <p>
               Brit Soap offers two advanced models of automatic soap cutters,
               engineered for consistent performance across different production
@@ -37,22 +43,20 @@ export default function SoapCuttersPage() {
               continuous, efficient operation.
             </p>
             <p>
-              Built using European design Both cutters enable real-time soap
-              length adjustment without stopping production, giving operators
-              full control and flexibility. With the ability to cut soap bars
-              ranging from 10 mm to 999 mm, they deliver accuracy and uniformity
-              across every batch.
+              Built using European design standards and engineered in India,
+              both cutters enable real-time soap length adjustment without
+              stopping production, giving operators full control and flexibility.
+              With the ability to cut soap bars ranging from 10 mm to 999 mm,
+              they deliver accuracy and uniformity across every batch.
             </p>
             <p>
-              standards and engineered in India, Brit Soap cutters combine
-              robust construction with high operational efficiency—making them
-              ideal for manufacturers seeking reliability, scalability, and
-              long-term performance.
+              Brit Soap cutters combine robust construction with high operational
+              efficiency—making them ideal for manufacturers seeking reliability,
+              scalability, and long-term performance.
             </p>
           </div>
 
-          {/* Products Grid */}
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-8">
             {products.map((product, index) => (
               <ProductCard key={index} {...product} />
             ))}
