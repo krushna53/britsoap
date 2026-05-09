@@ -23,7 +23,7 @@ export default function ServicesPreview({ services }: Props) {
       <div className="w-full">
 
         <div className="text-center mb-12 container">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white capitalize">
             What We Do
           </h2>
           <div className="mt-3 mx-auto w-16 h-1 bg-accent rounded-full" />
@@ -55,7 +55,7 @@ export default function ServicesPreview({ services }: Props) {
                         <Icon size={20} className="text-accent" />
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white leading-snug tracking-tight">
+                    <h3 className="text-2xl font-bold text-white leading-snug tracking-tight capitalize">
                       {service.title}
                     </h3>
                   </div>
@@ -83,7 +83,7 @@ export default function ServicesPreview({ services }: Props) {
                     <div className="w-8 h-8 rounded bg-accent/20 flex items-center justify-center shrink-0">
                       <Icon size={16} className="text-accent" />
                     </div>
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className="text-lg font-bold text-white capitalize">
                       {service.title}
                     </h3>
                   </div>

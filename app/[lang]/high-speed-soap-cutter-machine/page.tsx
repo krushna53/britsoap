@@ -83,7 +83,7 @@ export default function ProductPage() {
       {product.processSteps?.length && (
         <section className="py-20 bg-gray-50 text-center">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-4">
+            <h2 className="text-4xl font-bold text-primary mb-4 capitalize">
               {product.processTitle}
             </h2>
 
@@ -148,7 +148,7 @@ export default function ProductPage() {
             </p>
 
             {/* TITLE */}
-            <h2 className="text-4xl font-extrabold text-primary leading-tight mb-6">
+            <h2 className="text-4xl font-extrabold text-primary leading-tight mb-6 capitalize">
               {product.detailSection.title}
             </h2>
 
@@ -207,7 +207,7 @@ export default function ProductPage() {
       </section>
 
       <div className="bg-white py-12 md:py-20 px-4 md:px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug text-primary">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug text-primary capitalize">
           {product.applicationTitle}
         </h2>
 

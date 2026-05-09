@@ -197,17 +197,46 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      <div className="bg-primary text-white py-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center">
-          {product.applicationTitle}
-        </h2>
+      <section className="bg-[#2E3192] py-20 text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold capitalize">
+              {product.applicationTitle || "Applications In Production"}
+            </h2>
+          </div>
 
-        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
-          <p className="text-white/80 text-lg leading-relaxed text-left">
-            {product.applicationDescription}
-          </p>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              {product.applicationImage && (
+                <Image
+                  src={product.applicationImage}
+                  alt={product.applicationTitle || "Applications"}
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl w-full object-cover"
+                />
+              )}
+            </div>
+            <div>
+              {product.importance && (
+                <ul className="space-y-4 text-lg mb-8">
+                  {product.importance.map((item: string, i: number) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                      <span className="flex-1">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div className="text-white/80 leading-relaxed text-lg">
+                <p>
+                  The final step in extrusion, the Duplex Vacuum Plodder removes air pockets and ensures high-density, air-free soap bars with a superior finish.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       <Section
         title="Capacity Range"

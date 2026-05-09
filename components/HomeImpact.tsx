@@ -41,7 +41,7 @@ export default function HomeImpact({ data }: Props) {
 
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl font-bold text-primary uppercase"
+            className="text-3xl md:text-4xl font-bold text-primary capitalize"
           >
             Trusted Globally
           </motion.h2>

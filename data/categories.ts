@@ -148,7 +148,7 @@ const localProducts: Record<string, LocalProduct> = {
     title: "Laundry Stamper",
     description:
       "A purpose-built soap stamper for rectangular laundry bars, capable of stamping multiple faces efficiently. Best suited for high-volume laundry soap production with consistent shape and automated finishing lines.",
-    detailSection: { images: ["/assets/LaundryStamper/laundry-soap-syamper.png"] },
+    detailSection: { images: ["/assets/LaundryStamper/laundry-soap-stamper.png"] },
     comingSoon: false,
   },
   "saponification-crutcher": {

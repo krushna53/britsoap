@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <FloatingCTA text="Speak with an Engineer" href="/contact" />
+        <FloatingCTA text="Speak With An Engineer" href="/contact" />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

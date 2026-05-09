@@ -22,7 +22,7 @@ export default function SoapCuttersPage() {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
           {/* Heading */}
-          <h1 className="text-3xl font-semibold text-blue-900 mb-6 text-left">
+          <h1 className="text-3xl font-semibold text-blue-900 mb-6 text-left capitalize">
             Automatic Soap Cutters for Consistent Soap Manufacturing
           </h1>
 

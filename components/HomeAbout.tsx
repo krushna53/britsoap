@@ -64,7 +64,7 @@ export default function HomeAbout({ data }: Props) {
           {/* DYNAMIC TITLE */}
           <motion.h2
             variants={fadeUp}
-            className="text-3xl font-bold text-primary mb-6 uppercase"
+            className="text-3xl font-bold text-primary mb-6 capitalize"
           >
             {data?.aboutTitle || "Engineering Excellence"}
           </motion.h2>

@@ -691,10 +691,10 @@ export default async function ProductDetailPage({
         <Layout>
           <section className="py-16 bg-primary text-center">
             <div className="container">
-              <h2 className="text-sm uppercase tracking-widest text-primary-foreground/60 mb-2">
+              <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
                 {localCategory.title}
               </h2>
-              <h1 className="text-4xl font-bold text-primary-foreground">
+              <h1 className="text-4xl font-bold text-primary-foreground capitalize">
                 {localProduct.title}
               </h1>
             </div>
@@ -713,7 +713,7 @@ export default async function ProductDetailPage({
               </div>
 
               <div>
-                <h2 className="text-2xl font-semibold text-primary mb-4">
+                <h2 className="text-2xl font-semibold text-primary mb-4 capitalize">
                   {localProduct.title}
                 </h2>
 
@@ -758,7 +758,7 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -771,7 +771,7 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Saponification Crutcher
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -868,7 +868,7 @@ export default async function ProductDetailPage({
           <CTASection
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -889,7 +889,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -914,7 +914,7 @@ production."
                 />
               </div>
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Saponification Jet | Instant Soap Making System with Venturi Technology
 
                 </h2>
@@ -959,7 +959,7 @@ production."
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Engineering and Construction
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1001,7 +1001,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Uses and Benefits
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1052,7 +1052,7 @@ production."
           <CTASection
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1072,7 +1072,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1247,7 +1247,7 @@ production."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1355,7 +1355,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1509,7 +1509,7 @@ production."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1618,7 +1618,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1760,7 +1760,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -1779,7 +1779,7 @@ Production Lines"
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Powder Separators for Soap Drying Systems
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1989,7 +1989,7 @@ Production Lines"
           <CTASection
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2009,7 +2009,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   High-Performance Heat Exchanger for Liquid Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2027,7 +2027,7 @@ Production Lines"
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Advanced Heat Transfer &amp; Precise Temperature Control
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2178,7 +2178,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2200,7 +2200,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Integrated Vacuum System for Efficient Soap Drying
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2348,7 +2348,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2367,7 +2367,7 @@ Production Lines"
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Advanced Vacuum Spray Drying Technology for Soap Manufacturing
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2486,7 +2486,7 @@ Production Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2507,7 +2507,7 @@ Soap Finishing Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2620,7 +2620,7 @@ Soap Finishing Lines"
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2640,7 +2640,7 @@ continuous soap production lines."
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2752,7 +2752,7 @@ continuous soap production lines."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2773,7 +2773,7 @@ efficiency soap finishing lines."
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2872,7 +2872,7 @@ efficiency soap finishing lines."
           <CTASection
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-            buttonText="Speak with an Engineer"
+            buttonText="Speak With An Engineer"
             buttonLink={`/${lang}/contact`}
             showSecondaryButton={false}
           />
@@ -2952,7 +2952,7 @@ efficiency soap finishing lines."
         <CTASection
           title="Engineered for Efficiency. Built for Reliability"
           description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
-          buttonText="Speak with an Engineer"
+          buttonText="Speak With An Engineer"
           buttonLink={`/${lang}/contact`}
           showSecondaryButton={false}
         />
@@ -2974,10 +2974,10 @@ efficiency soap finishing lines."
     <Layout>
       <section className="py-16 bg-primary text-center">
         <div className="container">
-          <h2 className="text-sm uppercase tracking-widest text-primary-foreground/60 mb-2">
+          <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
             {category.title}
           </h2>
-          <h1 className="text-4xl font-bold text-primary-foreground">
+          <h1 className="text-4xl font-bold text-primary-foreground capitalize">
             {product.name}
           </h1>
         </div>
@@ -3002,7 +3002,7 @@ efficiency soap finishing lines."
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-primary mb-4 capitalize">
               {product.name}
             </h2>
 

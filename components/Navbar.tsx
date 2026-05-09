@@ -113,10 +113,10 @@ const Navbar = () => {
           <Image
             src="/logo.png"
             alt="Brit Soap"
-            width={140}
+            width={180}
             height={40}
             priority
-            className="object-contain"
+            className="object-contain  w-[120px] md:w-[180px] h-auto"
           />
         </Link>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
               {!link.megaMenu && link.path !== undefined && (
                 <Link
                   href={`/${lang}${link.path}`}
-                  className={`text-sm font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"
+                  className={`text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"
                     }`}
                 >
                   {link.name}

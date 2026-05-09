@@ -35,7 +35,7 @@ export default async function CategoryPage({
       {/* 🔹 Hero */}
       <section className="pt-20 pb-6 bg-background">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left capitalize">
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
@@ -153,7 +153,7 @@ export default async function CategoryPage({
 
                   {/* Text */}
                   <div className="px-5 py-5 text-primary-foreground">
-                    <h3 className="text-base font-bold mb-2 leading-snug">
+                    <h3 className="text-base font-bold mb-2 leading-snug capitalize">
                       {productTitle}
                     </h3>
                     <p className="text-xs text-primary-foreground/75 leading-relaxed">

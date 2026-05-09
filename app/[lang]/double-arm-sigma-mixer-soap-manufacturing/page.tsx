@@ -151,27 +151,46 @@ export default function ProductPage() {
           </div>
         </div>
       </Section> */}
-      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
-        {/* TITLE */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
-          {product.applicationTitle}
-        </h2>
+      <section className="bg-[#2E3192] py-20 text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold capitalize">
+              {product.applicationTitle || "Applications In Production"}
+            </h2>
+          </div>
 
-        {/* CONTENT */}
-                        <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
-          {Array.isArray(product.applicationDescription) ? (
-            product.applicationDescription.map((para, i) => (
-              <p key={i} className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
-                {para}
-              </p>
-            ))
-          ) : (
-            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
-              {product.applicationDescription}
-            </p>
-          )}
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              {product.applicationImage && (
+                <Image
+                  src={product.applicationImage}
+                  alt={product.applicationTitle || "Applications"}
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl w-full object-cover"
+                />
+              )}
+            </div>
+            <div>
+              {product.importance && (
+                <ul className="space-y-4 text-lg mb-8">
+                  {product.importance.map((item: string, i: number) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                      <span className="flex-1">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div className="text-white/80 leading-relaxed text-lg">
+                <p>
+                  The Brit Soap Double Sigma Mixer is engineered for high-capacity industrial soap lines, ensuring thorough blending and uniform distribution of ingredients for consistent batch quality.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
       <Section
         title="Capacity Range"
         description="The Brit Soap soap mixers are available in a wide range of production capacities to suit different manufacturing scales."
