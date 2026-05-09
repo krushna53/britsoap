@@ -224,7 +224,7 @@ export default function ProductPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               {product.applicationImage && (
                 <Image
@@ -237,7 +237,7 @@ export default function ProductPage() {
               )}
             </div>
             <div>
-              {product.whyPoints && (
+              {/* {product.whyPoints && (
                 <ul className="space-y-4 text-lg mb-8">
                   {product.whyPoints.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4">
@@ -246,10 +246,10 @@ export default function ProductPage() {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
               <div className="text-white/80 leading-relaxed text-lg">
                 <p>
-                  A versatile refining and extrusion machine designed for standard and specialized soap lines, ensuring uniform billet formation and improved product texture across toilet, laundry, and syndet soap formats.
+                 The Brit Soap Simplex Refining Plodder is used across a wide range of soap manufacturing environments where consistent refining and extrusion are required before finishing processes. It supports both standard and specialised soap production lines, ensuring uniform billet formation and improved downstream processing. Ideal for producing toilet soap bars, laundry soap bars, and syndet soaps.
                 </p>
               </div>
             </div>

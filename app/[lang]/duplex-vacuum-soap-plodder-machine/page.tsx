@@ -205,7 +205,7 @@ export default function ProductPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               {product.applicationImage && (
                 <Image
@@ -218,7 +218,7 @@ export default function ProductPage() {
               )}
             </div>
             <div>
-              {product.importance && (
+              {/* {product.importance && (
                 <ul className="space-y-4 text-lg mb-8">
                   {product.importance.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4">
@@ -227,10 +227,10 @@ export default function ProductPage() {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
               <div className="text-white/80 leading-relaxed text-lg">
                 <p>
-                  The final step in extrusion, the Duplex Vacuum Plodder removes air pockets and ensures high-density, air-free soap bars with a superior finish.
+           The Brit Soap duplex vacuum plodder is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines. The machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars . It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.
                 </p>
               </div>
             </div>

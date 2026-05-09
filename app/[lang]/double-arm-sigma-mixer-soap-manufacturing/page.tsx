@@ -159,7 +159,7 @@ export default function ProductPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               {product.applicationImage && (
                 <Image
@@ -172,7 +172,7 @@ export default function ProductPage() {
               )}
             </div>
             <div>
-              {product.importance && (
+              {/* {product.importance && (
                 <ul className="space-y-4 text-lg mb-8">
                   {product.importance.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4">
@@ -181,10 +181,11 @@ export default function ProductPage() {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
               <div className="text-white/80 leading-relaxed text-lg">
                 <p>
-                  The Brit Soap Double Sigma Mixer is engineered for high-capacity industrial soap lines, ensuring thorough blending and uniform distribution of ingredients for consistent batch quality.
+The Brit Soap Double Sigma Mixer is designed for efficient mixing in industrial soap manufacturing lines. Two solid mixing shafts fitted with sigma blades rotate in synchronized motion to knead and fold the soap mass, ensuring thorough blending and uniform distribution of perfumes, colourants, and additives. The mixer features a double U-shaped trough mixing chamber, which promotes efficient material circulation and eliminates dead zones for consistent batch quality. The inner trough and blades are manufactured from AISI 304 stainless steel, providing durability and corrosion resistance when processing soap formulations. Each shaft is supported by heavy-duty bearing assemblies designed for stable and reliable operation under continuous production conditions. A top safety grill ensures safe loading of soap chips and additive.
+
                 </p>
               </div>
             </div>

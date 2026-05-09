@@ -163,7 +163,7 @@ export default function ProductPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               {product.applicationImage && (
                 <Image
@@ -176,7 +176,7 @@ export default function ProductPage() {
               )}
             </div>
             <div>
-              {product.importance && (
+              {/* {product.importance && (
                 <ul className="space-y-4 text-lg mb-8">
                   {product.importance.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4">
@@ -185,10 +185,11 @@ export default function ProductPage() {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
               <div className="text-white/80 leading-relaxed text-lg">
                 <p>
-                  Essential for achieving smooth texture and uniform ingredient distribution, the Triple Roll Mill provides perfect homogenization for premium toilet and laundry soaps.
+The Brit Soap triple roll mill is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines, ensuring perfect homogenisation and uniform distribution of colours, fragrances, and additives giving the final soap a smooth texture. It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.
+
                 </p>
               </div>
             </div>
