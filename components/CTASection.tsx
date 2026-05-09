@@ -18,7 +18,7 @@ export default function CTASection({
   return (
     <section className="py-20 bg-primary text-white text-center">
       <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight capitalize">
+        <h2 className="text-4xl md:text-[47px] font-bold mb-6 leading-tight capitalize">
           {title}
         </h2>
 

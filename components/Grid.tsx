@@ -16,7 +16,7 @@ export default function Grid({ items }: GridProps) {
       {items.map((item, i) => (
         <div
           key={i}
-          className="bg-white rounded-2xl overflow-hidden border border-gray-200 transition hover:shadow-md"
+          className="bg-white  overflow-hidden border border-gray-200 transition hover:shadow-md"
         >
           {item.image && (
             <div className="w-full aspect-4/3 overflow-hidden">

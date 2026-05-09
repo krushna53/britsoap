@@ -126,7 +126,7 @@ export default function ProductPage() {
                   alt="Double arm sigma mixer mixing soap base"
                   width={600}
                   height={500}
-                  className="rounded-2xl shadow-lg w-full object-cover"
+                  className="shadow-lg w-full object-cover"
                 />
               )}
 
@@ -167,25 +167,34 @@ export default function ProductPage() {
                   alt={product.applicationTitle || "Applications"}
                   width={600}
                   height={400}
-                  className="rounded-2xl shadow-2xl w-full object-cover"
+                  className="shadow-2xl w-full object-cover"
                 />
               )}
             </div>
             <div>
-              {/* {product.importance && (
-                <ul className="space-y-4 text-lg mb-8">
-                  {product.importance.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span className="flex-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )} */}
+              <ul className="space-y-4 text-lg mb-8">
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Dual synchronized sigma blades</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">SS 304 stainless steel body</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Heavy-duty bearing assembly</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Continuous production support</span>
+                </li>
+              </ul>
               <div className="text-white/80 leading-relaxed text-lg">
                 <p>
-The Brit Soap Double Sigma Mixer is designed for efficient mixing in industrial soap manufacturing lines. Two solid mixing shafts fitted with sigma blades rotate in synchronized motion to knead and fold the soap mass, ensuring thorough blending and uniform distribution of perfumes, colourants, and additives. The mixer features a double U-shaped trough mixing chamber, which promotes efficient material circulation and eliminates dead zones for consistent batch quality. The inner trough and blades are manufactured from AISI 304 stainless steel, providing durability and corrosion resistance when processing soap formulations. Each shaft is supported by heavy-duty bearing assemblies designed for stable and reliable operation under continuous production conditions. A top safety grill ensures safe loading of soap chips and additive.
-
+                 The Brit Soap Double Sigma Mixer is designed for efficient
+        industrial soap manufacturing with synchronized kneading
+        and superior material blending.
                 </p>
               </div>
             </div>

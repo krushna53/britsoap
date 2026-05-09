@@ -144,7 +144,7 @@ export default function ProductPage() {
             <div className="flex flex-col gap-6">
               {/* MAIN IMAGE */}
               {product.detailSection.images?.[0] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
+                <div className="overflow-hidden shadow-xl">
                   <div className="w-full aspect-[16/10]">
                     <Image
                       src={product.detailSection.images[0]}
@@ -160,7 +160,7 @@ export default function ProductPage() {
 
               {/* SECOND IMAGE */}
               {product.detailSection.images?.[1] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
+                <div className="overflow-hidden shadow-xl">
                   <div className="w-full aspect-[16/10]">
                     <Image
                       src={product.detailSection.images[1]}
@@ -232,24 +232,39 @@ export default function ProductPage() {
                   alt={product.applicationTitle || "Applications"}
                   width={600}
                   height={400}
-                  className="rounded-2xl shadow-2xl w-full object-cover"
+                  className="shadow-2xl w-full object-cover"
                 />
               )}
             </div>
             <div>
-              {/* {product.whyPoints && (
-                <ul className="space-y-4 text-lg mb-8">
-                  {product.whyPoints.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span className="flex-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )} */}
+              <ul className="space-y-4 text-lg mb-8">
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Uniform billet formation</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Toilet soap production</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Laundry soap production</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">Syndet soap applications</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                  <span className="flex-1">
+                    Consistent downstream processing
+                  </span>
+                </li>
+              </ul>
               <div className="text-white/80 leading-relaxed text-lg">
                 <p>
-                 The Brit Soap Simplex Refining Plodder is used across a wide range of soap manufacturing environments where consistent refining and extrusion are required before finishing processes. It supports both standard and specialised soap production lines, ensuring uniform billet formation and improved downstream processing. Ideal for producing toilet soap bars, laundry soap bars, and syndet soaps.
+                  Designed for continuous soap refining and extrusion before
+                  final finishing processes.
                 </p>
               </div>
             </div>

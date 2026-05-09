@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image";
@@ -93,6 +93,7 @@ const navLinks: NavLink[] = [
       ],
     },
   },
+  {name:"Video", path: "https://www.youtube.com/@BritsoapMachinery"},
   { name: "Contact", path: "/contact" },
 ];
 
@@ -126,19 +127,29 @@ const Navbar = () => {
             <div key={i} className="relative group">
               {/* Regular link */}
               {!link.megaMenu && link.path !== undefined && (
-                <Link
-                  href={`/${lang}${link.path}`}
-                  className={`text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"
-                    }`}
-                >
-                  {link.name}
-                </Link>
+                link.path.startsWith("http") ? (
+                  <a
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary text-muted-foreground"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    href={`/${lang}${link.path}`}
+                    className={`text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"}`}
+                  >
+                    {link.name}
+                  </Link>
+                )
               )}
 
               {/* Mega menu trigger */}
               {link.megaMenu && (
                 <>
-                  <span className="text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground cursor-pointer hover:text-primary select-none">
+                  <span className="text-base font-medium capitalize tracking-[0.15em] text-muted-foreground cursor-pointer hover:text-primary select-none">
                     {link.name}
                   </span>
 
@@ -244,13 +255,25 @@ const Navbar = () => {
                 <div key={i}>
                   {/* Regular mobile link */}
                   {!link.megaMenu && link.path !== undefined && (
-                    <Link
-                      href={`/${lang}${link.path}`}
-                      onClick={() => setMobileOpen(false)}
-                      className="block text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground"
-                    >
-                      {link.name}
-                    </Link>
+                    link.path.startsWith("http") ? (
+                      <a
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileOpen(false)}
+                        className="block text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={`/${lang}${link.path}`}
+                        onClick={() => setMobileOpen(false)}
+                        className="block text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground"
+                      >
+                        {link.name}
+                      </Link>
+                    )
                   )}
 
                   {/* Mobile mega menu as accordion */}

@@ -90,7 +90,7 @@ export default function ProductPage() {
               {product.processSteps.map((step, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl shadow overflow-hidden"
+                  className="bg-white shadow overflow-hidden"
                 >
                   <div className="w-full aspect-[4/3] overflow-hidden">
                     <Image
@@ -126,7 +126,7 @@ export default function ProductPage() {
             <div className="flex flex-col gap-6">
               {/* MAIN IMAGE */}
               {product.detailSection.images?.[0] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
+                <div className="overflow-hidden shadow-xl">
                   <div className="w-full aspect-[16/10]">
                     <Image
                       src={product.detailSection.images[0]}
@@ -171,7 +171,7 @@ export default function ProductPage() {
                   alt={product.applicationTitle || "Applications"}
                   width={600}
                   height={400}
-                  className="rounded-2xl shadow-2xl w-full object-cover"
+                  className="shadow-2xl w-full object-cover"
                 />
               )}
             </div>
@@ -211,7 +211,7 @@ The Brit Soap triple roll mill is used across a wide range of soap manufacturing
                     alt="Simplex refiner plodder machine for soap manufacturing"
                     width={400}
                     height={300}
-                    className="rounded-2xl mx-auto mb-6 shadow-lg"
+                    className="mx-auto mb-6 shadow-lg"
                   />
 
                   <h3 className="text-xl font-bold text-primary mb-2 capitalize">

@@ -95,7 +95,7 @@ export default function ProductPage() {
               {product.processSteps.map((step, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-xl shadow overflow-hidden"
+                  className="bg-white shadow overflow-hidden"
                 >
                   <div className="w-full aspect-[4/3] overflow-hidden">
                     <Image
@@ -132,7 +132,7 @@ export default function ProductPage() {
             <div className="flex flex-col gap-6">
               {/* MAIN IMAGE */}
               {product.detailSection.images?.[0] && (
-                <div className="rounded-3xl overflow-hidden shadow-xl">
+                <div className="overflow-hidden shadow-xl">
                   <div className="w-full aspect-[16/10]">
                     <Image
                       src={product.detailSection.images[0]}
@@ -205,7 +205,7 @@ export default function ProductPage() {
               {/* ================= RIGHT: IMAGES ================= */}
               <div className="grid grid-cols-2 gap-6">
                 {/* IMAGE 1 */}
-                <div className="rounded-3xl overflow-hidden shadow-md bg-gray-100">
+                <div className="overflow-hidden shadow-md">
                   <Image
                     src="/assets/AVC/soap-cutter-embossing-roller.png"
                     alt="roller"
@@ -216,7 +216,7 @@ export default function ProductPage() {
                 </div>
 
                 {/* IMAGE 2 */}
-                <div className="rounded-3xl overflow-hidden shadow-md bg-gray-100">
+                <div className="overflow-hidden shadow-md">
                   <Image
                     src="/assets/AVC/soap-sample.png"
                     alt="soap"
@@ -227,7 +227,7 @@ export default function ProductPage() {
                 </div>
 
                 {/* IMAGE 3 (BIG) */}
-                <div className="col-span-2 rounded-3xl overflow-hidden shadow-lg">
+                <div className="col-span-2  overflow-hidden">
                   <Image
                     src="/assets/AVC/automatic-soap-cutter-embossing-assembly.jpg"
                     alt="machine"
