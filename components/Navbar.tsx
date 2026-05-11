@@ -102,15 +102,15 @@ const Navbar = () => {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const pathname = usePathname();
 
-  const lang = pathname.split("/")[1] || "en";
+  
 
-  const isActive = (path: string) => pathname === `/${lang}${path}`;
+  const isActive = (path: string) => pathname === (path === "" ? "/" : path);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href={`/${lang}`} className="flex items-center gap-2">
+        <Link href={`/`} className="flex items-center gap-2">
           <Image
             src="/logo.png"
             alt="Brit Soap"
@@ -138,7 +138,7 @@ const Navbar = () => {
                   </a>
                 ) : (
                   <Link
-                    href={`/${lang}${link.path}`}
+                    href={link.path}
                     className={`text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"}`}
                   >
                     {link.name}
@@ -164,7 +164,7 @@ const Navbar = () => {
                           className="p-4 border-r border-border last:border-r-0"
                         >
                           {col.path ? (
-                            <Link href={`/${lang}${col.path}`} className="block text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border hover:text-accent transition-colors">
+                            <Link href={col.path} className="block text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border hover:text-accent transition-colors">
                               {col.category}
                             </Link>
                           ) : (
@@ -176,7 +176,7 @@ const Navbar = () => {
                             {col.items.map((item, ii) => (
                               <Link
                                 key={ii}
-                                href={`/${lang}${item.path}`}
+                                href={item.path}
                                 className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
                               >
                                 {item.name}
@@ -186,7 +186,7 @@ const Navbar = () => {
                               <div key={si} className="mt-2 pl-3 border-l border-border/70">
                                 {subCategory.path ? (
                                   <Link
-                                    href={`/${lang}${subCategory.path}`}
+                                    href={subCategory.path}
                                     className="block text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-2 hover:text-accent transition-colors"
                                   >
                                     {subCategory.category}
@@ -200,7 +200,7 @@ const Navbar = () => {
                                   {subCategory.items.map((item, ii) => (
                                     <Link
                                       key={ii}
-                                      href={`/${lang}${item.path}`}
+                                      href={item.path}
                                       className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
                                     >
                                       {item.name}
@@ -223,7 +223,7 @@ const Navbar = () => {
         {/* CTA + Language */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href={`/${lang}/contact`}
+            href={`/contact`}
             className="inline-flex items-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
           >
             Get a Quote
@@ -267,7 +267,7 @@ const Navbar = () => {
                       </a>
                     ) : (
                       <Link
-                        href={`/${lang}${link.path}`}
+                        href={link.path}
                         onClick={() => setMobileOpen(false)}
                         className="block text-sm font-medium capitalize tracking-[0.15em] text-muted-foreground"
                       >
@@ -302,7 +302,7 @@ const Navbar = () => {
                             {link.megaMenu.columns.map((col, ci) => (
                               <div key={ci} className="mt-3">
                                 {col.path ? (
-                                  <Link href={`/${lang}${col.path}`} onClick={() => setMobileOpen(false)} className="block text-xs font-bold capitalize tracking-widest text-muted-foreground mb-1 hover:text-primary">
+                                  <Link href={col.path} onClick={() => setMobileOpen(false)} className="block text-xs font-bold capitalize tracking-widest text-muted-foreground mb-1 hover:text-primary">
                                     {col.category}
                                   </Link>
                                 ) : (
@@ -313,7 +313,7 @@ const Navbar = () => {
                                 {col.items.map((item, ii) => (
                                   <Link
                                     key={ii}
-                                    href={`/${lang}${item.path}`}
+                                    href={item.path}
                                     onClick={() => setMobileOpen(false)}
                                     className="block pl-3 py-1 text-sm text-muted-foreground hover:text-primary"
                                   >
@@ -324,7 +324,7 @@ const Navbar = () => {
                                   <div key={si} className="mt-2 pl-3 border-l border-border/70">
                                     {subCategory.path ? (
                                       <Link
-                                        href={`/${lang}${subCategory.path}`}
+                                        href={subCategory.path}
                                         onClick={() => setMobileOpen(false)}
                                         className="block text-xs font-semibold uppercase tracking-widest text-primary mb-1 hover:text-accent"
                                       >
@@ -338,7 +338,7 @@ const Navbar = () => {
                                     {subCategory.items.map((item, ii) => (
                                       <Link
                                         key={ii}
-                                        href={`/${lang}${item.path}`}
+                                        href={item.path}
                                         onClick={() => setMobileOpen(false)}
                                         className="block pl-3 py-1 text-sm text-muted-foreground hover:text-primary"
                                       >
@@ -358,7 +358,7 @@ const Navbar = () => {
               ))}
 
               <Link
-                href={`/${lang}/contact`}
+                href={`/contact`}
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center px-5 py-2 bg-accent text-accent-foreground text-xs font-medium rounded hover:bg-red-light transition-colors uppercase tracking-wider"
               >

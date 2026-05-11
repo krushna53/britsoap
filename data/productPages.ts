@@ -104,7 +104,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -244,7 +244,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
 
@@ -382,7 +382,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
 
@@ -524,7 +524,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
 
@@ -654,7 +654,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
 
@@ -798,7 +798,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -903,7 +903,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -1008,7 +1008,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -1113,7 +1113,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -1218,7 +1218,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -1323,7 +1323,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
     {
@@ -1428,7 +1428,7 @@ export const productPages = [
             description:
                 "Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant.",
             buttonText: "Speak With An Engineer",
-            buttonLink: "/en/contact",
+            buttonLink: "/contact",
         },
     },
 ];

@@ -195,24 +195,22 @@ const LOCAL_PRODUCT_SEO: Record<string, ProductSeoData> = {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; category: string; product: string }>;
+  params: Promise<{category: string; product: string }>;
 }): Promise<Metadata> {
-  const { lang, category, product } = await params;
+  const {category, product } = await params;
   const seo = LOCAL_PRODUCT_SEO[product];
 
   if (!seo) return {};
 
   return {
-    title: seo.title,
-    description: seo.description,
+    title: seo.title, description: seo.description,
     alternates: {
-      canonical: `/${lang}/products/${category}/${product}`,
+      canonical: `/products/${category}/${product}`,
     },
     openGraph: {
-      title: seo.title,
-      description: seo.description,
+      title: seo.title, description: seo.description,
       type: "website",
-      url: `/${lang}/products/${category}/${product}`,
+      url: `/products/${category}/${product}`,
     },
   };
 }
@@ -314,8 +312,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "soap-heat-exchanger": {
     title: "Heat Exchanger",
     description:
-      "Industrial heat exchanger for controlled liquid soap heating before vacuum spray drying.",
-    video: DEFAULT_VIDEO,
+      "Industrial heat exchanger for controlled liquid soap heating before vacuum spray drying.", video: DEFAULT_VIDEO,
     introTitle: "Stable Preheating For Efficient Soap Drying",
     introParagraphs: [
       "The heat exchanger raises liquid soap temperature before atomisation, helping excess moisture evaporate effectively inside the vacuum drying chamber.",
@@ -397,8 +394,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "vacuum-drying-system": {
     title: "Atomiser / Vacuum Spray Chamber",
     description:
-      "Vacuum spray chamber for rapid conversion of liquid neat soap into dried solid soap.",
-    video: DEFAULT_VIDEO,
+      "Vacuum spray chamber for rapid conversion of liquid neat soap into dried solid soap.", video: DEFAULT_VIDEO,
     introTitle: "Rapid Vacuum Spray Drying For Uniform Soap Output",
     introParagraphs: [
       "The atomiser sprays liquid soap under controlled vacuum conditions, enabling fast moisture removal and consistent solidification.",
@@ -668,9 +664,9 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
 export default async function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ lang: string; category: string; product: string }>;
+  params: Promise<{category: string; product: string }>;
 }) {
-  const { lang, category: categorySlug, product: productSlug } = await params;
+  const {category: categorySlug, product: productSlug } = await params;
 
   if (!categorySlug || !productSlug) return notFound();
 
@@ -736,7 +732,7 @@ export default async function ProductDetailPage({
                 <div className="text-sm text-muted-foreground">
                   Route:{" "}
                   <span className="font-medium text-primary">
-                    /{lang}/products/{categorySlug}/{productSlug}
+                    /products/{categorySlug}/{productSlug}
                   </span>
                 </div>
               </div>
@@ -870,7 +866,7 @@ export default async function ProductDetailPage({
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -1054,7 +1050,7 @@ production."
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -1250,7 +1246,7 @@ production."
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -1512,7 +1508,7 @@ production."
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -1763,7 +1759,7 @@ Production Lines"
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -1992,7 +1988,7 @@ Production Lines"
             title="Engineered For Efficiency. Built For Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2181,7 +2177,7 @@ Production Lines"
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2351,7 +2347,7 @@ Production Lines"
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2489,7 +2485,7 @@ Production Lines"
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2623,7 +2619,7 @@ Soap Finishing Lines"
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2755,7 +2751,7 @@ continuous soap production lines."
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2875,7 +2871,7 @@ efficiency soap finishing lines."
             title="Engineered for Efficiency. Built for Reliability"
             description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
             buttonText="Speak With An Engineer"
-            buttonLink={`/${lang}/contact`}
+            buttonLink={`/contact`}
             showSecondaryButton={false}
           />
         </Layout>
@@ -2955,7 +2951,7 @@ efficiency soap finishing lines."
           title="Engineered for Efficiency. Built for Reliability"
           description="Speak with our engineers to discuss your production requirements and identify the right capacity, configuration, and customization for your plant."
           buttonText="Speak With An Engineer"
-          buttonLink={`/${lang}/contact`}
+          buttonLink={`/contact`}
           showSecondaryButton={false}
         />
       </Layout>

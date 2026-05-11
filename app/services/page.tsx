@@ -3,14 +3,8 @@ import ServicesClient from "@/components/ServicesClient";
 
 export const revalidate = 300;
 
-export default async function ServicesPage({
-  params,
-}: {
-  params: { lang: string };
-}) {
-  const lang = params.lang;
-
-  const services = await getServices(lang);
+export default async function ServicesPage() {
+  const services = await getServices("en");
 
   return <ServicesClient services={services} />;
 }

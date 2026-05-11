@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, User } from "lucide-react";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const CONTACT_INFO = {
   person: "Mrs. Radhika Mehta",
@@ -13,8 +12,20 @@ const CONTACT_INFO = {
   email: "britsoap@gmail.com",
 };
 
+// Put your deployed Google Apps Script Web App URL here
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzSW7vkPsQpHT-AhsuFlR5ZNc3wyLW8VaJjwCe6ytLXUXeYDG8trktq4s_Rt3Ad__cM_g/exec";
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  subject: string;
+  message: string;
+};
+
 export default function ContactClient({ contact }: any) {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -27,33 +38,77 @@ export default function ContactClient({ contact }: any) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (loading) return;
+
+    if (!GOOGLE_APPS_SCRIPT_URL) {
+      setError("Form endpoint is missing. Set NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_URL.");
+      return;
+    }
+
     setLoading(true);
     setError("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        // text/plain avoids unnecessary preflight issues with Apps Script
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
         body: JSON.stringify(formData),
       });
 
+      // Apps Script may return JSON or plain text depending on your doPost
+      const rawText = await res.text();
+
+      let responseData: any = null;
+      try {
+        responseData = rawText ? JSON.parse(rawText) : null;
+      } catch {
+        responseData = null;
+      }
+
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || "Something went wrong.");
+        throw new Error(
+          responseData?.message ||
+            responseData?.error ||
+            "Failed to send message. Please try again."
+        );
+      }
+
+      if (
+        responseData &&
+        responseData.success === false
+      ) {
+        throw new Error(
+          responseData.message || "Failed to send message. Please try again."
+        );
       }
 
       setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        subject: "",
+        message: "",
+      });
     } catch (err: any) {
-      setError(err.message || "Failed to send. Please try again.");
+      setError(err?.message || "Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
-  const handleChange = (e: any) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -96,7 +151,6 @@ export default function ContactClient({ contact }: any) {
               </div>
 
               <div className="space-y-5">
-                {/* Contact Person */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <User size={16} className="text-primary-foreground" />
@@ -111,7 +165,6 @@ export default function ContactClient({ contact }: any) {
                   </div>
                 </div>
 
-                {/* Address */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <MapPin size={16} className="text-primary-foreground" />
@@ -126,7 +179,6 @@ export default function ContactClient({ contact }: any) {
                   </div>
                 </div>
 
-                {/* Phone — multiple numbers */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <Phone size={16} className="text-primary-foreground" />
@@ -149,7 +201,6 @@ export default function ContactClient({ contact }: any) {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <Mail size={16} className="text-primary-foreground" />
@@ -184,7 +235,7 @@ export default function ContactClient({ contact }: any) {
                     Thank You!
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    Your message has been sent. We'll get back to you shortly.
+                    Your message has been sent successfully. We&apos;ll get back to you shortly.
                   </p>
                 </div>
               ) : (
@@ -233,12 +284,14 @@ export default function ContactClient({ contact }: any) {
                           required={field.required}
                           value={(formData as any)[field.name]}
                           onChange={handleChange}
-                          className="w-full px-4 py-2.5 rounded border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                          disabled={loading}
+                          className="w-full px-4 py-2.5 rounded border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                           placeholder={field.placeholder}
                         />
                       </div>
                     ))}
                   </div>
+
                   <div>
                     <label className="text-xs font-medium text-foreground mb-1.5 block uppercase tracking-wider">
                       Subject *
@@ -248,7 +301,8 @@ export default function ContactClient({ contact }: any) {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                      disabled={loading}
+                      className="w-full px-4 py-2.5 rounded border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       <option value="">Select a subject</option>
                       <option value="quote">Request a Quote</option>
@@ -258,6 +312,7 @@ export default function ContactClient({ contact }: any) {
                       <option value="other">Other</option>
                     </select>
                   </div>
+
                   <div>
                     <label className="text-xs font-medium text-foreground mb-1.5 block uppercase tracking-wider">
                       Message *
@@ -268,13 +323,14 @@ export default function ContactClient({ contact }: any) {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+                      disabled={loading}
+                      className="w-full px-4 py-2.5 rounded border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none disabled:opacity-60 disabled:cursor-not-allowed"
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
-                  {error && (
-                    <p className="text-xs text-red-500">{error}</p>
-                  )}
+
+                  {error && <p className="text-xs text-red-500">{error}</p>}
+
                   <button
                     type="submit"
                     disabled={loading}

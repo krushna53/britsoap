@@ -1,27 +1,21 @@
 import ProductCard from "@/components/ProductCard";
 import Layout from "@/components/Layout";
 
-export default async function SoapCuttersPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
-
+export default async function SoapCuttersPage() {
   const products = [
     {
       title: "Electro Pneumatic Vertical Cutter",
       image: "/assets/AVC/automatic-soap-cutting-machine.png",
       description:
         "Electro-pneumatic vertical cutter for precise, synchronized cutting of continuously extruded soap into uniform bars.",
-      href: `/${lang}/av-pneumatic-soap-cutter-machine`,
+      href: `/av-pneumatic-soap-cutter-machine`,
     },
     {
       title: "High Speed Rotary Cutter",
       image: "/assets/HSB-Cutter/soap-cutting-machine-india.png",
       description:
         "A high-speed rotary soap cutter designed for precise, continuous cutting of extruded soap bars in larger manufacturing lines.",
-      href: `/${lang}/high-speed-soap-cutter-machine`,
+      href: `/high-speed-soap-cutter-machine`,
     },
   ];
 
@@ -49,16 +43,11 @@ export default async function SoapCuttersPage({
               With the ability to cut soap bars ranging from 10 mm to 999 mm,
               they deliver accuracy and uniformity across every batch.
             </p>
-            <p>
-              Brit Soap cutters combine robust construction with high operational
-              efficiency—making them ideal for manufacturers seeking reliability,
-              scalability, and long-term performance.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((product, index) => (
-              <ProductCard key={index} {...product} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {products.map((product, i) => (
+              <ProductCard key={i} title={product.title} description={product.description} image={product.image} href={product.href} />
             ))}
           </div>
         </div>

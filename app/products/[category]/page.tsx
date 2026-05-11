@@ -8,9 +8,9 @@ import { getLocalCategoryWithProducts } from "@/data/categories";
 export default async function CategoryPage({
   params,
 }: {
-  params: Promise<{ lang: string; category: string }>;
+  params: Promise<{ category: string }>;
 }) {
-  const { lang, category: slug } = await params;
+  const { category: slug } = await params;
 
   // Try local hardcoded categories first
   let categoryData = getLocalCategoryWithProducts(slug);
@@ -18,7 +18,7 @@ export default async function CategoryPage({
 
   if (!categoryData) {
     // Fallback to Contentful
-    const contentfulCategory = await getCategoryWithProducts(slug, lang);
+    const contentfulCategory = await getCategoryWithProducts(slug, "en");
     if (!contentfulCategory) return notFound();
     categoryData = contentfulCategory as any;
     isLocal = false;
@@ -120,9 +120,9 @@ export default async function CategoryPage({
 
               const productLink = isLocal
                 ? rootSlugs.includes(product.slug)
-                  ? `/${lang}/${product.slug}`
-                  : `/${lang}/products/${slug}/${product.slug}`
-                : `/${lang}/products/${slug}/${product.slug}`;
+                  ? `/${product.slug}`
+                  : `/products/${slug}/${product.slug}`
+                : `/products/${slug}/${product.slug}`;
 
               let productImg = null;
               if (isLocal) {
