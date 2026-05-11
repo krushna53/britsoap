@@ -9,7 +9,7 @@ export default async function AboutPage({
 }: {
   params: { lang: string };
 }) {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const data = await getAboutPage(lang);
 

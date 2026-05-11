@@ -8,7 +8,7 @@ export default async function ServicesPage({
 }: {
   params: { lang: string };
 }) {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const services = await getServices(lang);
 

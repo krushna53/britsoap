@@ -7,7 +7,7 @@ export default async function ContactPage({
 }: {
   params: { lang: string };
 }) {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const contact = await getContactSection(lang);
 
