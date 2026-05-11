@@ -39,7 +39,7 @@ export default async function CategoryPage({
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
-            <p className="mt-4 text-primary text-lg text-left max-w-4xl">
+            <p className="mt-4 text-primary text-lg text-left">
               {categoryData.description}
             </p>
           )}
@@ -47,7 +47,7 @@ export default async function CategoryPage({
       </section>
 
       {/* 🔹 Intro Content + Image */}
-      <section className="pb-12 pt-2 bg-background">
+      <section className={`pt-2 bg-background ${slug === "finishing-line" || slug === "soap-stampers" ? "pb-0" : "pb-12"}`}>
         <div className="container space-y-8">
           <div>
             {slug === "drying-line" && categoryData?.description && (
@@ -97,7 +97,7 @@ export default async function CategoryPage({
       </section>
 
       {/* 🔹 Products */}
-      <section className="py-20 bg-background">
+      <section className={`bg-background ${slug === "finishing-line" || slug === "soap-stampers" ? "pt-8 pb-20" : "py-20"}`}>
         <div className="container">
           <div className={`grid gap-8 justify-items-center ${
             products.length === 1
@@ -137,7 +137,7 @@ export default async function CategoryPage({
                   className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 h-101.25"
                 >
                   {/* Image */}
-                  <div className="bg-white m-4 mb-0 rounded-xl overflow-hidden border border-border">
+                  <div className="bg-white m-4 mb-0 overflow-hidden border border-border">
                     {productImg ? (
                       <Image
                         src={productImg}

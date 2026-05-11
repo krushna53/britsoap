@@ -840,7 +840,7 @@ export default async function ProductDetailPage({
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                <p className="text-sm font-semibold text-primary mb-3">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2710,7 +2710,7 @@ continuous soap production lines."
                 <h3 className="text-2xl font-bold text-primary mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {[
                     "Fully automatic six-side soap stamping system for premium finish",
                     "Uniform embossing on all faces including sides and edges",
@@ -2724,8 +2724,8 @@ continuous soap production lines."
                     "Reduced maintenance compared to conventional stamping machines",
                   ].map((benefit, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-primary font-bold flex-shrink-0 mt-1">•</span>
-                      <span>{benefit}</span>
+                      <span className="mt-1.5 w-2 h-2 rounded-full bg-accent shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">{benefit}</span>
                     </li>
                   ))}
                 </ul>
