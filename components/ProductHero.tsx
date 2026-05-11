@@ -71,7 +71,7 @@ export default function ProductHero({
               alt={title}
               width={960}
               height={540}
-              className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
+              className="w-full h-full object-cover aspect-video"
             />
           )}
           <div className="absolute inset-0 -z-10 blur-3xl bg-white/20 rounded-2xl"></div>

@@ -176,7 +176,7 @@ export default function ProductPage() {
                   {product.features?.map((item, i) => (
                     <div
                       key={i}
-                      className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300"
+                      className="group flex items-baseline gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300"
                     >
                       {/* DOT / ICON */}
                       <div className="w-7 h-7 flex items-center justify-center rounded-full bg-accent text-white text-xs font-bold shrink-0 mt-1">
