@@ -4,14 +4,8 @@ import { getAboutPage } from "@/lib/contentful";
 
 export const revalidate = 300;
 
-export default async function AboutPage({
-  params,
-}: {
-  params: { lang: string };
-}) {
-  const { lang } = await params;
-
-  const data = await getAboutPage(lang);
+export default async function AboutPage() {
+  const data = await getAboutPage("en");
 
   if (!data) return <div>No data found</div>;
 

@@ -31,7 +31,7 @@ export default function ProductHero({
 
           <div className="flex gap-4">
             <Link
-              href="/en/contact"
+              href="/contact"
               className="bg-accent text-white px-4 py-4 rounded-xl shadow-md 
                    flex items-center justify-center
                    hover:bg-accent/90 transition-all duration-300"

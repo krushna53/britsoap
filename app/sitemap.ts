@@ -1,66 +1,68 @@
 import type { MetadataRoute } from "next";
+import { productPages } from "@/data/productPages";
+import { categories } from "@/data/categories";
 
-const BASE_URL = "https://britsoap.netlify.app";
-const langs = ["en", "fr", "es"];
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://britsoap.netlify.app";
 
-const staticRoutes = [
-  "",
-  "/about",
-  "/services",
-  "/contact",
-  "/soap-cutters",
+const rootSlugs = [
+  "av-pneumatic-soap-cutter-machine",
+  "double-arm-sigma-mixer-soap-manufacturing",
+  "duplex-vacuum-soap-plodder-machine",
+  "high-speed-soap-cutter-machine",
+  "simplex-refiner-plodder",
+  "triple-roll-mill-soap-refining-machine",
 ];
 
-const categoryRoutes = [
-  "/products/saponification",
-  "/products/drying-line",
-  "/products/soap-stampers",
-  "/products/finishing-line",
-];
+function buildRoutes() {
+  const routes = new Set<string>();
 
-const productRoutes = [
-  "/products/saponification/saponification-crutcher-soap-manufacturing",
-  "/products/saponification/saponification-jet",
-  "/products/drying-line/soap-heat-exchanger",
-  "/products/drying-line/powder-separator",
-  "/products/drying-line/vacuum-drying-system",
-  "/products/drying-line/soap-atomiser",
-  "/products/soap-stampers/manual-pneumatic-soap-stamper",
-  "/products/soap-stampers/hrd-soap-stamper",
-  "/products/soap-stampers/rotary-soap-stamper",
-  "/products/soap-stampers/vertical-soap-stamper",
-  "/products/soap-stampers/six-face-soap-stamper",
-  "/products/soap-stampers/laundry-soap-stamper",
-];
+  // Static pages
+  ["", "/about", "/services", "/contact", "/soap-cutters"].forEach((r) =>
+    routes.add(r)
+  );
 
-const rootProductRoutes = [
-  "/double-arm-sigma-mixer-soap-manufacturing",
-  "/triple-roll-mill-soap-refining-machine",
-  "/simplex-refiner-plodder",
-  "/duplex-vacuum-soap-plodder-machine",
-  "/av-pneumatic-soap-cutter-machine",
-  "/high-speed-soap-cutter-machine",
-];
+  // Category pages from data/categories
+  categories.forEach((cat) => routes.add(`/products/${cat.slug}`));
 
-export default function sitemap(): MetadataRoute.Sitemap {
+  // Products defined in categories.localProducts and productPages
+  categories.forEach((cat) => {
+    cat.products.forEach((p) => {
+      if (rootSlugs.includes(p)) {
+        routes.add(`/${p}`);
+      } else {
+        routes.add(`/products/${cat.slug}/${p}`);
+      }
+    });
+  });
+
+  // Also include any productPages that might not be listed in categories
+  productPages.forEach((p) => {
+    if (rootSlugs.includes(p.slug)) {
+      routes.add(`/${p.slug}`);
+    } else {
+      // try to find a category that contains this product
+      const cat = categories.find((c) => c.products.includes(p.slug));
+      if (cat) routes.add(`/products/${cat.slug}/${p.slug}`);
+      else routes.add(`/products/${p.slug}`);
+    }
+  });
+
+  return Array.from(routes);
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
-  const allRoutes = [
-    ...staticRoutes,
-    ...categoryRoutes,
-    ...productRoutes,
-    ...rootProductRoutes,
-  ];
+  const routes = buildRoutes();
 
-  for (const lang of langs) {
-    for (const route of allRoutes) {
-      entries.push({
-        url: `${BASE_URL}/${lang}${route}`,
-        lastModified: new Date(),
-        changeFrequency: route === "" ? "weekly" : "monthly",
-        priority: route === "" ? 1.0 : route.includes("/products/") && !route.includes("/products/saponification") && !route.includes("/products/drying-line") && !route.includes("/products/soap-stampers") && !route.includes("/products/finishing-line") ? 0.8 : 0.7,
-      });
-    }
+  for (const route of routes) {
+    const url = `${BASE_URL}${route}`;
+    entries.push({
+      url,
+      lastModified: new Date(),
+      changeFrequency: route === "" ? "weekly" : "monthly",
+      priority: route === "" ? 1.0 : route.includes("/products/") ? 0.7 : 0.8,
+    });
   }
 
   return entries;
