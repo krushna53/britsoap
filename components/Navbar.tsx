@@ -213,6 +213,22 @@ const Navbar = () => {
                         </div>
                       ))}
                     </div>
+
+                    {/* Footer: View All Products */}
+                    <div className="border-t border-border px-6 py-3 flex items-center justify-between bg-muted/30">
+                      {/* <span className="text-xs text-muted-foreground">
+                        Browse all {link.megaMenu.columns.reduce((acc, col) => acc + col.items.length, 0)}+ machines across 5 categories
+                      </span> */}
+                      <Link
+                        href="/products"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline tracking-wider uppercase"
+                      >
+                        View All Products
+                        <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </>
               )}
