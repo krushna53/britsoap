@@ -98,7 +98,7 @@ export default function AllProductsPage() {
                 products.length <= 1
                   ? "grid-cols-1 max-w-95 mx-auto"
                   : products.length === 2
-                  ? "grid-cols-1 md:grid-cols-2 max-w-200 mx-auto"
+                  ? "grid-cols-1 md:grid-cols-2 max-w-200"
                   : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
               }`}
             >
