@@ -108,7 +108,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
-      <div className="container flex items-center justify-between h-16 md:h-20">
+      <div className="container flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
         <Link href={`/`} className="flex items-center gap-2">
           <Image
@@ -117,12 +117,12 @@ const Navbar = () => {
             width={180}
             height={40}
             priority
-            className="object-contain  w-[120px] md:w-[180px] h-auto"
+            className="object-contain  w-[120px] lg:w-[180px] h-auto"
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link, i) => (
             <div key={i} className="relative group">
               {/* Regular link */}
@@ -213,6 +213,22 @@ const Navbar = () => {
                         </div>
                       ))}
                     </div>
+
+                    {/* Footer: View All Products */}
+                    <div className="border-t border-border px-6 py-3 flex items-center justify-between bg-muted/30">
+                      {/* <span className="text-xs text-muted-foreground">
+                        Browse all {link.megaMenu.columns.reduce((acc, col) => acc + col.items.length, 0)}+ machines across 5 categories
+                      </span> */}
+                      <Link
+                        href="/products"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline tracking-wider uppercase"
+                      >
+                        View All Products
+                        <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </>
               )}
@@ -233,7 +249,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary"
+          className="lg:hidden text-primary"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -248,7 +264,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-y-auto max-h-[calc(100vh-4rem)] bg-background border-b border-border"
+            className="lg:hidden overflow-y-auto max-h-[calc(100vh-4rem)] bg-background border-b border-border"
           >
             <nav className="container flex flex-col gap-4 py-6">
               {navLinks.map((link, i) => (

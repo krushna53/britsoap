@@ -1,12 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
 
   const productLinks = [
     { name: "Saponification", path: "/products/saponification" },
@@ -58,7 +55,7 @@ const Footer = () => {
               ].map((link) => (
                 <li key={link.path}>
                   <Link
-                    href={`/${lang}${link.path}`}
+                    href={link.path}
                     className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors capitalize"
                   >
                     {link.name}
@@ -79,7 +76,7 @@ const Footer = () => {
                 <li key={item.name}>
                   {item.path ? (
                     <Link
-                      href={`/${lang}${item.path}`}
+                      href={item.path}
                       className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors capitalize"
                     >
                       {item.name}

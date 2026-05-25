@@ -1,4 +1,5 @@
-import ProductCard from "@/components/ProductCard";
+import Image from "next/image";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 
 export default async function SoapCuttersPage() {
@@ -21,7 +22,7 @@ export default async function SoapCuttersPage() {
 
   return (
     <Layout>
-      <section className="py-16 bg-muted">
+      <section className="py-16 bg-background">
         <div className="container">
           <h1 className="text-3xl font-bold text-primary mb-6 capitalize">
             Automatic Soap Cutters for Consistent Soap Manufacturing
@@ -45,9 +46,31 @@ export default async function SoapCuttersPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {products.map((product, i) => (
-              <ProductCard key={i} title={product.title} description={product.description} image={product.image} href={product.href} />
+              <Link
+                key={i}
+                href={product.href}
+                className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 h-101.25"
+              >
+                <div className="bg-white m-4 mb-0 overflow-hidden border border-border">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    width={500}
+                    height={300}
+                    className="w-full h-52 object-contain p-3"
+                  />
+                </div>
+                <div className="px-5 py-5 text-primary-foreground">
+                  <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-accent line-clamp-2 pb-2">
+                    {product.title}
+                  </h3>
+                  <p className="text-[13px] text-primary-foreground/75 leading-relaxed line-clamp-4 mt-2">
+                    {product.description}
+                  </p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
