@@ -39,7 +39,7 @@ export default function AllProductsPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-primary">
             Our Products
           </h1>
-          <p className="mt-4 text-muted-foreground text-lg max-w-2xl">
+          <p className="mt-4 text-muted-foreground text-lg">
             Industrial soap manufacturing machinery — engineered for performance, precision, and reliability.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function AllProductsPage() {
       <section className="py-12 bg-background min-h-[60vh]">
         <div className="container">
           {categoryData?.description && (
-            <p className="text-muted-foreground mb-10 max-w-3xl text-base">
+            <p className="text-muted-foreground mb-10 text-base">
               {categoryData.description}
             </p>
           )}
@@ -94,12 +94,12 @@ export default function AllProductsPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className={`grid gap-8 justify-items-center ${
+              className={`grid gap-8 ${
                 products.length <= 1
-                  ? "grid-cols-1 max-w-95 mx-auto"
+                  ? "grid-cols-1 max-w-95 justify-items-start"
                   : products.length === 2
-                  ? "grid-cols-1 md:grid-cols-2 max-w-200"
-                  : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+                  ? "grid-cols-1 md:grid-cols-2 max-w-200 justify-items-start"
+                  : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center"
               }`}
             >
               {products.map((product: any, i: number) => {
