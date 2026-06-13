@@ -32,7 +32,7 @@ export default function HomeCTA({ data }: Props) {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="text-primary-foreground/60 max-w-md mx-auto mb-8 text-sm"
+          className="text-primary-foreground/60 max-w-md mx-auto mb-8 text-lg"
         >
           {data?.ctaText ||
             "Get in touch with our team for a custom proposal."}

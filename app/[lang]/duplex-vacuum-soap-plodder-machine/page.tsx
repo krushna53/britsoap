@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
 
 export type Product = {
   slug: string;
@@ -81,7 +82,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
               {product.processDescription}
             </p>
 
@@ -102,7 +103,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="text-gray-600 text-lg leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -112,31 +113,12 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Duplex vacuum soap plodder machine for billet extrusion"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
-
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        items={product.importance || []}
+        columns={3}
+      />
 
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
@@ -215,26 +197,24 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      <Section
-        title={product.applicationTitle}
-        className="bg-primary text-white"
-        center
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
-              {product.applicationDescription}
-            </p>
-          </div>
+      <div className="bg-primary text-white py-20">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+          {product.applicationTitle}
+        </h2>
+
+        <div className="max-w-4xl mx-auto rounded-2xl pt-8">
+          <p className="text-white/80 text-lg leading-relaxed text-left">
+            {product.applicationDescription}
+          </p>
         </div>
-      </Section>
+      </div>
 
       <Section
         title="Capacity Range"
         description="The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales."
         center
       >
-        <CapacityRange capacities={product.capacities} />
+        <CapacityRange capacities={product.capacities || []} />
       </Section>
       {product.ctaSection && (
         <CTASection

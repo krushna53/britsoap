@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 type Props = {
   capacities: string[];
 };
-
 const FactoryIcon = ({ level }: { level: number }) => {
   const variants = [
     { width: 28, windows: 2 },
@@ -36,7 +37,13 @@ export default function CapacityRange({ capacities }: Props) {
           key={i}
           className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-5 py-4 hover:border-primary hover:bg-primary/5 transition"
         >
-          <FactoryIcon level={i} />
+          <Image
+            src={`/${Math.min(i + 1, 7)}.png`}
+            alt={`Capacity ${i + 1}`}
+            width={64}
+            height={64}
+            className="w-16 h-16 object-contain"
+          />
           <p className="text-lg font-semibold text-gray-800">{c}</p>
         </div>
       ))}

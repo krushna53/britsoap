@@ -32,7 +32,7 @@ export default function Grid({ items }: GridProps) {
           )}
 
           <div className="p-5">
-            <p className="text-gray-600 text-sm leading-relaxed text-left">
+            <p className="text-gray-600 text-lg leading-relaxed text-left">
               {item.desc}
             </p>
           </div>

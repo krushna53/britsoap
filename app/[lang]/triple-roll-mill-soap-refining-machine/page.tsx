@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import CapacityRange from "@/components/CapacityRange";
 import RefinerIntro from "@/components/RefinerIntro";
+import ImportanceGrid from "@/components/ImportanceGrid";
 
 export type Product = {
   slug: string;
@@ -81,7 +82,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
               {product.processDescription}
             </p>
 
@@ -102,7 +103,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="text-gray-600 text-lg leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -112,30 +113,11 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.whyPoints?.length && (
-        <section className="py-20  text-center">
-          <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-14">
-              {product.whyTitle}
-            </h2>
-
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mx-auto">
-              {product.whyPoints.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-100 border border-gray-100 p-6 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition"
-                >
-                  <div className="text-2xl mb-3 text-primary">✨</div>
-
-                  <p className="text-gray-700 text-sm md:text-base font-medium">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <ImportanceGrid
+        title={product.importanceTitle}
+        description={product.importanceDescription}
+        items={product.importance || []}
+      />
 
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
@@ -172,44 +154,28 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      {product.importance?.length && (
-        <Section
-          title={product.importanceTitle}
-          description={product.importanceDescription}
-          center
-        >
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Image
-              src={product.importanceImage}
-              alt="Simplex refiner plodder machine for soap manufacturing"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
 
-            <div className="grid gap-4">
-              {product.importance.map((item, i) => (
-                <div key={i} className="border p-4 rounded-lg shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
-      <Section
-        title={product.applicationTitle}
-        className="bg-primary text-white"
-        center
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-center">
+      <div className="bg-primary text-white py-12 md:py-20 px-4 md:px-6">
+        {/* TITLE */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug">
+          {product.applicationTitle}
+        </h2>
+
+        {/* CONTENT */}
+                        <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
+          {Array.isArray(product.applicationDescription) ? (
+            product.applicationDescription.map((para, i) => (
+              <p key={i} className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+                {para}
+              </p>
+            ))
+          ) : (
+            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
               {product.applicationDescription}
             </p>
-          </div>
+          )}
         </div>
-      </Section>
+      </div>
       {/* {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
@@ -250,7 +216,7 @@ export default function ProductPage() {
         description="The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales."
         center
       >
-        <CapacityRange capacities={product.capacities} />
+        <CapacityRange capacities={product.capacities || []} />
       </Section>
       {product.ctaSection && (
         <CTASection
