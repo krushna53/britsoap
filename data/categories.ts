@@ -206,7 +206,7 @@ const localProducts: Record<string, LocalProduct> = {
     title: "Soap Press / Soap Stampers",
     description:
       "Stamping systems that shape, compress, and emboss soap bars to deliver finished geometry and brand identity.",
-    detailSection: { images: ["/category-media/soap-stampers/overview.jpeg"] },
+    detailSection: { images: ["/category-media/soap-stampers/soap-stamping-machine.png"] },
     comingSoon: true,
   },
   "soap-cutters": {

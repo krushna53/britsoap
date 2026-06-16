@@ -709,7 +709,7 @@ export default async function ProductDetailPage({
               </div>
 
               <div>
-                <h2 className="text-2xl font-semibold text-primary mb-4 capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
                   {localProduct.title}
                 </h2>
 
@@ -824,7 +824,7 @@ export default async function ProductDetailPage({
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
                       <div className=" overflow-hidden ">
                 <Image
@@ -836,7 +836,7 @@ export default async function ProductDetailPage({
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-sm font-semibold text-primary mb-3">
+                <p className="text-lg font-bold text-primary mb-3 capitalize">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1081,7 +1081,7 @@ production."
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
               <div className=" ">
                 <Image
@@ -1089,7 +1089,7 @@ production."
                   alt="Manual pneumatic soap stamper"
                   width={900}
                   height={700}
-                  className="h-[340px] md:h-[480px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[340px] md:h-[480px] w-full object-contain rounded-2xl"
                 />
               </div>
 
@@ -1118,10 +1118,10 @@ production."
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
+                <p className="text-lg font-bold text-primary mb-3 capitalize">
                   Construction &amp; Functional Advantages
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1163,13 +1163,13 @@ production."
                   alt="Manual soap press"
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl"
                 />
               </div>
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
                <div className=" ">
                 <Image
@@ -1177,11 +1177,11 @@ production."
                   alt="Manual bar soap stamper"
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl"
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
+                <p className="text-lg font-bold text-primary mb-3 capitalize">
                   Key Features, Highlights &amp; Applications
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1413,12 +1413,12 @@ production."
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1fr_1fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
                   Key Benefits &amp; Functional Highlights
-                </p>
+                </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <ul className="space-y-2 list-disc pl-5">
                     <li>Speed operation up to 70 stamps per minute</li>
@@ -1458,42 +1458,42 @@ production."
                     alt="HRD soap stamper machine"
                     width={260}
                     height={180}
-                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl"
                   />
                   <Image
                     src="/assets/HRDStamper/soap-stamper-die.jpeg"
                     alt="HRD soap stamper die"
                     width={260}
                     height={180}
-                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl"
                   />
                   <Image
                     src="/assets/HRDStamper/soap-press-industrial.jpg"
                     alt="Industrial soap press"
                     width={260}
                     height={180}
-                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl"
                   />
                   <Image
                     src="/assets/HRDStamper/soap-press-die.jpeg"
                     alt="Soap press die assembly"
                     width={260}
                     height={180}
-                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl"
                   />
                   <Image
                     src="/assets/HRDStamper/soap-bar-stamper.jpeg"
                     alt="Stamped soap bars"
                     width={260}
                     height={180}
-                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl"
                   />
                   <Image
                     src="/assets/HRDStamper/automatic-soap-stamping-machine.jpeg"
                     alt="Automatic soap stamping machine"
                     width={260}
                     height={180}
-                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl bg-white"
+                    className="h-[110px] md:h-[120px] w-full object-contain rounded-xl"
                   />
                 </div>
               </div>
@@ -1612,7 +1612,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl text-primary leading-tight capitalize">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1710,12 +1710,12 @@ Production Lines"
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
                   Key Benefits &amp; Functional Highlights
-                </p>
+                </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <ul className="space-y-2 list-disc pl-5">
                     <li>
@@ -1784,10 +1784,10 @@ Production Lines"
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h2 className="text-3xl font-bold text-primary mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
                   Efficient Dust Removal Process in Soap Drying Systems
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -1862,7 +1862,7 @@ Production Lines"
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.85fr_1.15fr] items-center">
               <div className=" ">
                 <Image
@@ -1875,7 +1875,7 @@ Production Lines"
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
                   Robust Engineering & Durable Construction
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1914,10 +1914,10 @@ Production Lines"
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
                   Ideal for Soap Manufacturing Plants – Key Benefits
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2018,7 +2018,7 @@ Production Lines"
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
                 <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
@@ -2066,13 +2066,13 @@ Production Lines"
                   alt="Heat exchanger for soap drying line"
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl"
                 />
               </div>
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[0.95fr_1fr] items-center">
               <div className=" ">
                 <Image
@@ -2080,12 +2080,12 @@ Production Lines"
                   alt="Heat exchanger tube plate assembly"
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[420px] w-full object-contain rounded-2xl"
                 />
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
+                <p className="text-lg font-bold text-primary mb-3 capitalize">
                   Robust Stainless Steel Construction &amp; Safety Engineering
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2121,10 +2121,10 @@ Production Lines"
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg uppercase tracking-[0.3em] text-[#1b2481] mb-3 font-extrabold">
+                <p className="text-lg font-bold text-primary mb-3 capitalize">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2204,12 +2204,12 @@ Production Lines"
             </div>
           </section>
 
-          <section className="py-12 bg-background">
+          <section className="py-20 bg-background">
             <div className="container">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:auto-rows-fr">
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md h-full">
                   <h3 className="text-xl font-semibold mb-3">Vacuum Booster</h3>
-                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                  <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
                       <p>
                         The Brit Soap Vacuum Booster increases the degree of vacuum available in the spray drying plant by reinforcing the action of the vacuum pump.
@@ -2227,16 +2227,16 @@ Production Lines"
                         src="/assets/DryingLine/vacuum-booster-jet.png"
                         alt="Vacuum Booster"
                         width={420}
-                        height={220}
-                        className="w-full h-36 object-contain rounded-md p-2"
+                        height={320}
+                        className="w-full h-64 md:h-72 object-contain p-3"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md h-full">
                   <h3 className="text-xl font-semibold mb-3">Condenser</h3>
-                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                  <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
                       <p>
                         The Brit Soap water-cooled direct contact type gas condenser efficiently handles hot gases released from drying soap and the steam-operated vacuum booster.
@@ -2254,16 +2254,16 @@ Production Lines"
                         src="/assets/DryingLine/soap-condenser-soap-drying.png"
                         alt="Condenser"
                         width={420}
-                        height={220}
-                        className="w-full h-36 object-contain rounded-md p-2"
+                        height={320}
+                        className="w-full h-64 md:h-72 object-contain p-3"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md h-full">
                   <h3 className="text-xl font-semibold mb-3">Vacuum Pump</h3>
-                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                  <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
                       <p>
                         A double-stage liquid ring vacuum pump is used as part of the vacuum generating system.
@@ -2280,16 +2280,16 @@ Production Lines"
                         src="/assets/DryingLine/vacuum-pump.jpg"
                         alt="Vacuum Pump"
                         width={420}
-                        height={220}
-                        className="w-full h-36 object-contain rounded-md p-2"
+                        height={320}
+                        className="w-full h-64 md:h-72 object-contain p-3"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md h-full">
                   <h3 className="text-xl font-semibold mb-3">Barometric Tower</h3>
-                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                  <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
                       <p>
                         The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
@@ -2300,8 +2300,8 @@ Production Lines"
                         src="/assets/DryingLine/barometric-tower-soap-drying-plant.jpeg"
                         alt="Barometric Tower"
                         width={420}
-                        height={220}
-                        className="w-full h-36 object-contain rounded-md p-2"
+                        height={320}
+                        className="w-full h-64 md:h-72 object-contain p-3"
                       />
                     </div>
                   </div>
@@ -2314,7 +2314,7 @@ Production Lines"
             <div className="container">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h3 className="text-2xl font-bold text-primary">Applications & Key Benefits</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Applications & Key Benefits</h3>
                   <div className="text-muted-foreground leading-relaxed space-y-5">
                     <div>
                       <p className="font-semibold text-gray-900 mb-2">Ideal for:</p>
@@ -2338,7 +2338,7 @@ Production Lines"
                 </div>
 
                 <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h4 className="text-2xl font-bold text-primary">Barometric Tower for Vacuum System Integration</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Barometric Tower for Vacuum System Integration</h4>
                   <p className="text-muted-foreground leading-relaxed">
                     The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
                   </p>
@@ -2383,7 +2383,7 @@ Production Lines"
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-primary">Process & Functioning</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Process & Functioning</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     The atomiser operates on a continuous vacuum spray drying process, ensuring rapid moisture removal
@@ -2424,7 +2424,7 @@ Production Lines"
                 />
               </div>
               <div className="space-y-6 order-1 md:order-2">
-                <h3 className="text-3xl font-bold text-primary">Engineering & Construction</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Engineering & Construction</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     Engineered for durability and precision, the atomiser features robust stainless steel
@@ -2447,7 +2447,7 @@ Production Lines"
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-2 items-start">
               <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                <h3 className="text-2xl font-bold text-primary">Applications & Key Benefits</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Applications & Key Benefits</h3>
                 <div className="text-muted-foreground leading-relaxed space-y-3">
                   <div>
                     <p className="mb-2 pb-2">The atomiser is a versatile component in soap manufacturing, supporting multiple production
@@ -2522,7 +2522,7 @@ Soap Finishing Lines"
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
               <div className=" ">
                 <Image
@@ -2571,10 +2571,10 @@ Soap Finishing Lines"
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl font-bold text-primary mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-4">
@@ -2654,7 +2654,7 @@ continuous soap production lines."
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
               <div className=" ">
                 <Image
@@ -2704,10 +2704,10 @@ continuous soap production lines."
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl font-bold text-primary mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-3">
@@ -2787,7 +2787,7 @@ efficiency soap finishing lines."
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
               <div className=" ">
                 <Image
@@ -2826,10 +2826,10 @@ efficiency soap finishing lines."
             </div>
           </section>
 
-          <section className="pb-20 bg-background">
+          <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl font-bold text-primary mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-4">
@@ -2905,10 +2905,10 @@ efficiency soap finishing lines."
           items={templateData.importanceItems}
         />
 
-        <section className="bg-gray-50 py-20">
-          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <section className="py-20 bg-slate-50">
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
                 {templateData.detailTitle}
               </h2>
               {templateData.detailParagraphs.map((para, i) => (
@@ -3004,7 +3004,7 @@ efficiency soap finishing lines."
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-primary mb-4 capitalize">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
               {product.name}
             </h2>
 
