@@ -34,12 +34,12 @@ export default function AllProductsPage() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-20 pb-8 bg-background">
+      <section className="pt-20 pb-5 bg-background">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary">
+          <h1 className="text-3xl md:text-4xl font-bold text-primary">
             Our Products
           </h1>
-          <p className="mt-4 text-muted-foreground text-lg">
+          <p className="mt-3 text-muted-foreground text-base">
             Industrial soap manufacturing machinery — engineered for performance, precision, and reliability.
           </p>
         </div>
@@ -118,9 +118,9 @@ export default function AllProductsPage() {
                   <Link
                     key={`${product.slug}-${i}`}
                     href={productLink}
-                    className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 h-101.25"
+                    className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 min-h-101.25"
                   >
-                    <div className="bg-white m-4 mb-0 overflow-hidden border border-border">
+                    <div className="m-4 mb-0">
                       {productImg ? (
                         <Image
                           src={productImg}

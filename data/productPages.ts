@@ -1160,7 +1160,7 @@ export const productPages = [
             },
             {
                 desc: "The pneumatic press moves vertically downward, applying controlled force to create sharp, centered embossed impressions.",
-                image: "/assets/VerticalStamper/automatic-soap-stamping-machine.png",
+                image: "/assets/VerticalStamper/automatic-soap-stamping-machine.jpeg",
             },
             {
                 desc: "Stamped bars are ejected and ready for downstream packaging or further processing.",
@@ -1193,7 +1193,7 @@ export const productPages = [
 
             images: [
                 "/assets/VerticalStamper/vertical-soap-stamper.png",
-                "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg"
+                "/assets/VerticalStamper/soap-die-soap-stamping-machine.png"
             ]
         },
 

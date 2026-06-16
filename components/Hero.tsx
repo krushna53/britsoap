@@ -27,7 +27,7 @@ export default function Hero({ hero }: HeroProps) {
     fullUrl?.endsWith(".ogg");
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-5rem)] py-20 flex items-center justify-center overflow-hidden">
       {isVideo ? (
         <video
           autoPlay
@@ -61,7 +61,7 @@ export default function Hero({ hero }: HeroProps) {
 
           <motion.h1
             variants={fadeUp}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto capitalize"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto capitalize"
           >
             {hero.heroTitle}
           </motion.h1>

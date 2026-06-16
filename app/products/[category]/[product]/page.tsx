@@ -642,7 +642,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
   "soap-atomiser": {
     title: "Atomiser / Vacuum Spray Chamber for Soap Drying Systems",
     description: "High-efficiency vacuum spray drying chamber for converting liquid neat soap into solid, cooled soap within seconds.",
-    video: "/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png",
+    video: "/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.jpg",
     introTitle: "Advanced Vacuum Spray Drying Technology for Soap Manufacturing",
     introParagraphs: [
       "The Brit Soap Atomiser / Vacuum Spray Chamber enables soap manufacturers to transform liquid neat soap into dried, cooled, solid soap in just a few seconds by boiling off excess moisture under carefully controlled vacuum conditions.",
@@ -654,7 +654,7 @@ const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
     importanceItems: [],
     detailTitle: "",
     detailParagraphs: [],
-    detailImage: "/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png",
+    detailImage: "/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.jpg",
     applicationTitle: "",
     applicationDescription: "",
     capacities: [],
@@ -754,7 +754,7 @@ export default async function ProductDetailPage({
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -767,7 +767,7 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Saponification Crutcher
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -886,7 +886,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -901,17 +901,17 @@ production."
           {/* Row 1 - Image Left, Text Right */}
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[0.9fr_1.1fr] items-center">
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-slate-50 p-6">
+              <div>
                 <Image
                   src="/assets/SaponificationJet/saponification-jet-soap.png"
                   alt="Saponification Jet"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-xl bg-white"
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Saponification Jet | Instant Soap Making System with Venturi Technology
 
                 </h2>
@@ -956,7 +956,7 @@ production."
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Engineering and Construction
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -982,13 +982,13 @@ production."
                   ))}
                 </ul>
               </div>
-              <div className="rounded-[2rem] border border-border overflow-hidden shadow-sm bg-white p-6">
+              <div>
                 <Image
                   src="/assets/SaponificationJet/soap-from-oil-caustic.JPG"
                   alt="Engineering and Construction"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain rounded-xl"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
@@ -998,7 +998,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Uses and Benefits
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1024,24 +1024,20 @@ production."
                 </ul>
               </div>
               <div className="grid gap-4">
-                <div className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-4">
-                  <Image
-                    src="/assets/SaponificationJet/venturi-system-soap-reactor.jpg"
-                    alt="Venturi system"
-                    width={500}
-                    height={300}
-                    className="w-full h-48 object-contain rounded-xl bg-white"
-                  />
-                </div>
-                <div className="rounded-2xl border border-border overflow-hidden shadow-sm bg-slate-50 p-4">
-                  <Image
-                    src="/assets/SaponificationJet/industrial-soap-manufacturing.jpeg"
-                    alt="Industrial manufacturing"
-                    width={500}
-                    height={300}
-                    className="w-full h-48 object-contain rounded-xl bg-white"
-                  />
-                </div>
+                <Image
+                  src="/assets/SaponificationJet/venturi-system-soap-reactor.jpg"
+                  alt="Venturi system"
+                  width={500}
+                  height={300}
+                  className="w-full h-48 object-contain"
+                />
+                <Image
+                  src="/assets/SaponificationJet/industrial-soap-manufacturing.jpeg"
+                  alt="Industrial manufacturing"
+                  width={500}
+                  height={300}
+                  className="w-full h-48 object-contain"
+                />
               </div>
             </div>
           </section>
@@ -1069,7 +1065,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1353,7 +1349,7 @@ production."
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1616,7 +1612,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1777,7 +1773,7 @@ Production Lines"
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                 Powder Separators for Soap Drying Systems
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2001,13 +1997,13 @@ Production Lines"
           <ProductHero
             title="Heat Exchanger | Liquid Soap Processing for efficient soap drying lines"
             description="Precision Heat Exchanger for efficient soap heating and moisture evaporation. Designed for controlled temperature performance and seamless integration in modern soap drying lines."
-            video={templateData.video}
+            video="/assets/DryingLine/heat-exchanger-soap-drying.jpg"
           />
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   High-Performance Heat Exchanger for Liquid Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2025,7 +2021,7 @@ Production Lines"
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Advanced Heat Transfer &amp; Precise Temperature Control
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2198,7 +2194,7 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Integrated Vacuum System for Efficient Soap Drying
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2213,93 +2209,101 @@ Production Lines"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
                   <h3 className="text-xl font-semibold mb-3">Vacuum Booster</h3>
-                  <div className="mb-4">
-                    <Image
-                      src="/assets/DryingLine/vacuum-booster-jet.png"
-                      alt="Vacuum Booster"
-                      width={420}
-                      height={220}
-                      className="w-full h-36 object-contain rounded-md bg-white p-2"
-                    />
-                  </div>
-                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
-                    <p>
-                      The Brit Soap Vacuum Booster increases the degree of vacuum available in the spray drying plant by reinforcing the action of the vacuum pump.
-                    </p>
-                    <ul className="list-disc pl-5 mt-3 space-y-1">
-                      <li>Utilizes steam passing through a venturi tube with a restricted throat</li>
-                      <li>High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
-                      <li>Generates a higher vacuum level than a pump alone</li>
-                      <li>Improves overall system efficiency and drying effectiveness</li>
-                      <li>Designed for continuous industrial operation with robust construction</li>
-                    </ul>
+                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                    <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
+                      <p>
+                        The Brit Soap Vacuum Booster increases the degree of vacuum available in the spray drying plant by reinforcing the action of the vacuum pump.
+                      </p>
+                      <ul className="list-disc pl-5 mt-3 space-y-1">
+                        <li>Utilizes steam passing through a venturi tube with a restricted throat</li>
+                        <li>High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
+                        <li>Generates a higher vacuum level than a pump alone</li>
+                        <li>Improves overall system efficiency and drying effectiveness</li>
+                        <li>Designed for continuous industrial operation with robust construction</li>
+                      </ul>
+                    </div>
+                    <div className="md:order-2">
+                      <Image
+                        src="/assets/DryingLine/vacuum-booster-jet.png"
+                        alt="Vacuum Booster"
+                        width={420}
+                        height={220}
+                        className="w-full h-36 object-contain rounded-md p-2"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
                   <h3 className="text-xl font-semibold mb-3">Condenser</h3>
-                  <div className="mb-4">
-                    <Image
-                      src="/assets/DryingLine/soap-condenser-soap-drying.png"
-                      alt="Condenser"
-                      width={420}
-                      height={220}
-                      className="w-full h-36 object-contain rounded-md bg-white p-2"
-                    />
-                  </div>
-                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
-                    <p>
-                      The Brit Soap water-cooled direct contact type gas condenser efficiently handles hot gases released from drying soap and the steam-operated vacuum booster.
-                    </p>
-                    <ul className="list-disc pl-5 mt-3 space-y-1">
-                      <li>Cools hot gases, significantly reducing their volume</li>
-                      <li>Lowers the gas load on the vacuum pump, improving energy efficiency</li>
-                      <li>Ensures maximum condensation of condensable vapours into liquid</li>
-                      <li>Reduces non-condensable gases to minimum possible volume</li>
-                      <li>Engineered for reliable performance in high-temperature environments</li>
-                    </ul>
+                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                    <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
+                      <p>
+                        The Brit Soap water-cooled direct contact type gas condenser efficiently handles hot gases released from drying soap and the steam-operated vacuum booster.
+                      </p>
+                      <ul className="list-disc pl-5 mt-3 space-y-1">
+                        <li>Cools hot gases, significantly reducing their volume</li>
+                        <li>Lowers the gas load on the vacuum pump, improving energy efficiency</li>
+                        <li>Ensures maximum condensation of condensable vapours into liquid</li>
+                        <li>Reduces non-condensable gases to minimum possible volume</li>
+                        <li>Engineered for reliable performance in high-temperature environments</li>
+                      </ul>
+                    </div>
+                    <div className="md:order-2">
+                      <Image
+                        src="/assets/DryingLine/soap-condenser-soap-drying.png"
+                        alt="Condenser"
+                        width={420}
+                        height={220}
+                        className="w-full h-36 object-contain rounded-md p-2"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
                   <h3 className="text-xl font-semibold mb-3">Vacuum Pump</h3>
-                  <div className="mb-4">
-                    <Image
-                      src="/assets/DryingLine/vacuum-pump.jpg"
-                      alt="Vacuum Pump"
-                      width={420}
-                      height={220}
-                      className="w-full h-36 object-contain rounded-md bg-white p-2"
-                    />
-                  </div>
-                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
-                    <p>
-                      A double-stage liquid ring vacuum pump is used as part of the vacuum generating system.
-                    </p>
-                    <ul className="list-disc pl-5 mt-3 space-y-1">
-                      <li>Evacuates air and non-condensable gases entering the system</li>
-                      <li>Maintains stable vacuum levels for consistent drying performance</li>
-                      <li>Designed for durability and continuous industrial usage</li>
-                      <li>Supports efficient operation of the overall vacuum system</li>
-                    </ul>
+                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                    <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
+                      <p>
+                        A double-stage liquid ring vacuum pump is used as part of the vacuum generating system.
+                      </p>
+                      <ul className="list-disc pl-5 mt-3 space-y-1">
+                        <li>Evacuates air and non-condensable gases entering the system</li>
+                        <li>Maintains stable vacuum levels for consistent drying performance</li>
+                        <li>Designed for durability and continuous industrial usage</li>
+                        <li>Supports efficient operation of the overall vacuum system</li>
+                      </ul>
+                    </div>
+                    <div className="md:order-2">
+                      <Image
+                        src="/assets/DryingLine/vacuum-pump.jpg"
+                        alt="Vacuum Pump"
+                        width={420}
+                        height={220}
+                        className="w-full h-36 object-contain rounded-md p-2"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-md">
                   <h3 className="text-xl font-semibold mb-3">Barometric Tower</h3>
-                  <div className="mb-4">
-                    <Image
-                      src="/assets/DryingLine/barometric-tower-soap-drying-plant.jpeg"
-                      alt="Barometric Tower"
-                      width={420}
-                      height={220}
-                      className="w-full h-36 object-contain rounded-md bg-white p-2"
-                    />
-                  </div>
-                  <div className="text-sm text-primary-foreground/90 leading-relaxed">
-                    <p>
-                      The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
-                    </p>
+                  <div className="grid gap-4 md:grid-cols-2 items-center">
+                    <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
+                      <p>
+                        The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
+                      </p>
+                    </div>
+                    <div className="md:order-2">
+                      <Image
+                        src="/assets/DryingLine/barometric-tower-soap-drying-plant.jpeg"
+                        alt="Barometric Tower"
+                        width={420}
+                        height={220}
+                        className="w-full h-36 object-contain rounded-md p-2"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2360,12 +2364,12 @@ Production Lines"
           <ProductHero
             title="Atomiser / Vacuum Spray Chamber for Soap Drying Systems"
             description="High-efficiency vacuum spray drying chamber for converting liquid neat soap into solid, cooled soap within seconds."
-            video="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"
+            video="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.jpg"
           />
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                 Advanced Vacuum Spray Drying Technology for Soap Manufacturing
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2398,7 +2402,7 @@ Production Lines"
               </div>
               <div className=" overflow-hidden  p-5 md:p-6">
                 <Image
-                  src="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"
+                  src="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.jpg"
                   alt="Soap Atomiser / Vacuum Spray Chamber Process"
                   width={600}
                   height={500}
@@ -2505,7 +2509,7 @@ Soap Finishing Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2522,7 +2526,7 @@ Soap Finishing Lines"
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
               <div className=" ">
                 <Image
-                  src="/assets/VerticalStamper/automatic-soap-stamping-machine.png"
+                  src="/assets/VerticalStamper/automatic-soap-stamping-machine.jpeg"
                   alt="Vertical Soap Stamping Machine"
                   width={600}
                   height={500}
@@ -2597,8 +2601,8 @@ Soap Finishing Lines"
               <div className="grid grid-cols-2 gap-4">
                 {[
                   "/assets/VerticalStamper/automatic-soap-press.jpeg",
-                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
-                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
+                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.png",
+                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.png",
                   "/assets/VerticalStamper/bar-soap-stamping-machine.jpg",
                 ].map((img, i) => (
                   <div key={i} className="overflow-hidden p-2">
@@ -2638,7 +2642,7 @@ continuous soap production lines."
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2771,7 +2775,7 @@ efficiency soap finishing lines."
 
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight capitalize">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">

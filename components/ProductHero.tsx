@@ -16,7 +16,7 @@ export default function ProductHero({
   video,
 }: ProductHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
+    <section className="product-hero bg-gradient-to-br from-primary to-primary/80 text-white py-20">
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         <div>
           <p className="uppercase tracking-widest text-white/70 mb-4">
@@ -71,7 +71,7 @@ export default function ProductHero({
               alt={title}
               width={960}
               height={540}
-              className="w-full h-full object-cover aspect-video"
+              className="w-full h-full aspect-video object-contain"
             />
           )}
           <div className="absolute inset-0 -z-10 blur-3xl bg-white/20 rounded-2xl"></div>
