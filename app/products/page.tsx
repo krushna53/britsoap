@@ -136,7 +136,7 @@ export default function AllProductsPage() {
                       )}
                     </div>
                     <div className="px-5 py-5 text-primary-foreground">
-                      <h3 className="text-[17px] font-semibold mb-2 leading-snug capitalize border-b border-accent line-clamp-2 pb-2">
+                      <h3 className="text-[17px]  mb-2 leading-snug capitalize border-b border-accent line-clamp-2 pb-2">
                         {product.title}
                       </h3>
                       <p className="text-[13px] text-primary-foreground/75 leading-relaxed line-clamp-4 mt-2">
