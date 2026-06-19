@@ -66,7 +66,7 @@ export default async function SoapCuttersPage() {
                   <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-accent line-clamp-2 pb-2">
                     {product.title}
                   </h3>
-                  <p className="text-[13px] text-primary-foreground/75 leading-relaxed line-clamp-4 mt-2">
+                  <p className="text-[13px] !text-primary-foreground/75 leading-relaxed line-clamp-4 mt-2">
                     {product.description}
                   </p>
                 </div>

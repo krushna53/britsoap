@@ -173,25 +173,25 @@ export default function ProductPage() {
             </div>
             <div>
               <ul className="space-y-4 text-lg mb-8">
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Dual synchronized sigma blades</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">SS 304 stainless steel body</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Heavy-duty bearing assembly</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Continuous production support</span>
                 </li>
               </ul>
               <div className="text-white/80 leading-relaxed text-lg">
-                <p>
+                <p className="!text-primary-foreground">
                  The Brit Soap Double Sigma Mixer is designed for efficient
         industrial soap manufacturing with synchronized kneading
         and superior material blending.

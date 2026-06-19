@@ -229,7 +229,7 @@ export default function ProductPage() {
                 </ul>
               )} */}
               <div className="text-white/80 leading-relaxed text-lg">
-                <p>
+                <p className="!text-primary-foreground">
            The Brit Soap duplex vacuum plodder is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines. The machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars . It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.
                 </p>
               </div>

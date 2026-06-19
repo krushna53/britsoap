@@ -158,7 +158,7 @@ export default async function CategoryPage({
                     <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-[#e21e2d] line-clamp-2">
                       {productTitle}
                     </h3>
-                    <p className="text-[13px] text-primary-foreground/75 leading-relaxed line-clamp-4">
+                    <p className="text-[13px] !text-primary-foreground/75 leading-relaxed line-clamp-4">
                       {productDesc}
                     </p>
                   </div>
