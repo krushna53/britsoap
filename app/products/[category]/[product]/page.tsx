@@ -690,7 +690,7 @@ export default async function ProductDetailPage({
               <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
                 {localCategory.title}
               </h2>
-              <h1 className="text-4xl font-bold text-primary-foreground capitalize">
+              <h1 className="text-3xl md:text-4xl font-semibold text-primary-foreground capitalize">
                 {localProduct.title}
               </h1>
             </div>
@@ -709,7 +709,7 @@ export default async function ProductDetailPage({
               </div>
 
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-4">
                   {localProduct.title}
                 </h2>
 
@@ -752,9 +752,9 @@ export default async function ProductDetailPage({
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -767,7 +767,7 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Saponification Crutcher
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -836,7 +836,7 @@ export default async function ProductDetailPage({
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -884,9 +884,9 @@ production."
             video={templateData.video}
           />
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -911,7 +911,7 @@ production."
                 />
               </div>
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Saponification Jet | Instant Soap Making System with Venturi Technology
 
                 </h2>
@@ -956,7 +956,7 @@ production."
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Engineering and Construction
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -998,7 +998,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Uses and Benefits
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1063,9 +1063,9 @@ production."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1121,7 +1121,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Construction &amp; Functional Advantages
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1181,7 +1181,7 @@ production."
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Key Features, Highlights &amp; Applications
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1347,9 +1347,9 @@ production."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1416,7 +1416,7 @@ production."
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1fr_1fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-6">
                   Key Benefits &amp; Functional Highlights
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1610,7 +1610,7 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
                 <h2 className="text-2xl md:text-3xl text-primary leading-tight capitalize">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
@@ -1695,7 +1695,7 @@ Production Lines"
                       alt="Rotary stamping die machine"
                       width={420}
                       height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
+                      className="h-[180px] md:h-[220px] w-full"
                     />
                     <Image
                       src="/assets/RotaryStamper/industrial-soap-bar-stamping.jpg"
@@ -1713,7 +1713,7 @@ Production Lines"
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-6">
                   Key Benefits &amp; Functional Highlights
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1772,8 +1772,8 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                 Powder Separators for Soap Drying Systems
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1787,7 +1787,7 @@ Production Lines"
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-4">
                   Efficient Dust Removal Process in Soap Drying Systems
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -1855,7 +1855,7 @@ Production Lines"
                     alt="Soap drying filtration system"
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                    className="h-[220px] md:h-[260px] w-full object-contain"
                   />
                 </div>
               </div>
@@ -1875,7 +1875,7 @@ Production Lines"
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-4">
                   Robust Engineering & Durable Construction
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1917,7 +1917,7 @@ Production Lines"
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-4">
                   Ideal for Soap Manufacturing Plants – Key Benefits
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2001,9 +2001,9 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   High-Performance Heat Exchanger for Liquid Soap Processing
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2021,7 +2021,7 @@ Production Lines"
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Advanced Heat Transfer &amp; Precise Temperature Control
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2085,7 +2085,7 @@ Production Lines"
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Robust Stainless Steel Construction &amp; Safety Engineering
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2124,7 +2124,7 @@ Production Lines"
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2192,9 +2192,9 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Integrated Vacuum System for Efficient Soap Drying
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2314,7 +2314,7 @@ Production Lines"
             <div className="container">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Applications & Key Benefits</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">Applications & Key Benefits</h3>
                   <div className="text-muted-foreground leading-relaxed space-y-5">
                     <div>
                       <p className="font-semibold text-gray-900 mb-2">Ideal for:</p>
@@ -2338,7 +2338,7 @@ Production Lines"
                 </div>
 
                 <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h4 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Barometric Tower for Vacuum System Integration</h4>
+                  <h4 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">Barometric Tower for Vacuum System Integration</h4>
                   <p className="text-muted-foreground leading-relaxed">
                     The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
                   </p>
@@ -2368,8 +2368,8 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                 Advanced Vacuum Spray Drying Technology for Soap Manufacturing
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2383,7 +2383,7 @@ Production Lines"
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Process & Functioning</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">Process & Functioning</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     The atomiser operates on a continuous vacuum spray drying process, ensuring rapid moisture removal
@@ -2424,7 +2424,7 @@ Production Lines"
                 />
               </div>
               <div className="space-y-6 order-1 md:order-2">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Engineering & Construction</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">Engineering & Construction</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     Engineered for durability and precision, the atomiser features robust stainless steel
@@ -2447,7 +2447,7 @@ Production Lines"
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-2 items-start">
               <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Applications & Key Benefits</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">Applications & Key Benefits</h3>
                 <div className="text-muted-foreground leading-relaxed space-y-3">
                   <div>
                     <p className="mb-2 pb-2">The atomiser is a versatile component in soap manufacturing, supporting multiple production
@@ -2507,9 +2507,9 @@ Soap Finishing Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2574,7 +2574,7 @@ Soap Finishing Lines"
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-4">
@@ -2641,8 +2641,8 @@ continuous soap production lines."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2707,7 +2707,7 @@ continuous soap production lines."
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-3">
@@ -2774,8 +2774,8 @@ efficiency soap finishing lines."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -2829,7 +2829,7 @@ efficiency soap finishing lines."
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-4">
@@ -2908,7 +2908,7 @@ efficiency soap finishing lines."
         <section className="py-20 bg-slate-50">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-4">
                 {templateData.detailTitle}
               </h2>
               {templateData.detailParagraphs.map((para, i) => (
@@ -2979,7 +2979,7 @@ efficiency soap finishing lines."
           <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
             {category.title}
           </h2>
-          <h1 className="text-4xl font-bold text-primary-foreground capitalize">
+          <h1 className="text-3xl md:text-4xl font-semibold text-primary-foreground capitalize">
             {product.name}
           </h1>
         </div>
@@ -3004,7 +3004,7 @@ efficiency soap finishing lines."
           </div>
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+            <h2 className="text-xl md:text-2xl font-semibold text-primary leading-snug capitalize mb-4">
               {product.name}
             </h2>
 

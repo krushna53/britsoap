@@ -102,7 +102,7 @@ export default function ProductPage() {
               </h2>
 
               {product.detailSection?.description?.map((para, i) => (
-                <p key={i} className="text-gray-600 mb-4 leading-relaxed">
+                <p key={i} className="mb-4">
                   {para}
                 </p>
               ))}
