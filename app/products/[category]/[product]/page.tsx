@@ -801,7 +801,7 @@ export default async function ProductDetailPage({
                     alt="Industrial soap manufacturing setup"
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                    className="h-[220px] md:h-[260px] w-full"
                   />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Image
@@ -809,14 +809,14 @@ export default async function ProductDetailPage({
                       alt="Soap base output from oil and caustic process"
                       width={420}
                       height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
+                      className="h-[180px] md:h-[220px] w-full"
                     />
                     <Image
                       src="/assets/SaponificationCrutcher/neat-soap-production.jpeg"
                       alt="Neat soap production"
                       width={420}
                       height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
+                      className="h-[180px] md:h-[220px] w-full"
                     />
                   </div>
                 </div>
@@ -1687,7 +1687,7 @@ Production Lines"
                     }
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                    className="h-[220px] md:h-[260px] w-full"
                   />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Image
@@ -1702,7 +1702,7 @@ Production Lines"
                       alt="Industrial soap bar stamping"
                       width={420}
                       height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
+                      className="h-[180px] md:h-[220px] w-full"
                     />
                   </div>
                 </div>
@@ -1848,7 +1848,7 @@ Production Lines"
                     alt="Soap drying dust collector"
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                    className="h-[220px] md:h-[260px] w-full object-contain"
                   />
                   <Image
                     src="/assets/DryingLine/soap-drying-filteration.png"
@@ -1870,7 +1870,7 @@ Production Lines"
                   alt="Powder separator unit"
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[480px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[480px] w-full object-contain "
                 />
               </div>
 
@@ -1974,7 +1974,7 @@ Production Lines"
                   alt="Powder separator in drying plant"
                   width={900}
                   height={700}
-                  className="h-[320px] md:h-[480px] w-full object-contain rounded-2xl bg-white"
+                  className="h-[320px] md:h-[480px] w-full object-contain "
                 />
               </div>
             </div>
@@ -2215,11 +2215,11 @@ Production Lines"
                         The Brit Soap Vacuum Booster increases the degree of vacuum available in the spray drying plant by reinforcing the action of the vacuum pump.
                       </p>
                       <ul className="list-disc pl-5 mt-3 space-y-1">
-                        <li>Utilizes steam passing through a venturi tube with a restricted throat</li>
-                        <li>High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
-                        <li>Generates a higher vacuum level than a pump alone</li>
-                        <li>Improves overall system efficiency and drying effectiveness</li>
-                        <li>Designed for continuous industrial operation with robust construction</li>
+                        <li className="break-normal">Utilizes steam passing through a venturi tube with a restricted throat</li>
+                        <li className="break-normal">High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
+                        <li className="break-normal">Generates a higher vacuum level than a pump alone</li>
+                        <li className="break-normal">Improves overall system efficiency and drying effectiveness</li>
+                        <li className="break-normal">Designed for continuous industrial operation with robust construction</li>
                       </ul>
                     </div>
                     <div className="md:order-2">
@@ -2242,11 +2242,11 @@ Production Lines"
                         The Brit Soap water-cooled direct contact type gas condenser efficiently handles hot gases released from drying soap and the steam-operated vacuum booster.
                       </p>
                       <ul className="list-disc pl-5 mt-3 space-y-1">
-                        <li>Cools hot gases, significantly reducing their volume</li>
-                        <li>Lowers the gas load on the vacuum pump, improving energy efficiency</li>
-                        <li>Ensures maximum condensation of condensable vapours into liquid</li>
-                        <li>Reduces non-condensable gases to minimum possible volume</li>
-                        <li>Engineered for reliable performance in high-temperature environments</li>
+                        <li className="break-normal">Cools hot gases, significantly reducing their volume</li>
+                        <li className="break-normal">Lowers the gas load on the vacuum pump, improving energy efficiency</li>
+                        <li className="break-normal">Ensures maximum condensation of condensable vapours into liquid</li>
+                        <li className="break-normal">Reduces non-condensable gases to minimum possible volume</li>
+                        <li className="break-normal">Engineered for reliable performance in high-temperature environments</li>
                       </ul>
                     </div>
                     <div className="md:order-2">
@@ -2269,10 +2269,10 @@ Production Lines"
                         A double-stage liquid ring vacuum pump is used as part of the vacuum generating system.
                       </p>
                       <ul className="list-disc pl-5 mt-3 space-y-1">
-                        <li>Evacuates air and non-condensable gases entering the system</li>
-                        <li>Maintains stable vacuum levels for consistent drying performance</li>
-                        <li>Designed for durability and continuous industrial usage</li>
-                        <li>Supports efficient operation of the overall vacuum system</li>
+                        <li className="break-normal">Evacuates air and non-condensable gases entering the system</li>
+                        <li className="break-normal">Maintains stable vacuum levels for consistent drying performance</li>
+                        <li className="break-normal">Designed for durability and continuous industrial usage</li>
+                        <li className="break-normal">Supports efficient operation of the overall vacuum system</li>
                       </ul>
                     </div>
                     <div className="md:order-2">
@@ -2319,19 +2319,19 @@ Production Lines"
                     <div>
                       <p className="font-semibold text-gray-900 mb-2">Ideal for:</p>
                       <ul className="list-disc pl-5 space-y-1">
-                        <li>Soap spray drying plants</li>
-                        <li>Continuous soap manufacturing lines</li>
-                        <li>High-efficiency drying and moisture removal systems</li>
+                       <li className="break-normal">Soap spray drying plants</li>
+                       <li className="break-normal">Continuous soap manufacturing lines</li>
+                       <li className="break-normal">High-efficiency drying and moisture removal systems</li>
                       </ul>
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 mb-2">Key Benefits:</p>
                       <ul className="list-disc pl-5 space-y-1">
-                        <li>Enhances drying efficiency through improved vacuum levels</li>
-                        <li>Reduces energy consumption by lowering gas load on the pump</li>
-                        <li>Ensures consistent soap quality and moisture control</li>
-                        <li>Improves overall plant reliability and operational stability</li>
-                        <li>Optimizes performance of the entire soap drying line system</li>
+                       <li className="break-normal">Enhances drying efficiency through improved vacuum levels</li>
+                       <li className="break-normal">Reduces energy consumption by lowering gas load on the pump</li>
+                       <li className="break-normal">Ensures consistent soap quality and moisture control</li>
+                       <li className="break-normal">Improves overall plant reliability and operational stability</li>
+                       <li className="break-normal">Optimizes performance of the entire soap drying line system</li>
                       </ul>
                     </div>
                   </div>
@@ -2391,12 +2391,12 @@ Production Lines"
                     discharge within a single integrated system.
                   </p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>The chamber is cylindrical with a centrally mounted rotating shaft</li>
-                    <li>Soap spray nozzle and scraper blades are mounted on the shaft</li>
-                    <li>As the shaft rotates, liquid soap is sprayed onto the chamber walls, where it rapidly solidifies under vacuum</li>
-                    <li>The scraper blades remove the solidified soap from the chamber walls</li>
-                    <li>Soap is then deposited into the infeed throat of the outfeed plodder screw</li>
-                    <li>A bridge breaker is fixed at the bottom of the atomiser to ensure smooth material flow</li>
+                   <li className="break-normal">The chamber is cylindrical with a centrally mounted rotating shaft</li>
+                   <li className="break-normal">Soap spray nozzle and scraper blades are mounted on the shaft</li>
+                   <li className="break-normal">As the shaft rotates, liquid soap is sprayed onto the chamber walls, where it rapidly solidifies under vacuum</li>
+                   <li className="break-normal">The scraper blades remove the solidified soap from the chamber walls</li>
+                   <li className="break-normal">Soap is then deposited into the infeed throat of the outfeed plodder screw</li>
+                   <li className="break-normal">A bridge breaker is fixed at the bottom of the atomiser to ensure smooth material flow</li>
                   </ul>
                 </div>
               </div>
@@ -2432,12 +2432,12 @@ Production Lines"
                     and long service life in industrial environments.
                   </p>
                   <ul className="space-y-2 list-disc pl-5">
-                    <li>Chamber designed for vacuum-based rapid drying and efficient heat transfer</li>
-                    <li>Gland packing installed on the shaft on both soap side and vacuum side for sealing</li>
-                    <li>Equipped with a large bottom door for easy entry and maintenance inspection</li>
-                    <li>Includes two sight glasses with wipers (top and bottom) for real-time monitoring</li>
-                    <li>Contact parts made in AISI 304 stainless steel, including the duct connecting to the powder separator</li>
-                    <li>Built for durability, hygiene, and continuous industrial operation</li>
+                   <li className="break-normal">Chamber designed for vacuum-based rapid drying and efficient heat transfer</li>
+                   <li className="break-normal">Gland packing installed on the shaft on both soap side and vacuum side for sealing</li>
+                   <li className="break-normal">Equipped with a large bottom door for easy entry and maintenance inspection</li>
+                   <li className="break-normal">Includes two sight glasses with wipers (top and bottom) for real-time monitoring</li>
+                   <li className="break-normal">Contact parts made in AISI 304 stainless steel, including the duct connecting to the powder separator</li>
+                   <li className="break-normal">Built for durability, hygiene, and continuous industrial operation</li>
                   </ul>
                 </div>
               </div>
@@ -2455,20 +2455,20 @@ Production Lines"
                       productivity and product consistency across the drying line</p>
                     <p className="font-semibold text-gray-900 mb-3 text-lg">Used for:</p>
                     <ul className="space-y-2 list-disc pl-5">
-                      <li>Converting liquid neat soap into solid soap base or noodles</li>
-                      <li>Integration with simplex refiner for toilet, laundry, or multipurpose soap noodles</li>
-                      <li>Direct connection to duplex vacuum plodder for finished soap bar extrusion</li>
-                      <li>Suitable for continuous soap drying and finishing lines</li>
+                    <li className="break-normal">Converting liquid neat soap into solid soap base or noodles</li>
+                    <li className="break-normal">Integration with simplex refiner for toilet, laundry, or multipurpose soap noodles</li>
+                    <li className="break-normal">Direct connection to duplex vacuum plodder for finished soap bar extrusion</li>
+                    <li className="break-normal">Suitable for continuous soap drying and finishing lines</li>
                     </ul>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-3 text-lg">Key Benefits:</p>
                     <ul className="space-y-2 list-disc pl-5">
-                      <li>Rapid drying within seconds under controlled vacuum conditions</li>
-                      <li>Ensures consistent product quality and uniform moisture removal</li>
-                      <li>Supports flexible production (noodles or finished bars)</li>
-                      <li>Enhances overall plant efficiency and throughput</li>
-                      <li>Available in capacities ranging from 1 ton/hr to 4 tons/hr</li>
+                    <li className="break-normal">Rapid drying within seconds under controlled vacuum conditions</li>
+                    <li className="break-normal">Ensures consistent product quality and uniform moisture removal</li>
+                    <li className="break-normal">Supports flexible production (noodles or finished bars)</li>
+                    <li className="break-normal">Enhances overall plant efficiency and throughput</li>
+                    <li className="break-normal">Available in capacities ranging from 1 ton/hr to 4 tons/hr</li>
                     </ul>
                   </div>
                 </div>
@@ -2691,9 +2691,9 @@ continuous soap production lines."
                 <div className="bg-slate-50 p-6 rounded-2xl border border-border">
                   <p className="font-semibold text-primary mb-3">The stamping system includes:</p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>6 precision brass punches (top, bottom, and four sides)</li>
-                    <li>Integrated cooling galleries to prevent sticking and ensure clean release</li>
-                    <li>A high-grade alloy mould for extended service life and consistent dimensional accuracy</li>
+                    <li className="break-normal">6 precision brass punches (top, bottom, and four sides)</li>
+                    <li className="break-normal">Integrated cooling galleries to prevent sticking and ensure clean release</li>
+                    <li className="break-normal">A high-grade alloy mould for extended service life and consistent dimensional accuracy</li>
                   </ul>
                 </div>
                 <p>
@@ -2743,7 +2743,7 @@ continuous soap production lines."
                       alt={`6F Stamper Feature ${i + 1}`}
                       width={400}
                       height={300}
-                      className="w-full h-32 md:h-48 object-contain rounded-xl bg-white"
+                      className="w-full h-32 md:h-48 object-contain"
                     />
                   </div>
                 ))}
@@ -2863,7 +2863,7 @@ efficiency soap finishing lines."
                       alt={`Laundry Stamper Feature ${i + 1}`}
                       width={400}
                       height={300}
-                      className="w-full h-40 md:h-56 object-contain rounded-xl bg-white"
+                      className="w-full h-40 md:h-56 object-contain"
                     />
                   </div>
                 ))}
