@@ -14,7 +14,7 @@ type Props = {
 
 export default function HomeCTA({ data }: Props) {
   return (
-    <section className="py-20 bg-primary">
+    <section className="cta-section py-20 bg-primary">
       <div className="container text-center">
 
         <motion.h2

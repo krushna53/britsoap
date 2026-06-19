@@ -16,9 +16,9 @@ export default function CTASection({
   showSecondaryButton = true,
 }: CTASectionProps & { showSecondaryButton?: boolean }) {
   return (
-    <section className="py-20 bg-primary text-white text-center">
+    <section className="cta-section py-20 bg-primary text-white text-center">
       <div className="container">
-        <h2 className="text-4xl md:text-[40px] mb-6 leading-tight capitalize">
+        <h2 className="text-4xl md:text-[35px] font-bold mb-6 leading-tight capitalize">
           {title}
         </h2>
 

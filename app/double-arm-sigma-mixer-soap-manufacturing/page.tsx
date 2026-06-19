@@ -177,15 +177,15 @@ export default function ProductPage() {
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Dual synchronized sigma blades</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">SS 304 stainless steel body</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Heavy-duty bearing assembly</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Continuous production support</span>
                 </li>

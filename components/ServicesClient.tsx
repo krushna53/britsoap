@@ -196,7 +196,7 @@ export default function ServicesClient({ services }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary">
+      <section className="dark-section py-20 bg-primary">
         <div className="container text-center">
           <h2 className="text-3xl font-bold text-primary-foreground mb-4">
             Need a Custom Solution?
