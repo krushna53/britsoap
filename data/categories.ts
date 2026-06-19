@@ -132,7 +132,7 @@ const localProducts: Record<string, LocalProduct> = {
     title: "Vertical Stamper",
     description:
       "An advanced vertical stamping system engineered for precision alignment and superior surface finish, especially for premium soap bars. Suitable for high-end toilet soap production and automated finishing lines.",
-    detailSection: { images: ["/assets/VerticalStamper/automatic-soap-stamping-machine.png"] },
+    detailSection: { images: ["/assets/VerticalStamper/automatic-soap-stamping-machine.jpeg"] },
     comingSoon: false,
   },
   "six-face-soap-stamper": {
@@ -197,7 +197,7 @@ const localProducts: Record<string, LocalProduct> = {
     description:
       "The atomiser / vacuum spray chamber converts liquid soap into dried, solid form within seconds by spraying it under controlled vacuum conditions. This ensures uniform drying, consistent quality, and smooth integration with refining or plodding equipment.",
     detailSection: {
-      images: ["/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.png"],
+      images: ["/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.jpg"],
     },
     comingSoon: false,
   },
@@ -206,7 +206,7 @@ const localProducts: Record<string, LocalProduct> = {
     title: "Soap Press / Soap Stampers",
     description:
       "Stamping systems that shape, compress, and emboss soap bars to deliver finished geometry and brand identity.",
-    detailSection: { images: ["/category-media/soap-stampers/overview.jpeg"] },
+    detailSection: { images: ["/category-media/soap-stampers/soap-stamping-machine.png"] },
     comingSoon: true,
   },
   "soap-cutters": {

@@ -9,12 +9,12 @@ export default function RefinerIntro({ title, paragraphs }: Props) {
       <div className="container max-w-5xl mx-auto px-6">
 
         {/* TITLE */}
-        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-left">
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
           {title}
         </h2>
 
         {/* CONTENT */}
-        <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed text-left">
+        <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed text-center">
           {paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}

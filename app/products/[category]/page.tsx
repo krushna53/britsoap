@@ -134,10 +134,10 @@ export default async function CategoryPage({
                 <Link
                   key={`${product.slug}-${i}`}
                   href={productLink}
-                  className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 h-101.25"
+                  className="group bg-primary rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col w-full max-w-95 min-h-101.25"
                 >
                   {/* Image */}
-                  <div className="bg-white m-4 mb-0 overflow-hidden border border-border">
+                  <div className="m-4 mb-0">
                     {productImg ? (
                       <Image
                         src={productImg}

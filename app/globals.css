@@ -16,6 +16,10 @@
   --color-background: #ffffff;
   --color-foreground: #111111;
 
+  /* Soft section surfaces (used to break up plain white blocks) */
+  --color-surface: #f4f6fb;     /* very light blue-grey tint of brand */
+  --color-surface-blue: #eef1fa; /* slightly stronger blue tint */
+
   --color-border: #e5e7eb;
   --color-muted: #f5f5f5;
 
@@ -30,11 +34,25 @@
 
 /* Base styles */
 @layer base {
+  html,
+  body {
+    /* Prevent any stray element from causing sideways scroll on any device */
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Media should never exceed its column on small screens */
+  img,
+  video,
+  svg {
+    max-width: 100%;
   }
 
   h1,
@@ -62,9 +80,32 @@
 }
 
 .container {
+  width: 100%;
+  max-width: var(--breakpoint-2xl);
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  /* Tighter gutters on phones so nothing gets squeezed or cut off */
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
-
+
+@media (min-width: 640px) {
+  .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/*
+ * Product banner keeps its full size on wide screens (>= 1320px).
+ * Below 1320px we ONLY shrink the heading (the biggest space-eater, esp.
+ * for long titles) so the bottom button stays visible. The space between
+ * the description and the button is left untouched on purpose.
+ */
+@media (max-width: 1320px) {
+  .product-hero h1 {
+    font-size: 2.05rem;
+    line-height: 1.12;
+  }
+}
+

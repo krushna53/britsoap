@@ -11,9 +11,9 @@ const Footer = () => {
     { name: "Finishing Line", path: "/products/finishing-line" },
     { name: "Soap Cutters", path: "/soap-cutters" },
     { name: "Soap Stampers", path: "/products/soap-stampers" },
-    { name: "Wrapping", path: null },
-    { name: "Pneumatic Transport", path: null },
-    { name: "Detergent Plants", path: null },
+    // { name: "Wrapping", path: null },
+    // { name: "Pneumatic Transport", path: null },
+    // { name: "Detergent Plants", path: null },
   ];
 
   return (

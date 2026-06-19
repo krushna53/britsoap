@@ -107,7 +107,7 @@ const Navbar = () => {
   const isActive = (path: string) => pathname === (path === "" ? "/" : path);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background">
       <div className="container flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
         <Link href={`/`} className="flex items-center gap-2">
@@ -154,7 +154,7 @@ const Navbar = () => {
                   </span>
 
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[1100px] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[1100px] max-w-[calc(100vw-2rem)] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
 
                     {/* Columns */}
                     <div className="grid grid-cols-5 gap-0 p-2">
@@ -256,6 +256,9 @@ const Navbar = () => {
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
+
+      {/* Decorative brand band — demarcates the header */}
+      <div className="h-0.75 w-full bg-accent" />
 
       {/* Mobile Menu */}
       <AnimatePresence>

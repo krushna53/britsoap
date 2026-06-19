@@ -16,14 +16,14 @@ export default function ProductHero({
   video,
 }: ProductHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-primary to-primary/80 text-white py-20">
+    <section className="product-hero bg-gradient-to-br from-primary to-primary/80 text-white py-20">
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         <div>
           <p className="uppercase tracking-widest text-white/70 mb-4">
             BRIT SOAP MACHINERY
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 capitalize">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-6 capitalize">
             {title}
           </h1>
 
@@ -54,8 +54,11 @@ export default function ProductHero({
           </div>
         </div>
 
-        <div className="relative w-full h-full">
-          {video && (video.endsWith(".mp4") || video.endsWith(".mov") || video.endsWith(".webm")) ? (
+        <div className="relative w-full h-full flex justify-center m-auto">
+          {video &&
+          (video.endsWith(".mp4") ||
+            video.endsWith(".mov") ||
+            video.endsWith(".webm")) ? (
             <video
               id="product-video"
               src={video}
@@ -66,13 +69,15 @@ export default function ProductHero({
               className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
             />
           ) : (
-            <Image
-              src={video || "/placeholder.png"}
-              alt={title}
-              width={960}
-              height={540}
-              className="w-full h-full object-cover aspect-video"
-            />
+            <div className="relative flex items-center justify-center h-100 w-100 overflow-hidden">
+              <Image
+                src={video || "/placeholder.png"}
+                alt={title}
+                width={800}
+                height={800}
+                className="max-h-full max-w-full object-contain rounded-2xl"
+              />
+            </div>
           )}
           <div className="absolute inset-0 -z-10 blur-3xl bg-white/20 rounded-2xl"></div>
         </div>

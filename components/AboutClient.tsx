@@ -75,7 +75,7 @@ export default function AboutClient({ data }: Props) {
 
             <motion.h1
               variants={fadeUp}
-              className="text-5xl md:text-6xl font-extrabold text-primary-foreground leading-[1.08] mb-6"
+              className="text-4xl md:text-5xl font-extrabold text-primary-foreground leading-[1.08] mb-6"
             >
               {hero.heading}
             </motion.h1>
