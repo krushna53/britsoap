@@ -2526,11 +2526,11 @@ Soap Finishing Lines"
             <div className="container grid gap-10 md:grid-cols-[0.8fr_1.2fr] items-center">
               <div className=" ">
                 <Image
-                  src="/assets/VerticalStamper/automatic-soap-stamping-machine.jpeg"
+                  src="/assets/VerticalStamper/automatic-soap-stamping-machine.png"
                   alt="Vertical Soap Stamping Machine"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain bg-white"
+                  className="w-full h-auto object-contain"
                 />
               </div>
 
@@ -2601,8 +2601,8 @@ Soap Finishing Lines"
               <div className="grid grid-cols-2 gap-4">
                 {[
                   "/assets/VerticalStamper/automatic-soap-press.jpeg",
-                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.png",
-                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.png",
+                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
+                  "/assets/VerticalStamper/soap-die-soap-stamping-machine.jpeg",
                   "/assets/VerticalStamper/bar-soap-stamping-machine.jpg",
                 ].map((img, i) => (
                   <div key={i} className="overflow-hidden p-2">
@@ -2611,7 +2611,7 @@ Soap Finishing Lines"
                       alt={`Vertical Stamper Feature ${i + 1}`}
                       width={400}
                       height={300}
-                      className="w-full h-32 md:h-40 object-contain rounded-xl bg-white"
+                      className="w-full h-32 md:h-40 object-contain"
                     />
                   </div>
                 ))}
