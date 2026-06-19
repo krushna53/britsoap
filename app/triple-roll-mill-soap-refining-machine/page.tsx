@@ -82,7 +82,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -103,7 +103,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -177,7 +177,7 @@ export default function ProductPage() {
             </div>
             <div>
               {/* {product.importance && (
-                <ul className="space-y-4 text-lg mb-8">
+                <ul className="space-y-4 text-base mb-8">
                   {product.importance.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4">
                       <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
@@ -186,7 +186,7 @@ export default function ProductPage() {
                   ))}
                 </ul>
               )} */}
-              <div className="text-white/80 leading-relaxed text-lg">
+              <div className="text-white/80 leading-relaxed text-base">
                 <p>
 The Brit Soap triple roll mill is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines, ensuring perfect homogenisation and uniform distribution of colours, fragrances, and additives giving the final soap a smooth texture. It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.
 

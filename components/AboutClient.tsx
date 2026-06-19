@@ -296,7 +296,7 @@ export default function AboutClient({ data }: Props) {
                 <h3 className="text-xl font-bold text-primary mb-2 leading-snug">
                   {title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {desc}
                 </p>
               </motion.div>

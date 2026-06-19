@@ -27,7 +27,7 @@ export default function ProductHero({
             {title}
           </h1>
 
-          <p className="text-white/80 text-lg mb-8 max-w-xl">{description}</p>
+          <p className="text-white/80 text-base mb-8 max-w-xl">{description}</p>
 
           <div className="flex gap-4">
             <Link

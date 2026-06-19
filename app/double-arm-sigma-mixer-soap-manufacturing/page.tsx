@@ -145,7 +145,7 @@ export default function ProductPage() {
       >
         <div className="max-w-4xl mx-auto">
           <div className=" rounded-2xl p-8 md:p-10">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
+            <p className="text-white/80 text-base leading-relaxed mb-8 text-left">
               {product.applicationDescription}
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function ProductPage() {
               )}
             </div>
             <div>
-              <ul className="space-y-4 text-lg mb-8">
+              <ul className="space-y-4 text-base mb-8">
                 <li className="flex items-start gap-4">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Dual synchronized sigma blades</span>
@@ -190,7 +190,7 @@ export default function ProductPage() {
                   <span className="flex-1">Continuous production support</span>
                 </li>
               </ul>
-              <div className="text-white/80 leading-relaxed text-lg">
+              <div className="text-white/80 leading-relaxed text-base">
                 <p>
                  The Brit Soap Double Sigma Mixer is designed for efficient
         industrial soap manufacturing with synchronized kneading

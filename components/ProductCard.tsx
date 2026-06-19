@@ -22,7 +22,7 @@ export default function ProductCard({ title, description, image, href }: Props) 
       </div>
       <div className="flex-1 p-5 text-left">
         <h3 className="text-base font-bold text-primary mb-2 leading-snug">{title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+        <p className="text-base text-muted-foreground leading-relaxed">{description}</p>
         {/* {href && (
           <span className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-accent uppercase tracking-wider">
             Learn More
