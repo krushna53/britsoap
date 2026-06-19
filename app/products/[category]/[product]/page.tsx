@@ -1855,7 +1855,7 @@ Production Lines"
                     alt="Soap drying filtration system"
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl bg-white"
+                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl"
                   />
                 </div>
               </div>
@@ -2211,15 +2211,15 @@ Production Lines"
                   <h3 className="text-xl font-semibold mb-3">Vacuum Booster</h3>
                   <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
-                      <p>
+                      <p className="!text-primary-foreground">
                         The Brit Soap Vacuum Booster increases the degree of vacuum available in the spray drying plant by reinforcing the action of the vacuum pump.
                       </p>
                       <ul className="list-disc pl-5 mt-3 space-y-1">
-                        <li className="break-normal">Utilizes steam passing through a venturi tube with a restricted throat</li>
-                        <li className="break-normal">High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
-                        <li className="break-normal">Generates a higher vacuum level than a pump alone</li>
-                        <li className="break-normal">Improves overall system efficiency and drying effectiveness</li>
-                        <li className="break-normal">Designed for continuous industrial operation with robust construction</li>
+                        <li className="break-normal !text-primary-foreground">Utilizes steam passing through a venturi tube with a restricted throat</li>
+                        <li className="break-normal !text-primary-foreground">High-velocity steam flow pulls gases out of the vacuum spray chamber</li>
+                        <li className="break-normal !text-primary-foreground">Generates a higher vacuum level than a pump alone</li>
+                        <li className="break-normal !text-primary-foreground">Improves overall system efficiency and drying effectiveness</li>
+                        <li className="break-normal !text-primary-foreground">Designed for continuous industrial operation with robust construction</li>
                       </ul>
                     </div>
                     <div className="md:order-2">
@@ -2238,15 +2238,15 @@ Production Lines"
                   <h3 className="text-xl font-semibold mb-3">Condenser</h3>
                   <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
-                      <p>
+                      <p className="!text-primary-foreground">
                         The Brit Soap water-cooled direct contact type gas condenser efficiently handles hot gases released from drying soap and the steam-operated vacuum booster.
                       </p>
                       <ul className="list-disc pl-5 mt-3 space-y-1">
-                        <li className="break-normal">Cools hot gases, significantly reducing their volume</li>
-                        <li className="break-normal">Lowers the gas load on the vacuum pump, improving energy efficiency</li>
-                        <li className="break-normal">Ensures maximum condensation of condensable vapours into liquid</li>
-                        <li className="break-normal">Reduces non-condensable gases to minimum possible volume</li>
-                        <li className="break-normal">Engineered for reliable performance in high-temperature environments</li>
+                        <li className="break-normal !text-primary-foreground">Cools hot gases, significantly reducing their volume</li>
+                        <li className="break-normal !text-primary-foreground">Lowers the gas load on the vacuum pump, improving energy efficiency</li>
+                        <li className="break-normal !text-primary-foreground">Ensures maximum condensation of condensable vapours into liquid</li>
+                        <li className="break-normal !text-primary-foreground">Reduces non-condensable gases to minimum possible volume</li>
+                        <li className="break-normal !text-primary-foreground">Engineered for reliable performance in high-temperature environments</li>
                       </ul>
                     </div>
                     <div className="md:order-2">
@@ -2265,14 +2265,14 @@ Production Lines"
                   <h3 className="text-xl font-semibold mb-3">Vacuum Pump</h3>
                   <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
-                      <p>
+                      <p className="!text-primary-foreground">
                         A double-stage liquid ring vacuum pump is used as part of the vacuum generating system.
                       </p>
                       <ul className="list-disc pl-5 mt-3 space-y-1">
-                        <li className="break-normal">Evacuates air and non-condensable gases entering the system</li>
-                        <li className="break-normal">Maintains stable vacuum levels for consistent drying performance</li>
-                        <li className="break-normal">Designed for durability and continuous industrial usage</li>
-                        <li className="break-normal">Supports efficient operation of the overall vacuum system</li>
+                        <li className="break-normal !text-primary-foreground">Evacuates air and non-condensable gases entering the system</li>
+                        <li className="break-normal !text-primary-foreground">Maintains stable vacuum levels for consistent drying performance</li>
+                        <li className="break-normal !text-primary-foreground">Designed for durability and continuous industrial usage</li>
+                        <li className="break-normal !text-primary-foreground">Supports efficient operation of the overall vacuum system</li>
                       </ul>
                     </div>
                     <div className="md:order-2">
@@ -2291,7 +2291,7 @@ Production Lines"
                   <h3 className="text-xl font-semibold mb-3">Barometric Tower</h3>
                   <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] items-center">
                     <div className="text-sm text-primary-foreground/90 leading-relaxed md:order-1">
-                      <p>
+                      <p className="!text-primary-foreground">
                         The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
                       </p>
                     </div>
@@ -2513,10 +2513,10 @@ Soap Finishing Lines"
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling
-                  irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a
-                  significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality
-                  soap production.
+                 Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling
+                irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a
+                significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality
+                soap production.
                 </p>
               </div>
             </div>
@@ -2646,10 +2646,7 @@ continuous soap production lines."
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped
-                cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern,
-                high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more
-                durable, automated, and precision-driven approach.
+                The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern, high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more durable, automated, and precision-driven approach.
               </p>
             </div>
           </section>

@@ -48,7 +48,7 @@ export default function AboutClient({ data }: Props) {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-primary min-h-[52vh] flex items-center">
+      <section className="dark-section relative overflow-hidden bg-primary min-h-[52vh] flex items-center">
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
@@ -90,7 +90,7 @@ export default function AboutClient({ data }: Props) {
         </div>
       </section>
 
-      <section className="bg-accent">
+      <section className="dark-section bg-accent">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-accent-foreground/20">
             {stats.map(({ value, label }, i) => (

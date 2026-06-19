@@ -19,7 +19,7 @@ type Props = {
 
 export default function ServicesPreview({ services }: Props) {
   return (
-    <section className="pt-20 pb-0 bg-primary">
+    <section className="dark-section pt-20 pb-0 bg-primary">
       <div className="w-full">
 
         <div className="text-center mb-12 container">

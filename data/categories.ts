@@ -132,7 +132,7 @@ const localProducts: Record<string, LocalProduct> = {
     title: "Vertical Stamper",
     description:
       "An advanced vertical stamping system engineered for precision alignment and superior surface finish, especially for premium soap bars. Suitable for high-end toilet soap production and automated finishing lines.",
-    detailSection: { images: ["/assets/VerticalStamper/automatic-soap-stamping-machine.jpeg"] },
+    detailSection: { images: ["/assets/VerticalStamper/automatic-soap-stamping-machine.png"] },
     comingSoon: false,
   },
   "six-face-soap-stamper": {

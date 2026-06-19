@@ -238,23 +238,23 @@ export default function ProductPage() {
             </div>
             <div>
               <ul className="space-y-4 text-lg mb-8">
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Uniform billet formation</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Toilet soap production</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Laundry soap production</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">Syndet soap applications</span>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-4 !text-primary-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
                   <span className="flex-1">
                     Consistent downstream processing
@@ -262,7 +262,7 @@ export default function ProductPage() {
                 </li>
               </ul>
               <div className="text-white/80 leading-relaxed text-lg">
-                <p>
+                <p className="!text-primary-foreground">
                   Designed for continuous soap refining and extrusion before
                   final finishing processes.
                 </p>

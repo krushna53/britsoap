@@ -27,7 +27,7 @@ export default function Hero({ hero }: HeroProps) {
     fullUrl?.endsWith(".ogg");
 
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] py-20 flex items-center justify-center overflow-hidden">
+    <section className="hero-banner relative min-h-[calc(100vh-5rem)] py-20 flex items-center justify-center overflow-hidden">
       {isVideo ? (
         <video
           autoPlay

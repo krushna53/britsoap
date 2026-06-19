@@ -184,7 +184,7 @@ export default function ProductPage() {
                       </div>
 
                       {/* TEXT */}
-                      <p className="text-gray-800 leading-relaxed font-medium">
+                      <p className="">
                         {item}
                       </p>
                     </div>
@@ -257,7 +257,7 @@ export default function ProductPage() {
               </p>
             ))
           ) : (
-            <p className="text-[lab(27.1134_-0.956401_-12.3224)] text-sm sm:text-base md:text-lg leading-relaxed font-light">
+            <p className="">
               {product.applicationDescription}
             </p>
           )}
