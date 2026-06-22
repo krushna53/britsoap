@@ -34,7 +34,7 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { name: "Home", path: "" },
+  { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   {
@@ -258,6 +258,7 @@ const Navbar = () => {
       </div>
 
       {/* Decorative brand band — demarcates the header */}
+      <div className="h-[0.15rem] w-full bg-primary" />
       <div className="h-0.75 w-full bg-accent" />
 
       {/* Mobile Menu */}
