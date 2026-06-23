@@ -9,7 +9,7 @@ export default function RefinerIntro({ title, paragraphs }: Props) {
       <div className="container max-w-5xl mx-auto px-6">
 
         {/* TITLE */}
-        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+        <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-6 text-center">
           {title}
         </h2>
 

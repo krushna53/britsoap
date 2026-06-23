@@ -35,7 +35,7 @@ export default async function CategoryPage({
       {/* 🔹 Hero */}
       <section className="pt-20 pb-6 bg-background">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left capitalize">
+          <h1 className="text-3xl md:text-4xl font-midium text-primary text-left capitalize">
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
@@ -72,7 +72,7 @@ export default async function CategoryPage({
               </p>
             ))}
           </div>
-          {slug !== "soap-stampers" && slug !== "finishing-line" && (
+          {slug !== "soap-stampers" && (
             <div>
               <Image
                 src={
@@ -85,7 +85,7 @@ export default async function CategoryPage({
                 height={560}
                 className={`w-full ${slug === "drying-line"
                   ? "h-[380px] md:h-[460px]"
-                  : "h-[280px] md:h-[340px]"
+                  : "h-[280px] md:h-full"
                   } rounded-2xl ${slug === "saponification" || slug === "drying-line"
                     ? "object-contain"
                     : "object-cover"

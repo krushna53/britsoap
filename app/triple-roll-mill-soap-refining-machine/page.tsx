@@ -78,7 +78,7 @@ export default function ProductPage() {
       {product.processSteps?.length && (
         <section className="py-20 bg-gray-50 text-center">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-4 capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4">
               {product.processTitle}
             </h2>
 

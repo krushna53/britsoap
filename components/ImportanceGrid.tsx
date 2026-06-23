@@ -33,7 +33,7 @@ export default function ImportanceGrid({
 
         {/* TITLE */}
         {title && (
-          <h2 className="text-3xl font-bold text-primary mb-4">
+          <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4">
             {title}
           </h2>
         )}

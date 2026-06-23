@@ -70,6 +70,7 @@ export default function ProductHero({
             />
           ) : (
             <div className="relative flex items-center justify-center h-100 w-100 overflow-hidden">
+              
               <Image
                 src={video || "/placeholder.png"}
                 alt={title}

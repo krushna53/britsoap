@@ -164,11 +164,11 @@ const Navbar = () => {
                           className="p-4 border-r border-border last:border-r-0"
                         >
                           {col.path ? (
-                            <Link href={col.path} className="block text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border hover:text-accent transition-colors">
+                            <Link href={col.path} className="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border hover:text-accent transition-colors">
                               {col.category}
                             </Link>
                           ) : (
-                            <p className="text-xs font-bold capitalize tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border">
+                            <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border">
                               {col.category}
                             </p>
                           )}
@@ -177,7 +177,7 @@ const Navbar = () => {
                               <Link
                                 key={ii}
                                 href={item.path}
-                                className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 py-1"
+                                className="block text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all duration-150 uppercase py-1"
                               >
                                 {item.name}
                               </Link>

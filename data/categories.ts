@@ -74,7 +74,7 @@ export const categories = [
     intro: [
       "The soap finishing line is the final and most quality-critical stage where soap mass is transformed into smooth, refined, and precisely shaped bars ready for packaging. By combining mixing, milling, plodding, cutting, and stamping equipment, the line ensures consistent appearance, structural integrity, and strong brand identity.",
     ],
-    introImage: "/category-media/finishing-line/overview.jpg",
+    introImage: "/category-media/finishing-line/finishing.png",
     products: [
       "double-arm-sigma-mixer-soap-manufacturing",
       "triple-roll-mill-soap-refining-machine",
