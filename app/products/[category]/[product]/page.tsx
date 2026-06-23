@@ -690,7 +690,7 @@ export default async function ProductDetailPage({
               <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
                 {localCategory.title}
               </h2>
-              <h1 className="text-4xl font-bold text-primary-foreground capitalize">
+              <h1 className="text-3xl md:text-4xl font-semibold text-primary-foreground capitalize">
                 {localProduct.title}
               </h1>
             </div>
@@ -709,7 +709,7 @@ export default async function ProductDetailPage({
               </div>
 
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-4">
                   {localProduct.title}
                 </h2>
 
@@ -717,7 +717,7 @@ export default async function ProductDetailPage({
                   {localProduct.description}
                 </p>
 
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-base text-muted-foreground mb-4">
                   Detailed specifications, capacity options, and technical diagrams
                   will be published shortly.
                 </p>
@@ -752,12 +752,12 @@ export default async function ProductDetailPage({
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Saponification Crutcher is a critical reaction vessel designed for the semi-boiled soap manufacturing process, enabling precise mixing of fatty acids, caustic soda, brine, and water. Engineered for efficiency, it ensures uniform reaction, optimal cycle times, and consistent soap quality. Ideal for both soap production and additive blending applications.
                 </p>
               </div>
@@ -767,7 +767,7 @@ export default async function ProductDetailPage({
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Saponification Crutcher
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -836,7 +836,7 @@ export default async function ProductDetailPage({
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -884,12 +884,12 @@ production."
             video={templateData.video}
           />
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Saponification Jet is an advanced, no-moving-parts system designed for instant soap
                   production using steam energy. Utilizing venturi vacuum technology, it enables rapid mixing of
                   caustic liquor and oils, delivering up to 90% reacted neat soap directly from the unit. Ideal
@@ -911,7 +911,7 @@ production."
                 />
               </div>
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Saponification Jet | Instant Soap Making System with Venturi Technology
 
                 </h2>
@@ -936,7 +936,7 @@ production."
                   </p>
                   <div className="bg-slate-50 p-5 rounded-xl border border-border/50">
                     <p className="font-semibold text-primary mb-2">Concentric Barrel Design For:</p>
-                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                    <ul className="list-disc pl-5 space-y-1">
                       <li>Caustic liquor (alkali)</li>
                       <li>Oils / fatty materials</li>
                     </ul>
@@ -956,10 +956,10 @@ production."
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Engineering and Construction
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Built for durability and operational efficiency, the Saponification Jet features a
                   robust, no-moving-parts design that minimizes maintenance while ensuring
                   consistent performance. Its precision-engineered components allow for
@@ -998,10 +998,10 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Uses and Benefits
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Saponification Jet enhances production efficiency by significantly reducing reaction time and
                   energy consumption. Its streamlined design supports consistent output quality while lowering
                   operational costs and maintenance requirements.
@@ -1063,12 +1063,12 @@ production."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Manual Pneumatic Stamper is a compact, manually
                   operated soap finishing machine designed for precise stamping
                   of toilet soaps and laundry soaps. Engineered for low-capacity
@@ -1121,7 +1121,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Construction &amp; Functional Advantages
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1181,7 +1181,7 @@ production."
                 />
               </div>
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Key Features, Highlights &amp; Applications
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1347,12 +1347,12 @@ production."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap HRD Stamper is a high-performance soap stamping
                   machine designed to transform continuous soap billets from the
                   plodder into precisely shaped and finished toilet soap bars in
@@ -1416,7 +1416,7 @@ production."
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1fr_1fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-6">
                   Key Benefits &amp; Functional Highlights
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1610,12 +1610,12 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
                 <h2 className="text-2xl md:text-3xl text-primary leading-tight capitalize">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Rotary Soap Stamper is a high-performance
                   horizontal stamping machine engineered for continuous,
                   high-speed soap production lines. Designed with a rotating
@@ -1695,7 +1695,7 @@ Production Lines"
                       alt="Rotary stamping die machine"
                       width={420}
                       height={320}
-                      className="h-[180px] md:h-[220px] w-full object-contain rounded-2xl bg-white"
+                      className="h-[180px] md:h-[220px] w-full"
                     />
                     <Image
                       src="/assets/RotaryStamper/industrial-soap-bar-stamping.jpg"
@@ -1713,7 +1713,7 @@ Production Lines"
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-6">
                   Key Benefits &amp; Functional Highlights
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1772,11 +1772,11 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                 Powder Separators for Soap Drying Systems
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles
                 from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric
                 condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance.
@@ -1787,10 +1787,10 @@ Production Lines"
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-4">
                   Efficient Dust Removal Process in Soap Drying Systems
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   The Brit Soap Powder Separators efficiently remove fine dust
                   particles from gases exiting the Vacuum Spray Chamber,
                   ensuring cleaner exhaust flow, protecting downstream systems,
@@ -1875,7 +1875,7 @@ Production Lines"
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-4">
                   Robust Engineering & Durable Construction
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1917,7 +1917,7 @@ Production Lines"
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-4">
                   Ideal for Soap Manufacturing Plants – Key Benefits
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2001,12 +2001,12 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   High-Performance Heat Exchanger for Liquid Soap Processing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Heat Exchanger is a critical component in modern
                   soap drying lines, designed to efficiently raise the
                   temperature of liquid soap prior to entering the soap drying
@@ -2021,7 +2021,7 @@ Production Lines"
           <section className="py-20 bg-surface">
             <div className="container grid gap-10 md:grid-cols-[1.15fr_0.85fr] items-center">
               <div className="space-y-5">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Advanced Heat Transfer &amp; Precise Temperature Control
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2085,7 +2085,7 @@ Production Lines"
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Robust Stainless Steel Construction &amp; Safety Engineering
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2124,7 +2124,7 @@ Production Lines"
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="text-lg font-bold text-primary mb-3 capitalize">
+                <p className="text-lg font-semibold text-primary mb-3 capitalize">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2192,12 +2192,12 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Integrated Vacuum System for Efficient Soap Drying
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Vacuum Generating System is engineered to create and maintain optimal vacuum conditions within the spray drying plant, enabling efficient moisture evaporation and consistent soap quality. By combining a vacuum booster, condenser, and vacuum pump, the system ensures reduced gas load, improved thermal efficiency, and stable plant operation.
                 </p>
               </div>
@@ -2314,7 +2314,7 @@ Production Lines"
             <div className="container">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Applications & Key Benefits</h3>
+                  <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize">Applications & Key Benefits</h3>
                   <div className="text-muted-foreground leading-relaxed space-y-5">
                     <div>
                       <p className="font-semibold text-gray-900 mb-2">Ideal for:</p>
@@ -2338,7 +2338,7 @@ Production Lines"
                 </div>
 
                 <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h4 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Barometric Tower for Vacuum System Integration</h4>
+                  <h4 className="text-xl md:text-2xl text-primary leading-snug capitalize">Barometric Tower for Vacuum System Integration</h4>
                   <p className="text-muted-foreground leading-relaxed">
                     The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
                   </p>
@@ -2368,11 +2368,11 @@ Production Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                 Advanced Vacuum Spray Drying Technology for Soap Manufacturing
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 The Brit Soap Atomiser / Vacuum Spray Chamber enables soap manufacturers to transform liquid neat soap into dried, cooled, solid
                 soap in just a few seconds by boiling off excess moisture under carefully controlled vacuum conditions. This rapid drying process ensures
                 consistent soap quality, improved efficiency, and seamless integration with downstream soap finishing equipment.
@@ -2383,7 +2383,7 @@ Production Lines"
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
               <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Process & Functioning</h3>
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize">Process & Functioning</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     The atomiser operates on a continuous vacuum spray drying process, ensuring rapid moisture removal
@@ -2424,7 +2424,7 @@ Production Lines"
                 />
               </div>
               <div className="space-y-6 order-1 md:order-2">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Engineering & Construction</h3>
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize">Engineering & Construction</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     Engineered for durability and precision, the atomiser features robust stainless steel
@@ -2447,7 +2447,7 @@ Production Lines"
           <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-2 items-start">
               <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">Applications & Key Benefits</h3>
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize">Applications & Key Benefits</h3>
                 <div className="text-muted-foreground leading-relaxed space-y-3">
                   <div>
                     <p className="mb-2 pb-2">The atomiser is a versatile component in soap manufacturing, supporting multiple production
@@ -2507,16 +2507,16 @@ Soap Finishing Lines"
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+            <div className="container mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                 Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling
-                irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a
-                significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality
-                soap production.
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling
+                  irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a
+                  significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality
+                  soap production.
                 </p>
               </div>
             </div>
@@ -2574,7 +2574,7 @@ Soap Finishing Lines"
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-4">
@@ -2641,12 +2641,15 @@ continuous soap production lines."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern, high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more durable, automated, and precision-driven approach.
+              <p className="text-base text-muted-foreground leading-relaxed">
+                The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped
+                cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern,
+                high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more
+                durable, automated, and precision-driven approach.
               </p>
             </div>
           </section>
@@ -2704,7 +2707,7 @@ continuous soap production lines."
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-3">
@@ -2771,11 +2774,11 @@ efficiency soap finishing lines."
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize">
+            <div className="container mx-auto text-center space-y-6">
+              <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 The Brit Soap Laundry Soap Stamper is a high-performance rotary soap stamping machine
                 engineered for accurate and efficient stamping of rectangular banded laundry soaps and
                 toilet soaps. Designed for integration into modern soap finishing lines, it ensures
@@ -2826,7 +2829,7 @@ efficiency soap finishing lines."
           <section className="py-20 bg-surface-blue">
             <div className="container grid gap-10 md:grid-cols-[1.2fr_0.8fr] items-start">
               <div className=" shadow-smshadow-sm">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-6">
+                <h3 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-6">
                   Key Benefits & Functional Highlights
                 </h3>
                 <ul className="space-y-4">
@@ -2905,7 +2908,7 @@ efficiency soap finishing lines."
         <section className="py-20 bg-slate-50">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+              <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-4">
                 {templateData.detailTitle}
               </h2>
               {templateData.detailParagraphs.map((para, i) => (
@@ -2934,7 +2937,7 @@ efficiency soap finishing lines."
             {templateData.applicationTitle}
           </h2>
           <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
-            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+            <p className="text-white/80 text-base leading-relaxed font-light">
               {templateData.applicationDescription}
             </p>
           </div>
@@ -2976,7 +2979,7 @@ efficiency soap finishing lines."
           <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
             {category.title}
           </h2>
-          <h1 className="text-4xl font-bold text-primary-foreground capitalize">
+          <h1 className="text-3xl md:text-4xl font-semibold text-primary-foreground capitalize">
             {product.name}
           </h1>
         </div>
@@ -3001,7 +3004,7 @@ efficiency soap finishing lines."
           </div>
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-primary leading-tight capitalize mb-4">
+            <h2 className="text-xl md:text-2xl text-primary leading-snug capitalize mb-4">
               {product.name}
             </h2>
 

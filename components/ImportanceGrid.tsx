@@ -40,7 +40,7 @@ export default function ImportanceGrid({
 
         {/* DESCRIPTION */}
         {description && (
-          <p className="text-muted-foreground mb-10 text-gray-600 text-lg leading-relaxed  mx-auto">
+          <p className="text-muted-foreground mb-10 text-gray-600 text-base leading-relaxed  mx-auto">
             {description}
           </p>
         )}

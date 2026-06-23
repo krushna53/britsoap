@@ -81,7 +81,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -102,7 +102,7 @@ export default function ProductPage() {
                     />
                   </div>
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -127,7 +127,7 @@ export default function ProductPage() {
                 >
                   {/* <div className="text-2xl mb-3 text-primary">✨</div> */}
 
-                  <p className="text-gray-700 text-lg md:text-base font-medium">
+                  <p className="text-gray-700 text-base font-medium">
                     {item}
                   </p>
                 </div>
@@ -261,8 +261,8 @@ export default function ProductPage() {
                   </span>
                 </li>
               </ul>
-              <div className="text-white/80 leading-relaxed text-lg">
-                <p className="!text-primary-foreground">
+              <div className="text-white/80 leading-relaxed text-base">
+                <p>
                   Designed for continuous soap refining and extrusion before
                   final finishing processes.
                 </p>
@@ -305,12 +305,12 @@ export default function ProductPage() {
                       </h3>
 
                       {/* DESCRIPTION */}
-                      <p className="text-gray-600 mb-3 text-sm md:text-base">
+                      <p className="text-gray-600 mb-3 text-base">
                         {config.desc}
                       </p>
                       <ul className="text-gray-700 space-y-1 list-none pl-0 mt-auto">
                         {config.points.map((p, i) => (
-                          <li key={i} className="text-sm">
+                          <li key={i} className="text-base">
                             {" "}
                             <span className="text-primary mt-1">•</span>
                             <span>{p}</span>

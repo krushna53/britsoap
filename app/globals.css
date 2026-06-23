@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
@@ -23,6 +23,10 @@
   --color-border: #e5e7eb;
   --color-muted: #f5f5f5;
 
+  /* Typography */
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
   /* 🔥 Breakpoints control container in Tailwind v4 */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -44,7 +48,7 @@
   body {
     background: var(--color-background);
     color: var(--color-foreground);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -57,18 +61,15 @@
 
   h1,
   h2,
-  h3 {
-    text-transform: capitalize;
-  }
-
-  h1,
-  h2,
   h3,
   h4,
   h5,
   h6 {
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    /* Title Case everywhere, subtler weight + softer tracking, Sora */
+    font-family: var(--font-heading);
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
   button,
@@ -80,11 +81,29 @@
 }
 
 /*
- * Consistent paragraph + list typography. Kept outside @layer base so it
+ * Consistent section heading used across product/detail pages.
+ * One size, one weight, Title Case everywhere. Apply `.section-title`
+ * to any <h2>/<h3> that introduces a content block.
+ */
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;        /* ~text-2xl */
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;     /* ~text-[28px] on desktop, calmer than 3xl */
+  }
+}
+ /* * Consistent paragraph + list typography. Kept outside @layer base so it
  * reliably overrides Tailwind utilities.
  * Excluded: banners (.hero-banner, .product-hero) and dark sections
  * (.cta-section, .dark-section, footer) which use light text on a dark background.
- */
+ */ */
 p:not(.hero-banner p):not(.product-hero p):not(.cta-section p):not(.dark-section p):not(footer p) {
   font-size: 16px !important;
   color: var(--color-foreground) !important;
@@ -124,4 +143,3 @@ li:not(.hero-banner li):not(.product-hero li):not(.cta-section li):not(.dark-sec
     line-height: 1.12;
   }
 }
-

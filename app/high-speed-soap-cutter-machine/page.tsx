@@ -87,7 +87,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -108,7 +108,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -153,7 +153,7 @@ export default function ProductPage() {
             </h2>
 
             {/* INTRO */}
-            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+            <p className="text-gray-600 leading-relaxed mb-8 text-base">
               {product.detailSection.intro}
             </p>
 
@@ -178,7 +178,7 @@ export default function ProductPage() {
             </div>
 
             {/* EXTRA TEXT */}
-            <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+            <p className="text-gray-600 leading-relaxed mb-6 text-base">
               {product.detailSection.extraText}
             </p>
 
@@ -199,7 +199,7 @@ export default function ProductPage() {
             </div>
 
             {/* CONCLUSION */}
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-base">
               {product.detailSection.conclusion}
             </p>
           </div>
@@ -214,12 +214,12 @@ export default function ProductPage() {
         <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
           {Array.isArray(product.applicationDescription) ? (
             product.applicationDescription.map((desc, i) => (
-              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-base leading-relaxed mb-4">
                 {desc}
               </p>
             ))
           ) : (
-            <p className="">
+            <p className="text-[lab(27.1134_-0.956401_-12.3224)] text-base leading-relaxed font-light">
               {product.applicationDescription}
             </p>
           )}

@@ -103,7 +103,7 @@ export default function ServicesClient({ services }: Props) {
                     <h3 className="text-xl font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
                       {title}
                     </h3>
-                    <p className="text-lg text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
+                    <p className="text-base text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
                       {desc}
                     </p>
                   </div>
@@ -186,7 +186,7 @@ export default function ServicesClient({ services }: Props) {
                 <h3 className="text-xl font-semibold text-primary mb-2">
                   {item.title}
                 </h3>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   {item.desc}
                 </p>
               </motion.div>
@@ -201,7 +201,7 @@ export default function ServicesClient({ services }: Props) {
           <h2 className="text-3xl font-bold text-primary-foreground mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-primary-foreground/60 max-w-md mx-auto mb-8 text-lg">
+          <p className="text-primary-foreground/60 max-w-md mx-auto mb-8 text-base">
             Our engineering team is ready to design a solution for your specific requirements.
           </p>
           <Link

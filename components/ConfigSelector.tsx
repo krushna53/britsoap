@@ -40,7 +40,7 @@ export default function ConfigSelector({ configurations }: Props) {
                     {config.title}
                   </h3>
                   {config.desc && (
-                    <p className="mt-1.5 text-sm text-white/60 leading-relaxed">
+                    <p className="mt-1.5 text-base text-white/60 leading-relaxed">
                       {config.desc}
                     </p>
                   )}
