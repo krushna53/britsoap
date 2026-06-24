@@ -2188,7 +2188,7 @@ Production Lines"
           <ProductHero
             title="Vacuum Drying System| Vacuum Booster, Condenser & Pumps for soap drying lines"
             description="High-efficiency vacuum system designed to optimize moisture removal, improve drying performance, and enhance energy efficiency in modern soap manufacturing lines."
-            slug={params.product}
+           slug={(await params).product}
           />
 
           <section className="py-16 bg-background">
