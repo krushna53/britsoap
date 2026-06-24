@@ -25,12 +25,12 @@ export default function Section({
             }`}
           >
             {title && (
-              <h2 className={`text-4xl font-bold text-primary mb-4 ${className} capitalize`}>
+              <h2 className={`text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4 ${className} capitalize`}>
                 {title}
               </h2>
             )}
             {description && (
-              <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 text-base leading-relaxed">
                 {description}
               </p>
             )}

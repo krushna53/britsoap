@@ -33,7 +33,7 @@ const Footer = () => {
               </h3>
             </div>
 
-            <p className="text-sm text-primary-foreground/60 leading-relaxed">
+            <p className="text-base text-primary-foreground/60 leading-relaxed">
               Precision-engineered soap & detergent machinery. A joint venture
               between Britannia Soap Machinery Ltd (England) and Orum
               Engineering Pvt Ltd (India).
@@ -98,7 +98,7 @@ const Footer = () => {
             </h4>
 
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-primary-foreground/60">
+              <li className="flex items-start gap-3 text-base text-primary-foreground/60">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
 
                 <span>
@@ -107,7 +107,7 @@ const Footer = () => {
                 </span>
               </li>
 
-              <li className="flex items-start gap-3 text-sm text-primary-foreground/60">
+              <li className="flex items-start gap-3 text-base text-primary-foreground/60">
                 <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
 
                 <div className="space-y-1">
@@ -134,7 +134,7 @@ const Footer = () => {
                 </div>
               </li>
 
-              <li className="flex items-center gap-3 text-sm text-primary-foreground/60">
+              <li className="flex items-center gap-3 text-base text-primary-foreground/60">
                 <Mail size={16} className="shrink-0 text-accent" />
 
                 <a

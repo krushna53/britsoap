@@ -97,18 +97,18 @@ export default function ProductPage() {
         <section className="bg-gray-50 py-20">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-4 ">
+              <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4 ">
                 {product.detailSection.title}
               </h2>
 
               {product.detailSection?.description?.map((para, i) => (
-                <p key={i} className="text-gray-600 mb-4 leading-relaxed">
+                <p key={i} className="mb-4">
                   {para}
                 </p>
               ))}
               {product.detailSection.optional?.length && (
                 <div className="bg-white p-5 rounded-xl shadow-sm border">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h4 className="text-lg font-medium !text-primary mb-2">
                     Optional Configurations
                   </h4>
                   <ul className="list-disc list-inside text-gray-600">
@@ -145,16 +145,16 @@ export default function ProductPage() {
       >
         <div className="max-w-4xl mx-auto">
           <div className=" rounded-2xl p-8 md:p-10">
-            <p className="text-white/80 text-lg leading-relaxed mb-8 text-left">
+             <p className="text-white/80 text-base leading-relaxed mb-8 text-left">
               {product.applicationDescription}
             </p>
           </div>
         </div>
       </Section> */}
-      <section className="bg-[#2E3192] py-20 text-white">
+      <section className="bg-surface-blue py-20 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
               {product.applicationTitle || "Applications In Production"}
             </h2>
           </div>
@@ -172,26 +172,26 @@ export default function ProductPage() {
               )}
             </div>
             <div>
-              <ul className="space-y-4 text-lg mb-8">
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                  <span className="flex-1">Dual synchronized sigma blades</span>
+              <ul className="space-y-4 text-base mb-8">
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                  <span className="flex-1 ">Dual synchronized sigma blades</span>
                 </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
                   <span className="flex-1">SS 304 stainless steel body</span>
                 </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
                   <span className="flex-1">Heavy-duty bearing assembly</span>
                 </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
                   <span className="flex-1">Continuous production support</span>
                 </li>
               </ul>
-              <div className="text-white/80 leading-relaxed text-lg">
-                <p className="!text-primary-foreground">
+               <div className="text-white/80 leading-relaxed text-base">
+                <p className=" leading-relaxed text-base">
                  The Brit Soap Double Sigma Mixer is designed for efficient
         industrial soap manufacturing with synchronized kneading
         and superior material blending.

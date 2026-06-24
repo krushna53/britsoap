@@ -717,7 +717,7 @@ export default async function ProductDetailPage({
                   {localProduct.description}
                 </p>
 
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-base text-muted-foreground mb-4">
                   Detailed specifications, capacity options, and technical diagrams
                   will be published shortly.
                 </p>
@@ -752,12 +752,12 @@ export default async function ProductDetailPage({
           />
 
           <section className="py-16 bg-background">
-            <div className="container max-w-4xl mx-auto">
+           <div className="container mx-auto">
               <div className="text-center space-y-6">
                 <h2 className="text-xl md:text-2xl text-primary font-medium leading-snug uppercase">
                   Precision-Engineered Crutcher for Consistent Soap Production & Additive Mixing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Saponification Crutcher is a critical reaction vessel designed for the semi-boiled soap manufacturing process, enabling precise mixing of fatty acids, caustic soda, brine, and water. Engineered for efficiency, it ensures uniform reaction, optimal cycle times, and consistent soap quality. Ideal for both soap production and additive blending applications.
                 </p>
               </div>
@@ -889,7 +889,7 @@ production."
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Steam-Powered Saponification Jet for Continuous & Instant Soap Processing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Saponification Jet is an advanced, no-moving-parts system designed for instant soap
                   production using steam energy. Utilizing venturi vacuum technology, it enables rapid mixing of
                   caustic liquor and oils, delivering up to 90% reacted neat soap directly from the unit. Ideal
@@ -901,13 +901,13 @@ production."
           {/* Row 1 - Image Left, Text Right */}
           <section className="py-20 bg-background">
             <div className="container grid gap-12 md:grid-cols-[0.9fr_1.1fr] items-center">
-              <div>
+              <div className="flex items-center justify-center">
                 <Image
                   src="/assets/SaponificationJet/saponification-jet-soap.png"
                   alt="Saponification Jet"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain"
+                  className="max-h-[700px] max-w-[500px]"
                 />
               </div>
               <div className="space-y-6">
@@ -936,7 +936,7 @@ production."
                   </p>
                   <div className="bg-slate-50 p-5 rounded-xl border border-border/50">
                     <p className="font-semibold text-primary mb-2">Concentric Barrel Design For:</p>
-                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                    <ul className="list-disc pl-5 space-y-1">
                       <li>Caustic liquor (alkali)</li>
                       <li>Oils / fatty materials</li>
                     </ul>
@@ -959,7 +959,7 @@ production."
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Engineering and Construction
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Built for durability and operational efficiency, the Saponification Jet features a
                   robust, no-moving-parts design that minimizes maintenance while ensuring
                   consistent performance. Its precision-engineered components allow for
@@ -982,13 +982,13 @@ production."
                   ))}
                 </ul>
               </div>
-              <div>
+              <div className="flex items-center justify-center">
                 <Image
                   src="/assets/SaponificationJet/soap-from-oil-caustic.JPG"
                   alt="Engineering and Construction"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain"
+                  className="max-h-[420px] w-auto object-contain"
                 />
               </div>
             </div>
@@ -1001,7 +1001,7 @@ production."
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Uses and Benefits
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Saponification Jet enhances production efficiency by significantly reducing reaction time and
                   energy consumption. Its streamlined design supports consistent output quality while lowering
                   operational costs and maintenance requirements.
@@ -1068,7 +1068,7 @@ production."
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Manual Accurate Stamping for Soap Finishing Lines
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Manual Pneumatic Stamper is a compact, manually
                   operated soap finishing machine designed for precise stamping
                   of toilet soaps and laundry soaps. Engineered for low-capacity
@@ -1121,7 +1121,7 @@ production."
           <section className="py-20 bg-background">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
               <div className=" shadow-smshadow-sm">
-                <p className="!text-xl !md:text-2xl font-medium text-primary leading-snug uppercase mb-3">
+                <p className="!text-xl !md:text-2xl font-medium !text-primary leading-snug uppercase mb-3">
                   Construction &amp; Functional Advantages
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -1352,7 +1352,7 @@ production."
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Continuous Soap Stamping with Superior Finish Quality
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap HRD Stamper is a high-performance soap stamping
                   machine designed to transform continuous soap billets from the
                   plodder into precisely shaped and finished toilet soap bars in
@@ -1612,10 +1612,10 @@ Production Lines"
           <section className="py-16 bg-background">
             <div className="container max-w-4xl mx-auto">
               <div className="text-center space-y-6">
-                <h2 className="text-2xl md:text-3xl text-primary leading-tight capitalize">
+                <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Rotary Soap Stamper for Continuous, Consistent Soap Bar Finishing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Rotary Soap Stamper is a high-performance
                   horizontal stamping machine engineered for continuous,
                   high-speed soap production lines. Designed with a rotating
@@ -1776,7 +1776,7 @@ Production Lines"
               <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                 Powder Separators for Soap Drying Systems
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+               <p className="text-base text-muted-foreground leading-relaxed">
                 The Brit Soap Powder Separators are a critical component in modern soap drying lines, designed to efficiently remove fine dust particles
                 from gases exiting the vacuum spray chamber. This controlled separation process prevents soap particles from entering the barometric
                 condenser cooling water, ensuring smooth plant operation, improved effluent management, and consistent overall system performance.
@@ -1790,7 +1790,7 @@ Production Lines"
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4">
                   Efficient Dust Removal Process in Soap Drying Systems
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   The Brit Soap Powder Separators efficiently remove fine dust
                   particles from gases exiting the Vacuum Spray Chamber,
                   ensuring cleaner exhaust flow, protecting downstream systems,
@@ -1842,20 +1842,20 @@ Production Lines"
               </div>
 
               <div className=" ">
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <Image
                     src="/assets/DryingLine/soap-drying-dust-collector.png"
                     alt="Soap drying dust collector"
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain"
+                    className="max-h-[320px] w-full"
                   />
                   <Image
                     src="/assets/DryingLine/soap-drying-filteration.png"
                     alt="Soap drying filtration system"
                     width={900}
                     height={520}
-                    className="h-[220px] md:h-[260px] w-full object-contain rounded-2xl"
+                    className="max-h-[320px] w-full"
                   />
                 </div>
               </div>
@@ -2006,7 +2006,7 @@ Production Lines"
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   High-Performance Heat Exchanger for Liquid Soap Processing
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Heat Exchanger is a critical component in modern
                   soap drying lines, designed to efficiently raise the
                   temperature of liquid soap prior to entering the soap drying
@@ -2085,7 +2085,7 @@ Production Lines"
               </div>
 
               <div className=" shadow-smshadow-sm">
-                <p className="!text-xl !md:text-2xl font-medium text-primary leading-snug uppercase mb-3">
+                <p className="!text-xl !md:text-2xl font-medium !text-primary leading-snug uppercase mb-3">
                   Robust Stainless Steel Construction &amp; Safety Engineering
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2188,7 +2188,7 @@ Production Lines"
           <ProductHero
             title="Vacuum Drying System| Vacuum Booster, Condenser & Pumps for soap drying lines"
             description="High-efficiency vacuum system designed to optimize moisture removal, improve drying performance, and enhance energy efficiency in modern soap manufacturing lines."
-            video="/assets/DryingLine/vacuum-booster-jet.png"
+            slug={params.product}
           />
 
           <section className="py-16 bg-background">
@@ -2197,7 +2197,7 @@ Production Lines"
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Integrated Vacuum System for Efficient Soap Drying
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   The Brit Soap Vacuum Generating System is engineered to create and maintain optimal vacuum conditions within the spray drying plant, enabling efficient moisture evaporation and consistent soap quality. By combining a vacuum booster, condenser, and vacuum pump, the system ensures reduced gas load, improved thermal efficiency, and stable plant operation.
                 </p>
               </div>
@@ -2214,7 +2214,7 @@ Production Lines"
         alt="Vacuum Booster"
         width={900}
         height={700}
-        className="h-[320px] md:h-[480px] w-full object-contain"
+        className="max-h-[360px] w-auto mx-auto object-contain"
       />
     </div>
 
@@ -2297,7 +2297,7 @@ Production Lines"
         alt="Condenser"
         width={900}
         height={700}
-        className="h-[320px] md:h-[480px] w-full object-contain"
+        className="max-h-[360px] w-auto mx-auto object-contain"
       />
     </div>
 
@@ -2314,7 +2314,7 @@ Production Lines"
         alt="Vacuum Pump"
         width={900}
         height={700}
-        className="h-[320px] md:h-[480px] w-full object-contain"
+        className="max-h-[360px] w-auto mx-auto object-contain"
       />
     </div>
 
@@ -2367,7 +2367,7 @@ Production Lines"
   >
     Barometric Tower for Vacuum System Integration
   </h4>
-  <p className="text-muted-foreground leading-relaxed">
+ <p className="text-base text-muted-foreground leading-relaxed">
     The Barometric Tower serves as a structural and functional support system
     for the vacuum generating set in soap drying plants. By positioning the
     vacuum system at an elevated height, it enables efficient gravity-assisted
@@ -2382,7 +2382,7 @@ Production Lines"
         alt="Barometric Tower"
         width={900}
         height={700}
-        className="h-[320px] md:h-[480px] w-full object-contain"
+        className="max-h-[360px] w-auto mx-auto object-contain"
       />
     </div>
 
@@ -2396,7 +2396,7 @@ Production Lines"
                   <h3 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">Applications & Key Benefits</h3>
                   <div className="text-muted-foreground leading-relaxed space-y-5">
                     <div>
-                      <p className="font-semibold text-gray-900 mb-2">Ideal for:</p>
+                      <p className="font-medium !text-primary mb-2">Ideal for:</p>
                       <ul className="list-disc pl-5 space-y-1">
                        <li className="break-normal">Soap spray drying plants</li>
                        <li className="break-normal">Continuous soap manufacturing lines</li>
@@ -2404,7 +2404,7 @@ Production Lines"
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 mb-2">Key Benefits:</p>
+                      <p className="font-medium !text-primary mb-2">Key Benefits:</p>
                       <ul className="list-disc pl-5 space-y-1">
                        <li className="break-normal">Enhances drying efficiency through improved vacuum levels</li>
                        <li className="break-normal">Reduces energy consumption by lowering gas load on the pump</li>
@@ -2479,13 +2479,13 @@ Production Lines"
                   </ul>
                 </div>
               </div>
-              <div className=" overflow-hidden  p-5 md:p-6">
+              <div className="overflow-hidden p-5 md:p-6 flex items-center justify-center">
                 <Image
                   src="/assets/DryingLine/soap-atomiser-vacuum-spray-chamber.jpg"
                   alt="Soap Atomiser / Vacuum Spray Chamber Process"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-contain"
+                  className="max-h-[420px] w-full object-contain"
                 />
               </div>
             </div>
@@ -2591,7 +2591,7 @@ Soap Finishing Lines"
                 <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                   Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+               <p className="text-base text-muted-foreground leading-relaxed">
                  Traditional rotary soap stamping machines have long been used in soap finishing lines; however, they often face limitations in handling
                 irregular soap shapes, achieving consistent definition, and minimizing material wastage. The Vertical Stamper (VPress) represents a
                 significant advancement—offering improved accuracy, flexibility, and reduced scrap generation, making it ideal for modern, high-quality
@@ -2724,7 +2724,7 @@ continuous soap production lines."
               <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                 Rotary Soap Stamper for High-Speed, Uniform Soap Bar Production
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+               <p className="text-base text-muted-foreground leading-relaxed">
                 The Brit Soap Machinery 6F Stamper is a soap finishing solution designed to deliver perfectly shaped cuboid and rectangular soaps with sharp, consistent embossing on all six faces. Built for modern, high-efficiency soap manufacturing lines, it replaces conventional stamping systems with a more durable, automated, and precision-driven approach.
               </p>
             </div>
@@ -2854,7 +2854,7 @@ efficiency soap finishing lines."
               <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
                 Dual Rotary Stamping for Laundry Soap Bars
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 The Brit Soap Laundry Soap Stamper is a high-performance rotary soap stamping machine
                 engineered for accurate and efficient stamping of rectangular banded laundry soaps and
                 toilet soaps. Designed for integration into modern soap finishing lines, it ensures
@@ -3013,7 +3013,7 @@ efficiency soap finishing lines."
             {templateData.applicationTitle}
           </h2>
           <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
-            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+            <p className="text-white/80 text-base leading-relaxed font-light">
               {templateData.applicationDescription}
             </p>
           </div>

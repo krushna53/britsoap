@@ -81,7 +81,7 @@ export default function ProductPage() {
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -102,7 +102,7 @@ export default function ProductPage() {
                     />
                   </div>
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -115,7 +115,7 @@ export default function ProductPage() {
       {product.whyPoints?.length && (
         <section className="py-20  text-center">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-14 capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-16 text-center">
               {product.whyTitle}
             </h2>
 
@@ -127,7 +127,7 @@ export default function ProductPage() {
                 >
                   {/* <div className="text-2xl mb-3 text-primary">✨</div> */}
 
-                  <p className="text-gray-700 text-lg md:text-base font-medium">
+                  <p className="text-gray-700 text-base font-medium">
                     {item}
                   </p>
                 </div>
@@ -140,44 +140,41 @@ export default function ProductPage() {
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
           <div className="container grid md:grid-cols-2 gap-20 items-center">
-            {/* LEFT */}
-            <div className="flex flex-col gap-6">
-              {/* MAIN IMAGE */}
+            {/* LEFT — two images stacked, medium size */}
+            <div className="flex flex-col gap-4">
               {product.detailSection.images?.[0] && (
-                <div className="overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[0]}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="overflow-hidden flex items-center justify-center">
+                  <Image
+                    src={product.detailSection.images[0]}
+                    alt="Simplex refiner plodder machine for soap manufacturing"
+                    loading="eager"
+                    width={800}
+                    height={500}
+                    className="w-full max-w-[400px] max-h-[250px]"
+                  />
                 </div>
               )}
-
-              {/* SECOND IMAGE */}
               {product.detailSection.images?.[1] && (
-                <div className="overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[1]}
-                      alt="Simplex refiner plodder machine for soap manufacturing"
-                      loading="eager"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="overflow-hidden flex items-center justify-center">
+                  <Image
+                    src={product.detailSection.images[1]}
+                    alt="Simplex refiner plodder machine for soap manufacturing"
+                    loading="eager"
+                    width={800}
+                    height={500}
+                    className="w-full max-w-[400px] max-h-[250px]"
+                  />
                 </div>
               )}
             </div>
 
             {/* RIGHT */}
             <div className="max-w-xl space-y-6">
+              <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+              Machine Overview
+            </p>
               {product.detailSection.paragraphs?.map((p, i) => (
+                
                 <p
                   key={i}
                   className="text-gray-700 leading-relaxed text-[16.5px]"
@@ -216,66 +213,12 @@ export default function ProductPage() {
         </Section>
       )}
 
-      <section className="bg-[#2E3192] py-20 text-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold capitalize">
-              {product.applicationTitle || "Applications In Production"}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              {product.applicationImage && (
-                <Image
-                  src={product.applicationImage}
-                  alt={product.applicationTitle || "Applications"}
-                  width={600}
-                  height={400}
-                  className="shadow-2xl w-full object-cover"
-                />
-              )}
-            </div>
-            <div>
-              <ul className="space-y-4 text-lg mb-8">
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                  <span className="flex-1">Uniform billet formation</span>
-                </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                  <span className="flex-1">Toilet soap production</span>
-                </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                  <span className="flex-1">Laundry soap production</span>
-                </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                  <span className="flex-1">Syndet soap applications</span>
-                </li>
-                <li className="flex items-start gap-4 !text-primary-foreground">
-                  <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                  <span className="flex-1">
-                    Consistent downstream processing
-                  </span>
-                </li>
-              </ul>
-              <div className="text-white/80 leading-relaxed text-lg">
-                <p className="!text-primary-foreground">
-                  Designed for continuous soap refining and extrusion before
-                  final finishing processes.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
             {/* TITLE H2 */}
-            <h2 className="text-4xl font-bold text-primary text-center mb-16 capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-16 text-center">
               {product.configurationsTitle}
             </h2>
 
@@ -300,17 +243,17 @@ export default function ProductPage() {
                   <div className="w-full md:w-1/2 flex">
                     <div className="flex flex-col justify-between w-full p-5 md:p-6 text-left">
                       {/* TITLE */}
-                      <h3 className="text-lg md:text-2xl font-semibold text-primary mb-3 capitalize">
+                      <h3 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-3">
                         {config.title}
                       </h3>
 
                       {/* DESCRIPTION */}
-                      <p className="text-gray-600 mb-3 text-sm md:text-base">
+                      <p className="text-gray-600 mb-3 text-base">
                         {config.desc}
                       </p>
                       <ul className="text-gray-700 space-y-1 list-none pl-0 mt-auto">
                         {config.points.map((p, i) => (
-                          <li key={i} className="text-sm">
+                           <li key={i} className="text-base">
                             {" "}
                             <span className="text-primary mt-1">•</span>
                             <span>{p}</span>
@@ -325,6 +268,61 @@ export default function ProductPage() {
           </div>
         </section>
       )}
+      <section className="bg-surface-blue py-20 text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
+              {product.applicationTitle || "Applications In Production"}
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              {product.applicationImage && (
+                <Image
+                  src={product.applicationImage}
+                  alt={product.applicationTitle || "Applications"}
+                  width={600}
+                  height={400}
+                  className="shadow-2xl w-full object-cover"
+                />
+              )}
+            </div>
+            <div>
+              <ul className="space-y-4 text-lg mb-8">
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                  <span className="flex-1">Uniform billet formation</span>
+                </li>
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                  <span className="flex-1">Toilet soap production</span>
+                </li>
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                  <span className="flex-1">Laundry soap production</span>
+                </li>
+                <li className="flex items-start gap-4 ">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                  <span className="flex-1">Syndet soap applications</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                  <span className="flex-1">
+                    Consistent downstream processing
+                  </span>
+                </li>
+              </ul>
+              <div className="text-white/80 leading-relaxed text-base">
+                <p>
+                  Designed for continuous soap refining and extrusion before
+                  final finishing processes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Section
         title="Capacity Range"
         description="The Brit Soap soap refining machines are available in a wide range of production capacities to suit different manufacturing scales."

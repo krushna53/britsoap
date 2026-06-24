@@ -39,7 +39,7 @@ export default async function CategoryPage({
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
-            <p className="mt-4 text-primary text-lg text-left">
+             <p className="mt-4 text-primary text-base text-left">
               {categoryData.description}
             </p>
           )}
@@ -51,7 +51,7 @@ export default async function CategoryPage({
         <div className="container space-y-8">
           <div>
             {slug === "drying-line" && categoryData?.description && (
-              <p className="text-lg text-primary mb-5">
+              <p className="text-base text-primary mb-5">
                 {categoryData.description}
               </p>
             )}
@@ -158,7 +158,7 @@ export default async function CategoryPage({
                     <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-[#e21e2d] line-clamp-2">
                       {productTitle}
                     </h3>
-                    <p className="text-[13px] !text-primary-foreground/75 leading-relaxed">
+                    <p className="text-base !text-primary-foreground/75 leading-relaxed">
                       {productDesc}
                     </p>
                   </div>

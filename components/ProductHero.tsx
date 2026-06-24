@@ -8,16 +8,18 @@ type ProductHeroProps = {
   title: string;
   description: string;
   video?: string;
+  slug?: string;
 };
 
 export default function ProductHero({
   title,
   description,
   video,
+  slug,
 }: ProductHeroProps) {
   return (
     <section className="product-hero bg-gradient-to-br from-primary to-primary/80 text-white py-20">
-      <div className="container grid md:grid-cols-2 gap-16 items-center">
+      <div className="container grid md:grid-cols-[3fr_2fr] gap-16 items-center">
         <div>
           <p className="uppercase tracking-widest text-white/70 mb-4">
             BRIT SOAP MACHINERY
@@ -27,7 +29,7 @@ export default function ProductHero({
             {title}
           </h1>
 
-          <p className="text-white/80 text-lg mb-8 max-w-xl">{description}</p>
+          <p className="text-white/80 text-base mb-8 max-w-xl">{description}</p>
 
           <div className="flex gap-4">
             <Link
@@ -40,17 +42,6 @@ export default function ProductHero({
                 Speak With An Engineer
               </span>
             </Link>
-
-            {/* <button
-              onClick={() => {
-                document
-                  .getElementById("product-video")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition"
-            >
-              Watch Demo
-            </button> */}
           </div>
         </div>
 
@@ -69,16 +60,17 @@ export default function ProductHero({
               className="rounded-2xl shadow-2xl w-full h-full object-cover aspect-video"
             />
           ) : (
-            <div className="relative flex items-center justify-center h-100 w-100 overflow-hidden">
-              
-              <Image
-                src={video || "/placeholder.png"}
-                alt={title}
-                width={800}
-                height={800}
-                className="max-h-full max-w-full object-contain rounded-2xl"
-              />
-            </div>
+            slug !== "vacuum-drying-system" && (
+              <div className="relative flex items-center justify-center h-100 w-100 overflow-hidden">
+                <Image
+                  src={video || "/placeholder.png"}
+                  alt={title}
+                  width={800}
+                  height={800}
+                  className="max-h-full max-w-full object-contain rounded-2xl"
+                />
+              </div>
+            )
           )}
           <div className="absolute inset-0 -z-10 blur-3xl bg-white/20 rounded-2xl"></div>
         </div>

@@ -83,11 +83,11 @@ export default function ProductPage() {
       {product.processSteps?.length && (
         <section className="py-20 bg-gray-50 text-center">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-4">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4 text-center">
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -108,7 +108,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -148,6 +148,9 @@ export default function ProductPage() {
 
             {/* RIGHT */}
             <div className="max-w-xl space-y-6">
+              <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+              Machine Overview
+            </p>
               {product.detailSection.paragraphs?.map((p, i) => (
                 <p
                   key={i}
@@ -167,24 +170,24 @@ export default function ProductPage() {
               {/* ================= LEFT: FEATURES ================= */}
               <div>
                 {/* HEADING */}
-                <h3 className="text-3xl md:text-4xl font-bold text-primary mb-10">
+                <h3 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-5">
                   Key Features
                 </h3>
 
                 {/* FEATURE LIST */}
-                <div className="space-y-4">
+                <div className="space-y-0.5">
                   {product.features?.map((item, i) => (
                     <div
                       key={i}
-                      className="group flex items-baseline gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all duration-300"
+                      className="group flex items-center gap-3 px-3 py-1.5 rounded-xl hover:bg-gray-50 transition-all duration-300"
                     >
                       {/* DOT / ICON */}
-                      <div className="w-7 h-7 flex items-center justify-center rounded-full bg-accent text-white text-xs font-bold shrink-0 mt-1">
+                      <div className="w-5 h-5 flex items-center justify-center rounded-full bg-accent text-white text-xs font-bold shrink-0">
                         ✓
                       </div>
 
                       {/* TEXT */}
-                      <p className="">
+                      <p className="text-sm">
                         {item}
                       </p>
                     </div>
@@ -203,31 +206,31 @@ export default function ProductPage() {
               </div>
 
               {/* ================= RIGHT: IMAGES ================= */}
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4">
                 {/* IMAGE 1 */}
-                <div className="overflow-hidden shadow-md">
+                <div className="overflow-hidden shadow-md max-w-[280] h-[200px]">
                   <Image
                     src="/assets/AVC/soap-cutter-embossing-roller.png"
                     alt="roller"
                     width={1100}
                     height={800}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full"
                   />
                 </div>
 
                 {/* IMAGE 2 */}
-                <div className="overflow-hidden shadow-md">
+                <div className="overflow-hidden shadow-md max-w-[280px] h-[200px]">
                   <Image
                     src="/assets/AVC/soap-sample.png"
                     alt="soap"
                     width={1100}
                     height={800}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full"
                   />
                 </div>
 
                 {/* IMAGE 3 (BIG) */}
-                <div className="col-span-2  overflow-hidden">
+                <div className="col-span-2 overflow-hidden h-[300px]">
                   <Image
                     src="/assets/AVC/automatic-soap-cutter-embossing-assembly.jpg"
                     alt="machine"
@@ -245,14 +248,14 @@ export default function ProductPage() {
         <ConfigSelector configurations={product.configurations} />
       )}
       <div className="bg-white py-12 md:py-20 px-4 md:px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug text-primary">
+        <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase text-center">
           {product.applicationTitle}
         </h2>
 
         <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
           {Array.isArray(product.applicationDescription) ? (
             product.applicationDescription.map((desc, i) => (
-              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-base leading-relaxed mb-4">
                 {desc}
               </p>
             ))
