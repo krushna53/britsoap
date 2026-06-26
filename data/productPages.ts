@@ -420,7 +420,7 @@ export const productPages = [
         },
 
         // ✅ PROCESS SECTION
-        processTitle: "The Soap Extrusion Process",
+        processTitle: "Soap Cutting processs",
 
         processSteps: [
             {
@@ -692,7 +692,7 @@ export const productPages = [
         },
 
         // ✅ PROCESS SECTION
-        processTitle: "The Soap Extrusion Process",
+        processTitle: "Soap Cutting processs",
 
         processSteps: [
             {

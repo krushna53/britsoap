@@ -16,7 +16,8 @@ const stagger = {
 export type FeaturedProduct = {
   name: string;
   slug: string;
-  imageUrl: string; // ✅ required
+  imageUrl: string;
+  description?: string;
 };
 
 type FeaturedProductsProps = {
@@ -49,7 +50,8 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
             variants={fadeUp}
             className="text-3xl md:text-4xl font-bold text-primary capitalize"
           >
-            Precision Machinery
+            Engineered for Performance
+
           </motion.h2>
         </motion.div>
 
@@ -62,7 +64,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
               viewport={{ once: true }}
               transition={{ delay: i * 0.12 }}
             >
-              <Link href={`/products`} className="group block">
+              <Link href={`/products/${product.slug}`} className="group block">
                 <div className="overflow-hidden rounded border border-border">
                   <Image
                     src={product.imageUrl}
@@ -79,6 +81,11 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
                     {product.name}
                   </h3>
                 </div>
+                {product.description && (
+                  <p className="mt-2 text-base text-muted-foreground leading-relaxed">
+                    {product.description}
+                  </p>
+                )}
               </Link>
             </motion.div>
           ))}

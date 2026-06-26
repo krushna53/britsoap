@@ -18,19 +18,33 @@ export default async function Index() {
 
   if (!data) return null;
 
-  // ✅ FIXED: use FeaturedProduct type + always string
-  const featuredProducts: FeaturedProduct[] =
-    data.featuredProducts?.map((item) => ({
-      name: item.fields.name,
-      slug: item.fields.slug,
-      imageUrl: item.fields.image?.fields?.file?.url
-        ? `https:${item.fields.image.fields.file.url}`
-        : "/placeholder.png", // ✅ ALWAYS STRING
-    })) || [];
+  const featuredProducts: FeaturedProduct[] = [
+    {
+      name: "Soap Finishing Line",
+      slug: "finishing-line",
+      imageUrl: "/images/soap-finishing-line.jpeg",
+      description:
+        "Complete finishing lines tailored to different production capacities, delivering top-quality soap bars with consistent texture, shape, and appearance.",
+    },
+    {
+      name: "Saponification & Drying Plant",
+      slug: "saponification",
+      imageUrl: "/images/saponification-drying.jpeg",
+      description:
+        "Integrated systems for saponification and drying, designed for efficient, large-scale soap production with customizable configurations.",
+    },
+    {
+      name: "Soap Stamping Machines",
+      slug: "soap-stampers",
+      imageUrl: "/images/soap-stamping.jpeg",
+      description:
+        "Advanced solutions for stamping all types of soap bars. Our machines ensure precision, speed, and durability, optimizing your soap making process.",
+    },
+  ];
 
   return (
     <Layout>
-      <Hero hero={data} />
+      <Hero />
       <FeaturedProducts products={featuredProducts} />
       <HomeAbout data={data} />
       <ServicesPreview services={services} />

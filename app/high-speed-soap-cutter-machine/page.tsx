@@ -83,11 +83,11 @@ export default function ProductPage() {
       {product.processSteps?.length && (
         <section className="py-20 bg-gray-50 text-center">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-4 capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4 text-center">
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -108,7 +108,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -126,34 +126,36 @@ export default function ProductPage() {
       />
 
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container grid lg:grid-cols-2 gap-16 items-start">
-          {/* LEFT - IMAGE */}
-          <div className="lg:sticky top-24">
-            <div className="overflow-hidden shadow-2xl">
-              <Image
-                src={product.detailSection.images?.[0] || ""}
-                alt="soap cutting machine"
-                width={800}
-                height={500}
-                className="w-full h-full object-cover hover:scale-105 transition duration-500"
-              />
+        <div className="container flex flex-col lg:flex-row gap-16">
+          {/* LEFT - IMAGE: sticky while right content scrolls */}
+          <div className="lg:w-1/2 shrink-0">
+            <div className="sticky top-24">
+              <div className="overflow-hidden shadow-2xl">
+                <Image
+                  src={product.detailSection.images?.[0] || ""}
+                  alt="soap cutting machine"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto object-cover hover:scale-105 transition duration-500"
+                />
+              </div>
             </div>
           </div>
 
           {/* RIGHT - CONTENT */}
-          <div className="max-w-xl">
+          <div className="lg:w-1/2">
             {/* LABEL */}
             <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
               Machine Overview
             </p>
 
             {/* TITLE */}
-            <h2 className="text-4xl font-extrabold text-primary leading-tight mb-6 capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
               {product.detailSection.title}
             </h2>
 
             {/* INTRO */}
-            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+            <p className="text-gray-600 leading-relaxed mb-8 text-base">
               {product.detailSection.intro}
             </p>
 
@@ -178,7 +180,7 @@ export default function ProductPage() {
             </div>
 
             {/* EXTRA TEXT */}
-            <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+            <p className="text-gray-600 leading-relaxed mb-6 text-base">
               {product.detailSection.extraText}
             </p>
 
@@ -199,7 +201,7 @@ export default function ProductPage() {
             </div>
 
             {/* CONCLUSION */}
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-base">
               {product.detailSection.conclusion}
             </p>
           </div>
@@ -207,19 +209,19 @@ export default function ProductPage() {
       </section>
 
       <div className="bg-white py-12 md:py-20 px-4 md:px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center leading-snug text-primary capitalize">
+        <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase text-center">
           {product.applicationTitle}
         </h2>
 
         <div className="max-w-5xl mx-auto pt-6 md:pt-8 text-center">
           {Array.isArray(product.applicationDescription) ? (
             product.applicationDescription.map((desc, i) => (
-              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+              <p key={i} className="text-[lab(27.1134_-0.956401_-12.3224)] text-base leading-relaxed mb-4">
                 {desc}
               </p>
             ))
           ) : (
-            <p className="">
+            <p className="text-[lab(27.1134_-0.956401_-12.3224)] text-base leading-relaxed font-light">
               {product.applicationDescription}
             </p>
           )}

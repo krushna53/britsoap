@@ -35,11 +35,11 @@ export default async function CategoryPage({
       {/* 🔹 Hero */}
       <section className="pt-20 pb-6 bg-background">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary text-left capitalize">
+          <h1 className="text-3xl md:text-4xl font-midium text-primary text-left capitalize">
             {categoryData?.title}
           </h1>
           {slug !== "drying-line" && categoryData?.description && (
-            <p className="mt-4 text-primary text-lg text-left">
+             <p className="mt-4 text-primary text-base text-left">
               {categoryData.description}
             </p>
           )}
@@ -51,7 +51,7 @@ export default async function CategoryPage({
         <div className="container space-y-8">
           <div>
             {slug === "drying-line" && categoryData?.description && (
-              <p className="text-lg text-primary mb-5">
+              <p className="text-base text-primary mb-5">
                 {categoryData.description}
               </p>
             )}
@@ -72,7 +72,7 @@ export default async function CategoryPage({
               </p>
             ))}
           </div>
-          {slug !== "soap-stampers" && slug !== "finishing-line" && (
+          {slug !== "soap-stampers" && (
             <div>
               <Image
                 src={
@@ -85,7 +85,7 @@ export default async function CategoryPage({
                 height={560}
                 className={`w-full ${slug === "drying-line"
                   ? "h-[380px] md:h-[460px]"
-                  : "h-[280px] md:h-[340px]"
+                  : "h-[280px] md:h-full"
                   } rounded-2xl ${slug === "saponification" || slug === "drying-line"
                     ? "object-contain"
                     : "object-cover"
@@ -158,7 +158,7 @@ export default async function CategoryPage({
                     <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-[#e21e2d] line-clamp-2">
                       {productTitle}
                     </h3>
-                    <p className="text-[13px] !text-primary-foreground/75 leading-relaxed line-clamp-4">
+                    <p className="text-base !text-primary-foreground/75 leading-relaxed">
                       {productDesc}
                     </p>
                   </div>

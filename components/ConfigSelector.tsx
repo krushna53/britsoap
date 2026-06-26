@@ -17,7 +17,7 @@ export default function ConfigSelector({ configurations }: Props) {
 
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+          <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-3">
             Configurations Of The Machine
           </h2>
           <div className="mx-auto w-16 h-1 bg-accent rounded-full" />
@@ -40,7 +40,7 @@ export default function ConfigSelector({ configurations }: Props) {
                     {config.title}
                   </h3>
                   {config.desc && (
-                    <p className="mt-1.5 text-sm text-white/60 leading-relaxed">
+                     <p className="mt-1.5 text-base text-white/60 leading-relaxed">
                       {config.desc}
                     </p>
                   )}

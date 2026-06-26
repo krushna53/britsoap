@@ -145,7 +145,7 @@ export default function ContactClient({ contact }: any) {
                 <h2 className="text-2xl font-bold text-primary mb-1">
                   Get In Touch
                 </h2>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Reach out to us for product enquiries, quotes, or technical support.
                 </p>
               </div>
@@ -159,7 +159,7 @@ export default function ContactClient({ contact }: any) {
                     <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
                       Contact Person
                     </h4>
-                    <p className="text-sm text-muted-foreground font-medium">
+                    <p className="text-base text-muted-foreground font-medium">
                       {CONTACT_INFO.person}
                     </p>
                   </div>
@@ -173,8 +173,8 @@ export default function ContactClient({ contact }: any) {
                     <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
                       Address
                     </h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {CONTACT_INFO.address}
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Unit No. 4B, Garodiya Industrial Estate, Plot 3A, off Swami Vivekanand Road, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104
                     </p>
                   </div>
                 </div>
@@ -234,7 +234,7 @@ export default function ContactClient({ contact }: any) {
                   <h3 className="text-xl font-bold text-primary mb-2">
                     Thank You!
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     Your message has been sent successfully. We&apos;ll get back to you shortly.
                   </p>
                 </div>

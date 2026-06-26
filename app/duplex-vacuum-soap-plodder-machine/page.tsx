@@ -78,11 +78,11 @@ export default function ProductPage() {
       {product.processSteps?.length && (
         <section className="py-20 bg-gray-50 text-center">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary mb-4">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-4 text-center">
               {product.processTitle}
             </h2>
 
-            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-600 mb-16 max-w-3xl mx-auto text-base">
               {product.processDescription}
             </p>
 
@@ -103,7 +103,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="p-5">
-                    <p className="text-gray-600 text-lg leading-relaxed text-left">
+                    <p className="text-gray-600 text-base leading-relaxed text-left">
                       {step.desc}
                     </p>
                   </div>
@@ -123,35 +123,34 @@ export default function ProductPage() {
       {product.detailSection && (
         <section className="py-20 bg-gray-100">
           <div className="container grid md:grid-cols-2 gap-20 items-center">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               {product.detailSection.images?.[0] && (
-                <div className="overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[0]}
-                      alt="machine"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="overflow-hidden flex items-center justify-center">
+                  <Image
+                    src={product.detailSection.images[0]}
+                    alt="machine"
+                    width={800}
+                    height={500}
+                    className="w-full max-w-[500px] max-h-[300px] shadow-xl"
+                  />
                 </div>
               )}
               {product.detailSection.images?.[1] && (
-                <div className="overflow-hidden shadow-xl">
-                  <div className="w-full aspect-[16/10]">
-                    <Image
-                      src={product.detailSection.images[1]}
-                      alt="machine"
-                      width={800}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="overflow-hidden flex items-center justify-center">
+                  <Image
+                    src={product.detailSection.images[1]}
+                    alt="machine"
+                    width={800}
+                    height={500}
+                    className="w-full max-w-[500px] max-h-[300px] shadow-xl"
+                  />
                 </div>
               )}
             </div>
             <div className="max-w-xl space-y-6">
+              <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+              Machine Overview
+            </p>
               {product.detailSection.paragraphs?.map((p, i) => (
                 <p
                   key={i}
@@ -167,7 +166,7 @@ export default function ProductPage() {
       {product.configurations?.length && (
         <section className="py-20 bg-gray-50">
           <div className="container">
-            <h2 className="text-4xl font-bold text-primary text-center mb-16">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-16 text-center">
               {product.configurationsTitle}
             </h2>
             <div className="grid md:grid-cols-2 gap-16">
@@ -180,7 +179,7 @@ export default function ProductPage() {
                     height={300}
                     className="mx-auto mb-6 shadow-lg"
                   />
-                  <h3 className="text-xl font-bold text-primary mb-2">
+                  <h3 className="text-xl font-medium text-primary leading-snug uppercase mb-2">
                     {config.title}
                   </h3>
                   <p className="text-gray-600 mb-4 text-left">{config.desc}</p>
@@ -197,10 +196,10 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      <section className="bg-[#2E3192] py-20 text-white">
+      <section className="bg-surface-blue py-20 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold capitalize">
+            <h2 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">
               {product.applicationTitle || "Applications In Production"}
             </h2>
           </div>
@@ -219,7 +218,7 @@ export default function ProductPage() {
             </div>
             <div>
               {/* {product.importance && (
-                <ul className="space-y-4 text-lg mb-8">
+                <ul className="space-y-4 text-base mb-8">
                   {product.importance.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4">
                       <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
@@ -228,8 +227,8 @@ export default function ProductPage() {
                   ))}
                 </ul>
               )} */}
-              <div className="text-white/80 leading-relaxed text-lg">
-                <p className="!text-primary-foreground">
+              <div className="text-white/80 leading-relaxed text-base">
+                <p>
            The Brit Soap duplex vacuum plodder is used across a wide range of soap manufacturing environments supporting both standard and specialised soap production lines. The machine removes trapped air, improves product homogeneity, and ensures consistent extrusion of soap bars . It is an important step in the process of soap manufacturing and widely used for producing toilet soap bars, laundry soap bars, and syndet soaps.
                 </p>
               </div>

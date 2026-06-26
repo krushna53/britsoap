@@ -28,7 +28,7 @@ export default async function SoapCuttersPage() {
             Automatic Soap Cutters for Consistent Soap Manufacturing
           </h1>
 
-          <div className="text-muted-foreground mb-12 leading-relaxed text-lg space-y-3">
+          <div className="text-muted-foreground mb-12 leading-relaxed text-base space-y-3">
             <p>
               Brit Soap offers two advanced models of automatic soap cutters,
               engineered for consistent performance across different production
@@ -66,7 +66,7 @@ export default async function SoapCuttersPage() {
                   <h3 className="text-[17px] font-bold mb-2 leading-snug uppercase border-b border-accent line-clamp-2 pb-2">
                     {product.title}
                   </h3>
-                  <p className="text-[13px] !text-primary-foreground/75 leading-relaxed line-clamp-4 mt-2">
+                  <p className="text-base !text-primary-foreground/75 leading-relaxed mt-2">
                     {product.description}
                   </p>
                 </div>

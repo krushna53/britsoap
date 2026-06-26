@@ -22,7 +22,7 @@ export default function CTASection({
           {title}
         </h2>
 
-        <p className="text-white/80 text-lg mb-10 leading-relaxed">
+         <p className="text-white/80 text-base mb-10 leading-relaxed">
           {description}
         </p>
 
