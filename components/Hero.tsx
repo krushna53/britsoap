@@ -63,21 +63,24 @@ export default function Hero({ hero }: HeroProps) {
             variants={fadeUp}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto capitalize"
           >
-            {hero.heroTitle}
+            Complete Solutions for Every Stage of Soap Manufacturing.
+
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="text-primary-foreground/60 text-lg mt-4 max-w-lg mx-auto"
           >
-            {hero.heroSubtitle}
+            Equipment, Expertise, and Enduring Partnerships.
+
           </motion.p>
 
           <motion.p
             variants={fadeUp}
             className="text-primary-foreground/50 text-sm mt-2"
           >
-            {hero.heroTagline}
+            Global Engineering. Efficient Manufacturing
+
           </motion.p>
 
           <motion.div

@@ -174,7 +174,7 @@ export default function ContactClient({ contact }: any) {
                       Address
                     </h4>
                     <p className="text-base text-muted-foreground leading-relaxed">
-                      {CONTACT_INFO.address}
+                      Unit No. 4B, Garodiya Industrial Estate, Plot 3A, off Swami Vivekanand Road, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104
                     </p>
                   </div>
                 </div>

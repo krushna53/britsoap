@@ -26,10 +26,10 @@ export default function HomeAbout({ data }: Props) {
 
   return (
     <section className="py-20 bg-muted">
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="container grid grid-cols-1 lg:grid-cols-1 gap-16 items-center">
 
         {/* IMAGE */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ export default function HomeAbout({ data }: Props) {
             height={500}
             className="rounded-lg w-full h-96 object-cover"
           />
-        </motion.div>
+        </motion.div> */}
 
         {/* CONTENT */}
         <motion.div
@@ -53,43 +53,44 @@ export default function HomeAbout({ data }: Props) {
           {/* STATIC LABEL */}
           <motion.div
             variants={fadeUp}
-            className="flex items-center gap-3 mb-4"
+            className="flex items-center justify-center gap-3 mb-4"
           >
-            <div className="w-12 h-[2px] bg-accent" />
+            <div className="w-12 h-0.5 bg-accent" />
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
               About BritSoap
             </span>
+            <div className="w-12 h-0.5 bg-accent" />
           </motion.div>
 
           {/* DYNAMIC TITLE */}
           <motion.h2
             variants={fadeUp}
-            className="text-3xl font-bold text-primary mb-6 capitalize"
+            className="text-3xl font-bold text-primary mb-6 capitalize text-center"
           >
-            {data?.aboutTitle || "Engineering Excellence"}
+            {data?.aboutTitle || "Manufacturing Partners"}
           </motion.h2>
 
           {/* DYNAMIC DESCRIPTION */}
           <motion.div
             variants={fadeUp}
-            className="text-foreground leading-relaxed mb-6 text-lg"
+            className="text-foreground leading-relaxed mb-6 text-lg text-center"
           >
             {data?.aboutDescription?.nodeType
               ? documentToReactComponents(data.aboutDescription)
               : data?.aboutDescription ||
-                "BritSoap is a joint venture between Britannia Soap Machinery Ltd of England and Orum Engineering Pvt Ltd of India."}
+                "Brit Soap Machinery is one of India's leading and trusted providers of soap manufacturing machinery and complete production solutions. At Brit Soap, we do more than supply machinery, by combining global engineering expertise with efficient manufacturing, we help soap producers build, optimize, and grow their operations with reliable equipment and complete manufacturing solutions backed by engineering expertise, technical guidance, and ongoing support."}
           </motion.div>
 
           {/* STATIC FEATURES */}
           <motion.div
             variants={fadeUp}
-            className="grid grid-cols-2 gap-5"
+            className="grid grid-cols-1 md:grid-cols-4 gap-5"
           >
             {[
-              { icon: Settings, text: "Tailor-made Plants" },
-              { icon: Globe, text: "Global Service" },
-              { icon: Shield, text: "Best Quality" },
-              { icon: Wrench, text: "Full Support" },
+              { icon: Settings, text: "Complete Solutions" },
+              { icon: Globe, text: "Global Reach" },
+              { icon: Shield, text: "Long-Term Partnership" },
+              { icon: Wrench, text: "Technical Expertise" },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-3">
                 <Icon size={18} className="text-primary shrink-0" />
@@ -99,7 +100,7 @@ export default function HomeAbout({ data }: Props) {
           </motion.div>
 
           {/* BUTTON */}
-          <motion.div variants={fadeUp} className="mt-10">
+          <motion.div variants={fadeUp} className="mt-10 text-center">
             <Link
               href="/about"
               className="px-8 py-3 bg-primary text-white text-sm font-medium rounded-md hover:bg-secondary transition-colors"

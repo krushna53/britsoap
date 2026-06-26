@@ -102,8 +102,7 @@ const Footer = () => {
                 <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
 
                 <span>
-                  Unit No 12, Kotkar Industrial Estate, Off Aarey Road,
-                  Goregaon East, Mumbai 400063, India
+                 Unit No. 4B, Garodiya Industrial Estate, Plot 3A, off Swami Vivekanand Road, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104
                 </span>
               </li>
 

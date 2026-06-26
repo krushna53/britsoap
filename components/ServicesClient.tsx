@@ -103,7 +103,7 @@ export default function ServicesClient({ services }: Props) {
                     <h3 className="text-xl font-bold text-primary group-hover:text-primary-foreground mb-3 transition-colors">
                       {title}
                     </h3>
-                    <p className="text-base text-muted-foreground group-hover:text-primary-foreground leading-relaxed transition-colors">
+                    <p className="text-base text-muted-foreground !group-hover:text-primary-foreground leading-relaxed transition-colors">
                       {desc}
                     </p>
                   </div>
