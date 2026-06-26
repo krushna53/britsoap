@@ -44,7 +44,7 @@ export default async function Index() {
 
   return (
     <Layout>
-      <Hero hero={data} />
+      <Hero />
       <FeaturedProducts products={featuredProducts} />
       <HomeAbout data={data} />
       <ServicesPreview services={services} />

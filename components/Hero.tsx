@@ -13,37 +13,19 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
-type HeroProps = {
-  hero: any;
-};
-
-export default function Hero({ hero }: HeroProps) {
-  const fileUrl = hero?.heroBackground?.fields?.file?.url;
-  const fullUrl = fileUrl ? "https:" + fileUrl : "";
-
-  const isVideo =
-    fullUrl?.endsWith(".mp4") ||
-    fullUrl?.endsWith(".webm") ||
-    fullUrl?.endsWith(".ogg");
-
+export default function Hero() {
   return (
     <section className="hero-banner relative min-h-[calc(100vh-5rem)] py-20 flex items-center justify-center overflow-hidden">
-      {isVideo ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={fullUrl} type="video/mp4" />
-        </video>
-      ) : (
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${fullUrl})` }}
-        />
-      )}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/HRDStamper/toilet-soap-stamping-machine.mp4" type="video/quicktime" />
+        <source src="/assets/HRDStamper/toilet-soap-stamping-machine.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-primary/80" />
 
       <div className="relative z-10 container text-center">
@@ -63,7 +45,7 @@ export default function Hero({ hero }: HeroProps) {
             variants={fadeUp}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto capitalize"
           >
-            Complete Solutions for Every Stage of Soap Manufacturing.
+            Complete Solutions for Every Stage of Soap Manufacturing
 
           </motion.h1>
 

@@ -84,7 +84,7 @@ export default function HomeAbout({ data }: Props) {
           {/* STATIC FEATURES */}
           <motion.div
             variants={fadeUp}
-            className="grid grid-cols-1 md:grid-cols-4 gap-5"
+            className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-30"
           >
             {[
               { icon: Settings, text: "Complete Solutions" },
