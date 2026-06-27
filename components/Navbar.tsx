@@ -161,7 +161,7 @@ const Navbar = () => {
                       {link.megaMenu.columns.map((col, ci) => (
                         <div key={ci} className="border-r border-white/20 last:border-r-0">
                           {col.path ? (
-                            <Link href={col.path} className="block text-sm font-bold uppercase tracking-[0.15em] text-white px-4 py-4 hover:text-accent transition-colors">
+                            <Link href={col.path} className="block text-base font-bold uppercase tracking-[0.15em] text-white px-4 py-4 hover:text-accent transition-colors">
                               {col.category}
                             </Link>
                           ) : (
