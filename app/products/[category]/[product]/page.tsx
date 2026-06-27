@@ -824,7 +824,7 @@ export default async function ProductDetailPage({
             </div>
           </section>
 
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-slate-50">
             <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
                       <div className=" overflow-hidden ">
                 <Image
@@ -2122,9 +2122,10 @@ Production Lines"
           </section>
 
           <section className="py-20 bg-surface-blue">
-            <div className="container grid gap-10 md:grid-cols-[1fr_0.95fr] items-center">
-              <div className=" shadow-smshadow-sm">
-                <p className="!text-xl !md:text-2xl font-medium !text-primary leading-snug uppercase mb-3 ">
+            <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+              {/* Left — Ideal for */}
+              <div>
+                <p className="!text-xl !md:text-2xl font-medium !text-primary leading-snug uppercase mb-3">
                   Ideal for Modern Soap Manufacturing Plants
                 </p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -2137,34 +2138,40 @@ Production Lines"
                       applications
                     </li>
                   </ul>
-                  <p className="!text-xl !md:text-2xl font-medium !text-primary leading-snug uppercase">Key Benefits:</p>
-                  <ul className="space-y-2 list-disc pl-5">
-                    <li>
-                      Improves overall drying efficiency by enabling faster and
-                      uniform moisture evaporation
-                    </li>
-                    <li>
-                      Ensures consistent soap quality with controlled
-                      temperature management
-                    </li>
-                    <li>
-                      Enhances production capacity through continuous and stable
-                      operation
-                    </li>
-                    <li>
-                      Reduces energy wastage with efficient steam-based heat
-                      transfer
-                    </li>
-                    <li>
-                      Minimizes process variability, leading to better finish and
-                      reduced rework
-                    </li>
-                    <li>
-                      Built for reliability, resulting in lower maintenance and
-                      longer equipment life
-                    </li>
-                  </ul>
                 </div>
+              </div>
+
+              {/* Right — Key Benefits */}
+              <div>
+                <p className="!text-xl !md:text-2xl font-medium !text-primary leading-snug uppercase mb-3">
+                  Key Benefits:
+                </p>
+                <ul className="space-y-2 list-disc pl-5 text-muted-foreground leading-relaxed">
+                  <li>
+                    Improves overall drying efficiency by enabling faster and
+                    uniform moisture evaporation
+                  </li>
+                  <li>
+                    Ensures consistent soap quality with controlled
+                    temperature management
+                  </li>
+                  <li>
+                    Enhances production capacity through continuous and stable
+                    operation
+                  </li>
+                  <li>
+                    Reduces energy wastage with efficient steam-based heat
+                    transfer
+                  </li>
+                  <li>
+                    Minimizes process variability, leading to better finish and
+                    reduced rework
+                  </li>
+                  <li>
+                    Built for reliability, resulting in lower maintenance and
+                    longer equipment life
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
@@ -2390,38 +2397,30 @@ Production Lines"
 </section>
 
           <section className="py-20 bg-slate-50">
-            <div className="container">
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className=" p-8 md:p-10 rounded-[2rem]  space-y-6">
-                  <h3 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">Applications & Key Benefits</h3>
-                  <div className="text-muted-foreground leading-relaxed space-y-5">
-                    <div>
-                      <p className="font-medium !text-primary mb-2">Ideal for:</p>
-                      <ul className="list-disc pl-5 space-y-1">
-                       <li className="break-normal">Soap spray drying plants</li>
-                       <li className="break-normal">Continuous soap manufacturing lines</li>
-                       <li className="break-normal">High-efficiency drying and moisture removal systems</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-medium !text-primary mb-2">Key Benefits:</p>
-                      <ul className="list-disc pl-5 space-y-1">
-                       <li className="break-normal">Enhances drying efficiency through improved vacuum levels</li>
-                       <li className="break-normal">Reduces energy consumption by lowering gas load on the pump</li>
-                       <li className="break-normal">Ensures consistent soap quality and moisture control</li>
-                       <li className="break-normal">Improves overall plant reliability and operational stability</li>
-                       <li className="break-normal">Optimizes performance of the entire soap drying line system</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+            <div className="container space-y-8">
+              <h3 className="text-xl md:text-2xl font-medium !text-primary leading-snug uppercase text-center">Applications & Key Benefits</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+              {/* Left — Ideal for */}
+              <div>
+                <p className="text-xl md:text-2xl font-medium !text-primary leading-snug uppercase mb-3">Ideal for:</p>
+                <ul className="list-disc pl-5 space-y-2 text-muted-foreground leading-relaxed">
+                  <li>Soap spray drying plants</li>
+                  <li>Continuous soap manufacturing lines</li>
+                  <li>High-efficiency drying and moisture removal systems</li>
+                </ul>
+              </div>
 
-                {/* <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-sm space-y-6">
-                  <h4 className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase">Barometric Tower for Vacuum System Integration</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    The Barometric Tower serves as a structural and functional support system for the vacuum generating set in soap drying plants. By positioning the vacuum system at an elevated height, it enables efficient gravity-assisted discharge and stable vacuum operation, contributing to improved overall system performance and reliability.
-                  </p>
-                </div> */}
+              {/* Right — Key Benefits */}
+              <div>
+                <p className="text-xl md:text-2xl font-medium text-primary leading-snug uppercase mb-3">Key Benefits:</p>
+                <ul className="list-disc pl-5 space-y-2 text-muted-foreground leading-relaxed">
+                  <li>Enhances drying efficiency through improved vacuum levels</li>
+                  <li>Reduces energy consumption by lowering gas load on the pump</li>
+                  <li>Ensures consistent soap quality and moisture control</li>
+                  <li>Improves overall plant reliability and operational stability</li>
+                  <li>Optimizes performance of the entire soap drying line system</li>
+                </ul>
+              </div>
               </div>
             </div>
           </section>

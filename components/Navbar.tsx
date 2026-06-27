@@ -132,14 +132,14 @@ const Navbar = () => {
                     href={link.path}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary text-muted-foreground"
+                    className="text-base font-medium uppercase tracking-[0.15em] transition-colors hover:text-primary text-muted-foreground"
                   >
                     {link.name}
                   </a>
                 ) : (
                   <Link
                     href={link.path}
-                    className={`text-base font-medium capitalize tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"}`}
+                    className={`text-base font-medium uppercase tracking-[0.15em] transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"}`}
                   >
                     {link.name}
                   </Link>
@@ -149,29 +149,34 @@ const Navbar = () => {
               {/* Mega menu trigger */}
               {link.megaMenu && (
                 <>
-                  <span className="text-base font-medium capitalize tracking-[0.15em] text-muted-foreground cursor-pointer hover:text-primary select-none">
+                  <span className="text-base font-medium uppercase tracking-[0.15em] text-muted-foreground cursor-pointer hover:text-primary select-none">
                     {link.name}
                   </span>
 
                   {/* Mega Menu Dropdown */}
                   <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[1100px] max-w-[calc(100vw-2rem)] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
 
-                    {/* Columns */}
-                    <div className="grid grid-cols-5 gap-0 p-2">
+                    {/* Blue header — category names */}
+                    <div className="grid grid-cols-5 gap-0 bg-primary px-4">
                       {link.megaMenu.columns.map((col, ci) => (
-                        <div
-                          key={ci}
-                          className="p-4 border-r border-border last:border-r-0"
-                        >
+                        <div key={ci} className="border-r border-white/20 last:border-r-0">
                           {col.path ? (
-                            <Link href={col.path} className="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border hover:text-accent transition-colors">
+                            <Link href={col.path} className="block text-sm font-bold uppercase tracking-[0.15em] text-white px-4 py-4 hover:text-accent transition-colors">
                               {col.category}
                             </Link>
                           ) : (
-                            <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-3 pb-2 border-b border-border">
+                            <p className="text-sm font-bold hover:text-accent transition-colors uppercase tracking-[0.15em] text-white px-4 py-4">
                               {col.category}
                             </p>
                           )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* White sub-items area */}
+                    <div className="grid grid-cols-5 gap-0">
+                      {link.megaMenu.columns.map((col, ci) => (
+                        <div key={ci} className="p-4 border-r border-border last:border-r-0">
                           <div className="flex flex-col gap-1">
                             {col.items.map((item, ii) => (
                               <Link
@@ -216,9 +221,6 @@ const Navbar = () => {
 
                     {/* Footer: View All Products */}
                     <div className="border-t border-border px-6 py-3 flex items-center justify-between bg-muted/30">
-                      {/* <span className="text-xs text-muted-foreground">
-                        Browse all {link.megaMenu.columns.reduce((acc, col) => acc + col.items.length, 0)}+ machines across 5 categories
-                      </span> */}
                       <Link
                         href="/products"
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline tracking-wider uppercase"
