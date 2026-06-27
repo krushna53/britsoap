@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, User } from "lucide-react";
@@ -12,8 +11,8 @@ const CONTACT_INFO = {
   email: "britsoap@gmail.com",
 };
 
-// Put your deployed Google Apps Script Web App URL here
-const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzSW7vkPsQpHT-AhsuFlR5ZNc3wyLW8VaJjwCe6ytLXUXeYDG8trktq4s_Rt3Ad__cM_g/exec";
+// Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io/forms
+const FORMSPREE_URL = "https://formspree.io/f/xykqwadl";
 
 type FormData = {
   name: string;
@@ -33,70 +32,32 @@ export default function ContactClient({ contact }: any) {
     subject: "",
     message: "",
   });
-
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (loading) return;
-
-    if (!GOOGLE_APPS_SCRIPT_URL) {
-      setError("Form endpoint is missing. Set NEXT_PUBLIC_GOOGLE_APPS_SCRIPT_URL.");
-      return;
-    }
 
     setLoading(true);
     setError("");
 
     try {
-      const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+      const res = await fetch(FORMSPREE_URL, {
         method: "POST",
-        // text/plain avoids unnecessary preflight issues with Apps Script
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(formData),
       });
 
-      // Apps Script may return JSON or plain text depending on your doPost
-      const rawText = await res.text();
+      const data = await res.json();
 
-      let responseData: any = null;
-      try {
-        responseData = rawText ? JSON.parse(rawText) : null;
-      } catch {
-        responseData = null;
-      }
-
-      if (!res.ok) {
-        throw new Error(
-          responseData?.message ||
-            responseData?.error ||
-            "Failed to send message. Please try again."
-        );
-      }
-
-      if (
-        responseData &&
-        responseData.success === false
-      ) {
-        throw new Error(
-          responseData.message || "Failed to send message. Please try again."
-        );
+      if (!res.ok || data.ok === false) {
+        throw new Error(data?.error || "Failed to send message. Please try again.");
       }
 
       setSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        subject: "",
-        message: "",
-      });
+      setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
     } catch (err: any) {
       setError(err?.message || "Failed to send message. Please try again.");
     } finally {
@@ -142,14 +103,11 @@ export default function ContactClient({ contact }: any) {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-primary mb-1">
-                  Get In Touch
-                </h2>
+                <h2 className="text-2xl font-bold text-primary mb-1">Get In Touch</h2>
                 <p className="text-base text-muted-foreground">
                   Reach out to us for product enquiries, quotes, or technical support.
                 </p>
               </div>
-
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
@@ -164,7 +122,6 @@ export default function ContactClient({ contact }: any) {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <MapPin size={16} className="text-primary-foreground" />
@@ -174,11 +131,11 @@ export default function ContactClient({ contact }: any) {
                       Address
                     </h4>
                     <p className="text-base text-muted-foreground leading-relaxed">
-                      Unit No. 4B, Garodiya Industrial Estate, Plot 3A, off Swami Vivekanand Road, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104
+                      Unit No. 4B, Garodiya Industrial Estate, Plot 3A, off Swami Vivekanand Road,
+                      Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400104
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <Phone size={16} className="text-primary-foreground" />
@@ -189,7 +146,7 @@ export default function ContactClient({ contact }: any) {
                     </h4>
                     <div className="space-y-0.5">
                       {CONTACT_INFO.phones.map((phone) => (
-                        <a
+                        
                           key={phone}
                           href={`tel:${phone.replace(/\s/g, "")}`}
                           className="block text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -200,7 +157,6 @@ export default function ContactClient({ contact }: any) {
                     </div>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
                     <Mail size={16} className="text-primary-foreground" />
@@ -209,7 +165,7 @@ export default function ContactClient({ contact }: any) {
                     <h4 className="text-xs font-semibold text-foreground mb-0.5 uppercase tracking-wider">
                       Email
                     </h4>
-                    <a
+                    
                       href={`mailto:${CONTACT_INFO.email}`}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
@@ -231,48 +187,19 @@ export default function ContactClient({ contact }: any) {
                   <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5">
                     <Send size={20} className="text-accent" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-2">
-                    Thank You!
-                  </h3>
+                  <h3 className="text-xl font-bold text-primary mb-2">Thank You!</h3>
                   <p className="text-muted-foreground text-base">
                     Your message has been sent successfully. We&apos;ll get back to you shortly.
                   </p>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="p-8 rounded border border-border space-y-5"
-                >
+                <form onSubmit={handleSubmit} className="p-8 rounded border border-border space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {[
-                      {
-                        name: "name",
-                        label: "Full Name *",
-                        type: "text",
-                        placeholder: "John Doe",
-                        required: true,
-                      },
-                      {
-                        name: "email",
-                        label: "Email *",
-                        type: "email",
-                        placeholder: "john@company.com",
-                        required: true,
-                      },
-                      {
-                        name: "phone",
-                        label: "Phone",
-                        type: "tel",
-                        placeholder: "+91 XXXX XXXXXX",
-                        required: false,
-                      },
-                      {
-                        name: "company",
-                        label: "Company",
-                        type: "text",
-                        placeholder: "Your Company",
-                        required: false,
-                      },
+                      { name: "name", label: "Full Name *", type: "text", placeholder: "John Doe", required: true },
+                      { name: "email", label: "Email *", type: "email", placeholder: "john@company.com", required: true },
+                      { name: "phone", label: "Phone", type: "tel", placeholder: "+91 XXXX XXXXXX", required: false },
+                      { name: "company", label: "Company", type: "text", placeholder: "Your Company", required: false },
                     ].map((field) => (
                       <div key={field.name}>
                         <label className="text-xs font-medium text-foreground mb-1.5 block uppercase tracking-wider">
@@ -291,7 +218,6 @@ export default function ContactClient({ contact }: any) {
                       </div>
                     ))}
                   </div>
-
                   <div>
                     <label className="text-xs font-medium text-foreground mb-1.5 block uppercase tracking-wider">
                       Subject *
@@ -312,7 +238,6 @@ export default function ContactClient({ contact }: any) {
                       <option value="other">Other</option>
                     </select>
                   </div>
-
                   <div>
                     <label className="text-xs font-medium text-foreground mb-1.5 block uppercase tracking-wider">
                       Message *
@@ -328,9 +253,7 @@ export default function ContactClient({ contact }: any) {
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
-
                   {error && <p className="text-xs text-red-500">{error}</p>}
-
                   <button
                     type="submit"
                     disabled={loading}
