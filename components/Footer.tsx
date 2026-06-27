@@ -34,9 +34,7 @@ const Footer = () => {
             </div>
 
             <p className="text-base text-primary-foreground/60 leading-relaxed">
-              Precision-engineered soap & detergent machinery. A joint venture
-              between Britannia Soap Machinery Ltd (England) and Orum
-              Engineering Pvt Ltd (India).
+              One of India's leading providers of soap manufacturing machinery and complete production solutions.From standalone machines to complete production lines, Brit Soap helps manufacturers build, optimize, and grow with reliable equipment through  its engineering expertise, reliable performance, and lasting partnerships.
             </p>
           </div>
 
@@ -155,12 +153,12 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-6 flex-wrap justify-center">
-            <span className="text-[13px] text-primary-foreground/40 uppercase tracking-wider">
+            {/* <span className="text-[13px] text-primary-foreground/40 uppercase tracking-wider">
               Designed in England
-            </span>
+            </span> */}
 
             <span className="text-[13px] text-primary-foreground/40 uppercase tracking-wider">
-              Manufactured in India
+              Made in India
             </span>
           </div>
         </div>

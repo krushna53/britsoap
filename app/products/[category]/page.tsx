@@ -84,8 +84,8 @@ export default async function CategoryPage({
                 width={900}
                 height={560}
                 className={`w-full ${slug === "drying-line"
-                  ? "h-[380px] md:h-[460px]"
-                  : "h-[280px] md:h-full"
+                  ? "h-[320px] md:h-[350px]"
+                  : "h-[280px] md:h-[400px]"
                   } rounded-2xl ${slug === "saponification" || slug === "drying-line"
                     ? "object-contain"
                     : "object-cover"
