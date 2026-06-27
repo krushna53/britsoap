@@ -11,7 +11,6 @@ const CONTACT_INFO = {
   email: "britsoap@gmail.com",
 };
 
-// Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io/forms
 const FORMSPREE_URL = "https://formspree.io/f/xykqwadl";
 
 type FormData = {
@@ -145,15 +144,18 @@ export default function ContactClient({ contact }: any) {
                       Tel
                     </h4>
                     <div className="space-y-0.5">
-                      {CONTACT_INFO.phones.map((phone) => (
-                        
-                          key={phone}
-                          href={`tel:${phone.replace(/\s/g, "")}`}
-                          className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          {phone}
-                        </a>
-                      ))}
+                      {CONTACT_INFO.phones.map((phone) => {
+                        const href = "tel:" + phone.replace(/\s/g, "");
+                        return (
+                          
+                            key={phone}
+                            href={href}
+                            className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            {phone}
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -166,7 +168,7 @@ export default function ContactClient({ contact }: any) {
                       Email
                     </h4>
                     
-                      href={`mailto:${CONTACT_INFO.email}`}
+                      href={"mailto:" + CONTACT_INFO.email}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
                       {CONTACT_INFO.email}
