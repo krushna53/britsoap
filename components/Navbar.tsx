@@ -157,7 +157,7 @@ const Navbar = () => {
                   <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[1100px] max-w-[calc(100vw-2rem)] bg-white border border-border shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
 
                     {/* Blue header — category names */}
-                    <div className="grid grid-cols-5 gap-0 bg-primary px-4">
+                    <div className="grid grid-cols-5 gap-0 bg-primary">
                       {link.megaMenu.columns.map((col, ci) => (
                         <div key={ci} className="border-r border-white/20 last:border-r-0">
                           {col.path ? (
