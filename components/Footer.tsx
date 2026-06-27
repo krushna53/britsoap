@@ -152,15 +152,15 @@ const Footer = () => {
             rights reserved.
           </p>
 
-          {/* <div className="flex items-center gap-6 flex-wrap justify-center">
-            <span className="text-[13px] text-primary-foreground/40 uppercase tracking-wider">
+          <div className="flex items-center gap-6 flex-wrap justify-center">
+            {/* <span className="text-[13px] text-primary-foreground/40 uppercase tracking-wider">
               Designed in England
-            </span>
+            </span> */}
 
             <span className="text-[13px] text-primary-foreground/40 uppercase tracking-wider">
-              Manufactured in India
+              Made in India
             </span>
-          </div> */}
+          </div>
         </div>
       </div>
     </footer>
