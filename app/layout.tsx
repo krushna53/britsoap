@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { ReactNode } from "react";
-import { LanguageProvider } from "@/components/LanguageContext";
+import DisableInspect from "@/components/DisableInspect";
 import FloatingCTA from "@/components/FloatingCTA";
+import { LanguageProvider } from "@/components/LanguageContext";
+import type { Metadata } from "next";
+import { ReactNode } from "react";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+          <DisableInspect />
         <FloatingCTA />
         <LanguageProvider>{children}</LanguageProvider>
       </body>

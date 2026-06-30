@@ -4,7 +4,6 @@ import FeaturedProducts, {
   type FeaturedProduct,
 } from "@/components/FeaturedProducts";
 import HomeAbout from "@/components/HomeAbout";
-import HomeImpact from "@/components/HomeImpact";
 import HomeCTA from "@/components/HomeCTA";
 import type { HomepageData } from "@/types/contentful";
 import ServicesPreview from "@/components/ServicesPreview";
@@ -48,7 +47,6 @@ export default async function Index() {
       <FeaturedProducts products={featuredProducts} />
       <HomeAbout data={data} />
       <ServicesPreview services={services} />
-      <HomeImpact data={data} />
       <HomeCTA data={data} />
     </Layout>
   );
