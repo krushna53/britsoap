@@ -1,9 +1,31 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import { getCategoryWithProducts } from "@/lib/contentful";
 import { getLocalCategoryWithProducts } from "@/data/categories";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  const { category: slug } = await params;
+  const categoryData = getLocalCategoryWithProducts(slug);
+
+  if (!categoryData) return {};
+
+  return {
+    title: categoryData.title,
+    description: categoryData.description,
+    keywords: [
+      categoryData.title.toLowerCase(),
+      `${categoryData.title.toLowerCase()} machine`,
+      `soap ${slug.replace(/-/g, " ")}`,
+    ],
+  };
+}
 
 export default async function CategoryPage({
   params,
