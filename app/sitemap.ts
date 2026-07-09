@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { productPages } from "@/data/productPages";
 import { categories } from "@/data/categories";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://britsoap.netlify.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://britsoap.net";
 
 const rootSlugs = [
   "av-pneumatic-soap-cutter-machine",
