@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import FeaturedProducts, {
@@ -10,6 +11,20 @@ import ServicesPreview from "@/components/ServicesPreview";
 import { getHomepage, getServices } from "@/lib/contentful";
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: "Industrial Soap Making Machinery & Complete Soap Plant Manufacturer",
+  description:
+    "Brit Soap Machinery designs and manufactures complete soap production plants — from saponification to finishing, cutting, stamping and packing — for industrial soap manufacturers worldwide.",
+  keywords: [
+    "soap making machine",
+    "soap manufacturing machinery",
+    "soap plant manufacturer",
+    "industrial soap machinery",
+    "complete soap production line",
+    "soap making machine manufacturer india",
+  ],
+};
 
 export default async function Index() {
   const data = (await getHomepage("en")) as HomepageData;
