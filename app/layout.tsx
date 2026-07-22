@@ -11,6 +11,12 @@ export const metadata: Metadata = {
     default: "Brit Soap",
   },
   description: "Advanced Soap Machinery and Production Lines",
+  keywords: [
+    "soap machinery",
+    "soap making machine",
+    "soap manufacturing equipment",
+    "soap plant manufacturer",
+  ],
 };
 
 export default function RootLayout({

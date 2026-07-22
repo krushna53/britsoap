@@ -204,6 +204,7 @@ export async function generateMetadata({
 
   return {
     title: seo.title, description: seo.description,
+    keywords: seo.keywords,
     alternates: {
       canonical: `/products/${category}/${product}`,
     },
