@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import Layout from "@/components/Layout";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, buildMetadata, productSchema } from "@/lib/seo";
 import ProductHero from "@/components/ProductHero";
 import Section from "@/components/Section";
 import Grid from "@/components/Grid";
@@ -41,18 +44,17 @@ export type Product = {
   };
 };
 
-export async function generateMetadata() {
-  const product = productPages.find(
-    (p) => p.slug === "triple-roll-mill-soap-refining-machine",
-  );
+export async function generateMetadata(): Promise<Metadata> {
+  const product = productPages.find((p) => p.slug === "triple-roll-mill-soap-refining-machine");
 
   if (!product) return {};
 
-  return {
+  return buildMetadata({
     title: product.meta.title,
     description: product.meta.description,
     keywords: product.meta.keywords,
-  };
+    path: "/triple-roll-mill-soap-refining-machine",
+  });
 }
 
 export default function ProductPage() {
@@ -64,6 +66,22 @@ export default function ProductPage() {
 
   return (
     <Layout>
+      <JsonLd
+        id="triple-roll-mill-soap-refining-machine-product-schema"
+        data={productSchema({
+          name: product.meta.title,
+          description: product.meta.description,
+          path: "/triple-roll-mill-soap-refining-machine",
+        })}
+      />
+      <JsonLd
+        id="triple-roll-mill-soap-refining-machine-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" },
+          { name: "Triple Roll Mill", path: "/triple-roll-mill-soap-refining-machine" },
+        ])}
+      />
       <ProductHero
         title={product.title}
         description={product.description}

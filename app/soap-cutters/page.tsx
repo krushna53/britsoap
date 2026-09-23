@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 
-export const metadata: Metadata = {
-  title: "Automatic Soap Cutters | Electro-Pneumatic & Rotary Soap Cutting Machines",
+export const metadata: Metadata = buildMetadata({
+  title: "Automatic Soap Cutters | Electro-Pneumatic & Rotary Cutting Machines",
   description:
-    "Explore Brit Soap's automatic soap cutters — the Electro-Pneumatic Vertical Cutter and High-Speed Rotary Cutter — for precise, continuous soap bar cutting.",
+    "Brit Soap automatic soap cutters — Electro-Pneumatic Vertical Cutter and High-Speed Rotary Cutter — for precise, continuous soap bar cutting.",
   keywords: [
     "soap cutter machine",
     "automatic soap cutter",
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
     "rotary soap cutter",
     "soap bar cutting machine",
   ],
-};
+  path: "/soap-cutters",
+});
 
 export default async function SoapCuttersPage() {
   const products = [

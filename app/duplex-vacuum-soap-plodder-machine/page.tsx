@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import Layout from "@/components/Layout";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, buildMetadata, productSchema } from "@/lib/seo";
 import ProductHero from "@/components/ProductHero";
 import Section from "@/components/Section";
 import Grid from "@/components/Grid";
@@ -41,18 +44,17 @@ export type Product = {
   };
 };
 
-export async function generateMetadata() {
-  const product = productPages.find(
-    (p) => p.slug === "duplex-vacuum-soap-plodder-machine",
-  );
+export async function generateMetadata(): Promise<Metadata> {
+  const product = productPages.find((p) => p.slug === "duplex-vacuum-soap-plodder-machine");
 
   if (!product) return {};
 
-  return {
+  return buildMetadata({
     title: product.meta.title,
     description: product.meta.description,
     keywords: product.meta.keywords,
-  };
+    path: "/duplex-vacuum-soap-plodder-machine",
+  });
 }
 
 export default function ProductPage() {
@@ -64,6 +66,22 @@ export default function ProductPage() {
 
   return (
     <Layout>
+      <JsonLd
+        id="duplex-vacuum-soap-plodder-machine-product-schema"
+        data={productSchema({
+          name: product.meta.title,
+          description: product.meta.description,
+          path: "/duplex-vacuum-soap-plodder-machine",
+        })}
+      />
+      <JsonLd
+        id="duplex-vacuum-soap-plodder-machine-breadcrumb-schema"
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" },
+          { name: "Duplex Vacuum Plodder", path: "/duplex-vacuum-soap-plodder-machine" },
+        ])}
+      />
       <ProductHero
         title={product.title}
         description={product.description}
