@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Layout from "@/components/Layout";
 import JsonLd from "@/components/JsonLd";
 import {
+  absoluteUrl,
   breadcrumbSchema,
   buildMetadata,
   productSchema,
@@ -204,15 +205,33 @@ export async function generateMetadata({
   params: Promise<{ category: string; product: string }>;
 }): Promise<Metadata> {
   const { category, product } = await params;
+  const path = `/products/${category}/${product}`;
   const seo = LOCAL_PRODUCT_SEO[product];
 
-  if (!seo) return {};
+  if (seo) {
+    return buildMetadata({
+      title: seo.title,
+      description: seo.description,
+      keywords: seo.keywords,
+      path,
+    });
+  }
+
+  // Products without a hand-written SEO entry still need their own title and
+  // canonical. Returning {} here would let them inherit the layout defaults,
+  // which canonicalises them to the homepage and drops them from the index.
+  const categoryData = getLocalCategoryWithProducts(category);
+  const fallback = (categoryData?.products as { slug?: string; title?: string; description?: string }[] | undefined)
+    ?.find((p) => p?.slug === product);
+
+  if (!fallback?.title) {
+    return { alternates: { canonical: absoluteUrl(path) } };
+  }
 
   return buildMetadata({
-    title: seo.title,
-    description: seo.description,
-    keywords: seo.keywords,
-    path: `/products/${category}/${product}`,
+    title: fallback.title,
+    description: fallback.description ?? "",
+    path,
   });
 }
 

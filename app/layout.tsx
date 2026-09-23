@@ -31,7 +31,9 @@ export const metadata: Metadata = {
     "soap manufacturing equipment",
     "soap plant manufacturer",
   ],
-  alternates: { canonical: SITE_URL },
+  // Deliberately no `alternates.canonical` here. A default would be inherited
+  // by any page whose generateMetadata returns early, pointing it at the
+  // homepage and telling Google it is a duplicate. Each page sets its own.
   openGraph: {
     siteName: SITE_NAME,
     type: "website",
