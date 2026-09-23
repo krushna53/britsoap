@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { productPages } from "@/data/productPages";
-import { categories } from "@/data/categories";
+import { categories, getLocalCategoryWithProducts } from "@/data/categories";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://britsoap.net";
 
@@ -24,13 +24,20 @@ function buildRoutes() {
   // Category pages from data/categories
   categories.forEach((cat) => routes.add(`/products/${cat.slug}`));
 
-  // Products defined in categories.localProducts and productPages
+  // Products defined in categories.localProducts and productPages.
+  // cat.products holds lookup keys, which are not always the product's own
+  // slug — "saponification-crutcher" maps to a product whose slug is
+  // "saponification-crutcher-soap-manufacturing". The route matches on the
+  // slug, so resolve each key through the same helper the pages use.
   categories.forEach((cat) => {
-    cat.products.forEach((p) => {
-      if (rootSlugs.includes(p)) {
-        routes.add(`/${p}`);
+    const resolved = getLocalCategoryWithProducts(cat.slug);
+    resolved?.products.forEach((product) => {
+      const slug = (product as { slug?: string })?.slug;
+      if (!slug) return;
+      if (rootSlugs.includes(slug)) {
+        routes.add(`/${slug}`);
       } else {
-        routes.add(`/products/${cat.slug}/${p}`);
+        routes.add(`/products/${cat.slug}/${slug}`);
       }
     });
   });
@@ -40,8 +47,12 @@ function buildRoutes() {
     if (rootSlugs.includes(p.slug)) {
       routes.add(`/${p.slug}`);
     } else {
-      // try to find a category that contains this product
-      const cat = categories.find((c) => c.products.includes(p.slug));
+      // try to find a category that resolves to this product
+      const cat = categories.find((c) =>
+        getLocalCategoryWithProducts(c.slug)?.products.some(
+          (product) => (product as { slug?: string })?.slug === p.slug
+        )
+      );
       if (cat) routes.add(`/products/${cat.slug}/${p.slug}`);
       else routes.add(`/products/${p.slug}`);
     }
