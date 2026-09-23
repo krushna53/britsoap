@@ -1,5 +1,6 @@
 import DisableInspect from "@/components/DisableInspect";
 import FloatingCTA from "@/components/FloatingCTA";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import JsonLd from "@/components/JsonLd";
 import { LanguageProvider } from "@/components/LanguageContext";
 import {
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body>
         <JsonLd id="organization-schema" data={organizationSchema} />
         <JsonLd id="website-schema" data={websiteSchema} />
+        <GoogleAnalytics />
         <DisableInspect />
         <FloatingCTA />
         <LanguageProvider>{children}</LanguageProvider>
