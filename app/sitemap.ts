@@ -17,7 +17,7 @@ function buildRoutes() {
   const routes = new Set<string>();
 
   // Static pages
-  ["", "/about", "/services", "/contact", "/soap-cutters"].forEach((r) =>
+  ["", "/about", "/services", "/contact", "/products", "/soap-cutters"].forEach((r) =>
     routes.add(r)
   );
 

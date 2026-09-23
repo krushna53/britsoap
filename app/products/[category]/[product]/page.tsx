@@ -1,8 +1,14 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
-import Script from "next/script";
 import Layout from "@/components/Layout";
+import JsonLd from "@/components/JsonLd";
+import {
+  breadcrumbSchema,
+  buildMetadata,
+  productSchema,
+  stripBrandSuffix,
+} from "@/lib/seo";
 import { getCategoryWithProducts } from "@/lib/contentful";
 import { getLocalCategoryWithProducts } from "@/data/categories";
 import ProductHero from "@/components/ProductHero";
@@ -195,25 +201,71 @@ const LOCAL_PRODUCT_SEO: Record<string, ProductSeoData> = {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{category: string; product: string }>;
+  params: Promise<{ category: string; product: string }>;
 }): Promise<Metadata> {
-  const {category, product } = await params;
+  const { category, product } = await params;
   const seo = LOCAL_PRODUCT_SEO[product];
 
   if (!seo) return {};
 
-  return {
-    title: seo.title, description: seo.description,
+  return buildMetadata({
+    title: seo.title,
+    description: seo.description,
     keywords: seo.keywords,
-    alternates: {
-      canonical: `/products/${category}/${product}`,
-    },
-    openGraph: {
-      title: seo.title, description: seo.description,
-      type: "website",
-      url: `/products/${category}/${product}`,
-    },
-  };
+    path: `/products/${category}/${product}`,
+  });
+}
+
+/** Products below already declare their own richer Product + FAQ schema. */
+const PRODUCTS_WITH_CUSTOM_SCHEMA = new Set([
+  "hrd-soap-stamper",
+  "rotary-soap-stamper",
+]);
+
+/** Emits Product + BreadcrumbList schema into the server HTML. */
+function ProductStructuredData({
+  categorySlug,
+  productSlug,
+}: {
+  categorySlug: string;
+  productSlug: string;
+}) {
+  const seo = LOCAL_PRODUCT_SEO[productSlug];
+  if (!seo) return null;
+
+  const path = `/products/${categorySlug}/${productSlug}`;
+  const categoryData = getLocalCategoryWithProducts(categorySlug);
+
+  return (
+    <>
+      {!PRODUCTS_WITH_CUSTOM_SCHEMA.has(productSlug) && (
+        <JsonLd
+          id={`${productSlug}-product-schema`}
+          data={productSchema({
+            name: seo.title,
+            description: seo.description,
+            path,
+          })}
+        />
+      )}
+      <JsonLd
+        id={`${productSlug}-breadcrumb-schema`}
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" },
+          ...(categoryData
+            ? [
+                {
+                  name: categoryData.title,
+                  path: `/products/${categorySlug}`,
+                },
+              ]
+            : []),
+          { name: stripBrandSuffix(seo.title), path },
+        ])}
+      />
+    </>
+  );
 }
 
 const LOCAL_PRODUCT_PAGES: Record<string, LocalProductPageData> = {
@@ -686,6 +738,10 @@ export default async function ProductDetailPage({
 
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <section className="py-16 bg-primary text-center">
             <div className="container">
               <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">
@@ -746,6 +802,10 @@ export default async function ProductDetailPage({
     if (productSlug === "saponification-crutcher-soap-manufacturing") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Saponification Crutcher | High-Efficiency Soap Reaction Vessel for Semi-Boiled Process"
             description="Advanced industrial crutcher for efficient saponification, mixing, and soap manufacturing processes."
@@ -877,6 +937,10 @@ export default async function ProductDetailPage({
     if (productSlug === "saponification-jet") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Saponification Jet | Instant Soap Making System with Venturi Technology
 "
@@ -1057,6 +1121,10 @@ production."
     if (productSlug === "manual-pneumatic-soap-stamper") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Manual Pneumatic Soap Stamper | Compact Soap Finishing Machine for Precision Stamping"
             description="Cost-Effective Single Cavity Stamper for Low Capacity Soap Production"
@@ -1327,20 +1395,12 @@ production."
 
       return (
         <Layout>
-          <Script
-            id="hrd-soap-stamper-product-schema"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(hrdProductSchema),
-            }}
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
           />
-          <Script
-            id="hrd-soap-stamper-faq-schema"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(hrdFaqSchema),
-            }}
-          />
+          <JsonLd id="hrd-soap-stamper-product-schema" data={hrdProductSchema} />
+          <JsonLd id="hrd-soap-stamper-faq-schema" data={hrdFaqSchema} />
           <ProductHero
             title="HRD Soap Stamper | Integrated Cutting and Stamping for Continuous Soap Bars"
             description="Precision HRD soap stamper for continuous cutting and stamping. Designed for consistent quality and seamless integration in modern soap production lines."
@@ -1589,20 +1649,12 @@ production."
 
       return (
         <Layout>
-          <Script
-            id="rotary-soap-stamper-product-schema"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(rotaryProductSchema),
-            }}
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
           />
-          <Script
-            id="rotary-soap-stamper-faq-schema"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(rotaryFaqSchema),
-            }}
-          />
+          <JsonLd id="rotary-soap-stamper-product-schema" data={rotaryProductSchema} />
+          <JsonLd id="rotary-soap-stamper-faq-schema" data={rotaryFaqSchema} />
           <ProductHero
             title="Rotary Soap Stamper | Automatic Soap Stamping System for Continuous 
 Production Lines"
@@ -1766,6 +1818,10 @@ Production Lines"
     if (productSlug === "powder-separator") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Powder Separators | Efficient powder separation for soap drying lines"
             description="High-efficiency powder separation for removing fine dust particles from vacuum spray chamber exhaust gases."
@@ -1995,6 +2051,10 @@ Production Lines"
     if (productSlug === "soap-heat-exchanger") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Heat Exchanger | Liquid Soap Processing for efficient soap drying lines"
             description="Precision Heat Exchanger for efficient soap heating and moisture evaporation. Designed for controlled temperature performance and seamless integration in modern soap drying lines."
@@ -2193,6 +2253,10 @@ Production Lines"
     if (productSlug === "vacuum-drying-system") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Vacuum Drying System| Vacuum Booster, Condenser & Pumps for soap drying lines"
             description="High-efficiency vacuum system designed to optimize moisture removal, improve drying performance, and enhance energy efficiency in modern soap manufacturing lines."
@@ -2440,6 +2504,10 @@ Production Lines"
     if (productSlug === "soap-atomiser") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Atomiser / Vacuum Spray Chamber for Soap Drying Systems"
             description="High-efficiency vacuum spray drying chamber for converting liquid neat soap into solid, cooled soap within seconds."
@@ -2578,6 +2646,10 @@ Production Lines"
     if (productSlug === "vertical-soap-stamper") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Vertical Soap Stamping Machine | Automatic Soap Stamping for Advanced 
 Soap Finishing Lines"
@@ -2712,6 +2784,10 @@ Soap Finishing Lines"
     if (productSlug === "six-face-soap-stamper") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Six Face Soap Stamping Machine | Automatic Stamping for Cubic & Cuboid Soaps in Advanced Finishing Lines"
             description="Fully automatic six-side soap stamper engineered for precision embossing, uniform shape, and premium finish in 
@@ -2841,6 +2917,10 @@ continuous soap production lines."
     if (productSlug === "laundry-soap-stamper") {
       return (
         <Layout>
+          <ProductStructuredData
+            categorySlug={categorySlug}
+            productSlug={productSlug}
+          />
           <ProductHero
             title="Laundry Soap Stamper Machine | Dual-Side Stamping for Laundry Soap 
 Finishing Lines"
@@ -2960,6 +3040,10 @@ efficiency soap finishing lines."
 
     return (
       <Layout>
+        <ProductStructuredData
+          categorySlug={categorySlug}
+          productSlug={productSlug}
+        />
         <ProductHero
           title={templateData.title}
           description={templateData.description}
@@ -3050,6 +3134,10 @@ efficiency soap finishing lines."
 
   return (
     <Layout>
+      <ProductStructuredData
+        categorySlug={categorySlug}
+        productSlug={productSlug}
+      />
       <section className="py-16 bg-primary text-center">
         <div className="container">
           <h2 className="text-sm capitalize tracking-widest text-primary-foreground/60 mb-2">

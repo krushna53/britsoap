@@ -3,7 +3,7 @@ export const productPages = [
         slug: "double-arm-sigma-mixer-soap-manufacturing",
 
         meta: {
-            title: "Double Arm Sigma Mixer For Soap Manufacturing | Brit Soap",
+            title: "Double Arm Sigma Mixer For Soap Manufacturing",
             description:
                 "Industrial sigma mixer for uniform soap mixing. Ideal for blending perfumes & additives. Speak to an engineer today.",
             keywords: [

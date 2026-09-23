@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import FeaturedProducts, {
@@ -12,10 +13,10 @@ import { getHomepage, getServices } from "@/lib/contentful";
 
 export const revalidate = 300;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Industrial Soap Making Machinery & Complete Soap Plant Manufacturer",
   description:
-    "Brit Soap Machinery designs and manufactures complete soap production plants — from saponification to finishing, cutting, stamping and packing — for industrial soap manufacturers worldwide.",
+    "Brit Soap Machinery builds complete soap production plants — saponification, finishing, cutting, stamping and packing — for manufacturers worldwide.",
   keywords: [
     "soap making machine",
     "soap manufacturing machinery",
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
     "complete soap production line",
     "soap making machine manufacturer india",
   ],
-};
+  path: "/",
+});
 
 export default async function Index() {
   const data = (await getHomepage("en")) as HomepageData;

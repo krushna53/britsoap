@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/components/Layout";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 import { getCategoryWithProducts } from "@/lib/contentful";
 import { getLocalCategoryWithProducts } from "@/data/categories";
 
@@ -16,7 +18,7 @@ export async function generateMetadata({
 
   if (!categoryData) return {};
 
-  return {
+  return buildMetadata({
     title: categoryData.title,
     description: categoryData.description,
     keywords: [
@@ -24,7 +26,8 @@ export async function generateMetadata({
       `${categoryData.title.toLowerCase()} machine`,
       `soap ${slug.replace(/-/g, " ")}`,
     ],
-  };
+    path: `/products/${slug}`,
+  });
 }
 
 export default async function CategoryPage({
@@ -54,6 +57,17 @@ export default async function CategoryPage({
 
   return (
     <Layout>
+      <JsonLd
+        id={`${slug}-breadcrumb-schema`}
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" },
+          {
+            name: categoryData?.title ?? slug,
+            path: `/products/${slug}`,
+          },
+        ])}
+      />
       {/* 🔹 Hero */}
       <section className="pt-20 pb-6 bg-background">
         <div className="container">
