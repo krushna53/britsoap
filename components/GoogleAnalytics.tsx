@@ -2,14 +2,17 @@
 
 import Script from "next/script";
 
+/** Brit Soap's GA4 property. Override with NEXT_PUBLIC_GA_ID if it ever changes. */
+const DEFAULT_GA_ID = "G-MSLVT8GKGF";
+
 /**
- * Loads GA4 when NEXT_PUBLIC_GA_ID is set, and renders nothing when it is not,
- * so local and preview builds stay out of the production analytics data.
+ * Loads GA4 on the deployed site. Skipped during `next dev` so local work does
+ * not land in the production property.
  */
 export default function GoogleAnalytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || DEFAULT_GA_ID;
 
-  if (!gaId) return null;
+  if (!gaId || process.env.NODE_ENV === "development") return null;
 
   return (
     <>
